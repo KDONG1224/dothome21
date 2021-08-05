@@ -208,35 +208,179 @@
              document.write(key);
              document.write(obj[key]);
          }
+         document.write("<br><br>");
        }
 
-       {
-           let i = "1";
+    //    {
+    //        let i = "1";
 
-           function gallery(num){
-               if(num){
-                   if(num==2) direct++;
-               } else {
-                   if(num==1) direct--;
-               }
-           }
-           gallery(8);
+    //        function gallery(num){
+    //            if(num){
+    //                if(num==2) direct++;
+    //            } else {
+    //                if(num==1) direct--;
+    //            }
+    //        }
+    //        gallery(8);
 
-           document.write(num);
-       }
+    //        document.write(num);
+    //    }
 
-       {
-           if()
-       }
+    //    {
+    //        if()
+    //    }
 
+    //asd
+    // {
+    //     var x = 100;
+    //     document.write(x);
 
+    //     x = 200;
+    //     document.write(x);
 
+    //     document.write("<br><br>");
+    // }
 
+    // //da
+    // {
+    //     for(let i=1; i<10; i++){
+    //         if(i%2==0){
+    //             document.write(i);
+    //         }
+    //     }
+    //     document.write("<br><br>");
+    // }
 
+    // //da
+    // {
+    //     for(let i=1; i<10; i++){
+    //         if(true){
+    //             document.write(i);
+    //         }
+    //     }
+    //     document.write("<br><br>");
+    // }
 
+    // //da
+    // {
+    //     if("1"){
+    //         document.write("true");
+    //     } else {
+    //         document.write('false');
+    //     }
 
+    //     document.write("<br><br>");
+    // }
 
+    //for문을 이용해서 각 데이터를 출력하시오!!!
+    {
+        document.write("*** for문을 이용해서 각 데이터를 출력하시오!!! ***<br>");
 
+        const arr = [100, 200, 300, 400, 500];
+
+        for(let i=0; i<arr.length; i++){
+            document.write(arr[i], "<br>");
+        }
+        document.write("<br><br>");
+    }
+
+    //forEach문을 이용해서 각 데이터를 출력하시오!!!(function을 이용해서)
+    {
+        document.write("*** forEach문을 이용해서 각 데이터를 출력하시오!!!(function을 이용해서) ***<br>");
+
+        const arr = [100, 200, 300, 400, 500];
+
+        arr.forEach(function(el){
+            document.write(el, "<br>")
+        });
+
+        document.write("<br><br>");
+    }
+
+    //forEach문을 이용해서 각 데이터를 출력하시오!!!
+    {
+        document.write("*** forEach문을 이용해서 각 데이터를 출력하시오!!! ***<br>");
+
+        const arr = [100, 200, 300, 400, 500];
+
+        arr.forEach((el) => {
+            document.write(el, "<br>");
+        });
+        
+        arr.forEach(el => {
+            document.write(el, "<br>");
+        });
+
+        arr.forEach(el => document.write(el, "<br>"));
+
+        document.write("<br><br>");
+    }
+
+    //forEach문을 이용해서 각 데이터를 출력하시오!!!
+    {
+        document.write("*** for of/in문을 이용해서 각 데이터를 출력하시오!!! ***<br>");
+
+        const arr = [100, 200, 300, 400, 500];
+
+       for(let element of arr) document.write(element, "<br>");
+       for(let element in arr) document.write(element, "<br>");
+       for(let element in arr) document.write(arr[element], "<br>");
+
+        document.write("<br><br>");
+    }
+
+    //배열에서 300 찾은 다음 출력하세요!!!
+    {
+        document.write("*** 배열에서 300 찾은 다음 출력하세요!!! ***<br>");
+
+        const arr = [100, 200, 300, 400, 500];
+
+        const find = arr.find(element => {
+            return element === 300
+        });
+        document.write(find,"<br><br>");
+    }
+
+    //"함수가 실행되었습니다." (선언적 함수);
+    {
+        document.write("*** 함수가 실행되었습니다. (선언적 함수) ***<br>");
+
+        function func(){
+            document.write("함수가 실행되었습니다.<br><br>");
+        };
+        func();
+    }
+
+    //"함수가 실행되었습니다." (익명 함수);
+    {
+        document.write("*** 함수가 실행되었습니다. (익명 함수) ***<br>");
+
+        const func = function(){
+            document.write("함수가 실행되었습니다.<br><br>");
+        }
+        func();
+    }
+
+    //"함수가 실행되었습니다." (매개변수 함수);
+    {
+        document.write("*** 함수가 실행되었습니다. (매개변수 함수) ***<br>");
+
+        function func(str){
+            document.write(str);
+        }
+        func("함수가 실행되었습니다.<br><br>");
+    }
+
+    //"함수가 실행되었습니다." (리턴값 함수);
+    {
+        document.write("*** 함수가 실행되었습니다. (리턴값 함수) ***<br>");
+        
+        function func(){
+            const str = "함수가 실행되었습니다.";
+            return str;
+        }
+        document.write(func(), "<br><br>");
+    }
 
 
 
