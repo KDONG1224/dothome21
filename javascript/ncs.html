@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCS시험</title>
+</head>
+<body>
+    <script>
+        //switch문 활용
+        {
+            document.write("*** switch문을 이용 ***<br>")
+
+            var inputString = prompt("제일 먼저 잡고 싶은 물건은 무엇인가요?", "1.과일, 2.떡, 3.수정구슬, 4.현찰, 5.반지"); 
+            // document.write(inputString);
+            console.log(inputString)
+
+            let str = inputString;
+
+            switch (str){
+                case "과일" :
+                    document.write("당신은 생각이 많고 진지해 보이는 연상 타입입니다.");
+                break;
+                case "떡" :
+                    document.write("당신은 무드에 약해 화술과 매너가 좋은 타입입니다.");
+                break;
+                case "수정구슬" :
+                    document.write("당신은 정열적이고 열중하는 타입입니다.");
+                break;
+                case "현찰" :
+                    document.write("당신은 부드럽고 따뜻한 타입입니다.");
+                break;ㅂ
+                case "반지" :
+                    document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.");
+                break;
+                default :
+                    document.write("str==값이없음");
+                break;
+            }
+        }
+
+        //if문 활용
+        {
+            document.write("*** if문을 이용 ***<br>")
+
+            var inputString = prompt("제일 먼저 잡고 싶은 물건은 무엇인가요?", "1.과일, 2.떡, 3.수정구슬, 4.현찰, 5.반지"); 
+            // document.write(inputString);
+            console.log(inputString)
+
+            let str = inputString;
+
+            if (str="과일"){
+                document.write("당신은 생각이 많고 진지해 보이는 연상 타입입니다.");
+            } else if (str="떡"){
+                document.write("당신은 무드에 약해 화술과 매너가 좋은 타입입니다.");
+            } else if (str="수정구슬"){
+                document.write("당신은 정열적이고 열중하는 타입입니다.");
+            } else if (str="현찰"){
+                document.write("당신은 부드럽고 따뜻한 타입입니다.");
+            } else if (str="반지"){
+                document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.");
+            }               
+        }
+        
+    </script>
+</body>
+</html>
