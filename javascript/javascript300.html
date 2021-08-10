@@ -332,6 +332,11 @@
         document.write(str);
     }
     func("03. 함수가 실행되었습니다.");
+
+    function func1(str1, str2){
+        document.write(str1, str2);
+    }
+    func1("03. 함수가(str1)", " 실행되었습니다.(str2)");
 }
 </code></pre>
         </div>
@@ -738,7 +743,12 @@
                 document.write("*** 03. 매개변수 함수 ***<br>");
                 document.write(str);
             }
-            func("03. 함수가 실행되었습니다.<br><br>");
+            func("03. 함수가 실행되었습니다.<br>");
+
+            function func1(str1, str2){
+                document.write(str1, str2);
+            }
+            func1("03. 함수가(str1)", " 실행되었습니다.(str2)<br><br>");
         }
 
         //sample04
