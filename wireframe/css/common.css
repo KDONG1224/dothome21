@@ -1,0 +1,8 @@
+
+/* container */
+.container {
+    max-width: 1200px;                                              /* max-width값과 width값을 100%로 주면 @media와 같은 효과를 줄 수 있다.*/
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.13);
+}
