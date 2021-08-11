@@ -336,7 +336,7 @@
 
     <!-- sample01 -->
     <div id="sample01" class="sample">
-        <h2> 01. 날짜 메서드 : getFullYear() <span class="dot"></span></h2>
+        <h2> 01. 날짜 메서드 : getFullYear() / getMonth() / getHours() / getMinutes() / getSeconds() / getMilliseconds() / getDay() :연도/월/일/시간/분/초/밀리초/요일 불러오기 <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -541,7 +541,7 @@
                         <td class="sample03_M3"></td>
                         <td class="sample03_R3"></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td class="sample03_N4"></td>
                         <td class="sample03_Q4"></td>
                         <td class="sample03_M4"></td>
@@ -552,13 +552,22 @@
                         <td class="sample03_Q5"></td>
                         <td class="sample03_M5"></td>
                         <td class="sample03_R5"></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    
+    //타임스탬프는 1970년 1월 1일 00:00:00부터 현재까지의 경과 시간을 밀리초(1/1000)로 표현한 것입니다.
+
+    const date = Date.parse("2021/8/11");
+    document.querySelector(".sample03_R1").innerHTML = date;
+
+    const date2 = Date.parse("8 11 2021");
+    document.querySelector(".sample03_R2").innerHTML = date2;
+
+    const date3 = Date.now();
+    document.querySelector(".sample03_R3").innerHTML = date3;
 }
 </code></pre>
         </div>
