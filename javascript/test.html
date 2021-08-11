@@ -380,39 +380,197 @@
             return str;
         }
         document.write(func(), "<br><br>");
+        document.write("<br><br><br><br><br>");
     }
 
 
 
-    {
-        var inputString = prompt("제일 먼저 잡고 싶은 물건은 무엇인가요?", "1.과일, 2.떡, 3.수정구슬, 4.현찰, 5.반지"); 
-        // document.write(inputString);
-        console.log(inputString)
+    // {
+    //     var inputString = prompt("제일 먼저 잡고 싶은 물건은 무엇인가요?", "1.과일, 2.떡, 3.수정구슬, 4.현찰, 5.반지"); 
+    //     // document.write(inputString);
+    //     console.log(inputString)
 
-        let str = 0;
-        switch (str){
-            case "과일" :
-                document.write("당신은 생각이 많고 진지해 보이는 연상 타입입니다.");
-            break;
-            case "떡" :
-                document.write("당신은 무드에 약해 화술과 매너가 좋은 타입입니다.");
-            break;
-            case "수정구슬" :
-                document.write("당신은 정열적이고 열중하는 타입입니다.");
-            break;
-            case "현찰" :
-                document.write("당신은 부드럽고 따뜻한 타입입니다.");
-            break;
-            case "반지" :
-                document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.");
-            break;
-            default :
-                document.write("str==값이없음");
-            break;
+    //     let str = 0;
+    //     switch (str){
+    //         case "과일" :
+    //             document.write("당신은 생각이 많고 진지해 보이는 연상 타입입니다.");
+    //         break;
+    //         case "떡" :
+    //             document.write("당신은 무드에 약해 화술과 매너가 좋은 타입입니다.");
+    //         break;
+    //         case "수정구슬" :
+    //             document.write("당신은 정열적이고 열중하는 타입입니다.");
+    //         break;
+    //         case "현찰" :
+    //             document.write("당신은 부드럽고 따뜻한 타입입니다.");
+    //         break;
+    //         case "반지" :
+    //             document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.");
+    //         break;
+    //         default :
+    //             document.write("str==값이없음");
+    //         break;
+    //     }
+        
+    // }
+
+    //시험연습 5회차
+    {
+        document.write("*** 시험연습 5회차 ***<br>");
+
+        //선언적 함수
+        {
+            function func(){
+                document.write("선언적 함수가 실행됨<br>");
+            }
+            func();
+        }
+
+        //익명함수
+        {
+            const func = function(){
+                document.write("익명함수가 실행됨<br>");
+            }
+            func();
+        }
+
+        //매개변수함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("매개변수함수가 실행됨<br>");
+        }
+
+        //리턴값함수
+        {
+            function func(){
+                const str = "리턴값함수가 실행됨<br>";
+                return str;
+            }
+            document.write(func());
+        }
+
+        //화살표함수 : 선언적함수
+        {
+            func = () => {
+                document.write("화살표 선언적함수가 실행됨<br>");
+            }
+            func();
+        }
+
+        //화살표함수 : 익명함수
+        {
+            const func = () => {
+                document.write("화살표 익명함수가 실행됨<br>")
+            }
+            func();
+        }
+
+        //화살표함수 : 리턴값함수
+        {
+            func = () => {
+                const str = "화살표 리턴값함수가 실햄됨<br>";
+                return str;
+            }
+            document.write(func());
+        }
+
+        //화살표함수 : 익명+매개+리턴값
+        {
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("화살표 익명+매개+리턴값<br>"));
+        }
+
+        //화살표함수 : 익명+매개+리턴값+괄호생략
+        {
+            const func = str => {
+                return str;
+            }
+            document.write(func("화살표 익명+매개+리턴값+괄호생략<br>"));
+        }
+
+        //화살표함수 : 익명+매개+리턴값+매개괄호생략+리턴생략
+        {
+            const func = str => str;
+
+            document.write(func("화살표 익명+매개+리턴값+매개괄호생략+리턴생략<br>"));
+        }
+
+        //화살표함수 : 선언적+매개+리턴값+매개괄호생략+리턴생략
+        {
+            func = str => str;
+
+            document.write(func("화살표 선언적+매개+리턴값+매개괄호생략+리턴생략<br>"));
+        }
+        
+        //내부함수
+        {
+            function func(){
+                function funA(){
+                    document.write("A가 실행됨<br>")
+                }
+                funA();
+
+                function funB(){
+                    document.write("B가 실행됨<br>")
+                }
+                funB();
+            }
+            func();
+        }
+
+        //즉시실행함수
+        {
+            (function(){
+                document.write("즉시실행됨<br>")
+            })();
+        }
+
+        //파라미터함수
+        {
+            function func(str = "파라미터함수 실행됨<br>"){
+                document.write(str);
+            }
+            func();
+        }
+
+        //아규먼트함수
+        {
+            function func(strA, strB){
+                document.write(arguments[0]);
+                document.write(arguments[1]);
+            }
+            func("함수A가<br>", "함수B가<br>")
+        }
+
+        //재귀함수
+        {
+            function func(num){
+                if(num<=1){
+                    document.write("재귀함수가 실행됨<br>");
+                } else {
+                    document.write("재귀함수else가 실행됨<br>");
+                    func(num-1);
+                }
+            }
+            func(5);
+        }
+
+        //콜백함수
+        {
+            function funA(){
+                document.write("함수A<br>");
+            }
+            function funB(str){
+                document.write("함수B가<br>");
+                str();
+            }
+            funB(funA); 
         }
     }
-
-
 
 
 
