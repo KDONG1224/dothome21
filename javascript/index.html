@@ -121,11 +121,21 @@
             transition: all 0.4s;
         }
         .design li a.active {
-            background-color: gold;
-            border-color: gold;
+            background-color: #fff;
+            border-color: #0e43f1;
+            color: #0e43f1;
+        }
+        .design li a.passive {
+            background-color: #cd4f5d;
+            border-color: #cd4f5d;
             color: #fff;
         }
-        .design li a:hover {
+        .design li a.active:hover {
+            box-shadow: inset 0 -100px 0 #cd4f5d;
+            color: #fff;
+            border-style: solid;
+        }
+        .design li a.passive:hover {
             box-shadow: inset 0 -100px 0 #0e43f1;
             color: #fff;
             border-style: solid;
@@ -482,7 +492,7 @@
 
             <ul class="design">
                 <li><a class="active" href="../javascript/index.html">Design1</a></li>
-                <li><a href="../javascript-1/index.html">Design2</a></li>
+                <li><a class="passive" href="../javascript-1/index.html">Design2</a></li>
             </ul>
 
             <nav class="menu">

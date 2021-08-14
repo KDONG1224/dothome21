@@ -18,18 +18,13 @@
                 font-weight: normal;
                 font-style: normal;
             }
-            @font-face {
-                font-family: 'TmonMonsori';
-                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
     
             * {
                 margin: 0;
                 padding: 0;
                 font-family: 'NEXON Lv1 Gothic OTF';
                 line-height: 1.6;
+                word-break: break-all;
             }
     
             body {
@@ -38,20 +33,14 @@
             }
     
             h1 {
-                padding-top: 40px;
                 padding-bottom: 20px;
-            }
-    
-            h1 a {
-                font-family: 'TmonMonsori';
             }
     
             hr {
                 margin: 5% 0;
                 border-style: dashed;
                 border-color: #E6E6E6;
-                border-width: 0px;
-                border-bottom-width: 1px;
+                border-width: 1px;
             }
     
             img {
@@ -184,44 +173,63 @@
             .sample .sam dd {
                 padding: 3px 0 16px 0;
             }
+    
+            ol {
+                list-style: none;
+            }
+    
+            ol li {
+                display: inline;
+                text-align: center;
+                line-height: 40px;
+                margin-bottom: 5px;
+            }
+    
+            ol li a {
+                display: inline-block;
+                border-radius: 30px;
+                padding: 2px 20px 0px 20px;
+                border: 1px solid #000;
+            }
+    
+            ol li a:hover {
+                background: #000;
+                color: #fff;
+            }
+    
+            ol li.active {
+                background: #000;
+            }
+    
+            ol li.active a {
+                color: #fff;
+            }
             .mt20{
                 margin-top: 20px;
             }
-            .page {
-                position: absolute;
-                right: 20px;
-                top: 15px;
+            table tr td {
+                border: 1px solid #989898;
+                padding: 5px;
             }
-            .page li {
-                display: inline-block;
-                list-style: none;
+            .ol1::before {
+                content: "데이터 저장하기 : ";
             }
-            .page li a {
-                text-decoration: none;
-                color: #222;
+            .ol2::before {
+                content: "데이터 불러오기 : ";
             }
-            .page li a:hover {
-                color: #09db09;
+            .ol3::before {
+                content: "데이터 실행하기 : ";
             }
-            .menu li {
-                display: inline;
+            .ol4::before {
+            content: "데이터 제어하기 : ";
             }
-            .menu li a {
-                font-family: 'NEXON Lv1 Gothic OTF';
-                color: #000;
-                border: 1px dashed #000;
-                padding: 10px 30px;
-                display: inline-block;
-                border-radius: 50px;
-                font-size: 16px;
-                margin: 4px 1px;
-                box-shadow: inset 0 0 0 #000;
-                transition: all 0.4s;
+            .ol5::before {
+                content: "데이터 내장 객체 : ";
             }
-            .menu li a:hover {
-                box-shadow: inset 0 -100px 0 #000;
-                color: #fff;
+            .ol6::before {
+                content: "데이터 공부하기 : ";
             }
+    
             .view {
                 padding: 20px;
             }
@@ -256,109 +264,100 @@
                 color: #000;
                 background-color: #f5f5f5;
             }
-            @media(max-width: 800px){
-                body {
-                    font-size: 13px;
-                }
-                h1 {
-                    text-align: center;
-                }
-                .menu li a {
-                    font-size: 12px;
-                    padding: 5px 20px;
-                }
-                .list li {
-                    line-height: 1.2;
-                }
-                .list a {
-                    font-size: 12px;
-                }
-                .sample h2 {
-                    font-size: 14px;
-                    font-weight: normal;
-                    padding: 7px 5px 5px;
-                }
-                .sample h2 .dot {
-                    display: none;
-                }
-                .sample pre {
-                    font-size: 14px;
-                }
-                .view {
-                    padding: 5px;
-                    max-width: 800px;
-                    overflow: auto;
-                }
-                .view th {
-                    font-weight: normal;
-                }
+            .page {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            }
+            .page li {
+                display: inline-block;
+                list-style: none;
+            }
+            .page li a {
+                text-decoration: none;
+                color: #222;
+            }
+            .page li a:hover {
+                color: #09db09;
+            }
+            @media (max-width: 600px){
                 .view table td.result {
                     color: #000;
+                    background-color: #f5f5f5;
                 }
             }
+            
         </style>
-    </head>
+</head>
+
+<body>
+    <h1>Javascript 문법 정리</h1>
+
+    <ul class="page">
+        <li><a href="../refer-html/index.html">HTML</a></li>
+        <li><a href="../refer-css/index.html">CSS</a></li>
+        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+    </ul>
     
-    <body>
-    
-        <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-    
-        <ul class="page">
-            <li><a href="../refer-html/index.html">HTML</a></li>
-            <li><a href="../refer-css/index.html">CSS</a></li>
-            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
-        </ul>
-    
-        <nav class="menu">
-            <ul>
-                <li><a href="javascript100.html">데이터 저장하기</a></li>
-                <li><a href="javascript500.html">데이터 불러오기</a></li>
-                <li><a href="javascript300.html">데이터 실행하기</a></li>
-                <li><a href="javascript200.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript602.html">문자열 객체</a></li>
-                <li><a href="javascript601.html">배열 객체</a></li>
-                <li><a href="javascript604.html">날짜 객체</a></li>
-                <li><a href="javascript609.html">수학 객체</a></li>
-                <li><a href="javascript608.html">숫자 객체</a></li>
-                <li><a href="javascript603.html">브라우저 객체</a></li>
-                <li><a href="javascript607.html">요소 객체</a></li>
-                <li><a href="javascript605.html">이벤트 객체</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript606.html">샘플</a></li>
-                <li><a href="javascript400.html">알고리즘</a></li>
-            </ul>
-        </nav>
+    <ol class="ol1">
+        <li><a href="javascript100.html">변수</a></li>
+        <li><a href="javascript100.html">상수</a></li>
+        <li><a href="javascript100.html">배열(Array)</a></li>
+        <li><a href="javascript100.html">객체(Object)</a></li>
+    </ol>
+    <ol class="ol2">
+        <li><a href="javascript200.html">변수</a></li>
+        <li><a href="javascript200.html">상수</a></li>
+        <li><a href="javascript200.html">배열</a></li>
+        <li><a href="javascript200.html">객체</a></li>
+    </ol>
+    <ol class="ol3">
+        <li><a href="javascript300.html">함수(Function)</a></li>
+    </ol>
+    <ol class="ol4">
+        <li><a href="javascript400.html">조건문</a></li>
+        <li><a href="javascript400.html">반복문</a></li>
+    </ol>
+    <ol class="ol5">
+        <li><a href="javascript500.html">문자열 객체</a></li>
+        <li><a href="javascript600.html">배열 객체</a></li>
+        <li><a href="javascript700.html">날짜 객체</a></li>
+        <li><a href="javascript800.html">수학 객체</a></li>
+        <li><a href="javascript900.html">숫자 객체</a></li>
+        <li><a href="javascript1000.html">브라우저 객체</a></li>
+        <li><a href="javascript1100.html">요소 객체</a></li>
+        <li><a href="javascript1200.html">이벤트 객체</a></li>
+    </ol>
+    <ol class="ol6">
+        <li><a href="javascript1300.html">샘플</a></li>
+        <li><a href="javascript1400.html">알고리즘</a></li>
+    </ol>
     
     <h2 class="mt20">배열 객체</h2>
-    <ol class="list">
-        <li><a href="#sample01">배열 메서드 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
-        <li><a href="#sample02">배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열)</a></li>
-        <li><a href="#sample03">배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
-        <li><a href="#sample03">배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)</a></li>
-        <li><a href="#sample04">배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)</a></li>
-        <li><a href="#sample04">배열 메서드 : pop() : 배열 마지막 요소 삭제하기 : 반환(삭제된 요소)</a></li>
-        <li><a href="#sample05">배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">배열 메서드 : includes() : 배열 요소 검색하기 : 반환(숫자)</a></li>
-
-        <li><a href="#sample06">배열 메서드 : reverse() : 배열 요소의 순서를 반대로 정렬할 때 : 반환(불린)</a></li>
-        <li><a href="#sample06">배열 메서드 : sort() : 배열 요소 정렬할 때 : 반환(배열)</a></li>
-        <li><a href="#sample07">배열 메서드 : concat() : 배열 요소 결합할 때 : 반환(배열)</a></li>
-        <li><a href="#sample08">배열 메서드 : slice() : 배열 요소를 다른 요소로 변경할 때 : 반환(배열)</a></li>
-        <li><a href="#sample09">배열 메서드 : splice() : 배열 요소를 다른 요소로 변경할 때 : 반환(배열)</a></li>
-        <li><a href="#sample10">배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
-        <li><a href="#sample10">배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</a></li>
-        <li><a href="#sample11">배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색하기 : 반환(배열)</a></li>
-        <li><a href="#sample12">배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만들기 : 반환(배열)</a></li>
-        <li><a href="#sample13">배열 메서드 : reduce() : 배열 요소를 하나로 정리하기 : 반환(결과값)</a></li>
-        
-        <li><a href="#sample13">배열 메서드 : reduceRight() : 배열 요소를 하나로 정리하기 : 반환(결과값)</a></li>
-        <li><a href="#sample14">배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
-    </ol>
+    <ul>
+        <li><a href="#sample01">01. 배열 메서드 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
+        <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열)</a></li>
+        <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
+        <li><a href="#sample03">03. 배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)</a></li>
+        <li><a href="#sample04">04. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+        <li><a href="#sample04">04. 배열 메서드 : pop() : 배열 마지막 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색하기 : 반환(숫자)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : includes() : 배열 요소 검색하기 : 반환(숫자)</a></li>
+        <li><a href="#sample06">06. 배열 메서드 : reverse() : 배열 요소의 순서를 반대로 정렬할 때 : 반환(불린)</a></li>
+        <li><a href="#sample06">06. 배열 메서드 : sort() : 배열 요소 정렬할 때 : 반환(배열)</a></li>
+        <li><a href="#sample07">07. 배열 메서드 : concat() : 배열 요소 결합할 때 : 반환(배열)</a></li>
+        <li><a href="#sample08">08. 배열 메서드 : slice() : 배열 요소를 다른 요소로 변경할 때 : 반환(배열)</a></li>
+        <li><a href="#sample09">09. 배열 메서드 : splice() : 배열 요소를 다른 요소로 변경할 때 : 반환(배열)</a></li>
+        <li><a href="#sample10">10. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
+        <li><a href="#sample10">10. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</a></li>
+        <li><a href="#sample11">11. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색하기 : 반환(배열)</a></li>
+        <li><a href="#sample12">12. 배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만들기 : 반환(배열)</a></li>
+        <li><a href="#sample13">13. 배열 메서드 : reduce() : 배열 요소를 하나로 정리하기 : 반환(결과값)</a></li>
+        <li><a href="#sample13">13. 배열 메서드 : reduceRight() : 배열 요소를 하나로 정리하기 : 반환(결과값)</a></li>
+        <li><a href="#sample14">14. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
+    </ul>
 
     <hr>
 
