@@ -1,25 +1,82 @@
 <!DOCTYPE html>
-<html lang="ko">                                                                    <!-- 언어설정 : 한국어 -->
-<head>                                                                              <!--  -->
-    <meta charset="UTF-8">                                                          <!-- 언어설정 : UTF-8은 전세계 공통언어 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">                           <!-- 호환성 : 익스프로 버전으로 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">          <!-- 비율 : pc에서 보다가 모바일에서 볼 경우 -->
-    <meta name="author" content="kdong">                                            <!-- 누가 만들었는지 -->
-    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">      <!-- 사이트 설명 -->
-    <meta name="keywords" content="크동, 사이트, 웹퍼블리셔, 프론트엔드개발자">         <!-- 키워드 -->
+<html lang="ko">                                                                        <!-- 언어설정 : 한국어 -->
+<head>                                                                                  <!--  -->
+    <meta charset="UTF-8">                                                              <!-- 언어설정 : UTF-8은 전세계 공통언어 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">                               <!-- 호환성 : 익스프로 버전으로 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">              <!-- 비율 : pc에서 보다가 모바일에서 볼 경우 -->
+    <meta name="author" content="kdong">                                                <!-- 누가 만들었는지 -->
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">       <!-- 사이트 설명 -->
+    <meta name="keywords" content="크동, 사이트, 웹퍼블리셔, 프론트엔드개발자">          <!-- 키워드 -->
     <title>CardType01</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">                                    <!-- 폰트설정 css -->
     <link rel="stylesheet" href="css/reset.css">                                    <!-- 기본설정 초기화 css -->
     <link rel="stylesheet" href="css/common.css">                                   <!-- 공통설정 css -->
-    <link rel="stylesheet" href="css/style.css">                                    <!-- 스타일설정 css -->
+
+    <!-- Card Type CSS -->
+    <link rel="stylesheet" href="css/cardType.css">                                 <!-- 스타일설정 css -->
 
     <!-- 파비콘 -->
     <!-- <link rel="shortcut icon" href="../assets/ico/favicon.ico"> -->            <!-- 화면 탭의 아이콘(?) -->
 </head>
 <body>
-    <section>
+
+    <!-- cardType01 -->
+    <section id="cardType" class="cardType01">
+        <div class="container">
+            <h2>혼술족을 위한 제안</h2>
+            <p>분위기를 내고 싶은 당신, 혼술을 하는 당신, 맛있는 술을 마시고 싶은 당신, 여러분을 위해 제안합니다. 
+            열심히 준비하였습니다. 재밌게 봐주세요~</p>
+            <div class="card-wrap">
+                <div class="card">
+                    <a href="#">
+                        <img src="img/card01.jpg" alt="칵테일(Cocltail) 이미지입니다." class="card-img">
+                        <strong class="card-title">칵테일(Cocltail)</strong>
+                        <span class="card-desc">술과 여러 종류의 음료, 첨가물 등을 섞어 만든 혼합주를 일컫는다.</span>
+                        <span class="card-keyword">
+                            <span>#칵테일</span>
+                            <span>#모히또</span>
+                            <span>#블루하와이</span>
+                            <span>#마가리타</span>
+                            <span>#바카디</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img src="img/card02.jpg" alt="맥주(Beer) 이미지입니다." class="card-img">
+                        <strong class="card-title">맥주(Beer)</strong>
+                        <span class="card-desc">보리를 가공한 맥아를 발효한 술이다. 알콜은 맥주의 종류에 따라 다양한 도수를 가진다.</span>
+                        <span class="card-keyword">
+                            <span>#맥주</span>
+                            <span>#카스</span>
+                            <span>#테라</span>
+                            <span>#한맥</span>
+                            <span>#타이거</span>
+                            <span>#하이네켄</span>
+                            <span>#기네스</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img src="img/card03.jpg" alt="보드카(Vodka) 이미지입니다." class="card-img">
+                        <strong class="card-title">보드카(Vodka)</strong>
+                        <span class="card-desc">동유럽 원산의 증류주이다. 러시아어로 물을 뜻하는 낱말 'вода 보다’에서 유래되었다.</span>
+                        <span class="card-keyword">
+                            <span>#앱솔루트</span>
+                            <span>#스미노프</span>
+                            <span>#레이카</span>
+                            <span>#벨루가</span>
+                            <span>#그레이구스</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- //cardType01 -->
+    
 </body>
 </html>

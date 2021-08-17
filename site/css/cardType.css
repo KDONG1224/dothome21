@@ -1,0 +1,59 @@
+/* 카드 타입 유형 */
+
+/* cardType01 */
+#cardType {}
+
+.cardType01 {
+    font-family: 'GmarketSans';
+    padding: 60px 0;
+}
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.cardType01 p {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+
+/* float을 이용한 레이아웃(옛날버전-구 익스플로러) */
+/* .card-wrap {
+    overflow: hidden;
+}
+.card-wrap > div {  >의 뜻은 첫번째 자식만 해당되게 함
+    float: left;
+    width: 387px;
+    margin-right: 19px;
+}
+.card-wrap > div:last-child {
+    margin-right: 0;
+} */
+
+/* flex를 이용한 레이아웃(최신버전) */
+.card-wrap {
+    display: flex;
+    /* gap: 10px; */
+    justify-content: space-between; /* 가로정렬: 양쪽이 딱 붙는다 */
+}
+.card-wrap > div {
+    width: 387px;
+}
+.card {}
+.card .card-img {}
+.card .card-title {
+    display: block;
+    font-size: 32px;
+}
+.card .card-desc {
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+}
+.card .card-keyword {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+}
