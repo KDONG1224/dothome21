@@ -297,6 +297,7 @@
         <li><a href="../refer-html/index.html">HTML</a></li>
         <li><a href="../refer-css/index.html">CSS</a></li>
         <li><a href="../javascript/index.html">JAVASCRIPT</a></li>
+        <li><a href="../javascript/index2.html">JQUERY</a></li>
     </ul>
 
     <nav class="menu">
@@ -834,6 +835,12 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    //slice(시작인덱스);
+    //slice(시작인덱스, 종료인덱스);
+    //slice() : 시작 값이 종료 값보다 클 경우 : 결과 값 없음
+    //subString() : 시작 값이 종료 값보다 클 경우 : 두 값을 바꿔서 처리 --> 데이터 값을 받아올때 시작값이 큰 경우가 발생할 때 사용
+    //substr(시작인덱스, 글자수)
+
     const str = "자바스크립트(javascript) 공부";
 
     const text = str.slice(1, 4);
@@ -1491,7 +1498,7 @@
             
             document.querySelector(".sample07_N7").innerHTML = "7";
             document.querySelector(".sample07_Q7").innerHTML = str;
-            document.querySelector(".sample07_M7").innerHTML = ".substring(4, 5)";
+            document.querySelector(".sample07_M7").innerHTML = ".substr(4, 5)";
             document.querySelector(".sample07_R7").innerHTML = text7;
         }
 
@@ -1556,7 +1563,7 @@
 
             document.querySelector(".sample09_N2").innerHTML = "2";
             document.querySelector(".sample09_Q2").innerHTML = str2;
-            document.querySelector(".sample09_M2").innerHTML = ".split('')";
+            document.querySelector(".sample09_M2").innerHTML = ".split(' ')";
             document.querySelector(".sample09_R2").innerHTML = text2;
 
             const str3 = "자바스크립트(javascript) 공부";
