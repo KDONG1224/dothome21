@@ -76,78 +76,58 @@ body {
     opacity: 0.5;
 }
 
-
 /* cardType02 */
 .cardType02 {
     font-family: 'S-CoreDream';
     padding: 150px 0;
 }
 .cardType02 h2 {
-    font-weight: 500;
     font-size: 50px;
-    margin-bottom: 7px;
+    font-weight: 500;
     text-align: center;
+    margin-bottom: 7px;
 }
 .cardType02 p {
-    font-weight: 300;
     font-size: 26px;
-    line-height: 1.28;
-    margin-bottom: 40px;
+    font-weight: 300;
     text-align: center;
 }
-/* float: left 이용 방법 */
-/* .cardType02 .card-wrap {
-    overflow: hidden;
-}
-.cardType02 .card-wrap .card {
-    float: left;
-    box-sizing: border-box;
-}
-.cardType02 .card-wrap .card:last-child {
-    margin-right: 0;
-} */
-
-
-/* display: flex 이용 방법 */
-/* .cardType02 .card-wrap {
-    display: flex;
-} */
-
-/* grid 이용 방법 */
 .cardType02 .card-wrap {
     display: grid;
     grid-template-columns: repeat(4, 285px);
     gap: 20px;
 }
-
-.cardType02 .card-wrap {}
 .cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
     margin: 40px 20px 0 0;
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
-    border: 1px solid #e6e6e6;
+    border: solid 1px #e6e6e6;
     box-sizing: border-box;
 }
 .cardType02 .card-wrap .card .card-title {
-    display: block;
     font-size: 24px;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 .cardType02 .card-wrap .card .card-desc {
-    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 6px;
 }
 .cardType02 .card-wrap .card .card-word {}
 .cardType02 .card-wrap .card .card-word span {
+    font-size: 10px;
     margin: 6px 202px 0 1px;
     padding: 4px 16px 3px;
     border-radius: 20px;
+    border: solid 1px #000;
     background-color: #000;
-    display: inline-block;
     color: #fff;
-    font-size: 10px;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
+    display: inline-block;
 }
-
