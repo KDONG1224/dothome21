@@ -116,11 +116,14 @@ body {
     font-weight: 300;
     line-height: 1.4;
     margin-bottom: 6px;
+    display: block;
 }
-.cardType02 .card-wrap .card .card-word {}
+.cardType02 .card-wrap .card .card-word {
+    display: block;
+}
 .cardType02 .card-wrap .card .card-word span {
     font-size: 10px;
-    margin: 6px 202px 0 1px;
+    margin: 15px 0 30px 0;
     padding: 4px 16px 3px;
     border-radius: 20px;
     border: solid 1px #000;
