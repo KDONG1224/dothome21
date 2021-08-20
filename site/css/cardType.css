@@ -209,14 +209,15 @@ body {
     text-transform: uppercase;
 }
 .cardType03 .card-wrap .card .card-aside .card-title {
-    margin: 9px 179px 14px 19px;
+    margin: 2px 179px 5px 19px;
     font-size: 26px;
     font-weight: bold;
     display: block;
     white-space: nowrap;
 }
 .cardType03 .card-wrap .card .card-aside .card-desc {
-    margin:2px 2px 10px 19px;
+    height: 75px;
+    margin: 2px 2px 20px 19px;
     font-size: 16px;
     line-height: 1.53;
     color: #555;
