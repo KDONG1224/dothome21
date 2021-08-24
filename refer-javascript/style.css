@@ -35,11 +35,6 @@ hr {
     border-width: 0px;
     border-bottom-width: 1px;
 }
-img {
-    vertical-align: top;
-    border-radius: 5px;
-    margin: 5px;
-}
 ul {
     list-style: none;
 }
@@ -227,6 +222,51 @@ color: #fff;
 border-radius: 30px;
 padding: 0 20px;
 }
+/* option */
+.view {
+    padding: 20px; 
+    border: 1px solid #f2f2f2;
+}
+.view ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.view li {
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    margin: 10px;
+    color: #222;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.view .red {
+    border: 1px dashed #a51a3d;
+    background-color: #f9f2f4;
+    color: #a51a3d;
+}
+.view .blue {
+    border: 1px dashed #3d90b7;
+    background-color: #e7f6fd;
+    color: #3d90b7;
+}
+.btn {
+    padding: 20px; 
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+}
+.btn a {
+    border: 1px solid #e6e6e6;
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 4px 0;
+    color: #222;
+    transition: all 0.2s;
+}
+.btn a:hover {
+    background: #000;
+    color: #fff;
+}
 @media(max-width: 800px){
     body {
         padding: 5%;
@@ -261,13 +301,17 @@ padding: 0 20px;
         max-width: 800px;
         overflow: auto;
     }
-    .viwe th,
+    .view table {
+        border-left: 0px;
+        border-right: 0px;
+    }
+    .view th,
     .view table td {
-        font-size: 10px;
         white-space: nowrap;
-        font-weight: normal;
+        font-size: 13px;
     }
     .view table td.result {
         color: #000;
+        background: #f1f1f1;
     }
 }
