@@ -20,7 +20,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    /* 위드값에 마진, 패딩 안넣게 함 */
 }
 body {
     padding: 2%;
@@ -289,7 +290,8 @@ hr {
         white-space: nowrap;
     }
     .table table td {
-        white-space: nowrap;
+        /* font-size: 8px; */
+        /* white-space: nowrap; */
     }
 }
 
