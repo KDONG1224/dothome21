@@ -181,7 +181,7 @@ a {
     color: #fff;
 }
 .result {}
-.result .result-title {
+.result h3 {
     font-size: 15px;
     margin-top: 8px;
     background: #E6E6E6;
@@ -190,23 +190,31 @@ a {
     color: #000;
     border-radius: 5px;
 }
-.result .result-title.red {
+.result h3:hover {
+    cursor: pointer;
     background-color: #E4E4E1;
     background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
  	background-blend-mode: normal, multiply;
     color: #000;
     border-radius: 5px 5px 0 0;
 }
-.result div {
-    color: #fff;
-    
-}
-.result div.active {
+/* .result .result-title.active {
+    background-color: #E4E4E1;
+    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+ 	background-blend-mode: normal, multiply;
+    color: #000;
+    border-radius: 5px 5px 0 0;
+} */
+.result .text {
+    display: none;
     color: #000;
     padding: 10px 10px;
     background-color: #000;
     color: #fff;
     border-radius: 0 5px 5px 5px;
+}
+.result text.active {
+    display: block;
 }
 .view {
     padding: 20px;

@@ -92,21 +92,6 @@
 </code></pre>
         </div>
     </div>
-    <div class="result">
-        <h3 class="result-title">결과보기</h3>
-        <div>
-            <span class="text1-1"></span>
-            <span class="text1-2"></span>
-            <span class="text1-3"></span>
-            <span class="text1-4"></span>
-            <span class="text1-5"></span>
-            <span class="text1-6"></span>
-            <span class="text1-7"></span>
-            <span class="text1-8"></span>
-            <span class="text1-9"></span>
-            <span class="text1-10"></span>
-        </div>
-    </div>
 
     <hr>
 
@@ -428,26 +413,11 @@
 </code></pre>
         </div>
     </div>
-    <div class="result">
-        <h3 class="result-title">결과보기</h3>
-        <div>
-            <span class="text1-1"></span>
-            <span class="text1-2"></span>
-            <span class="text1-3"></span>
-            <span class="text1-4"></span>
-            <span class="text1-5"></span>
-            <span class="text1-6"></span>
-            <span class="text1-7"></span>
-            <span class="text1-8"></span>
-            <span class="text1-9"></span>
-            <span class="text1-10"></span>
-        </div>
-    </div>
 
     <hr>
 
     <div id="sample17" class="sample">
-        <h2> 01. 변수의 종류 : 지역변수, 전역변수 <span class="dot"></span></h2>
+        <h2> 17. 변수의 종류 : 지역변수, 전역변수 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     document.write("*** 17. 변수의 종류 : 전역변수, 지역변수 ***");
@@ -485,7 +455,7 @@
     <hr>
 
     <div id="sample18" class="sample">
-        <h2> 02. 변수의 변환 : 형 변환 <span class="dot"></span></h2>
+        <h2> 18. 변수의 변환 : 형 변환 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     document.write("*** 18. 변수의 변환 : 형 변환 ***");
@@ -515,7 +485,7 @@
     <hr>
 
     <div id="sample19" class="sample">
-        <h2> 03. 변수의 유형(데이터 타입) <span class="dot"></span></h2>
+        <h2> 19. 변수의 유형(데이터 타입) <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     //변수 : 숫자(number), 문자(string), 함수(function), 배열(object),
@@ -553,10 +523,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
         
-        document.querySelector(".result").addEventListener("click", () => {
-            document.querySelector(".result div").classList.toggle("active");
-            document.querySelector(".result h3").classList.toggle("red");
-        })
+        // document.querySelector(".result-title").addEventListener("click", () => {
+        //     document.querySelector(".result-title").classList.toggle("active");
+        //     document.querySelector(".result div").classList.toggle("active");
+        // })
+        
+        // document.querySelectorAll(".result-title").forEach((el) => {
+        //     el.addEventListener("click", function(){
+        //         document.querySelectorAll(".result div").forEach((el) => {
+        //             el.classList.toggle("active")
+        //         })
+        //     });
+        // })      
+        
+        // document.querySelectorAll(".result-title").forEach(el => {
+        //     el.addEventListener("click", function(){
+        //         this.classList.toggle("active");
+        //     });
+        // })
+        // document.querySelectorAll(".result div").forEach(el => {
+        //     el.addEventListener("click", function(){
+        //         this.classList.toggle("active")
+        //     })
+        // })
 
         //sample01
         //01. 변수 : 데이터 저장소
@@ -569,10 +558,6 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
-
-            document.querySelector(".text1-1").innerHTML = x;
-            document.querySelector(".text1-2").innerHTML = y;
-            document.querySelector(".text1-3").innerHTML = z;
         }
 
         //sample02
