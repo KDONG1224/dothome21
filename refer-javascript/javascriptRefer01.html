@@ -92,6 +92,21 @@
 </code></pre>
         </div>
     </div>
+    <div class="result">
+        <h3 class="result-title">결과보기</h3>
+        <div>
+            <span class="text1-1"></span>
+            <span class="text1-2"></span>
+            <span class="text1-3"></span>
+            <span class="text1-4"></span>
+            <span class="text1-5"></span>
+            <span class="text1-6"></span>
+            <span class="text1-7"></span>
+            <span class="text1-8"></span>
+            <span class="text1-9"></span>
+            <span class="text1-10"></span>
+        </div>
+    </div>
 
     <hr>
 
@@ -413,6 +428,21 @@
 </code></pre>
         </div>
     </div>
+    <div class="result">
+        <h3 class="result-title">결과보기</h3>
+        <div>
+            <span class="text1-1"></span>
+            <span class="text1-2"></span>
+            <span class="text1-3"></span>
+            <span class="text1-4"></span>
+            <span class="text1-5"></span>
+            <span class="text1-6"></span>
+            <span class="text1-7"></span>
+            <span class="text1-8"></span>
+            <span class="text1-9"></span>
+            <span class="text1-10"></span>
+        </div>
+    </div>
 
     <hr>
 
@@ -522,6 +552,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+        
+        document.querySelector(".result").addEventListener("click", () => {
+            document.querySelector(".result div").classList.toggle("active");
+            document.querySelector(".result h3").classList.toggle("red");
+        })
+
         //sample01
         //01. 변수 : 데이터 저장소
         {
@@ -533,6 +569,10 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector(".text1-1").innerHTML = x;
+            document.querySelector(".text1-2").innerHTML = y;
+            document.querySelector(".text1-3").innerHTML = z;
         }
 
         //sample02

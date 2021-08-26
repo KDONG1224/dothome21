@@ -162,3 +162,68 @@ body {
     margin-top: 5px;
     display: inline-block;
 }
+
+
+
+
+
+/* imageType03 */
+.imageType03 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType03 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.imageType03 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType03 .image-wrap .image {
+    position: relative;
+    perspective: 800px;
+}
+.imageType03 .image::after {
+    content: '';
+    position: absolute;
+    left: 30px; top: 30px; right: 30px; bottom: 30px;
+    background: #fff;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: all 0.4s ease-in-out;
+}
+.imageType03 .image:hover::after {
+    opacity: 0.9;
+    transform: rotateX(0deg);
+}
+.imageType03 .image .image-img {}
+.imageType03 .image .image-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transform: ;
+    transition: all 0.3s ease-in-out;
+}
+.imageType03 .image:hover .image-cont {
+    opacity: 1;
+    transform: translate(-50%, -60% );
+}
+.imageType03 .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+}
+.imageType03 .image .image-btn {
+    color: #fff;
+    padding: 10px 20px 8px 20px;
+    border-radius: 20px; 
+    background: #000;
+}
