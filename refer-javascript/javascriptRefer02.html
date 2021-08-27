@@ -870,9 +870,9 @@
             // num.forEach(function(){});  //es5
             // num.forEach(()=>{});  //es6
             num.forEach((element, index, array)=>{
-                document.write(element, "<br>");
-                document.write(index, "<br>");
-                document.write(array, "<br>");
+                // document.write(element, "<br>");
+                // document.write(index, "<br>");
+                // document.write(array, "<br>");
 
                 document.querySelector("#sample07 .text").innerHTML += `element : ${element} <br> index : ${index} <br> array : ${array} <br><br>`;
                 document.querySelector("#sample07 .result-box h3").addEventListener("click", function(){
@@ -887,12 +887,12 @@
         //sample08
         //08. 배열 : 데이터 불러오기 : for of문(Vue에서 많이 사용함 : 배열에서 사용)
         {
-            document.write("*** 08. 배열 : 데이터 불러오기 : for of문 ***<br>");
+            // document.write("*** 08. 배열 : 데이터 불러오기 : for of문 ***<br>");
 
             const num = [100, 200, 300, 400, 500];
 
             for ( let i of num ){
-                document.write(i);
+                // document.write(i);
 
                 document.querySelector("#sample08 .text").innerHTML += `i : ${i} <br>`;
                 document.querySelector("#sample08 .result-box h3").addEventListener("click", function(){
@@ -900,14 +900,12 @@
                     document.querySelector("#sample08 .result-box div").classList.toggle("active");
                 })
             }
-
-            document.write("<br><br>");
         }
 
         //sample09
         //09. 배열 : 데이터 불러오기 : for in문 : 객체에서 사용(배열에서도 가능)
         {
-            document.write("*** 09. 배열 : 데이터 불러오기 : for in문 ***<br>");
+            // document.write("*** 09. 배열 : 데이터 불러오기 : for in문 ***<br>");
 
             const num = [100, 200, 300, 400, 500];
 
@@ -926,26 +924,24 @@
                     document.querySelector("#sample09 .result-box div").classList.toggle("active");
                 })
             }
-
-            document.write("<br><br>");
         }
 
         //sample10
         //10. 배열 : 데이터 불러오기 : map() : 배열로 저장 : 객체, 배열 다 사용(상당히 많이 사용함 : 리액트)
         //단순 반복 for문, 배열 데이터 반복 forEach(), 배열 데이터 반복을 새로운 배열로 저장 map()
         {
-            document.write("*** 10. 배열 : 데이터 불러오기 : map() ***<br>");
+            // document.write("*** 10. 배열 : 데이터 불러오기 : map() ***<br>");
 
             const num = [100, 200, 300, 400, 500];
 
-            num.map( (el) => {
-                // document.write(el, "<br>");
-                // console.log(el);
+            // num.map( (el) => {
+            //     // document.write(el, "<br>");
+            //     // console.log(el);
 
-                document.querySelector("#sample10 .text").innerHTML += `el : ${el} <br>`;
-            } );
+            //     document.querySelector("#sample10 .text").innerHTML += `el : ${el} <br>`;
+            // } );
 
-            document.write("<br>");
+            // document.write("<br>");
 
             num.map( (element, index, array) => {
                 // document.write(element, "<br>");
@@ -969,7 +965,7 @@
         //sample11
         //11. 배열 : 데이터 불러오기 : 펼침 연산자(최신문법 : 리액트에서 많이 사용)
         {
-            document.write("*** 11. 배열 : 데이터 불러오기 : 펼침 연산자 ***<br>");
+            // document.write("*** 11. 배열 : 데이터 불러오기 : 펼침 연산자 ***<br>");
 
             const arr = [100, 200, 300, 400, 500];
 
@@ -1003,7 +999,7 @@
         //sample12
         //12. 객체 : 데이터 불러오기 : 기본
         {
-            document.write("*** 12. 객체 : 데이터 불러오기 : 기본 ***<br>");
+            // document.write("*** 12. 객체 : 데이터 불러오기 : 기본 ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1028,7 +1024,7 @@
         //sample13
         //13. 객체 : 데이터 불러오기 : Object
         {
-            document.write("*** 13. 객체 : 데이터 불러오기 : Object ***<br>");
+            // document.write("*** 13. 객체 : 데이터 불러오기 : Object ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1242,7 +1238,7 @@
         //sample21
         //21. 객체 : 데이터 불러오기 : 비구조화 할당(최신-리액트)
         {
-            document.write("*** 21. 객체 : 데이터 불러오기 : 비구조화 할당 ***<br>");
+            // document.write("*** 21. 객체 : 데이터 불러오기 : 비구조화 할당 ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1251,9 +1247,9 @@
             }
             const { a, b, c } = obj;
 
-            document.write(a, "<br>");
-            document.write(b, "<br>");
-            document.write(c, "<br><br>");
+            // document.write(a, "<br>");
+            // document.write(b, "<br>");
+            // document.write(c, "<br><br>");
 
             document.querySelector("#sample21 .text").innerHTML = `a : ${a} <br> b : ${b} <br> c : ${c}`;
                 document.querySelector("#sample21 .result-box h3").addEventListener("click", function(){
@@ -1265,7 +1261,7 @@
         //sample22
         //22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장(많이 쓰이는 형태)
         {
-            document.write("*** 22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
+            // document.write("*** 22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1274,9 +1270,9 @@
             }
             const { a:name1, b:name2, c:name3 } = obj;
 
-            document.write(name1, "<br>");
-            document.write(name2, "<br>");
-            document.write(name3, "<br><br>");
+            // document.write(name1, "<br>");
+            // document.write(name2, "<br>");
+            // document.write(name3, "<br><br>");
 
             document.querySelector("#sample22 .text").innerHTML = `name1 : ${name1} <br> name2 : ${name2} <br> name3 : ${name3}`;
                 document.querySelector("#sample22 .result-box h3").addEventListener("click", function(){

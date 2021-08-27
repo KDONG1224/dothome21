@@ -100,6 +100,10 @@
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
     
     <hr>
@@ -806,6 +810,12 @@
             function func(){
                 document.write("*** 01. 선언적 함수 ***<br>");
                 document.write("01. 함수가 실행되었습니다.<br><br>");
+
+                document.querySelector("#sample01 .text").innerHTML = `x : ${x} <br> y : ${y} <br> z : ${z}`;
+                document.querySelector("#sample01 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample01 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample01 .result-box div").classList.toggle("active");
+                })
             }
             func();
         }
