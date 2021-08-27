@@ -910,13 +910,13 @@
             const num = [100, 200, 300, 400, 500];
 
             for( let i in num ){
-                document.write(i, " &nbsp");
+                // document.write(i, " &nbsp");
 
                 document.querySelector("#sample09 .text").innerHTML += `i : ${i} <br> `;
             }
 
             for( let i in num ){
-                document.write(num[i], " &nbsp");
+                // document.write(num[i], " &nbsp");
 
                 document.querySelector("#sample09 .text").innerHTML += `<br> i : ${num[i]}`;
                 document.querySelector("#sample09 .result-box h3").addEventListener("click", function(){
@@ -958,8 +958,6 @@
                     document.querySelector("#sample10 .result-box div").classList.toggle("active");
                 })
             } );
-
-            document.write("<br><br>");
         }
 
         //sample11
@@ -1089,8 +1087,6 @@
                     document.querySelector("#sample15 .result-box div").classList.toggle("active");
                 })
             }
-
-            document.write("<br>");
         }
 
         //sample16
@@ -1129,8 +1125,6 @@
                     document.querySelector("#sample16 .result-box div").classList.toggle("active");
                 })
             });
-
-            document.write("<br>");
         }
 
         //sample17
@@ -1196,10 +1190,10 @@
             };
             const spread = {...obj, d: "jquery"};
 
-            document.write(spread.a, "<br>");
-            document.write(spread.b, "<br>");
-            document.write(spread.c, "<br>");
-            document.write(spread.d, "<br><br>");
+            // document.write(spread.a, "<br>");
+            // document.write(spread.b, "<br>");
+            // document.write(spread.c, "<br>");
+            // document.write(spread.d, "<br><br>");
 
             document.querySelector("#sample19 .text").innerHTML = `spread.a : ${spread.a} <br> spread.b : ${spread.b} <br> spread.c : ${spread.c} <br> spread.d : ${spread.d}`;
                 document.querySelector("#sample19 .result-box h3").addEventListener("click", function(){
