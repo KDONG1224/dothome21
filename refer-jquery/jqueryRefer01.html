@@ -175,7 +175,7 @@
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     $(".reset1").click(function(){
-        $(".view1 li").removeClass("blue");
+        $(".view1 *").removeClass("blue");
     });
     $(".btn1-1").click(function(){
         $(".view1 .class").addClass("blue");
@@ -214,7 +214,7 @@
                     $(".view1 .class, .view1 #id").addClass("blue");
                 });
                 $(".btn1-5").click(function(){
-                    $(".view1 *").addClass("blue");
+                    $(".view1 li").addClass("blue");
                 });
             </script>
 

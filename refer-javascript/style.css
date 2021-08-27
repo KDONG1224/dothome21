@@ -70,6 +70,10 @@ a {
     padding: 15px;
     border: 1px solid #E6E6E6;
     border-radius: 5px 5px 0 0;
+    overflow: hidden;               
+    display: -webkit-box;           
+    -webkit-line-clamp: 100;          
+    -webkit-box-orient: vertical;
 }
 .sample h2 .dot {
     width: 10px;
@@ -140,6 +144,7 @@ a {
 .sample .desc dt {
     padding: 3px 0;
     margin-bottom: 6px;
+    color: rgb(85, 85, 243);
 }
 .sample .desc dd {
     padding: 3px 0 16px 0;
@@ -324,7 +329,7 @@ padding: 0 20px;
         text-align: center;
     }
     #wrap {
-        margin: 0.5vh;
+        margin: 0.01vh;
     }
     #contents {
         padding: 4%;
@@ -366,5 +371,8 @@ padding: 0 20px;
     .view table td.result {
         color: #000;
         background: #f1f1f1;
+    }
+    .sample .result-box h3 {
+        font-size: 13px;
     }
 }

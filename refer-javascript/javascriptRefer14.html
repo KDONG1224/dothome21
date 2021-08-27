@@ -12,11 +12,16 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .sample .result-box .text {
+            word-wrap: break-all;
+        }
+    </style>
 </head>
 
-<body>
-
-    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
+<body id="wrap">
+    <div id="contents">
+        <h1><a href="index.html">Javascript 레퍼런스</a></h1>
 
     <!-- <ul class="page">
         <li><a href="../index.html">MAIN</a></li>
@@ -79,6 +84,10 @@
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
     
     <hr>
@@ -96,6 +105,10 @@
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
     
     <hr>
@@ -112,6 +125,10 @@
     }
 }
 </code></pre>
+        </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
         </div>
     </div>
     
@@ -134,13 +151,17 @@
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
 
     <hr>
 
     <!-- sample05 -->
     <div id="sample05" class="sample">
-        <h2> 5. 1부터 100까지 합 출력하기 <span class="dot"></span></h2>
+        <h2> 05. 1부터 100까지 합 출력하기 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     document.write("*** 05. 1부터 100까지 합 출력하기 ***");
@@ -152,6 +173,10 @@
     document.write(sum);
 }
 </code></pre>
+        </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
         </div>
     </div>
 
@@ -173,6 +198,10 @@
     }
 }
 </code></pre>
+        </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
         </div>
     </div>
 
@@ -203,6 +232,10 @@
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
 
     <hr>
@@ -231,6 +264,10 @@
     document.write(table);
 }
 </code></pre>
+        </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
         </div>
     </div>
 
@@ -263,6 +300,10 @@
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
 
     <hr>
@@ -274,18 +315,25 @@
         //sample1
         //01. 1부터 100까지 출력하기
         {
-            document.write("*** 01. 1부터 100까지 출력하기 ***<br>");
+            // document.write("*** 01. 1부터 100까지 출력하기 ***<br>");
 
             for( let i=1; i<=100; i++ ){
-                document.write(i, " &nbsp;");
+                // document.write(i, " &nbsp;");
+
+                document.querySelector("#sample01 .text").innerHTML += `${i} &nbsp`;
+                
             }
-            document.write("<br><br>");
+            // document.write("<br><br>");
+            document.querySelector("#sample01 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample01 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample01 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample2
         //02. 1부터 100까지 출력하기 : 짝수만
         {
-            document.write("*** 02. 1부터 100까지 출력하기 : 짝수만 ***<br>");
+            // document.write("*** 02. 1부터 100까지 출력하기 : 짝수만 ***<br>");
 
             // a+b
             // a-b
@@ -294,9 +342,18 @@
             // a%b
 
             for( let i=1; i<100; i+=1){
-                if( i%2 == 0 ) document.write(i, " &nbsp;");
+                if( i%2 == 0 ) 
+                // document.write(i, " &nbsp;");
+
+                document.querySelector("#sample02 .text").innerHTML += `${i} &nbsp`;
+
             }
-            document.write("<br><br>");
+
+            document.querySelector("#sample02 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample02 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample02 .result-box div").classList.toggle("active");
+                })
+            // document.write("<br><br>");
 
             // for( let i=1; i<=100; i++){
             //     if( i%2 == 0 ) document.write(i, " &nbsp;");
@@ -307,46 +364,70 @@
         //sample3
         //03. 1부터 100까지 출력하기 : 5의 배수만
         {
-            document.write("*** 03. 1부터 100까지 출력하기 : 5의 배수만 ***<br>");
+            // document.write("*** 03. 1부터 100까지 출력하기 : 5의 배수만 ***<br>");
 
             for( let i=1; i<=100; i++){
-                if( i%5 == 0 ) document.write(i, " &nbsp;");
+                if( i%5 == 0 ) 
+                //document.write(i, " &nbsp;");
+
+                document.querySelector("#sample03 .text").innerHTML += `${i} &nbsp`;
+
             }
-            document.write("<br><br>");
+            // document.write("<br><br>");
+
+            document.querySelector("#sample03 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample03 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample03 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample4
         //04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력
         {
-            document.write("*** 04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력 ***<br>");
+            // document.write("*** 04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력 ***<br>");
 
            for( let i=1; i<=100; i++){
                if( i % 2 == 0){
-                    document.write("<span style='color:red'> " + i + " </span>");
+                    document.querySelector("#sample04 .text").innerHTML += "<span style='color:rgb(219, 56, 56)'> " + `${i} &nbsp` + "</span>";
+
+                    // document.write("<span style='color:rgb(219, 56, 56)'> " + i + " </span>");
                } else {
-                    document.write("<span style='color:blue'> " + i + " </span>");
+                    document.querySelector("#sample04 .text").innerHTML += "<span style='color:rgb(85, 85, 243)'> " + `${i} &nbsp` + "</span>";
+
+                    // document.write("<span style='color:rgb(85, 85, 243)'> " + i + " </span>");
                }
             }
 
-            document.write("<br><br>");
+            document.querySelector("#sample04 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample04 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample04 .result-box div").classList.toggle("active");
+                })
+
+            // document.write("<br><br>");
         }
 
         //sample5
         //05. 1부터 100까지 합 출력하기
         {
-            document.write("*** 05. 1부터 100까지 합 출력하기 ***<br>");
+            // document.write("*** 05. 1부터 100까지 합 출력하기 ***<br>");
 
             let sum = 0;
             for( let i=1; i<=100; i++){
                 sum += i;
             }
-            document.write(sum, "<br><br>");
+            // document.write(sum, "<br><br>");
+
+            document.querySelector("#sample05 .text").innerHTML += `${sum}`;
+            document.querySelector("#sample05 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample05 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample05 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample6
         //06. 구구단 출력하기
         {
-            document.write("*** 06. 구구단 출력하기 ***<br>");
+            // document.write("*** 06. 구구단 출력하기 ***<br>");
 
             //2~9 for(var i=2; i<=9; i++)
             //1~9 for(var i=1; i<=9; i++)
@@ -366,18 +447,25 @@
                 //document.write(i, "<br>")
                 for(var j=1; j<=9; j++){
                     var sum = i * j;
-                    document.write(i + " * " + j + " = " + sum , "<br>")
+                    // document.write(i + " * " + j + " = " + sum , "<br>")
+                    document.querySelector("#sample06 .text").innerHTML +=`${i} * ${j} = ${sum} <br>`;
+
                 }
             }
 
-            document.write("<br><br>");
+            // document.write("<br><br>");
+
+            document.querySelector("#sample06 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample06 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample06 .result-box div").classList.toggle("active");
+                })
 
         }
         
         //sample7
         //07. 테이블 만들기1
         {
-            document.write("*** 07. 테이블 만들기1 ***<br>");
+            // document.write("*** 07. 테이블 만들기1 ***<br>");
 
             let num = 1;
             let table = "<table>";
@@ -393,13 +481,20 @@
 
             table += "</table>";
         
-            document.write(table,"<br><br>");
+            let docu = table
+            // document.write(table,"<br><br>");
+            
+            document.querySelector("#sample07 .text").innerHTML = `${docu}`;
+            document.querySelector("#sample07 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample07 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample07 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample8
         //08. 테이블 만들기2
         {
-            document.write("*** 08. 테이블 만들기2 ***<br>");
+            // document.write("*** 08. 테이블 만들기2 ***<br>");
 
             let num = 100;
             let table = "<table>";
@@ -415,13 +510,21 @@
 
             table += "</table>";
         
-            document.write(table,"<br><br>");
+            // document.write(table,"<br><br>");
+            
+            let docu = table
+
+            document.querySelector("#sample08 .text").innerHTML = `${docu}`;
+            document.querySelector("#sample08 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample08 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample08 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample9
         //09. 테이블 만들기3 : 짝수만
         {
-            document.write("*** 09. 테이블 만들기3 : 짝수만 ***<br>");
+            // document.write("*** 09. 테이블 만들기3 : 짝수만 ***<br>");
 
             let num = 1;
             let table = "<table>";
@@ -439,7 +542,15 @@
 
             table += "</table>";
         
-            document.write(table,"<br><br>");
+            // document.write(table,"<br><br>");
+
+            let docu = table
+
+            document.querySelector("#sample09 .text").innerHTML = `${docu}`;
+            document.querySelector("#sample09 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample09 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample09 .result-box div").classList.toggle("active");
+                })
         }
 
         // document.write("*** 08. 테이블 만들기3***<br>");
@@ -460,6 +571,8 @@
 
 
     </script>
+    </div>
+    
 
 </body>
 
