@@ -1085,7 +1085,7 @@
             };
 
             for(let key in obj){
-                document.write(obj[key], "<br>");
+                // document.write(obj[key], "<br>");
 
                 document.querySelector("#sample15 .text").innerHTML += `obj[key] : ${obj[key]} <br>`;
                 document.querySelector("#sample15 .result-box h3").addEventListener("click", function(){
@@ -1123,9 +1123,9 @@
             // obj.map(el => {})
 
             obj.map( el => {
-                document.write(el.a, "<br>");
-                document.write(el.b, "<br>");
-                document.write(el.c, "<br>");
+                // document.write(el.a, "<br>");
+                // document.write(el.b, "<br>");
+                // document.write(el.c, "<br>");
 
                 document.querySelector("#sample16 .text").innerHTML += `el.a : ${el.a} <br> el.b : ${el.b} <br> el.c : ${el.c} <br><br>`;
                 document.querySelector("#sample16 .result-box h3").addEventListener("click", function(){
@@ -1140,7 +1140,7 @@
         //sample17
         //17. 객체 : 데이터 불러오기 : hasOwnProperty : 데이터 유무 확인
         {
-            document.write("*** 17. 객체 : 데이터 불러오기 : hasOwnProperty ***<br>");
+            // document.write("*** 17. 객체 : 데이터 불러오기 : hasOwnProperty ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1148,26 +1148,27 @@
                 c: "javascript",
             };
 
-            document.write(obj.hasOwnProperty('a'), "<br>");
-            document.write(obj.hasOwnProperty('b'), "<br>");
-            document.write(obj.hasOwnProperty('c'), "<br>");
-            document.write(obj.hasOwnProperty('100'), "<br>");
-            document.write('a' in obj, "<br>");
-            document.write('b' in obj, "<br>");
-            document.write('c' in obj, "<br>");
-            document.write('100' in obj, "<br><br>");
+            // document.write(obj.hasOwnProperty('a'), "<br>");
+            // document.write(obj.hasOwnProperty('b'), "<br>");
+            // document.write(obj.hasOwnProperty('c'), "<br>");
+            // document.write(obj.hasOwnProperty('100'), "<br>");
+            // document.write('a' in obj, "<br>");
+            // document.write('b' in obj, "<br>");
+            // document.write('c' in obj, "<br>");
+            // document.write('100' in obj, "<br><br>");
 
-            document.querySelector("#sample16 .text").innerHTML += `obj.hasOwnProperty('a') : ${obj.hasOwnProperty('a')} <br> el.b : ${el.b} <br> el.c : ${el.c} <br><br>`;
-                document.querySelector("#sample16 .result-box h3").addEventListener("click", function(){
-                    document.querySelector("#sample16 .result-box h3").classList.toggle("active");
-                    document.querySelector("#sample16 .result-box div").classList.toggle("active");
+            document.querySelector("#sample17 .text").innerHTML += `obj.hasOwnProperty('a') : ${obj.hasOwnProperty('a')} <br> obj.hasOwnProperty('b') : ${obj.hasOwnProperty('b')} <br> 
+            obj.hasOwnProperty('c') : ${obj.hasOwnProperty('c')} <br> 'a' in obj : ${'a' in obj} <br> 'b' in obj : ${'b' in obj} <br> 'c' in obj : ${'c' in obj} <br> '100' in obj : ${'100' in obj} <br>`;
+                document.querySelector("#sample17 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample17 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample17 .result-box div").classList.toggle("active");
                 })
         }
 
         //sample18
         //18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사
         {
-            document.write("*** 18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사 ***<br>");
+            // document.write("*** 18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사 ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1176,15 +1177,21 @@
             };
             const spread = {...obj};
 
-            document.write(spread.a, "<br>");
-            document.write(spread.b, "<br>");
-            document.write(spread.c, "<br><br>");
+            // document.write(spread.a, "<br>");
+            // document.write(spread.b, "<br>");
+            // document.write(spread.c, "<br><br>");
+            
+            document.querySelector("#sample18 .text").innerHTML = `spread.a : ${spread.a} <br> spread.b : ${spread.b} <br> spread.c : ${spread.c}`;
+                document.querySelector("#sample18 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample18 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample18 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample19
         //19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가
         {
-            document.write("*** 19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가 ***<br>");
+            // document.write("*** 19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가 ***<br>");
 
             const obj  = {
                 a: 100,
@@ -1197,12 +1204,18 @@
             document.write(spread.b, "<br>");
             document.write(spread.c, "<br>");
             document.write(spread.d, "<br><br>");
+
+            document.querySelector("#sample19 .text").innerHTML = `spread.a : ${spread.a} <br> spread.b : ${spread.b} <br> spread.c : ${spread.c} <br> spread.d : ${spread.d}`;
+                document.querySelector("#sample19 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample19 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample19 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample20
         //20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합
         {
-            document.write("*** 20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합 ***<br>");
+            // document.write("*** 20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합 ***<br>");
 
             const objA  = {
                 a: 100,
@@ -1214,10 +1227,16 @@
             };
             const spread = {...objA, ...objB};
 
-            document.write(spread.a, "<br>");
-            document.write(spread.b, "<br>");
-            document.write(spread.c, "<br>");
-            document.write(spread.d, "<br><br>");
+            // document.write(spread.a, "<br>");
+            // document.write(spread.b, "<br>");
+            // document.write(spread.c, "<br>");
+            // document.write(spread.d, "<br><br>");
+
+            document.querySelector("#sample20 .text").innerHTML = `spread.a : ${spread.a} <br> spread.b : ${spread.b} <br> spread.c : ${spread.c} <br> spread.d : ${spread.d}`;
+                document.querySelector("#sample20 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample20 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample20 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample21
@@ -1235,6 +1254,12 @@
             document.write(a, "<br>");
             document.write(b, "<br>");
             document.write(c, "<br><br>");
+
+            document.querySelector("#sample21 .text").innerHTML = `a : ${a} <br> b : ${b} <br> c : ${c}`;
+                document.querySelector("#sample21 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample21 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample21 .result-box div").classList.toggle("active");
+                })
         }
 
         //sample22
@@ -1252,6 +1277,12 @@
             document.write(name1, "<br>");
             document.write(name2, "<br>");
             document.write(name3, "<br><br>");
+
+            document.querySelector("#sample22 .text").innerHTML = `name1 : ${name1} <br> name2 : ${name2} <br> name3 : ${name3}`;
+                document.querySelector("#sample22 .result-box h3").addEventListener("click", function(){
+                    document.querySelector("#sample22 .result-box h3").classList.toggle("active");
+                    document.querySelector("#sample22 .result-box div").classList.toggle("active");
+                })
             
         }
 
