@@ -24,7 +24,7 @@
     /* 위드값에 마진, 패딩 안넣게 함 */
 }
 body {
-    padding: 2%;
+    padding: 1%;
     font-family: 'NEXON Lv1 Gothic OTF';
 }
 ul {
@@ -40,6 +40,17 @@ hr {
     border-color: #e6e6e6;
     border-width: 0px;
     border-bottom-width: 1px;
+}
+#wrap {
+    margin: -1vh;
+    border: 8px solid #ff9800;
+    border-radius: 20px;
+}
+#contents {
+    border: 8px solid #ffcc80;
+    padding: 2%;
+    border-radius: 12px;
+    height: 100%;
 }
 .title {
     border-top: 3px solid #ff9800;
@@ -90,6 +101,7 @@ hr {
     border-collapse: collapse;
     border-spacing: 0;
     text-align: left;
+    overflow: auto;
 }
 .table table caption {
     text-align: left;
@@ -114,8 +126,9 @@ hr {
 }
 .page {
     position: absolute;
-    right: 20px;
-    top: 8px;
+    right: 7%;
+    top: 0.1%;
+    transform: translate(-50%, -50%);
     font-size: 12px;
 }
 .page li {
@@ -136,7 +149,7 @@ hr {
 .sample h2 {
     position: relative;
     font-size: 16px;
-    background-color: #f2f6fd;
+    background-color: #ffe6c2;
     padding: 15px;
     border-radius: 5px 5px 0 0;
     font-weight: normal;
@@ -144,7 +157,7 @@ hr {
 .sample h2 .dot {
     width: 10px;
     height: 10px;
-    background: #989898;
+    background: #1b5e20;
     display: block;
     border-radius: 50%;
     position: absolute;
@@ -155,7 +168,7 @@ hr {
     content: '';
     width: 10px;
     height: 10px;
-    background: #989898;
+    background: #ea80fc;
     border-radius: 50%;
     position: absolute;
     left: -15px;
@@ -165,7 +178,7 @@ hr {
     content: '';
     width: 10px;
     height: 10px;
-    background: #989898;
+    background: #880e4f;
     position: absolute;
     border-radius: 50%;
     right: -15px;
@@ -185,12 +198,13 @@ hr {
         font-size: 13px;
     }
     #wrap {
-        margin: 0;
+        margin: -2.5vh;
         border-width: 6px; 
         border-radius: 18px;
     }
     #contents {
         border-width: 6px;
+        padding: 4%;
     }
     .title {
         border-top-width: 2px; 
@@ -217,6 +231,8 @@ hr {
     }
     .sample h2 .dot {
         display: none;
+        /* top: 14px;
+        vertical-align: middle; */
     }
     .sample pre {
         line-height: 1.2 !important;
@@ -259,13 +275,14 @@ hr {
     border-top: 0;
 }
 .btn a {
-    border: 1px solid #e6e6e6;
+    border: 1px solid #ff9800;
     padding: 7px 25px;
-    display: inline-block;
+    display: block;
     border-radius: 40px;
     margin: 4px 0;
     color: #222;
     transition: all 0.2s;
+    text-align: center;
 }
 .btn a:hover {
     background: #000;
@@ -273,7 +290,8 @@ hr {
 }
 @media(max-width: 800px){
     .view {
-        padding: 10px 10px 0 10px;
+        padding: 10px;
+        justify-content: space-around;
     }
     .view li {
         padding: 10px;
@@ -281,6 +299,9 @@ hr {
     }
     .btn {
         padding: 10px;
+    }
+    .table {
+        overflow: auto;
     }
     .table table {
         overflow: auto;

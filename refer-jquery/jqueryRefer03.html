@@ -89,6 +89,31 @@
             text-align: center;
         }
 
+        @media (max-width: 800px){
+            .ex1 {
+                flex-wrap: wrap;
+            }
+            .ex1 > div {
+                width: 31%;
+                margin: 1%;
+            }
+            .ex2 {
+                flex-wrap: wrap;
+            }
+            .ex2 > div {
+                width: 31%;
+                margin: 1%;
+
+            }
+            .ex3 {
+                flex-wrap: wrap;
+            }
+            .ex3 > div {
+                width: 31%;
+                margin: 1%;
+            }
+        }
+
         /* ex4 */
         .ex4 {
             min-height: 300px;
@@ -173,13 +198,13 @@
                 <h1><a href="index.html">속성 메서드</a></h1>
             </div>
 
-            <ul class="page">
+            <!-- <ul class="page">
                 <li><a href="../index.html">MAIN</a></li>
                 <li><a href="../refer-html/index.html">HTML</a></li>
                 <li><a href="../refer-css/index.html">CSS</a></li>
                 <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
                 <li><a href="../refer-jquery/index.html">JQUERY</a></li>
-            </ul>
+            </ul> -->
 
             <nav class="menu">
                 <ul>
@@ -463,9 +488,9 @@
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    //리셋버튼을 클릭하면 첫번째, 네번째 클래스 추가
+    //리셋버튼을 클릭하면 세번째, 네번째 클래스 추가
     $(".btn3-0").click(function(){
-        $(".ex3 > div:nth-child(1), .ex3 > div:nth-child(4)").addClass("active")
+        $(".ex3 > div:nth-child(3), .ex3 > div:nth-child(4)").addClass("active")
     })
 
     $(".btn3-1").click(function(){
@@ -480,7 +505,7 @@
             <script>
                 //리셋버튼을 클릭하면 첫번째, 네번째 클래스 추가
                 $(".btn3-0").click(function(){
-                    $(".ex3 > div:nth-child(1), .ex3 > div:nth-child(4)").addClass("active")
+                    $(".ex3 > div:nth-child(3), .ex3 > div:nth-child(4)").addClass("active")
                 })
                 $(".btn3-1").click(function(){
                     if( $(".ex3 > div").hasClass("active") ){
