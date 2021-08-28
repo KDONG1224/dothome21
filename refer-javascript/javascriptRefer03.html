@@ -1603,29 +1603,29 @@
         {
             // document.write("*** 26. 함수 유형 : 객체 생성자 함수 ***<br>");
 
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
+            // function func(num, name, job){
+            //     this.num = num;
+            //     this.name = name;
+            //     this.job = job;
 
-                this.result = function(){
-                    // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
-                }
-            }
+            //     this.result = function(){
+            //         // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
+            //     }
+            // }
             
-            const info1 = new func("1", "크동", "웹 퍼블리셔");             //인스턴스 생성
-            const info2 = new func("2", "강동재", "프론트앤드 개발자");     //인스턴스 생성
+            // const info1 = new func("1", "크동", "웹 퍼블리셔");             //인스턴스 생성
+            // const info2 = new func("2", "강동재", "프론트앤드 개발자");     //인스턴스 생성
 
-            info1.result();
-            info2.result();
+            // info1.result();
+            // info2.result();
 
             // document.write("<br>");
 
             document.querySelector("#sample26 .text").innerHTML = `1. 내 이름은 크동이며, 직업은 웹 퍼블리셔 입니다. <br> 2. 내 이름은 강동재이며, 직업은 프론트앤드 개발자 입니다.`;
-                document.querySelector("#sample26 .result-box h3").addEventListener("click", function(){
-                    document.querySelector("#sample26 .result-box h3").classList.toggle("active");
-                    document.querySelector("#sample26 .result-box div").classList.toggle("active");
-                })
+            document.querySelector("#sample26 .result-box h3").addEventListener("click", function(){
+                document.querySelector("#sample26 .result-box h3").classList.toggle("active");
+                document.querySelector("#sample26 .result-box div").classList.toggle("active");
+            })
         }
 
         //sample27
@@ -1633,21 +1633,21 @@
         {
             // document.write("*** 27. 함수 유형 : 프로토타입 함수 ***<br>");
 
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
-            }
+            // function func(num, name, job){
+            //     this.num = num;
+            //     this.name = name;
+            //     this.job = job;
+            // }
 
-            func.prototype.result = function(){
-                // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
-            }
+            // func.prototype.result = function(){
+            //     // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
+            // }
 
-            const info1 = new func("1", "크동", "웹 퍼블리셔");             
-            const info2 = new func("2", "강동재", "프론트앤드 개발자");     
+            // const info1 = new func("1", "크동", "웹 퍼블리셔");             
+            // const info2 = new func("2", "강동재", "프론트앤드 개발자");     
 
-            info1.result();
-            info2.result();
+            // info1.result();
+            // info2.result();
 
             // document.write("<br>");
 
@@ -1663,26 +1663,26 @@
         {
             // document.write("*** 28. 함수 유형 : 객체 리터럴 함수 ***<br>");
 
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
-            }
+            // function func(num, name, job){
+            //     this.num = num;
+            //     this.name = name;
+            //     this.job = job;
+            // }
 
-            func.prototype = {
-                result1 : function(){
-                    // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
-                },
-                result2 : function(){
-                    // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
-                }
-            }
+            // func.prototype = {
+            //     result1 : function(){
+            //         // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
+            //     },
+            //     result2 : function(){
+            //         // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
+            //     }
+            // }
 
-            const info1 = new func("1", "크동", "웹 퍼블리셔");             
-            const info2 = new func("2", "강동재", "프론트앤드 개발자");     
+            // const info1 = new func("1", "크동", "웹 퍼블리셔");             
+            // const info2 = new func("2", "강동재", "프론트앤드 개발자");     
 
-            info1.result1();
-            info2.result2();
+            // info1.result1();
+            // info2.result2();
 
             // document.write("<br>");
 
@@ -1698,21 +1698,21 @@
         {
             // document.write("*** 29. 함수 유형 : 클래스 ***<br>");
 
-            class study {
-                constructor(num, name, job){                        //무조건 실행되게 하는 함수
-                    this.num = num;
-                    this.name = name;
-                    this.job = job;
-                }
-                result(){
-                    // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
-                }
-            }
-            const info1 = new study("1", "크동", "웹 퍼블리셔");             
-            const info2 = new study("2", "강동재", "프론트앤드 개발자");
+            // class study {
+            //     constructor(num, name, job){                        //무조건 실행되게 하는 함수
+            //         this.num = num;
+            //         this.name = name;
+            //         this.job = job;
+            //     }
+            //     result(){
+            //         // document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + " 입니다.<br>");
+            //     }
+            // }
+            // const info1 = new study("1", "크동", "웹 퍼블리셔");             
+            // const info2 = new study("2", "강동재", "프론트앤드 개발자");
 
-            info1.result();
-            info2.result();
+            // info1.result();
+            // info2.result();
 
             document.querySelector("#sample29 .text").innerHTML = `1. 내 이름은 크동이며, 직업은 웹 퍼블리셔 입니다. <br> 2. 내 이름은 강동재이며, 직업은 프론트앤드 개발자 입니다.`;
                 document.querySelector("#sample29 .result-box h3").addEventListener("click", function(){
