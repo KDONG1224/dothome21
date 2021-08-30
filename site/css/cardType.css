@@ -266,7 +266,7 @@ body {
 /* cardType05 */
 .cardType05 {
     padding: 100px 0;
-    font-family: 'Nanum Gothic';
+    font-family: "NanumSquare";
 }
 .cardType05 h2 {
     text-align: center;
@@ -316,11 +316,11 @@ body {
 .cardType05 .card .card-cards .card-desc {
     clear: both;
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 20px;
     line-height: 2;
-    font-weight: 700;
-    opacity: 0.5;
+    font-weight: 400;
+    opacity: 1;
 }
 .cardType05 .card .card-cards .card-btn {}
 .cardType05 .card .card-cards .card-btn a {
@@ -329,6 +329,7 @@ body {
     padding: 5px 20px 5px 20px;
     border: 1px solid #ebebeb;
     margin-bottom: 30px;
+    font-weight: bold;
 }
 .cardType05 .card .card-cards .card-btn a.btn1 {
     margin-right: 20px;
