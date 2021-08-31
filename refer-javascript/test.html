@@ -23,19 +23,89 @@
         // });
         // console.log(sum)
 
-        function sayHello(name, age){
-            console.log(`Hello ${name} you are ${age} years old`);
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     for(let i=0; i<num.length; i++){
+        //         console.log(num[i]);
+        //     }
+        // }
+
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     num.forEach((el)=>{
+        //         console.log(el);
+        //     })
+        // }
+
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     num.forEach((el,index,array)=>{
+        //         console.log(el);
+        //         console.log(index);
+        //         console.log(array);
+        //     })
+        // }
+
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+        //     const result =num.splice(2,1);
+
+        //     console.log(num)
+
+        //     const text1 = num.slice(2,3);
+        //         document.write(num);
+                
+        //     for(let i=0;i<num.length;i++){
+        //     if(i == 2){
+        //         continue;
+        //     } if (i>num.length){
+        //         break;
+        //     }
+        //     document.write(num[i]);
+        //     }
+
+        //     document.write(num.filter(el => el !== 300));
+        // }
+
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     num.map((el)=>{
+        //         console.log(el)
+        //     })
+        // }
+
+        // {
+        //     const obj = [
+        //         {a: 100},
+        //         {a: 200},
+        //         {a: 300}
+        //     ]
+
+        //     obj.map(el => console.log(el.a))
+        // }
+        
+        {
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+
+                this.result = function(){
+                    document.write(num)
+                }
+            }
+
+            const info = new func("1", "크동", "웹 퍼블리셔")
+
+            document.write(`${info.num}. 내 이름은 ${info.name}이며 직업은 ${info.job}입니다.`)
         }
-
-        const greenNicolas = sayHello("Nicolas", 14)
-
-        console.log(greenNicolas)
-
-
         
         
     }
-
     </script>
 </body>
 </html>

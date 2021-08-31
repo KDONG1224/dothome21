@@ -407,6 +407,53 @@
     </section>
     <!-- //sliderType04 -->
 
+    <!-- sliderType05 -->
+    <section class="sliderType">
+        <div class="sliderType05">
+            <div class="swiper5">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>genesis</em>
+                        <h3>GV70</h3>
+                        <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                        <span class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">견적 내기</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>genesis</em>
+                        <h3>G80 SPORT</h3>
+                        <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                        <span class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">견적 내기</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>genesis</em>
+                        <h3>G80</h3>
+                        <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                        <span class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">견적 내기</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <!-- //sliderType05 -->
+
 
 
 
@@ -478,6 +525,29 @@
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+        
+        const swiper5 = new Swiper('.swiper5', {
+            // Optional parameters
+            effect: "cube",
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
             },
 
             // If we need pagination
