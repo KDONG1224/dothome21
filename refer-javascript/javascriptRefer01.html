@@ -651,6 +651,12 @@
         //     ${".result-box"}.toggleClass("active");
         // });
 
+        $(".result-box h3").click(function (e) {
+            e.preventDefault();
+            $(this).parents().toggleClass("active");
+        });
+
+
         //sample01
         //01. 변수 : 데이터 저장소
         {
