@@ -91,9 +91,13 @@
 }
 </code></pre>
         </div>
-        <div class="result-box">
-            <h3>결과보기</h3>
-            <div class="text"></div>
+        <div class="result">
+            <h3><a href="#">결과보기</a></h3>
+            <div class="show">
+                <span class="result1-1"></span>
+                <span class="result1-2"></span>
+                <span class="result1-3"></span>
+            </div>
         </div>
     </div>
 
@@ -633,6 +637,18 @@
         // })
 
         //정답보기
+        // document.querySelector(".result1 h3").addEventListener("click", function(){
+        //     document.querySelector(".result1 div").classList.toggle("show");
+        // }); //노가다
+
+        // document.querySelectorAll(".result h3").forEach(el => {
+        //     el.addEventListener("click", function(e){
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("show");
+        //     });
+        // })
+
+        //정답보기
         // document.querySelector(".result-box h3").addEventListener("click", result-boxBtn);
         // function result-boxBtn(event){      a태그에 #을 없애주는 역할
         //     event.preventDefault();
@@ -651,9 +667,9 @@
         //     ${".result-box"}.toggleClass("active");
         // });
 
-        $(".result-box h3").click(function (e) {
-            e.preventDefault();
-            $(this).parents().toggleClass("active");
+        $(".result h3").click(function(e){
+           e.preventDefault();
+           $(this).parents().toggleClass("show");
         });
 
 
@@ -669,11 +685,15 @@
             // document.write(y, "<br>");
             // document.write(z, "<br><br>");
 
-            document.querySelector("#sample01 .text").innerHTML = `x : ${x} <br> y : ${y} <br> z : ${z}`;
-            document.querySelector("#sample01 .result-box h3").addEventListener("click", function(){
-                document.querySelector("#sample01 .result-box h3").classList.toggle("active");
-                document.querySelector("#sample01 .result-box div").classList.toggle("active");
-            })
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
+
+            // document.querySelector("#sample01 .text").innerHTML = `x : ${x} <br> y : ${y} <br> z : ${z}`;
+            // document.querySelector("#sample01 .result-box h3").addEventListener("click", function(){
+            //     document.querySelector("#sample01 .result-box h3").classList.toggle("active");
+            //     document.querySelector("#sample01 .result-box div").classList.toggle("active");
+            // })
         }
 
         //sample02
