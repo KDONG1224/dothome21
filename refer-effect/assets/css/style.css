@@ -643,11 +643,8 @@ a {
     height: 30px;
     line-height: 2.5;
   }
-  .info.right {
-    display: none;
-  }
   .info h1 {
-    font-size: 15px;
+    font-size: 14px;
   }
   #modal {
     position: absolute;
