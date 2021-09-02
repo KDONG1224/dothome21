@@ -393,7 +393,7 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
 #modal.show.hide {
 	animation: unfoldOut 1s ease forwards;
 }
-@keyframes unfoldIn {
+@keyframes unfoldOut {
 	0% {transform: scaley(1) scalex(1)}
 	50% {transform: scaley(0.005) scalex(1)}
 	100% {transform: scaley(0.005) scalex(0)}
@@ -517,6 +517,14 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
             }
         }
     }
+    .info {
+        &.right {
+            display: none;
+        }
+        h1 {
+            font-size: 15px;
+        }
+    }    
     #modal {
         position: absolute;
         left: 0;
@@ -535,6 +543,12 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
     }
     .code-view {
         width: 90vw;
+        font-size: 14px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        .view-cont {
+            height: 60vh;
+        }
         .view-title {
             li {
                 a {

@@ -427,7 +427,7 @@ a {
           animation: unfoldOut 1s ease forwards;
 }
 
-@-webkit-keyframes unfoldIn {
+@-webkit-keyframes unfoldOut {
   0% {
     -webkit-transform: scaley(1) scalex(1);
             transform: scaley(1) scalex(1);
@@ -442,7 +442,7 @@ a {
   }
 }
 
-@keyframes unfoldIn {
+@keyframes unfoldOut {
   0% {
     -webkit-transform: scaley(1) scalex(1);
             transform: scaley(1) scalex(1);
@@ -454,6 +454,21 @@ a {
   100% {
     -webkit-transform: scaley(0.005) scalex(0);
             transform: scaley(0.005) scalex(0);
+  }
+}
+
+@-webkit-keyframes unfoldIn {
+  0% {
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
+  }
+  50% {
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
 }
 
@@ -628,6 +643,12 @@ a {
     height: 30px;
     line-height: 2.5;
   }
+  .info.right {
+    display: none;
+  }
+  .info h1 {
+    font-size: 15px;
+  }
   #modal {
     position: absolute;
     left: 0;
@@ -646,6 +667,12 @@ a {
   }
   .code-view {
     width: 90vw;
+    font-size: 14px;
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+  .code-view .view-cont {
+    height: 60vh;
   }
   .code-view .view-title li a {
     font-size: 14px;

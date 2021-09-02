@@ -175,10 +175,3 @@ code.hljs {
 .hljs-meta-keyword {
   font-weight: bold;
 }
-
-@media(max-width: 800px){
-  pre code.hljs {
-    overflow-x: visible;
-    font-size: 12px;
-  }
-}
