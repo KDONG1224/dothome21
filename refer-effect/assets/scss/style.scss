@@ -535,5 +535,14 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
     }
     .code-view {
         width: 90vw;
+        .view-title {
+            li {
+                a {
+                    font-size: 14px;
+                    padding: 10px 10px 12px;
+                    margin: 0 5px;
+                }
+            }   
+        }
     }
 }

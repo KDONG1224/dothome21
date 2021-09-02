@@ -179,5 +179,6 @@ code.hljs {
 @media(max-width: 800px){
   pre code.hljs {
     overflow-x: visible;
+    font-size: 12px;
   }
 }
