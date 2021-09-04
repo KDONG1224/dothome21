@@ -12,6 +12,19 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .list .p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .list .p .a {
+            color: #0e43f1;
+            margin-left: 10px;
+        }
+        .sample .result-box .text {
+            word-wrap: break-all;
+        }
+    </style>
 </head>
 
 <body id="wrap">
@@ -50,75 +63,37 @@
         </ul>
     </nav>
     
-    <h2 class="mt20"><a href="index.html">이벤트 객체</a></h2>
+    <h2 class="mt20"><a href="javascriptReferBook.html">레퍼런스북</a></h2>
     <div class="list">
-        <ol>
-            <li><a href="#sample01">이벤트 메서드 : </a></li>
-        </ol>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fx9QOw0LcUCNn1jvThaWCAZ%2FHTML-Reference-Book%3Fnode-id%3D195%253A4910" allowfullscreen></iframe>
+        <p class="p">코드 보기<a class="a" href="https://www.figma.com/proto/x9QOw0LcUCNn1jvThaWCAZ/HTML-Reference-Book?page-id=195%3A4910&node-id=195%3A6471&viewport=241%2C48%2C0.05&scaling=min-zoom">View</a></p>
     </div>
 
     <hr>
     
     <!-- sample01 -->
-    <div id="sample01" class="sample">
-        <h2> 01.  <span class="dot"></span></h2>
-        <div class="view">
-            <table>
-                <colgroup>
-                    <col style="width: 4%">
-                    <col style="width: 22%">
-                    <col style="width: 22%">
-                    <col style="width: 52%">
-                </colgroup>
-                <thead>
-                    <th>번호</th>
-                    <th>기본값</th>
-                    <th>메서드</th>
-                    <th>결과값</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="sample01_N1"></td>
-                        <td class="sample01_Q1"></td>
-                        <td class="sample01_M1"></td>
-                        <td class="sample01_R1"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N2"></td>
-                        <td class="sample01_Q2"></td>
-                        <td class="sample01_M2"></td>
-                        <td class="sample01_R2"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <!-- <div id="sample01" class="sample">
+        <h2> 01. 1부터 100까지 출력하기 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    
+    document.write("*** 01. 1부터 100까지 출력하기 ***");
+
+    for( let i=1; i&lt;=100; i++ ){
+        document.write(i);
+    }
 }
 </code></pre>
         </div>
+        <div class="result-box">
+            <h3>결과보기</h3>
+            <div class="text"></div>
+        </div>
     </div>
-    <!-- sample01 -->
 
-    <hr>
+    <hr> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
-    <script>
-
-        //sample01
-        //01. 날짜 메서드 : getFullYear() : 연도 불러오기
-        // {
-        //     const date = new Date();
-        //     const year = date.getFullYear();
-
-        //     document.querySelector(".sample01_N1").innerHTML = "1";
-        //     document.querySelector(".sample01_Q1").innerHTML = "new Date()";
-        //     document.querySelector(".sample01_M1").innerHTML = ".getFullYear()";
-        //     document.querySelector(".sample01_R1").innerHTML = "지금은 " + year + "년 입니다.";
-        // }
-    </script>
     </div>
     
 
