@@ -229,7 +229,7 @@ a {
     display: block;
 }
 
-/* 내가 */
+/* me */
 .sample .result-box {}
 .sample .result-box h3 {
     font-size: 15px;
@@ -253,7 +253,7 @@ a {
 .sample .result-box div {
     display: none;
     color: #000;
-    padding: 10px 10px;
+    padding: 15px 20px;
     background-color: #272822;
     color: #fff;
     border-radius: 0 5px 5px 5px;
@@ -262,6 +262,38 @@ a {
     font-size: 13px;
     display: block;
 }
+/* another */
+.sample .result {}
+.sample .result h3 {
+    
+}
+.sample .result h3 a {
+    font-size: 15px;
+    margin-top: 8px;
+    background: #E6E6E6;
+    display: inline-block;
+    padding: 8px 10px 6px 10px;
+    color: #000;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.sample .result.show h3 a {
+    background-color: #E4E4E1;
+    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+ 	background-blend-mode: normal, multiply;
+    color: rgb(42, 43, 40);
+    border-radius: 5px 5px 0 0;
+}
+.sample .result .show > span {
+    display: block;
+    font-size: 13px;
+    color: #000;
+    background-color: #272822;
+    color: #fff;
+    border-radius: 0 5px 5px 5px;
+}
+
 .view {
     padding: 20px;
 }
@@ -407,5 +439,9 @@ padding: 0 20px;
     }
     .sample .result-box h3 {
         font-size: 13px;
+    }
+    .btn a {
+        display: block;
+        font-size: 12px;
     }
 }

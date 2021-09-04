@@ -88,22 +88,32 @@
         //     obj.map(el => console.log(el.a))
         // }
         
-        {
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
+        // {
+        //     function func(num, name, job){
+        //         this.num = num;
+        //         this.name = name;
+        //         this.job = job;
 
-                this.result = function(){
-                    document.write(num)
-                }
-            }
+        //         this.result = function(){
+        //             document.write(num)
+        //         }
+        //     }
 
-            const info = new func("1", "크동", "웹 퍼블리셔")
+        //     const info = new func("1", "크동", "웹 퍼블리셔")
 
-            document.write(`${info.num}. 내 이름은 ${info.name}이며 직업은 ${info.job}입니다.`)
-        }
-        
+        //     document.write(`${info.num}. 내 이름은 ${info.name}이며 직업은 ${info.job}입니다.`)
+        // }
+
+        let A = 1;
+        let B = 2;
+        if(A>B){
+            document.write(">");
+        } else if(A<B){
+            document.write("<");
+        } else if(A==B){
+            document.write("==");
+        };
+        console.log(A)
         
     }
     </script>

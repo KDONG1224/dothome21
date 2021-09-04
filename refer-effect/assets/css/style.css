@@ -80,6 +80,14 @@ a {
   text-decoration: none;
 }
 
+.iphone main {
+  padding: 10px;
+}
+
+.android main {
+  padding: 10px;
+}
+
 .bg {
   position: relative;
   height: 100vh;
@@ -137,6 +145,46 @@ a {
 
 .bg10 {
   background-image: url(../img/bg10@2.jpg);
+}
+
+.bg11 {
+  background-image: url(../img/bg11@2.jpg);
+}
+
+.bg12 {
+  background-image: url(../img/bg12@2.jpg);
+}
+
+.bg13 {
+  background-image: url(../img/bg13@2.jpg);
+}
+
+.bg14 {
+  background-image: url(../img/bg14@2.jpg);
+}
+
+.bg15 {
+  background-image: url(../img/bg15@2.jpg);
+}
+
+.bg16 {
+  background-image: url(../img/bg16@2.jpg);
+}
+
+.bg17 {
+  background-image: url(../img/bg17@2.jpg);
+}
+
+.bg18 {
+  background-image: url(../img/bg18@2.jpg);
+}
+
+.bg19 {
+  background-image: url(../img/bg19@2.jpg);
+}
+
+.bg20 {
+  background-image: url(../img/bg20@2.jpg);
 }
 
 #main {
