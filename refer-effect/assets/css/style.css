@@ -951,6 +951,7 @@ a {
   z-index: 100;
   word-break: keep-all;
   color: #F0F600;
+  font-weight: 800;
 }
 
 .paraCont .content-item:nth-child(even) {
