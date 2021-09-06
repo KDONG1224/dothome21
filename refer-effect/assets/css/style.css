@@ -289,12 +289,12 @@ a {
   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
 }
 
-#main.parallax {
+#main.parallaxMain {
   background: -webkit-gradient(linear, left bottom, left top, from(#cc208e), to(#6713d2));
   background: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
 }
 
-#main.parallax #contents h1 {
+#main.parallaxMain #contents h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#0250c5), to(#1f0412));
   background-image: linear-gradient(to top, #0250c5 0%, #1f0412 100%);
 }
