@@ -12,6 +12,7 @@ const Game_COLS = 10;
 
 //variables
 let score = 0;
+let overScore = 0;
 let duration = 500;
 let downInterval;
 let tempMovingItem;
@@ -110,7 +111,6 @@ function checkMatch(){
             scoreDisplay.innerText = score;
         }
     })
-
     generateNewBlock()
 }
 
@@ -187,5 +187,6 @@ document.addEventListener("keydown", function(e){
 restartButton.addEventListener("click", function(){
     playground.innerHTML = "";
     gameText.style.display = "none";
+    scoreDisplay.innerText = overScore;
     init()
 })

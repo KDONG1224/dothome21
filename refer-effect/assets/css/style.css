@@ -201,8 +201,7 @@ a {
   background: linear-gradient(to top, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 }
 
-#main.menu #contents a {
-  -webkit-background-clip: text;
+#main.menu #contents h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a03136), to(#2400f0));
   background-image: linear-gradient(to top, #a03136 0%, #2400f0 100%);
 }
@@ -212,8 +211,7 @@ a {
   background: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
 }
 
-#main.mouse #contents a {
-  -webkit-background-clip: text;
+#main.mouse #contents h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#800006), to(#e2cb00));
   background-image: linear-gradient(to top, #800006 0%, #e2cb00 100%);
 }
@@ -223,8 +221,7 @@ a {
   background: linear-gradient(to top, #00dbde 0%, #fc00ff 100%);
 }
 
-#main.slider #contents a {
-  -webkit-background-clip: text;
+#main.slider #contents h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f43b47), to(#453a94));
   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
 }
@@ -234,8 +231,7 @@ a {
   background: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
 }
 
-#main.parallax #contents a {
-  -webkit-background-clip: text;
+#main.parallax #contents h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#0250c5), to(#1f0412));
   background-image: linear-gradient(to top, #0250c5 0%, #1f0412 100%);
 }
@@ -245,8 +241,7 @@ a {
   background: linear-gradient(to bottom, #231557 0%, #44107A 29%, #FF1361 88%, #fff700dc 100%);
 }
 
-#main.game #contents a {
-  -webkit-background-clip: text;
+#main.game #contents h1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#232526), to(#414345));
   background-image: linear-gradient(to bottom, #232526 0%, #414345 100%);
 }
@@ -413,7 +408,7 @@ a {
   top: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1000;
+  z-index: 100000;
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -679,11 +674,9 @@ a {
     font-size: 18vw;
   }
   #nav ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (70px)[5];
-        grid-template-columns: repeat(5, 70px);
-    gap: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #nav ul li a {
     font-size: 12px;
@@ -701,6 +694,7 @@ a {
   }
   #modal .modal-cont {
     padding: 20px;
+    height: 100vh;
   }
   #modal .modal-cont h2 {
     font-size: 25px;
@@ -723,5 +717,318 @@ a {
     font-size: 14px;
     padding: 10px 10px 12px;
     margin: 0 5px;
+  }
+}
+
+.parallax {
+  background: #222;
+  color: #fff;
+  font-family: 'NEXONLv1Gothic';
+  position: relative;
+}
+
+.paraScroll {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 12px;
+  padding: 0px 20px 2px;
+}
+
+.paraInfo2 {
+  position: fixed;
+  left: 20px;
+  bottom: 70px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+  border-radius: 10px;
+}
+
+.paraInfo2 li {
+  list-style: none;
+}
+
+.paraNav {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  border-radius: 50px;
+}
+
+.paraNav li {
+  display: inline-block;
+  list-style: none;
+}
+
+.paraNav li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.paraNav li.active a {
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+
+.paraInfo {
+  padding: 20px;
+}
+
+.paraInfo h1 {
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 1px dashed #fff;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.paraInfo h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.paraInfo p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.paraCont {
+  width: 100%;
+  overflow: hidden;
+}
+
+.paraCont .content-item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw 0;
+  padding-top: 10vw;
+  text-align: right;
+  position: relative;
+}
+
+.paraCont .content-item .num {
+  font-family: 'Lato';
+  font-weight: 100;
+  font-size: 25vw;
+  opacity: 0.07;
+  position: absolute;
+  right: -5vw;
+  top: -10vw;
+}
+
+.paraCont .content-item .title {
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.paraCont .content-item .img-Wrap {
+  width: 100%;
+  padding-bottom: 56%;
+  background: #000;
+  position: relative;
+}
+
+.paraCont .content-item .img-Wrap .img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.paraCont .content-item .img-Wrap .img:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+}
+
+.paraCont .content-item .img-Wrap .img-jq {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.paraCont .content-item .img-Wrap .img-jq:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+}
+
+.paraCont .content-item .desc {
+  font-size: 6vw;
+  line-height: 1.4;
+  margin-top: -6vw;
+  margin-right: -3vw;
+  position: relative;
+  z-index: 100;
+  word-break: keep-all;
+  color: #F0F600;
+}
+
+.paraCont .content-item:nth-child(even) {
+  margin-left: auto;
+  text-align: left;
+}
+
+.paraCont .content-item:nth-child(even) .num {
+  right: auto;
+  left: -5vw;
+}
+
+.paraCont .content-item:nth-child(even) .desc {
+  margin-right: auto;
+  margin-left: -3vw;
+}
+
+.content-item:nth-child(1) .img {
+  background-image: url(../img/bg1.jpg);
+}
+
+.content-item:nth-child(2) .img {
+  background-image: url(../img/bg2.jpg);
+}
+
+.content-item:nth-child(3) .img {
+  background-image: url(../img/bg3.jpg);
+}
+
+.content-item:nth-child(4) .img {
+  background-image: url(../img/bg4.jpg);
+}
+
+.content-item:nth-child(5) .img {
+  background-image: url(../img/bg5.jpg);
+}
+
+.content-item:nth-child(6) .img {
+  background-image: url(../img/bg6.jpg);
+}
+
+.content-item:nth-child(7) .img {
+  background-image: url(../img/bg7.jpg);
+}
+
+.content-item:nth-child(8) .img {
+  background-image: url(../img/bg8.jpg);
+}
+
+.content-item:nth-child(9) .img {
+  background-image: url(../img/bg9.jpg);
+}
+
+.content-item:nth-child(1) .img-jq {
+  background-image: url(../img/bg11.jpg);
+}
+
+.content-item:nth-child(2) .img-jq {
+  background-image: url(../img/bg12.jpg);
+}
+
+.content-item:nth-child(3) .img-jq {
+  background-image: url(../img/bg13.jpg);
+}
+
+.content-item:nth-child(4) .img-jq {
+  background-image: url(../img/bg14.jpg);
+}
+
+.content-item:nth-child(5) .img-jq {
+  background-image: url(../img/bg15.jpg);
+}
+
+.content-item:nth-child(6) .img-jq {
+  background-image: url(../img/bg16.jpg);
+}
+
+.content-item:nth-child(7) .img-jq {
+  background-image: url(../img/bg17.jpg);
+}
+
+.content-item:nth-child(8) .img-jq {
+  background-image: url(../img/bg18.jpg);
+}
+
+.content-item:nth-child(9) .img-jq {
+  background-image: url(../img/bg19.jpg);
+}
+
+.source button {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 20px;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .parallax {
+    padding: 10px 15px;
+  }
+  .parallax .paraInfo h1 {
+    font-size: 14px;
+  }
+  .parallax .paraInfo p {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .parallax .paraNav {
+    padding: 5px 10px;
+  }
+  .parallax .paraNav li a {
+    font-size: 12px;
+    width: 10px;
+    height: 10px;
+    line-height: 1.1;
+  }
+  .parallax .paraInfo2 {
+    font-size: 10px;
+    padding: 10px;
+  }
+  .parallax .paraScroll {
+    font-size: 10px;
+    padding: 0px 10px;
+  }
+  .parallax .source button {
+    right: 20px;
+    top: 60px;
   }
 }

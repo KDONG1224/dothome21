@@ -140,12 +140,16 @@ tabBtn.click(function(){
 //     $("#modal").addClass("hide")							  
 // });
 
-document.querySelector(".info button").addEventListener("click", function(){
-    document.querySelector("#modal").classList.remove("hide");
-    document.querySelector("#modal").classList.add("show");
-    document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");
-});
+function modal(){
+    document.querySelector(".info button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.remove("hide");
+        document.querySelector("#modal").classList.add("show");
+        document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");
+    });
+    
+    document.querySelector(".modal-cont button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.add("hide");
+    });
+}
 
-document.querySelector(".modal-cont button").addEventListener("click", function(){
-    document.querySelector("#modal").classList.add("hide");
-});
+
