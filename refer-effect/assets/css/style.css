@@ -680,7 +680,7 @@ a {
   }
   #nav ul li a {
     font-size: 12px;
-    width: 65px;
+    width: 60px;
     height: 30px;
     line-height: 2.5;
   }
@@ -711,7 +711,8 @@ a {
     overflow: hidden;
   }
   .code-view .view-cont {
-    height: 60vh;
+    height: 55vh;
+    overflow-y: scroll;
   }
   .code-view .view-title li a {
     font-size: 14px;
