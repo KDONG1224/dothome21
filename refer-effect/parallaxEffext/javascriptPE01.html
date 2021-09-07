@@ -156,7 +156,27 @@
 ​
     <!-- footer -->
     <footer class="paraFooter">
-​
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul> 
+                <li class="active"><a href="javascriptPE01.html">1</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+            <ul>
+                <li><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+            </ul>
+        </div>
     </footer>
     <!-- //footer -->
 
@@ -653,20 +673,16 @@ window.addEventListener("scroll", function(){
     // info
     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-    // $(".offset1").text(parseInt($("#section1").offset().top) + "px");
-    // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
-    // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
-    // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
-    // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
-    // document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
-    // document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
-    // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
-    // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
-    // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
-
-    for(let i=1; i&lt;10; i++){
-        document.querySelector(".offset"+i).innerText = parseInt(document.getElementById("section"+i).offsetTop) + "px";
-    }
+    $(".offset1").text(parseInt($("#section1").offset().top) + "px");
+    document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
+    document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
+    document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
+    document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
+    document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
+    document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
+    document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
+    document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
+    document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
 });
 </code></pre> 
                     </div>
@@ -753,35 +769,21 @@ window.addEventListener("scroll", function(){
             // info
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-            // $(".offset1").text(parseInt($("#section1").offset().top) + "px");
-            // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
-            // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
-            // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
-            // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
-            // document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
-            // document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
-            // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
-            // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
-            // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
-
-            for(let i=1; i<10; i++){
-                document.querySelector(".offset"+i).innerText = parseInt(document.getElementById("section"+i).offsetTop) + "px";
-            }
+            $(".offset1").text(parseInt($("#section1").offset().top) + "px");
+            document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
+            document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
+            document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
+            document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
+            document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
+            document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
+            document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
+            document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
+            document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
         });
 
 
-        function modal(){
-            document.querySelector(".parallax .source button").addEventListener("click", function(){
-                document.querySelector("#modal").classList.remove("hide");
-                document.querySelector("#modal").classList.add("show");
-                document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");
-            });
-            
-            document.querySelector(".modal-cont button").addEventListener("click", function(){
-                document.querySelector("#modal").classList.add("hide");
-            });
-        }
-        modal();
+        //source
+        modalPE01();
     </script>
     <!-- //script -->
 </body>

@@ -132,6 +132,12 @@ tabBtn.click(function(){
     tabCont.eq(index).css("display","block");
 });
 
+//paraScroll
+// $(window).scroll(function(){
+//     let scrollTop = $(window).scrollTop();
+//     $(".paraScroll span").text(parseInt(scrollTop) + "px");
+// });
+
 // modal
 // $(".btn-wrap button").click(function(){
 //     $("#modal").removeClass().addClass("show")
@@ -142,6 +148,32 @@ tabBtn.click(function(){
 
 function modal(){
     document.querySelector(".info button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.remove("hide");
+        document.querySelector("#modal").classList.add("show");
+        document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");
+    });
+    
+    document.querySelector(".modal-cont button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.add("hide");
+    });
+}
+
+//modal - PE01
+function modalPE01(){
+    document.querySelector(".parallax .source button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.remove("hide");
+        document.querySelector("#modal").classList.add("show");
+        document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");
+    });
+    
+    document.querySelector(".modal-cont button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.add("hide");
+    });
+}
+
+//modal - PE02
+function modalPE02(){
+    document.querySelector(".parallax .source02 button").addEventListener("click", function(){
         document.querySelector("#modal").classList.remove("hide");
         document.querySelector("#modal").classList.add("show");
         document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");

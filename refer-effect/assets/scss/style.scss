@@ -852,6 +852,29 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
     }
 }
 
+.source02 button {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    width: 120px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 20px;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.4);;
+    border-radius: 50px;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
 @media (max-width: 800px){
     .parallax {
 
@@ -895,5 +918,61 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
             right: 20px;
             top: 93.6%;
         }   
+    }
+}
+
+//paraFooter
+.paraFooter {
+    padding: 200px 0;
+
+    h1 {
+        font-size: 8vw;
+        line-height: 1.2;
+        padding: 10vw 8vw 0 8vw;
+        text-transform: uppercase;
+        margin-bottom: 3vw;
+    }
+
+    em {
+        display: block;
+        font-family: ‘Lato’;
+        font-weight: 100;
+        padding-left: 18vw;
+    }
+
+    .footerInfo {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        padding: 15px 20px;
+        margin-bottom: 2px;
+
+        h2 {
+            padding-right: 20px;
+        }
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                color: #fff;
+                border: 1px dashed #fff;
+                width: 30px; height: 30px;
+                display: inline-block;
+                border-radius: 50%;
+                line-height: 30px;
+                text-decoration: none;
+                margin-right: 6px;
+            }
+
+            &.active a {
+                background: #fff;
+                color: #000;
+            }
+        }
     }
 }
