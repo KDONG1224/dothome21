@@ -104,6 +104,70 @@
   font-style: normal;
 }
 
+/* 에스코어 드림 - 9개 */
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 100;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 200;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-weight: 900;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff") format("woff");
+  font-style: normal;
+}
+
 /* 여백 초기화 */
 body,
 div,
@@ -168,6 +232,10 @@ a {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
+}
+
+.bg.blue::before {
+  background-color: #41088b59;
 }
 
 .bg1 {
@@ -248,6 +316,46 @@ a {
 
 .bg20 {
   background-image: url(../img/bg20@2.jpg);
+}
+
+.bg21 {
+  background-image: url(../img/bg21@2.jpg);
+}
+
+.bg22 {
+  background-image: url(../img/bg22@2.jpg);
+}
+
+.bg23 {
+  background-image: url(../img/bg23@2.jpg);
+}
+
+.bg24 {
+  background-image: url(../img/bg24@2.jpg);
+}
+
+.bg25 {
+  background-image: url(../img/bg25@2.jpg);
+}
+
+.bg26 {
+  background-image: url(../img/bg26@2.jpg);
+}
+
+.bg27 {
+  background-image: url(../img/bg27@2.jpg);
+}
+
+.bg28 {
+  background-image: url(../img/bg28@2.jpg);
+}
+
+.bg29 {
+  background-image: url(../img/bg29@2.jpg);
+}
+
+.bg30 {
+  background-image: url(../img/bg30@2.jpg);
 }
 
 #main {
@@ -388,6 +496,12 @@ a {
   right: 0;
 }
 
+.info.left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+}
+
 .info h1 {
   font-weight: 300;
   font-size: 20px;
@@ -430,6 +544,20 @@ a {
 .info li.active a {
   background: #fff;
   color: #000;
+}
+
+.info.list {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.info.list li {
+  display: block;
 }
 
 .info button {
