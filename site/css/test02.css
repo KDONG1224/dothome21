@@ -34,7 +34,7 @@ body {
 }
 #header .logo h1 {
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 800;
 }
 #header nav {}
 #header nav li {
@@ -82,7 +82,9 @@ body {
 }
 
 /* section1 */
-#section1 {}
+#section1 {
+    font-family: 'Nanum Gothic';
+}
 #section1 h3 {
     text-align: center;
     font-size: 50px;
