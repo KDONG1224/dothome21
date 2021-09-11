@@ -236,7 +236,7 @@ body {
     font-size: 50px;
     font-weight: 800;
     line-height: 68px;
-    margin-bottom: 72px;
+    margin-bottom: 135px;
 }
 #cont1 .cont1-inner1 .box2 {
     height: 900px;
@@ -244,6 +244,7 @@ body {
     border-radius: 20px;
     padding-bottom: 30px;
     overflow: hidden;
+    margin-top: 20px;
 }
 #cont1 .cont1-inner1 .box2 .text1 {
     padding: 40px;
@@ -252,7 +253,7 @@ body {
 #cont1 .cont1-inner1 .box2 em {
     font-size: 15px;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 #cont1 .cont1-inner1 .box2 h3 {
     font-size: 35px;
@@ -284,7 +285,7 @@ body {
     background: rgb(52, 51, 51);
     border-radius: 20px;
     padding: 40px;
-    height: 570px;
+    height: 550px;
     cursor: pointer;
 }
 #cont1 .cont1-inner2 .box1 em {
@@ -303,7 +304,7 @@ body {
 }
 #cont1 .cont1-inner2 .box1 img {
     width: 100%;
-    margin-top: 110px;
+    margin-top: 90px;
     margin-left: 40px;
     vertical-align: top;
     transition: transform 0.2s;
@@ -319,7 +320,7 @@ body {
     background: rgb(52, 51, 51);
     border-radius: 20px;
     padding: 40px;
-    height: 541px;
+    height: 521px;
     cursor: pointer;
 }
 #cont1 .cont1-inner2 .box2 em {
@@ -338,7 +339,7 @@ body {
 }
 #cont1 .cont1-inner2 .box2 img {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 60px;
     vertical-align: top;
     transition: transform 0.2s;
     transform: scale(1);
