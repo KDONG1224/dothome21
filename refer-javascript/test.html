@@ -104,18 +104,49 @@
         //     document.write(`${info.num}. 내 이름은 ${info.name}이며 직업은 ${info.job}입니다.`)
         // }
 
-        let A = 1;
-        let B = 2;
-        if(A>B){
-            document.write(">");
-        } else if(A<B){
-            document.write("<");
-        } else if(A==B){
-            document.write("==");
-        };
-        console.log(A)
+        // let A = 1;
+        // let B = 2;
+        // if(A>B){
+        //     document.write(">");
+        // } else if(A<B){
+        //     document.write("<");
+        // } else if(A==B){
+        //     document.write("==");
+        // };
+        // console.log(A)
         
     }
+
+
+    {
+        function func(){
+            let a =[], cnt = 0;
+
+            for(i=1; i<=5; i++){
+                if(a[i] % 2 !=0){
+                    cnt = cnt+1;
+                }
+            }
+            document.write(cnt+"<br>");
+            console.log(i)
+        }
+        func();
+    }
+
+    {
+        function func1(){
+            let i=10, hap=0;
+            while(i>1){
+                i--;
+                if(i%3 == 1){
+                    hap+=[i]; //10,7,4
+                }
+            }
+            document.write(hap);
+        }
+        func1();
+    }
+
     </script>
 </body>
 </html>
