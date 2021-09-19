@@ -914,8 +914,26 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
 @for $i from 1 through 9 {
     .content-item {
         &:nth-child(#{$i}){
+            .img.img3 {
+                background-image: url(../img/bg2#{$i}.jpg);
+            }
+        }
+    }
+}
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
             .img-jq {
                 background-image: url(../img/bg1#{$i}.jpg);
+            }
+        }
+    }
+}
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
+            .img-jq.img3 {
+                background-image: url(../img/bg2#{$i}.jpg);
             }
         }
     }
