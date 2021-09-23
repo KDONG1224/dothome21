@@ -238,6 +238,14 @@ a {
   background-color: #41088b59;
 }
 
+.bg.brown::before {
+  background-color: rgba(50, 37, 11, 0.8);
+}
+
+.bg.white::before {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .bg1 {
   background-image: url(../img/bg1@2.jpg);
 }
