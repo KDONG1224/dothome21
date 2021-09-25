@@ -1,0 +1,632 @@
+body {
+    font-family: 'NanumSquare'
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    height: 670px;
+}
+
+/* header */
+#header {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 10%);
+}
+.header {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+.header .logo {
+    position: absolute;
+    top: 23px;
+    left: 6%;
+    width: 200px;
+    height: 40px;
+    z-index: 5;
+}
+.header .logo {}
+.header .logo a {
+    background: url('https://whale.naver.com/_resource/img/main/logo_whale.svg') no-repeat center;
+    text-align: center;
+    line-height: 40px;
+    text-indent: -9999em;
+    display: block;
+    height: 40px;
+}
+.header .header-nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+.header .header-nav .nav-menu {
+    padding: 0;
+    margin: 0;
+    font-family: 'NanumSquare';
+}
+.header .header-nav .nav-menu ul {
+    text-align: center;
+    overflow: hidden;
+}
+.header .header-nav .nav-menu ul li {
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+}
+.header .header-nav .nav-menu ul li a {
+    line-height: 120%;
+    color: #2d1d1d;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 90px;
+}
+.header .header-nav .nav-menu ul li a:hover {
+    color: #05c3a7;
+}
+.header .down-btn {}
+.header .down-btn a {
+    position: absolute;
+    top: 20px;
+    right: 4%;
+    width: 125px;
+    height: 50px;
+    color: #15c5aa;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #15c5aa;
+    border-radius: 5px;
+    transition: all .5s;
+}
+.header .down-btn a:hover {
+    background-color: #15c5aa;
+    color: #fff;
+}
+
+/* main */
+/* tab */
+#tab {
+    margin-top: 90px;
+    width: 100%;
+}
+.tab {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.tab ul {}
+.tab ul li {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    max-width: 330px;
+    height: 70px;
+    line-height: 70px;
+}
+.tab ul .tab1 {}
+.tab ul .tab2 {
+    border-right: 1px solid #838383;
+    border-left: 1px solid #838383;
+}
+.tab ul .tab3 {}
+.tab ul .tab1 .tab-content {
+    background: url("https://whale.naver.com/_resource/img/whywhale/top_check.png");
+    background-position: top 23px left;
+    background-repeat: no-repeat;
+    color: #05d6b4;
+}
+.tab ul .tab2 .tab-content {
+    background-image: url("https://whale.naver.com/_resource/img/whywhale/top_check_2.png");
+    background-repeat: no-repeat;
+}
+.tab ul .tab3 .tab-content {
+    background-image: url("https://whale.naver.com/_resource/img/whywhale/top_check_3.png");
+    background-repeat: no-repeat;
+}
+.tab ul li .tab-content {
+    background-position: bottom 24px left;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    color: #838383;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+/* cont1 */
+#cont1 {
+    display: block;
+    background: url("https://whale.naver.com/_resource/img/whywhale/top_tasking_bg.jpg") no-repeat top center/ cover;
+    width: 100%;
+    height: 670px;
+    text-align: left;
+}
+#cont1 .container {
+    display: table;
+    width: 100%;
+    padding-top: 180px;
+}
+.cont1-box {}
+.cont1-box h3 {
+    font-size: 50px;
+    line-height: 120%;
+    color: #fff;
+    font-weight: bold;
+}
+.cont1-box h3 .br {
+    display: none;
+}
+.cont1-box p {
+    font-size: 30px;
+    color: #fff;
+    padding: 30px 0 50px;
+}
+.cont1-box .down-btn {}
+.cont1-box .down-btn a {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    background: #05d6b4;
+}
+.cont1-box .down-btn a::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url("https://whale.naver.com/_resource/img/main/icon_btn_arrow.png") 50% 50% no-repeat;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
+}
+
+/* cont2 */
+#cont2 {}
+.sectionCont-box {
+    display: table-cell;
+    vertical-align: middle;
+    height: 670px;
+}
+.sectionCont-box h3 {
+    color: #000;
+    padding-left: 80px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+}
+.sectionCont-box h3::before {
+    content: '';
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+}
+.sectionCont-box p {
+    color: #333130;
+    font-size: 26px;
+    margin: 30px 0 50px;
+}
+.sectionCont-box ul {
+    width: 100%;
+}
+.sectionCont-box ul li {
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.sectionCont-box ul li a {
+    display: inline-block;
+    color: #2d68d2;
+    line-height: 20px;
+    font-size: 18px;
+}
+.sectionCont-box ul li a::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png") no-repeat top center;
+    background-size: 100%;
+}
+.sectionCont-box .device {
+    width: 100%;
+    margin-top: 30px;
+}
+.sectionCont-box .device .pc {
+    display: inline-block;
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_pc.png") no-repeat bottom center;
+    background-size: 100%;
+    width: 118px;
+    height: 76px;
+}
+.sectionCont-box .device .mobile {
+    display: inline-block;
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_m.png") no-repeat bottom center;
+    background-size: 100%;
+    width: 118px;
+    height: 76px;
+}
+.sectionCont-img-box {
+    display: table-cell;
+    width: 50%;
+    height: 670px;
+    vertical-align: middle;
+}
+.sectionCont-img-box img {
+    display: block;
+    width: 100%;
+    border-style: none;
+}
+
+/* sectionCont-box background/odd/even */
+#main section:nth-child(odd) {
+    background-color: #ecedf1;
+}
+
+#main section:nth-child(even) {
+    background-color: #fff;
+}
+
+#main section:nth-child(even) .sectionCont-box {
+    padding-left: 5%;
+}
+
+/* sectionCont-box h3 */
+#cont2 .sectionCont-box h3::before {
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_05.png") no-repeat top center;
+}
+#cont3 .sectionCont-box h3::before {
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_01.png") no-repeat top center;
+}
+#cont4 .sectionCont-box h3::before {
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_02.png") no-repeat top center;
+}
+#cont5 .sectionCont-box h3::before {
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_03.png") no-repeat top center;
+}
+#cont6 .sectionCont-box h3::before {
+    background: url("https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_04.png") no-repeat top center;
+}
+
+/* banner */
+#banner {
+    width: 100%;
+    background: #fff;
+    padding: 10% 0;
+    text-align: center;
+}
+#banner .container {
+    height: auto;
+}
+#banner .banner-img {
+    display: inline-block;
+    margin-bottom: 3%;
+    max-width: 560px;
+}
+#banner .down-btn {}
+#banner .down-btn a {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    background: #05d6b4;
+}
+#banner .down-btn a::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url("https://whale.naver.com/_resource/img/main/icon_btn_arrow.png") 50% 50% no-repeat;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+#footer .container {
+    height: auto;
+    vertical-align: middle;
+    position: relative;
+}
+#footer h2 {
+    display: inline-block;
+    margin: 0 0 20px;
+    max-width: 141px;
+}
+#footer h2 a {}
+#footer h2 a img {
+    width: 100%;
+    display: block;
+}
+#footer ul {}
+#footer ul li {
+    text-align: center;
+    display: inline-block;
+    margin: 10px 20px 0;
+    position: relative;
+}
+#footer ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #c0c0c0;
+}
+#footer ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -21px;
+    width: 1px;
+    height: 18px;
+    background: #dadada;
+}
+#footer p {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+#footer p a {
+    padding: 0 15px 0 45px;
+    height: 43px;
+    color: #c0c0c0;
+    font-size: 16px;
+    line-height: 43px;
+}
+#footer p a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 55px);
+    width: 20px;
+    height: 20px;
+    background: url("https://whale.naver.com/_resource/img/main/beta.svg") no-repeat;
+}
+
+/* 모바일 */
+@media(max-width: 800px){
+    /* header */
+    #header {
+        height: 60px;
+    }
+    .container {
+        width: 90%;
+    }
+    .header .logo {
+        top: 10px;
+        left: 4%;
+        width: 140px;
+    }
+    .nav-menu,
+    .header .down-btn {
+        display: none;
+    }
+
+    /* main */
+    #main {
+        margin-top: 60px;
+    }
+
+    /* tab */
+    #tab {
+        margin-top: 0;
+    }
+    .tab ul li {
+        max-width: 330px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .tab ul li .tab-content {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+    .tab ul .tab1 .tab-content {
+        background-size: 14px auto;
+        background-position: top 17px left;
+    }
+    .tab ul .tab2 .tab-content {
+        background-size: 14px auto;
+        background-position: bottom 17px left;
+    }
+    .tab ul .tab3 .tab-content {
+        background-size: 14px auto;
+        background-position: bottom 17px left;
+    }
+
+    /* cont1 */
+    #cont1 {
+        background: url("https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg") no-repeat top right calc(50% - 35%);
+    }
+    #cont1 .container {
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 0;
+    }
+    #cont1 .cont1-box {
+        display: block;
+        padding: 0 5%;
+        height: 100%;
+        background: url("https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png") no-repeat bottom right;
+        background-size: 80%;
+    }
+    #cont1 .cont1-box h3 {
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    #cont1 .cont1-box h3 .br {
+        display: block;
+    }
+    #cont1 .cont1-box p {
+        font-size: 18px;
+        padding: 20px 0 50px;
+    }
+    #cont1 .cont1-box .down-btn a {
+        width: 200px;
+        font-size: 24px;
+        border-radius: 32px;
+        height: 64px;
+        line-height: 64px;
+    }
+    #cont1 .cont1-box .down-btn a::after {
+        height: 64px;
+    }
+
+    /* section */
+    /* sectionCont-box background/odd/even */
+    #main section:nth-child(odd) {
+        height: 750px;
+    }
+    #main section:nth-child(even) {
+        position: relative;
+        padding-top: 80px;
+    }
+    #main section:nth-child(2) {
+        position: relative;
+        padding-top: 0;
+    }
+    #main section:nth-child(odd) .sectionCont-box {
+        padding-top: 80px;
+        height: auto;
+    }
+    #main section:nth-child(even) .sectionCont-box {
+        padding-left: 0;
+    }
+    #main section:nth-child(even) .sectionCont-img-box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+    }
+    #main section .sectionCont-box {
+        display: block;
+        width: 100%;
+    }
+    #main section .sectionCont-box {
+        display: block;
+        width: 100%;
+    }
+    #main section .sectionCont-box h3 {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 60px;
+        font-size: 32px;
+    }
+    #main section .sectionCont-box h3::before {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+    #main section .sectionCont-box p {
+        font-size: 18px;
+        color: #333130;
+        margin: 25px 0 40px;
+    }
+    #main section .sectionCont-box ul {}
+    #main section .sectionCont-box ul li {
+        margin-bottom: 12px;
+        padding-left: 22px;
+    }
+    #main section .sectionCont-box ul li a {
+        line-height: 18px;
+        font-size: 16px;
+    }
+    #main section .sectionCont-box ul li a::before {
+        width: 16px;
+        height: 16px;
+    }
+    #main section .sectionCont-box .device .pc {
+        width: 90px;
+        height: 40px;
+    }
+    #main section .sectionCont-box .device .mobile {
+        width: 90px;
+        height: 40px;
+    }
+    #main section .sectionCont-img-box {
+        padding-bottom: 80px;
+        display: block;
+        width: 82.8%;
+        text-align: center;
+        margin: 10% auto 0;
+    }
+
+    /* banner */
+    #banner .banner-img {
+        max-width: 300px;
+    }
+
+    /* footer */
+    #footer {
+        padding: 40px 0;
+    }
+    #footer .container {}
+    #footer h2 {
+        max-width: 120px;
+    }
+    #footer h2 a {}
+    #footer h2 a img {}
+    #footer ul li {}
+    #footer li a {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    #footer li a::after {}
+    #footer p {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        margin: 30px 0 0;
+    }
+    #footer p a {
+        padding: 0 15px 0 35px;
+        height: 38px;
+        font-size: 14px;
+        line-height: 38px;
+    }
+    #footer p a::before {
+        top: calc(50% - 8px);
+        left: calc(50% - 47px);
+        width: 16px;
+        height: 16px;
+    }
+}

@@ -1,0 +1,730 @@
+body {
+    font-family: 'NanumSquare';
+}
+
+/* header */
+#header {
+    background: #fff;
+}
+.header {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+h1 {}
+h1 a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: transparent;
+    background: url('https://whale.naver.com/_resource/img/main/logo_whale.svg') no-repeat center;
+}
+nav {}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    margin: 0 50px;
+}
+nav ul li a {
+    color: #2d1d1d;
+    font-size: 18px;
+    font-family: 'NanumSquare';
+    font-weight: 800;
+}
+.down {}
+.down a {
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #15c5aa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #15c5aa;
+}
+.down a:hover {
+    background: #15c5aa;
+    color: #05d6b4;
+}
+
+/* nav */
+#nav {
+    width: 100%;
+    background-color: #333;
+}
+.tapMenu {}
+.tapMenu .tapMenu-cont {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.tapMenu .tapMenu-cont ul {
+    padding: 30px 0;
+}
+.tapMenu .tapMenu-cont ul li {
+    color: #838383;
+}
+.tapMenu .tapMenu-cont ul li .li1 {
+    font-size: 18px;
+}
+.tapMenu .tapMenu-cont ul li .li2 {
+    font-size: 18px;
+}
+.tapMenu .tapMenu-cont ul li .li3 {
+    font-size: 18px;
+}
+
+/* banner */
+#banner {}
+#banner .banner-wrap {
+    width: 100%;
+    height: 700px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/top_tasking_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 200px 0;
+}
+.banner h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.banner p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.banner .banner-btn {
+    position: relative;
+}
+.banner .banner-btn a {
+    font-size: 25px;
+    color: #fff;
+    background: #05d6b4;
+    border-radius: 45px;
+    padding: 15px 35px;
+}
+.banner .banner-btn a .banner-btn-span {
+    color: transparent;
+}
+.banner .banner-btn a:after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url('https://whale.naver.com/_resource/img/main/icon_btn_arrow.png') 50% 50% no-repeat;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
+    position: absolute;
+    left: 120px;
+    top: -20px;
+}
+
+/* cont1 */
+#cont1 {
+    width: 100%;
+    background-color: #ecedf1;
+    padding: 150px 0;
+}
+.cont1-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cont1-box1 {
+    width: 48%;
+    height: 300px;
+    overflow: hidden;
+}
+.cont1-box1 img {
+    float: left;
+}
+.cont1-box1 h3 {
+    float: left;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    display: block;
+}
+.cont1-box1 p {
+    clear: both;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.cont1-box1 span {
+    position: relative;
+}
+.cont1-box1 span a {
+    color: #2d68d2;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    margin-left: 28px;
+}
+.cont1-box1 span:before {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont1-box1 .cont1-btn {}
+.cont1-box1 .cont1-btn .btn1 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_pc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.cont1-box1 .cont1-btn .btn2 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_m.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 2px;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.cont1-box2 {
+    width: 48%;
+    height: 300px;
+}
+.cont1-box2 img {
+    width: 100%;
+    height: 310px;
+}
+/* cont2 */
+#cont2 {
+    width: 100%;
+    background-color: #fff;
+    padding: 150px 0;
+}
+.cont2-box1 {
+    width: 48%;
+    height: 300px;
+}
+.cont2-box1 img {
+    width: 100%;
+    height: 310px;
+}
+.cont2-box2 {
+    width: 48%;
+    overflow: hidden;
+}
+.cont2-box2 img {
+    float: left;
+    margin-top: 10px;
+}
+.cont2-box2 h3 {
+    float: left;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cont2-box2 p {
+    clear: both;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.cont2-box2 .cont2-blue {
+    position: relative;
+}
+.cont2-box2 .cont2-blue a {
+    color: #2d68d2;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-left: 25px;
+}
+.cont2-box2 .cont2-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont2-box2 .cont2-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont2-box2 .cont2-blue.a {
+    margin-bottom: 35px;
+}
+.cont2-box2 .cont2-btn {}
+.cont2-box2 .cont2-btn .btn1 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_pc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.cont2-box2 .cont2-btn .btn2 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_m.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 2px;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+
+/* cont3 */
+#cont3 {
+    width: 100%;
+    background-color: #ecedf1;
+    padding: 150px 0;
+}
+.cont3-box1 {
+    width: 48%;
+    overflow: hidden;
+}
+.cont3-box1 img {
+    float: left;
+    margin-top: 10px;
+}
+.cont3-box1 h3 {
+    float: left;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cont3-box1 p {
+    clear: both;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.cont3-box1 .cont3-blue {
+    position: relative;
+}
+.cont3-box1 .cont3-blue a {
+    color: #2d68d2;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-left: 25px;
+}
+.cont3-box1 .cont3-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont3-box1 .cont3-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont3-box1 .cont3-blue.a {
+    margin-bottom: 35px;
+}
+.cont3-box1 .cont3-btn {}
+.cont3-box1 .cont3-btn .btn1 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_pc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.cont3-box1 .cont3-btn .btn2 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_m.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 2px;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.cont3-box2 {
+    width: 48%;
+    height: 300px;
+}
+.cont3-box2 img {
+    width: 100%;
+    height: 310px;
+}
+
+/* cont4 */
+#cont4 {
+    width: 100%;
+    background-color: #fff;
+    padding: 150px 0;
+}
+.cont4-box1 {
+    width: 48%;
+    height: 300px;
+}
+.cont4-box1 img {
+    width: 100%;
+    height: 310px;
+}
+.cont4-box2 {
+    width: 48%;
+    overflow: hidden;
+}
+.cont4-box2 img {
+    float: left;
+    margin-top: 10px;
+}
+.cont4-box2 h3 {
+    float: left;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cont4-box2 p {
+    clear: both;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.cont4-box2 .cont4-blue {
+    position: relative;
+}
+.cont4-box2 .cont4-blue a {
+    color: #2d68d2;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-size: 18px;
+}
+.cont4-box2 .cont4-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont4-box2 .cont4-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont4-box2 .cont4-blue.a {
+    margin-bottom: 35px;
+}
+.cont4-box2 .cont4-btn {
+    display: flex;
+}
+.cont4-box2 .cont4-btn .btn-btn1 span {
+    display: block;
+    margin-bottom: 5px;
+    color: #919191;
+}
+.cont4-box2 .cont4-btn .btn-btn2 span {
+    display: block;
+    margin-bottom: 5px;
+    color: #919191;
+}
+.cont4-box2 .cont4-btn .btn-btn2 .btn-btn2-1 {
+    display: flex;
+}
+.cont4-box2 .cont4-btn .btn1 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_pc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 21px 50px;
+    border-radius: 10px;
+}
+.cont4-box2 .cont4-btn .btn2 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_pc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5px;
+    padding: 21px 50px;
+    border-radius: 10px;
+}
+.cont4-box2 .cont4-btn .btn3 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_m.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5px;
+    padding: 21px 50px;
+    border-radius: 10px;
+}
+
+/* cont5 */
+#cont5 {
+    width: 100%;
+    background-color: #ecedf1;
+    padding: 150px 0;
+}
+.cont5-box1 {
+    width: 48%;
+    overflow: hidden;
+}
+.cont5-box1 img {
+    float: left;
+    margin-top: 10px;
+}
+.cont5-box1 h3 {
+    float: left;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.cont5-box1 p {
+    clear: both;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.cont5-box1 .cont5-blue {
+    position: relative;
+}
+.cont5-box1 .cont5-blue a {
+    color: #2d68d2;
+    display: block;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    font-size: 18px;
+}
+.cont5-box1 .cont5-blue:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png') no-repeat top center;
+    background-size: 100%;
+}
+.cont5-box1 .cont5-btn {}
+.cont5-box1 .cont5-btn .btn1 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_pc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 45px;
+    border-radius: 10px;
+}
+.cont5-box1 .cont5-btn .btn2 {
+    font-size: 20px;
+    font-weight: 400;
+    background: url('https://whale.naver.com/_resource/img/whywhale/icon_m.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5px;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.cont5-box2 {
+    width: 48%;
+    height: 300px;
+}
+.cont5-box2 img {
+    width: 100%;
+    height: 310px;
+}
+
+/* article */
+#article {
+    width: 100%;
+    background-color: #fff;
+    padding: 150px 0;
+}
+.article {
+    text-align: center;
+    margin: 0 auto;
+}
+.article .article-box1 {
+    height: 100px;
+    margin: 0 auto;
+}
+.article .article-box1 img {
+    height: 100px;
+}
+.article .article-box2 {}
+.article .article-box2 a {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #fff;
+    background: #05d6b4;
+    border-radius: 40px;
+    padding: 10px 30px;
+    position: relative;
+}
+.article .article-box2 a span {
+    color: transparent;
+}
+.article .article-box2 a:after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url('https://whale.naver.com/_resource/img/main/icon_btn_arrow.png') 50% 50% no-repeat;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
+    position: absolute;
+    left: 135px;
+    top: -8px;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+.footer {}
+.footer .footer-logo {}
+.footer .footer-logo img {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 2000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer-center nav {}
+.footer-center nav ul {}
+.footer-center nav ul li {
+    margin: 0 20px;
+}
+.footer-center nav ul li a {
+    font-size: 15px;
+    font-weight: 300;
+    color: #c0c0c0;
+}
+.footer-center nav ul .beta a:nth-child(6) {
+    margin-right: 10px;
+}
+.footer-center nav ul .beta a:last-child {
+    border: 1px solid #c0c0c0;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+
+
+/* container */
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* 미디어 */
+@media(max-width: 1290px){
+    #header nav ul li {
+        width: 93px;
+    }
+    #header .nav ul li a {
+        font-size: 15px;
+    }
+}
+@media(max-width: 960px){
+    #header nav {
+        display: none;
+    }
+    .cont1-container {
+        display: block;
+    }
+    #cont2 .cont1-container,
+    #cont4 .cont1-container {
+        flex-direction: row-reverse;
+    }
+    .cont1-box1 {
+        margin-top: 50px;
+    }
+    .cont1-box1 h3 {
+        font-size: 40px;
+    }
+}

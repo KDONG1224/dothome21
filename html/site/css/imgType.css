@@ -1,0 +1,187 @@
+/* imgType */
+body {
+    background: #f3f3f3;
+}
+.imgType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+/* imgType01 */
+.imgType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.imgType01 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.imgType01 .img-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imgType01 .img-wrap .img-img {
+    margin-right: 20px;
+}
+.imgType01 .img-wrap .img-card {}
+.imgType01 .img-wrap .img-card .innerbox {
+    position: relative;
+    bottom: 195px;
+    left: 15px;
+    background-color: rgba(0,0,0,0.5);
+    width: 500px;
+    padding: 10px 15px;
+    color: #fff;
+}
+.imgType01 .img-wrap .img-card .innerbox_2 {
+    position: relative;
+    bottom: 197px;
+    left: 15px;
+    background-color: rgba(0,0,0,0.5);
+    width: 500px;
+    padding: 10px 15px;
+    color: #fff;
+}
+.imgType01 .img-wrap .img-card .innerbox .img-title {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.imgType01 .img-wrap .img-card .innerbox .img-desc {
+    display: block;
+    width: 490px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.imgType01 .img-wrap .img-card .innerbox .img-word a {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+.imgType01 .img-wrap .img-card .innerbox_2 .img-title {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.imgType01 .img-wrap .img-card .innerbox_2 .img-desc {
+    display: block;
+    width: 490px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.imgType01 .img-wrap .img-card .innerbox_2  .img-word a {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* imgType02 */
+.imgType02 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.imgType02 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.imgType02 .img-wrap {
+    display: flex;
+    gap: 20px;
+}
+.imgType02 .img-wrap .img-card {
+    position: relative;
+}
+.imgType02 .img-wrap .img-card .img-img {
+    width: 100%;
+    vertical-align: middle;
+}
+.imgType02 .img-wrap .img-card .innerbox {
+    color: #000;
+    margin: 0 auto;
+}
+.imgType02 .img-wrap .img-card .innerbox .img-title {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50px;
+    padding: 10px 30px 5px 30px;
+    margin-right: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* imgType03 */
+.imgType03 {
+    padding: 150px 0;
+    font-family: 'GmarketSans';
+}
+.imgType03 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.imgType03 .img-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 590px);
+    gap: 20px;
+}
+.imgType03 .img-wrap .img-card {
+    width: 590px;
+    height: 590px;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.imgType03 .img-wrap .img-card .img-img {
+    position: relative;
+}
+.imgType03 .img-wrap .img-card .inner1 {
+    position: absolute;
+    left: 23%;
+    top: 77%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.6);
+    width: 490px;
+    padding: 15px 15px;
+    color: #fff;
+}
+.imgType03 .img-wrap .img-card .inner1 .img-title {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.imgType03 .img-wrap .img-card .inner1 .img-desc {
+    font-size: 14px;
+    font-weight: 300;
+}
+.imgType03 .img-wrap .img-card .inner2 div {
+    height: 290px;
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+}
+.imgType03 .img-wrap .img-card .inner2 div:nth-child(2),
+.imgType03 .img-wrap .img-card .inner2 div:nth-child(4) {
+    margin-left: 20px;
+}
+.imgType03 .img-wrap .img-card .inner2 img.inner-img {
+}
+.imgType03 .img-wrap .img-card .inner2 .inner-title {
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 89%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 15px 5px 15px;
+    width: 60px;
+    text-align: center;
+
+}

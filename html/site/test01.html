@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">                                                                        <!-- 언어설정 : 한국어 -->
+<head>                                                                                  <!--  -->
+    <meta charset="UTF-8">                                                              <!-- 언어설정 : UTF-8은 전세계 공통언어 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">                               <!-- 호환성 : 익스프로 버전으로 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">              <!-- 비율 : pc에서 보다가 모바일에서 볼 경우 -->
+    <meta name="author" content="kdong">                                                <!-- 누가 만들었는지 -->
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">       <!-- 사이트 설명 -->
+    <meta name="keywords" content="크동, 사이트, 웹퍼블리셔, 프론트엔드개발자">          <!-- 키워드 -->
+    <title>test01</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/fonts.css">                                    폰트설정 css -->
+    <!-- <link rel="stylesheet" href="css/var.css">                                      변수설정 css -->
+    <!-- <link rel="stylesheet" href="css/reset.css">                                    기본설정 초기화 css -->
+    <!-- <link rel="stylesheet" href="css/common.css">                                   공통설정 css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- 파비콘 -->
+    <!-- <link rel="shortcut icon" href="../assets/ico/favicon.ico"> -->            <!-- 화면 탭의 아이콘(?) -->
+
+    <!-- 나눔스퀘어 웹 폰트 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <!-- type="text/css" 는 생략 가능 -->
+
+    <style>
+        /* 기본 초기화 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        /* body */
+        body {
+            background-image: url(img/test02.png);
+        }
+        #wrap {}
+        #header {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: #fff;
+        }
+        #header h1 {
+            font-size: 20px;
+        }
+        #header img {
+            width: 30px;
+            height: 30px;
+        }
+        #header nav li {
+            display: inline;
+        }
+        #header nav a {
+            color: #fff;
+            padding: 0 20px;
+        }
+        #header .login {
+            color: #fff;
+        }
+        #banner {
+            /* background: #000; */
+        }
+        .banner {
+            padding: 200px 0;
+            height: 400px;
+            color: #fff;
+        }
+        .banner h2 {
+            margin: 250px 0 60px 0;
+            color: #fff;
+            font-size: 85px;
+            line-height: 1.1;
+        }
+        .banner strong{
+            display: inline-block;
+            font-size: 45px;
+            margin-bottom: 30px;
+            color: #fff;
+            line-height: 1.2;
+        }
+        .banner p{
+            color: #fff;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 2;
+            margin-bottom: 200px;
+        }
+        #slider {
+            /* background: #000; */
+            padding: 100px;
+            position: relative;
+            bottom: 5%; left: 50%;
+            transform: translate(-50%, -5%);
+        }
+        .swiper {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            border-radius: 20px;
+            margin-top: 300px;
+            margin-bottom: 100px;
+            cursor: pointer;
+        }
+        .swiper-wrapper .swiper-slide .slider-inner{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 420px;
+        }
+        .swiper-wrapper .swiper-slide .slider-inner.s1 {
+            background-image: url(img/test-slider01.png);
+        }
+        .swiper-wrapper .swiper-slide .slider-inner.s2 {
+            background-image: url(img/test-slider02.png);
+        }
+        .swiper-wrapper .swiper-slide .slider-inner.s3 {
+            background-image: url(img/test-slider03.png);
+        }
+        .swiper-wrapper .swiper-slide .slider-inner.s4 {
+            background-image: url(img/test-slider04.png);
+        }
+        .swiper-wrapper .swiper-slide .slider-inner.s5 {
+            background-image: url(img/test-slider05.png);
+        }
+        .swiper-wrapper .swiper-slide .slider-inner.s6 {
+            background-image: url(img/test-slider06.png);
+        }
+        .swiper-slide .slider-inner {
+            color: #fff;
+        }
+        .swiper-slide .slider-inner em {
+            font-size: 18px;
+            opacity: 0.5;
+            padding: 55px 0 10px 70px;
+            display: block;
+        }
+        .swiper-slide .slider-inner h3 {
+            font-size: 35px;
+            line-height: 1.4;
+            margin: 0 0 20px 70px;
+        }
+        .swiper-slide .slider-inner .btn {
+            display: block;
+            margin: 0 0 0 70px;
+        }
+        .swiper-slide .slider-inner .btn a {
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .swiper-pagination {
+            text-align: left;
+            margin: 0 0 40px 45px;
+        }
+        .swiper-pagination .swiper-pagination-bullet{
+            z-index: 1000;
+            background-color: #fff;
+        }
+        .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+        .swiper-button-prevs1 {
+            width: 62px; height: 62px;
+            position: fixed;
+            top: 60%;
+            right: 72%;
+            transform: translateY(-58%);
+            border-radius: 50%;
+            background: #000000f3;
+            color: #fff;
+            text-align: center;
+            line-height: 5;
+            z-index: 100;
+        }
+        .swiper-button-prevs1:hover {
+            background-color: #bdbdbd;
+        }
+        .swiper-button-prevs1 svg {
+            stroke: #fff;
+        }
+        .swiper-button-nexts1 {
+            width: 62px; height: 62px;
+            position: fixed;
+            top: 60%;
+            left: 72%;
+            transform: translateY(-58%);
+            border-radius: 50%;
+            background: #000000f3;
+            color: #fff;
+            text-align: center;
+            line-height: 5;
+            z-index: 100;
+        }
+        .swiper-button-nexts1:hover {
+            background-color: #bdbdbd;
+        }
+        .swiper-button-nexts1 svg {
+            stroke: #fff;
+            transform: rotate(180deg);
+        }
+        .testType02 {
+            margin-bottom: 150px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .testType02 .testcont1 {
+            width: 48.5%;
+        }
+        .testType02 .testcont1 h3{
+            color: rgb(113, 126, 238);
+            font-size: 50px;
+            font-weight: 800;
+            margin-bottom: 60px;
+        }
+        .testType02 .testcont1 > div {
+            width: 100%;
+            height: 872px;
+            background: linear-gradient(to bottom,  rgb(53, 53, 56) 0%,rgb(31, 31, 34) 100%);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.342);
+            border-radius: 20px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .testType02 .text1 {
+            display: inline-block;
+            color: rgb(189, 189, 189);
+            font-size: 16px;
+            font-weight: 800;
+            margin: 45px 0 10px 50px;
+        }
+        .testType02 .text2 {
+            display: block;
+            margin: 0 0 15px 50px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .testType02 .text3 {
+            display: block;
+            margin: 0 0 0px 50px;
+            color: rgb(113, 126, 238);
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        .testType02 .testcont2 {
+            width: 48.5%;
+        }
+        .testType02 .testcont2 .cont2 .text2 {
+            text-align: left;
+        }
+        .testType02 .testcont2 > div {
+            width: 100%;
+            height: 550px;
+            background: linear-gradient(to bottom,  rgb(53, 53, 56) 0%,rgb(31, 31, 34) 100%);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.342);
+            border-radius: 20px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .testType02 .testcont2 > div:nth-child(1) {
+            margin-bottom: 32px;
+        }
+        .testType02 .textimg {
+            transition: transform 0.45s;
+            transform: scale(1);
+            width: 500px;
+        }
+        .testType02 .cont3 .textimg {
+            width: 530px;
+        }
+        .testType02 .cont1:hover .textimg{
+            transform: scale(1.1);
+        }
+        .testType02 .cont2:hover .textimg{
+            transform: scale(1.1);
+        }
+        .testType02 .cont3:hover .textimg{
+            transform: scale(1.1);
+        }
+        #cont2 {
+            /* background: #000; */
+            padding: 300px 0;
+        }
+        .cont2 {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .cont2 h2 {
+            color: #5cf0c6;
+            font-size: 50px;
+            flex: 0 0 100%;
+        }
+        .cont2 .boxA1 {
+            flex: 0 0 48%;
+            height: 300px;
+            background: rgb(172, 122, 122);
+            border-radius: 40px;
+        }
+        .cont2 .boxA2 {
+            flex: 0 0 48%;
+            height: 300px;
+            background: rgb(172, 122, 122);
+            border-radius: 40px;
+        }
+        .cont2 .boxA3 {
+            flex: 0 0 100%;
+            height: 300px;
+            background: rgb(172, 122, 122);
+            border-radius: 40px;
+            margin-top: 30px;
+        }
+        #footer {}
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <header id="header">
+            <img src="img/test01.gif" alt="로고입니다.">
+            <h1>NAVER<br>INFLUENSER CENTER</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">인플루언서 안내</a></li>
+                    <li><a href="#">광고 수익 혜택</a></li>
+                    <li><a href="#">성장 지원 프로그램</a></li>
+                    <li><a href="#">브랜드 커넥트</a></li>
+                    <li><a href="#">공지</a></li>
+                </ul>
+            </nav>
+            <span><a href="#" class="login">로그인</a></span>
+        </header>
+        <!-- //header -->
+        <section id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>NAVER INFLUENSER CENTER</h2>
+                    <strong>인플루언서에게 필요한 모든 것</strong>
+                    <p>네이버 인플루언서 센터는 여러분들에게 다양한 지원 프로그램을 운영하고 있습니다.
+                        더 큰 수익과 성장을 위한 다양한 혜택과 지원 프로그램을 지금 경험해보세요.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- //banner -->
+        <section id="slider">
+            <div class="container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner s1">
+                                <em>로고전문가 최은빈과 함께하는</em>
+                                <h3>세상에서 제일 쉬운<br>로고 만들기 심화편</h3>
+                                <span class="btn">
+                                    <a href="#">지금 만나보세요 &#10140;</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner s2">
+                                <em>로고전문가 최은빈과 함께하는</em>
+                                <h3>세상에서 제일쉬운<br>나만의 로고 만들기</h3>
+                                <span class="btn">
+                                    <a href="#">지금 만나보세요 &#10140;</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner s3">
+                                <em>광고 표시, 어떻게 하지?</em>
+                                <h3>정정당당하게 광고하자!<br>추천보증광고 표시법</h3>
+                                <span class="btn">
+                                    <a href="#">지금 만나보세요 &#10140;</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner s4">
+                                <em>@여행작가 박은하의</em>
+                                <h3>클릭을 부르는<br>포스팅 방법</h3>
+                                <span class="btn">
+                                    <a href="#">지금 만나보세요 &#10140;</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner s5">
+                                <em>세남자와 해결해요!</em>
+                                <h3>세금신고의 꽃<br>절세 노하우!</h3>
+                                <span class="btn">
+                                    <a href="#">지금 만나보세요 &#10140;</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner s6">
+                                <em>세남자와 해결해요!</em>
+                                <h3>세금 신고<br>FAQ</h3>
+                                <span class="btn">
+                                    <a href="#">지금 만나보세요 &#10140;</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-pagination"></div>
+    
+                    <div class="swiper-button-prevs1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" stroke="#000" aria-hidden="true" width="30" height="30"><path d="M17 23.485L8.513 15 17 6.514" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+                    <div class="swiper-button-nexts1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" stroke="#000" aria-hidden="true" width="30" height="30"><path d="M17 23.485L8.513 15 17 6.514" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+                </div>
+            </div>
+        </section>
+        <!-- //slider -->
+        <section class="bodyType">
+            <div class="container">
+                <div class="testType02">
+                    <div class="testcont1">
+                        <h3>인플루언서에게<br>제공되는<br>광고 수익과 혜택</h3>
+                        <div class="cont1">
+                            <span class="text1">인플루언서 홈</span>
+                            <span class="text2">취향을 자유롭게 표현하는<br>나만의 홈페이지</span>
+                            <span class="text3">자세히 알아보기 &#10140;</span>
+                            <img class="textimg" src="img/test05.png" alt="첫번째 텍스트박스">
+                        </div>
+                    </div>
+                    <div class="testcont2">
+                        <div class="cont2">
+                            <span class="text1">특별한 광고</span>
+                            <span class="text2">더 커진 수익과 효과적인<br>헤드뷰 광고</span>
+                            <span class="text3">자세히 알아보기 &#10140;</span>
+                            <img class="textimg" src="img/test04.png" alt="두번째 텍스트박스">
+                        </div>
+                        <div class="cont3">
+                            <span class="text1">검색 참여</span>
+                            <span class="text2">인플루언서의 콘텐츠를<br>더 많이 보여주는 검색 결과</span>
+                            <span class="text3">자세히 알아보기 &#10140;</span>
+                            <img class="textimg" src="img/test06.png" alt="세번째 텍스트박스">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //cont1 -->
+        <section id="cont2">
+            <div class="container">
+                <div class="cont2">
+                    <h2>오직 네이버 인플루언서만을 위한 성장 지원 프로그램</h2>
+                    <div class="boxA1">
+                        <span>인플루언서 홈</span>
+                        <h4>취향을 자유롭게</h4>
+                        <a href="#">자세히 알아보기</a>
+                        <!-- <img src="img/test07.png" alt="이미지입니다."> -->
+                    </div>
+                    <div class="boxA2">
+                        <span>인플루언서 홈</span>
+                        <h4>취향을 자유롭게</h4>
+                        <a href="#">자세히 알아보기</a>
+                        <!-- <img src="img/test08.png" alt="이미지입니다."> -->
+                    </div>
+                    <div class="boxA3">
+                        <span>인플루언서 홈</span>
+                        <h4>취향을 자유롭게</h4>
+                        <a href="#">자세히 알아보기</a>
+                        <!-- <img src="img/test09.png" alt="이미지입니다."> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //cont2 -->
+        <section id="cont3">
+            <div class="container">
+                <div class="cont3">
+                    <h3>제목</h3>
+                    <a href="#">지원안내</a>
+                    <a href="#">소개</a>
+                </div>
+            </div>
+        </section>
+        <!-- //cont3 -->
+        <footer id="footer">
+            <div>
+                <a href="#">top</a>
+            </div>
+            <div>
+                <a href="#">로그아웃</a>
+                <address>
+                    NAVER Copyright © NAVER Corp. All Rights Reserved.
+                </address>
+                <h3>NAVER</h3>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+
+
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        // const swiper = new Swiper('.swiper', {
+        //     // Optional parameters
+        //     direction: 'horizontal',
+        //     loop: true,
+        //     autoplay: {
+        //         delay: 3000,
+        //     },
+
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //     },
+
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     }
+        // });
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+
+            pagination: {   
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-nexts1',
+                prevEl: '.swiper-button-prevs1',
+            },
+        });
+
+        // const header = document.querySelector(".testType header");
+        //     window.addEventListener("scroll", e => {
+        //         let scroll = document.documentElement.scrollTop;
+
+        //         if(scroll > 0) {
+        //             header.style.position = "stick";
+        //             header.style.backgroundColor = "rgba(20, 20, 20, 0.8)";
+        //         } else {
+        //             header.style.position = "";
+        //             header.style.top = "";
+        //             header.style.backgroundColor = "";
+        //         }
+        //     });
+    </script>
+</body>
+</html> 
+

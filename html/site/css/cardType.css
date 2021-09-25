@@ -1,0 +1,339 @@
+/* cardType */
+body {
+    background: #f3f3f3;
+}
+.cardType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+/* cardType01 */
+.cardType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.cardType01 p {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+
+/* float을 이용한 레이아웃(옛날버전-구 익스플로러) */
+/* .card-wrap {
+    overflow: hidden;
+}
+.card-wrap > div {  >의 뜻은 첫번째 자식만 해당되게 함
+    float: left;
+    width: 387px;
+    margin-right: 19px;
+}
+.card-wrap > div:last-child {
+    margin-right: 0;
+} */
+
+/* flex를 이용한 레이아웃(최신버전) */
+.cardType01 .card-wrap {
+    display: flex;
+    /* gap: 10px; */
+    justify-content: space-between; 
+}
+.cardType01 .card-wrap > div {
+    width: 387px;
+}
+.cardType01 .card {}
+.cardType01 .card .card-img {}
+.cardType01 .card .card-title {
+    display: block;
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}    
+    /* white-space: nowrap, overflow: hidden, text-overflow   -> 한줄효과 */
+.cardType01 .card .card-desc {
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    overflow: hidden;               
+    display: -webkit-box;           
+    -webkit-line-clamp: 2;          
+    -webkit-box-orient: vertical;
+}
+/* 넘치는 부분을 일단 차단 */
+/* 벤더 프리픽스 */
+/* 두줄효과 */
+
+.cardType01 .card .card-keyword {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* cardType02 */
+.cardType02 {
+    font-family: 'S-CoreDream';
+    padding: 150px 0;
+}
+.cardType02 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 7px;
+}
+.cardType02 p {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+}
+.cardType02 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    gap: 20px;
+}
+.cardType02 .card-wrap .card {
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;
+    padding: 15px 15px 16px 14px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+}
+.cardType02 .card-wrap .card .card-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+.cardType02 .card-wrap .card .card-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    display: block;
+}
+.cardType02 .card-wrap .card .card-word {
+    display: block;
+}
+.cardType02 .card-wrap .card .card-word span {
+    font-size: 10px;
+    margin: 12px 0 30px 0;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    border: solid 1px #000;
+    background-color: #000;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* cardType03 */
+.cardType03 {
+    padding: 100px 0;
+    font-family: "NanumSquare";
+    position: relative;
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+.cardType03 p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
+}
+.cardType03 .popular {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    position: absolute;
+    right: 0;
+    top: 180px;   
+}
+.cardType03 .popular a {
+    margin-right: 20px;
+}
+.cardType03 .card-wrap {}
+.cardType03 .card-wrap ul {}
+.cardType03 .card-wrap .card {
+    margin-bottom: 50px;
+}
+
+.cardType03 .card-wrap .card .card-img {
+    width: 285px;
+    height: 185px;
+    position: absolute;
+}
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
+}
+.cardType03 .card-wrap .card .right .card-cate {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cardType03 .card-wrap .card .right .card-cate.red {
+    background: #ff5151;
+}
+.cardType03 .card-wrap .card .right .card-cate.blue {
+    background: #5465ff;
+}
+.cardType03 .card-wrap .card .right .card-cate.green {
+    background: #11c865;
+}
+.cardType03 .card-wrap .card .right .card-title {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+}
+.cardType03 .card-wrap .card .right .card-desc {
+    height: 75px;
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 17px;
+}
+.cardType03 .card-wrap .card .right .card-date {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+
+/* imageType04 */
+.imageType04 {
+    padding: 100px 0;
+}
+.imageType04 h2 {
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 75px;
+    line-height: 1.3;
+}
+.imageType04 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType04 .image-wrap .image {
+    position: relative;
+}
+.imageType04 .image-wrap .image .image-cont {
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+}
+.imageType04 .image-wrap .image .image-cont em {
+    display: block;
+    font-size: 13px;
+    font-weight: 1000;
+    margin-bottom: 18px;
+    color: #a9a3a3;
+}
+.imageType04 .image-wrap .image .image-cont strong {
+    display: inline;
+    width: 320px;
+    font-size: 20px;
+    font-weight: 1000;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+
+
+/* cardType05 */
+.cardType05 {
+    padding: 100px 0;
+    font-family: "NanumSquare";
+}
+.cardType05 h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+.cardType05 p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+.cardType05 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(3,381px);
+    justify-content: space-between;
+    gap: 30px;
+}
+.cardType05 .card-wrap .card {
+    width: 381px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+}
+.cardType05 .card-wrap .card img {}
+.cardType05 .card .card-cards {
+    overflow: hidden;
+    margin: 36px 13px 2px 40px;
+}
+.cardType05 .card .card-cards .card-title {
+    float: left;
+    font-size: 25px;
+    font-weight: 800;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.cardType05 .card .card-cards .card-new {
+    float: left;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 10px 2px 10px;
+    border-radius: 50px;
+    background-color: #fa615b;
+    color: #fff;
+    margin-top: 5px;
+}
+.cardType05 .card .card-cards .card-desc {
+    clear: both;
+    display: block;
+    font-size: 17px;
+    margin-bottom: 20px;
+    line-height: 2;
+    font-weight: 400;
+    opacity: 1;
+}
+.cardType05 .card .card-cards .card-btn {}
+.cardType05 .card .card-cards .card-btn a {
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.cardType05 .card .card-cards .card-btn a.btn1 {
+    margin-right: 20px;
+    background-color: #06d686;
+    color: #fff;
+}
+.cardType05 .card .card-cards .card-btn a.btn2 {}

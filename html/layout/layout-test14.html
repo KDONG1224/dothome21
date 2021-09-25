@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 테스트14</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E3F2FD;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            height: 200px;
+            background-color: #BBDEFB;
+        }
+        #banner {
+            height: 200px;
+            background-color: #90CAF9;
+        }
+        #main {
+            overflow: hidden;
+        }
+        .aside {
+            width: 30%;
+            height: 900px;
+            background-color: #64B5F6;
+            float: left;
+        }
+        .section {
+            width: 70%;
+            height: 300px;
+            background-color: #42A5F5;
+            float: left;
+        }
+        .article1 {
+            width: 70%;
+            height: 300px;
+            background-color: #2196F3;
+            float: left;
+        }
+        .article2 {
+            width: 70%;
+            height: 300px;
+            background-color: #1E88E5;
+            float: left;
+        }
+        #footer {
+            height: 200px;
+            background-color: #1976D2;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 100%;
+            }
+        }
+        @media(max-width: 1000px){
+            #wrap {
+                width: 100%;
+            }
+            .aside {
+                width: 30%;
+                height: 400px;
+            }
+            .section {
+                width: 70%;
+                height: 200px;
+            }
+            .article1 {
+                width: 70%;
+                height: 200px;
+            }
+            .article2 {
+                width: 100%;
+                height: 500px;
+            }
+        }
+        @media(max-width: 600px){
+            #wrap {
+                width: 100%;
+            }
+            .aside {
+                width: 100%;
+                height: 200px;
+            }
+            .section {
+                width: 100%;
+                height: 350px;
+            }
+            .article1 {
+                width: 100%;
+                height: 200px;
+            }
+            .article2 {
+                width: 100%;
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="banner"></div>
+        <div id="main">
+            <div class="aside"></div>
+            <div class="section"></div>
+            <div class="article1"></div>
+            <div class="article2"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.min.css">
+
+    <style>
+        #tab-menu {
+            width: 600px;
+            background: #05204A;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            overflow: hidden;
+            font-family: 'NEXONLv2Gothic';
+            color: #fff;
+        }
+        .tab-btn {}
+        .tab-btn ul {
+            display: flex;
+        }
+        .tab-btn li {
+            width: 20%;
+            list-style: none;
+            text-align: center;
+        }
+        .tab-btn li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 15px 15px 15px;
+            display: block;
+        }
+        .tab-btn li.active a {
+            border-bottom: 3px solid #F63E02;
+            color: #F63E02;
+        }
+        .tab-cont {
+            background: #fff;
+            padding: 20px;
+            color: #222;
+        }
+        .tab-cont > div {
+            display: none;
+        }
+        .tab-cont > div:first-child {
+            display: block;
+        }
+        .tab-cont > div h2 {
+            margin-bottom: 10px;
+        }
+        .tab-cont > div p {
+            line-height: 1.6;
+        }
+        @media(max-width: 800px){
+            #tab-menu {
+                width: 80vw;
+            }
+            .tab-btn li a {
+                font-size: 14px;
+                padding: 14px 10px 9px 10px;
+            }
+            .tab-cont > div h2 {
+                font-size: 14px;
+                white-space: nowrap;
+            }
+            .tab-cont > div p {
+                font-size: 12px
+            }
+        }
+        .iframe.play {
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+<body class="bg bg11">
+
+    <!-- contents -->
+    <main>
+        <div id="tab-menu">
+            <div class="tab-btn">
+                <ul>
+                    <li class="active"><a href="#">Tab1</a></li>
+                    <li><a href="#">Tab2</a></li>
+                    <li><a href="#">Tab3</a></li>
+                    <li><a href="#">Tab4</a></li>
+                    <li><a href="#">Tab5</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-cont">
+                <div>
+                    <h2>Can I Love ? (Feat. 유라(youra), Meego)</h2>
+                    <p>
+                        오해할까 봐 말하는데<br> 
+                        괜찮냐고 안 물어도 돼<br>
+                        나도 다른 사람들처럼 웃고 싶은데 그게 잘 안돼<br>
+                        너희 들에 얼굴들은 왜 내가 불행하다고만 해<br>
+                        나도 다른 사람들처럼 웃고 싶은데 그게 잘 안돼<br>
+                    </p>
+                </div>
+                <div>
+                    <h2>깜빡 (Feat. 카더가든)</h2>
+                    <p>
+                        난 숨고 있지만 찾진 말아줘요<br>
+                        내방 속에 작은 침대 위<br>
+                        한참 동안 키스를 해요<br>
+                        밤새 너로 가득 채운 몸이<br>
+                        겁이 나서 너를 벗어요<br>
+                        아 어려운 게 많아요<br>
+                        알아챌까 눈을 피해요<br>
+                    </p>
+                </div>
+                <div>
+                    <h2>성인</h2>
+                    <p>
+                        얼마 전 너의 번홀 찾았어<br>
+                        다행이야 나도 번호를 안 바꿔서<br>
+                        혹시 이건 미련일까 한참 생각해봤지만<br>
+                        이건 "그냥 생각나서” 에 조금 더 가까워<br>
+                        이런 날이 올까 상상도 못 했어 난<br>
+                    </p>
+                </div>
+                <div>
+                    <h2>그래왔던것처럼 (Feat. 유라 (youra))</h2>
+                    <p>
+                        어느 새벽 우연히 널 봤을 때<br>
+                        나는 아무 이유 없이 그냥 모른 척 했어<br>
+                        묻고 싶던 말은 참 많았지만<br>
+                        너의 변명뿐인 말을 듣고 싶진 않았어<br>
+                        아무 일도 없던 것처럼 그냥 우리 지나가요<br>
+                        그저 그래왔던 것처럼 점점 익숙해지겠죠<br>
+                    </p>
+                </div>
+                <div>
+                    <h2>ONLY</h2>
+                    <p>
+                        이제는 숨기지 않고도 말할 수 있어<br>
+                        그렇게나 말하고 싶던 I say I love you<br>
+                        쉬고 싶은 밤에도 바쁘던 아침에도<br>
+                        그대 내게 쉴 곳을 마음속에 마련해요<br>
+                        내가 더 잘할게요 그 맘을 내게 나눠준다면<br>
+                        Now I believe<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">jquery Menu Effect01</a></h1>
+        <p>메뉴 이펙트 - 탭 메뉴</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li class="active"><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME02.html">2</a></li>
+            <li><a href="jqueryME03.html">3</a></li>
+            <li><a href="jqueryME04.html">4</a></li>
+            <li><a href="jqueryME05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //info -->
+
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+          <div class="modal-cont">
+            <div class="code-view">
+                <div class="view-header">
+                    <div class="dot" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="view-title">
+                    <ul>
+                        <li class="active"><a href="#">Html</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">jQuery</a></li>
+                    </ul>
+                </div>
+                <div class="view-cont">
+                    <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="tab-menu"&gt;
+        &lt;div class="tab-btn"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="tab-cont"&gt;
+            &lt;div&gt;
+                &lt;h2&gt;Can I Love ? (Feat. 유라(youra), Meego)&lt;/h2&gt;
+                &lt;p&gt;
+                    오해할까 봐 말하는데&lt;br&gt;
+                    괜찮냐고 안 물어도 돼&lt;br&gt;
+                    나도 다른 사람들처럼 웃고 싶은데 그게 잘 안돼&lt;br&gt;
+                    너희 들에 얼굴들은 왜 내가 불행하다고만 해&lt;br&gt;
+                    나도 다른 사람들처럼 웃고 싶은데 그게 잘 안돼&lt;br&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;깜빡 (Feat. 카더가든)&lt;/h2&gt;
+                &lt;p&gt;
+                    난 숨고 있지만 찾진 말아줘요&lt;br&gt;
+                    내방 속에 작은 침대 위&lt;br&gt;
+                    한참 동안 키스를 해요&lt;br&gt;
+                    밤새 너로 가득 채운 몸이&lt;br&gt;
+                    겁이 나서 너를 벗어요&lt;br&gt;
+                    아 어려운 게 많아요&lt;br&gt;
+                    알아챌까 눈을 피해요&lt;br&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;성인&lt;/h2&gt;
+                &lt;p&gt;
+                    얼마 전 너의 번홀 찾았어&lt;br&gt;
+                    다행이야 나도 번호를 안 바꿔서&lt;br&gt;
+                    혹시 이건 미련일까 한참 생각해봤지만&lt;br&gt;
+                    이건 "그냥 생각나서” 에 조금 더 가까워&lt;br&gt;
+                    이런 날이 올까 상상도 못 했어 난&lt;br&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;그래왔던것처럼 (Feat. 유라 (youra))&lt;/h2&gt;
+                &lt;p&gt;
+                    어느 새벽 우연히 널 봤을 때&lt;br&gt;
+                    나는 아무 이유 없이 그냥 모른 척 했어&lt;br&gt;
+                    묻고 싶던 말은 참 많았지만&lt;br&gt;
+                    너의 변명뿐인 말을 듣고 싶진 않았어&lt;br&gt;
+                    아무 일도 없던 것처럼 그냥 우리 지나가요&lt;br&gt;
+                    그저 그래왔던 것처럼 점점 익숙해지겠죠&lt;br&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;ONLY&lt;/h2&gt;
+                &lt;p&gt;
+                    이제는 숨기지 않고도 말할 수 있어&lt;br&gt;
+                    그렇게나 말하고 싶던 I say I love you&lt;br&gt;
+                    쉬고 싶은 밤에도 바쁘던 아침에도&lt;br&gt;
+                    그대 내게 쉴 곳을 마음속에 마련해요&lt;br&gt;
+                    내가 더 잘할게요 그 맘을 내게 나눠준다면&lt;br&gt;
+                    Now I believe&lt;br&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                    </div>
+                    <div class="css">
+<pre><code class="language-css">#tab-menu {
+    width: 600px;
+    background: #FF0F80;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'NEXONLv2Gothic';
+    color: #fff;
+}
+.tab-btn {}
+.tab-btn ul {
+    display: flex;
+}
+.tab-btn li {
+    width: 20%;
+    list-style: none;
+    text-align: center;
+}
+.tab-btn li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 15px 15px 15px;
+    display: block;
+}
+.tab-btn li.active a {
+    border-bottom: 3px solid #F0F600;
+    color: #F0F600;
+}
+.tab-cont {
+    background: #fff;
+    padding: 20px;
+    color: #222;
+}
+.tab-cont > div {
+    display: none;
+}
+.tab-cont > div:first-child {
+    display: block;
+}
+.tab-cont > div h2 {
+    margin-bottom: 10px;
+}
+.tab-cont > div p {
+    line-height: 1.6;
+}
+</code></pre>
+                    </div>
+                    <div class="javascript">
+<pre><code class="language-js">// 1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+// 2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+// 3. 버튼 인덱스 설정
+// 4. 1번째 버튼은 1번째 컨텐츠 연결(버튼 인덱스 별 해당 컨텐츠 연결)
+// 5. 모든 컨텐츠를 안보이게 설정
+// 6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
+
+const tabBtn = $(".tab-btn ul li");         //5개의 버튼을 변수에 저장 -> 할당
+const tabCont = $(".tab-cont > div");       //5개의 컨텐츠를 변수에 저장 -> 할당
+
+tabBtn.click(function(){
+    let target = $(this);                   //this 내가 클릭한 대상 -> btn -> li
+    tabBtn.removeClass("active");
+    target.addClass("active");
+
+    let index = target.index();
+    // alert(index);
+    tabCont.css("display","none");
+    tabCont.eq(index).css("display","block");
+});
+</code></pre> 
+                    </div>
+                </div>
+            </div>
+
+            <button>닫기</button>
+          </div>
+        </div>
+      </div>
+    <!-- //modal -->
+
+    <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        modal();
+    </script>
+    <!-- //script -->
+</body>
+</html>
