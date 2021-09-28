@@ -32,6 +32,11 @@
     padding: 100px 0;
     /* background: rgba(0,0,0,0.3); */
 }
+.flow-article {
+    width: 100%;
+    background: #f7f6ff;
+    padding: 100px 0;
+}
 
 /* header */
 #header {
@@ -85,7 +90,6 @@
     width: 600px;
     margin: 0 auto;
     border: 1px solid #dfdfdf;
-    height: 1000px;
     background: #fff;
     padding: 60px 40px;
     box-sizing: border-box;
@@ -94,8 +98,268 @@
     font-size: 24px;
     margin-bottom: 30px;
 }
+.member-form h4 {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 14px;
+}
 .member-form .join-info {
     margin-bottom: 20px;
 }
-.member-form .join-info li {}
-.member-form .join-privacy {}
+.member-form .join-privacy {
+    background: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.member-form button {
+    font-size: 18px;
+}
+.member-form .info {
+    padding-top: 20px;
+    color: #666;
+}
+.member-form .info a {
+    text-decoration: underline;
+    color: #666;
+}
+
+/* member-box */
+.member-box {}
+.member-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+.member-box input {
+    margin-bottom: 30px;
+}
+
+/* section-commnet */
+.section-commnet {
+    text-align: center;
+}
+.section-commnet h4 {
+    font-size: 40px;
+}
+.section-commnet p {
+    font-size: 18px;
+}
+.comment-form {
+    margin-top: 50px;
+}
+.comment-form .comment-wrap{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.comment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: left;
+}
+.comment-list > div {
+    flex: 0 0 22%;
+    margin-bottom: 40px;
+}
+.comment-list > div p {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.comment-list > div p::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -8px;
+    border-top: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.comment-list > div img {
+    width: 30px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+.comment-list > div span {
+    vertical-align: 8px;
+    padding-left: 3px;
+}
+.comment-list > div span:last-child {
+    float: right;
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.6;
+}
+
+/* cardType01 */
+.content-article .cardType01 {
+    font-family: 'GmarketSans';
+}
+.content-article .cardType01 h2 {  
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.content-article .cardType01 p {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+
+/* float을 이용한 레이아웃(옛날버전-구 익스플로러) */
+/* .card-wrap {
+    overflow: hidden;
+}
+.card-wrap > div {  >의 뜻은 첫번째 자식만 해당되게 함
+    float: left;
+    width: 387px;
+    margin-right: 19px;
+}
+.card-wrap > div:last-child {
+    margin-right: 0;
+} */
+
+/* flex를 이용한 레이아웃(최신버전) */
+.content-article .cardType01 .card-wrap {
+    display: flex;
+    /* gap: 10px; */
+    justify-content: space-between; 
+}
+.content-article .cardType01 .card-wrap > div {
+    width: 32%;
+    /* flex: 0 0 32%; 밑의 3가지를 한번에 작성하는 법
+    flex-shrink: 0; 비율 수축
+    flex-grow: 0; 비율 늘리기
+    flex-basis: 32%; 위드값 */
+}
+.content-article .cardType01 .card {}
+.content-article .cardType01 .card .card-img {}
+.content-article .cardType01 .card .card-title {
+    display: block;
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}    
+/* white-space: nowrap, overflow: hidden, text-overflow   -> 한줄효과 */
+.content-article .cardType01 .card .card-desc {
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    overflow: hidden;               
+    display: -webkit-box;           
+    -webkit-line-clamp: 2;          
+    -webkit-box-orient: vertical;
+}
+/* 넘치는 부분을 일단 차단 */
+/* 벤더 프리픽스 */
+/* 두줄효과 */
+
+.content-article .cardType01 .card .card-keyword {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* boardType */
+.boardType {}
+.boardType h3 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+.boardType p {
+    font-size: 26px;
+}
+.boardType .board {}
+.boardType .board .board-search {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+.boardType .board .board-search .form-search {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+.boardType .board .board-search .form-select {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background-color: transparent;
+}
+.boardType .board .board-search .form-btn {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+.boardType .board .board-search .form-btn.black {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
+.boardType .board .board-table table {
+    width: 100%;
+    border-top: 3px solid #000;
+    border-bottom: 2px solid #000;
+}
+.boardType .board .board-table table th {
+    background-color: #eee;
+    font-weight: normal;
+}
+.boardType .board .board-table table th,
+.boardType .board .board-table table td {
+    border-bottom: 1px solid #000;
+    padding: 19px 0;
+    text-align: center;
+}
+.boardType .board .board-page {
+    margin-top: 50px;
+}
+.boardType .board .board-page ul {
+    display: flex;
+    justify-content: center;
+}
+.boardType .board .board-page li a {
+    display: block;
+    border: 1px solid #eee;
+    padding: 13px 10px;
+    margin-right: -1px;
+}
+.boardType .board .board-page li.active a {
+    background: #000;
+    color: #fff;
+}
+
+/* boardWrite */
+.board-write {
+    padding: 50px 0 100px;
+}
+.board-write label {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+.board-write .title-text {
+    width: 100%;
+    display: block;
+    border: 1px solid #eee;
+    padding: 13px;
+    margin-bottom: 20px;
+    resize: none;
+}
+.board-write .board-btn {
+    float: right;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+/* footer */
+footer {
+    height: 500px;
+}

@@ -67,9 +67,22 @@ strong {
 em {
     font-style: normal;
 }
-
 img {
     width: 100%;
+}
+fieldset {
+    border: 0 none;
+}
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* 테이블 초기화 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* 제목 초기화 */
@@ -114,6 +127,64 @@ dl.list2 li::before {
     border-radius: 50%;
     left: 0; top: 7px;
 }
+
+/* 인풋 스타일 유형 */
+.input_write {
+    width: 100%;
+    display: block;
+    border: 1px solid #dfdfdf;
+    padding: 13px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 22px;
+    box-sizing: border-box;
+}
+.input_write2 {
+    border: 2px solid #a69cf7;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 50px;
+    outline: none;
+    background: #fff;
+    color: #7266c7;
+}
+.input_write2.w100 {
+    min-width: 300px;
+}
+.input_write2::-webkit-input-placeholder {
+    color: #7266c7;
+}
+.input_write2:-ms-input-placeholder {
+    color: #7266c7;
+}
+.input_write2::placeholder {
+    color: #7266c7;
+}
+
+/* 버튼 스타일 유형 */
+.btn_submit {
+    width: 100%;
+    padding: 16px;
+    background-color: #eee;
+    transition: box-shadow .3s, background-color .3s;
+}
+.btn_submit:hover {
+    box-shadow: inset 0 0 0 1px #000;
+    background-color: #fff;
+}
+.btn_submit2 {
+    background: #a69cf7;
+    color: #fff;
+    border-radius: 50px;
+    width: 58px;
+    height: 58px;
+    margin: 4px 0 0 4px;
+    transition: box-shadow .3s;
+}
+.btn_submit2:hover {
+    box-shadow: inset 0 0 0 5px #9082f5;
+}
+
 
 /* 이미지 표현 방법 */
 /* 

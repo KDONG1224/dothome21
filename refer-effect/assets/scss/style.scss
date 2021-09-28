@@ -896,6 +896,10 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
             word-break: keep-all;
             color: #F0F600;
             font-weight: 800;
+
+            &.color2 {
+                color: #3185FC;
+            }
         }
 
         &:nth-child(even){

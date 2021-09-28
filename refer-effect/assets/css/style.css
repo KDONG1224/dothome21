@@ -1090,6 +1090,10 @@ a {
   font-weight: 800;
 }
 
+.paraCont .content-item .desc.color2 {
+  color: #3185FC;
+}
+
 .paraCont .content-item:nth-child(even) {
   margin-left: auto;
   text-align: left;
