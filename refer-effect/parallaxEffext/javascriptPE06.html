@@ -28,55 +28,6 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
-
-        /* 한번에 나타나기 */
-        /* .content-item {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 1s;
-        }
-        .content-item.show {
-            transform: translateY(0);
-            opacity: 1;
-        } */
-
-        /* 개별적으로 나타나기 */
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 1.23, 1, 1);
-        }
-        .content-item .title {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.663, 0.38, 1.01);
-        }
-        .content-item .img-Wrap {
-            perspective: 500px;
-            opacity: 0;
-            transform: translateY(200px) rotate(30deg) skew(20deg);
-            transition: all 1s 0.6s cubic-bezier(0, 1.23, 1, 1);
-        }
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 1.23, 1, 1);
-        }
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-        }
-        .content-item.show .title {
-            opacity: 1;
-            transform: translateX(0);
-        }.content-item.show .img-Wrap {
-            opacity: 1;
-            transform: translateY(0) rotate(0) skew(0);
-        }
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
         
     </style>
 </head>
@@ -84,8 +35,8 @@
 
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 - jquery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect06 - javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- //header -->
 ​
@@ -115,7 +66,7 @@
                 <span class="num">01</span>
                 <h2 class="title">Section1</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Be true to thyself.</p>
             </section>
@@ -125,7 +76,7 @@
                 <span class="num">02</span>
                 <h2 class="title">Section2</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Attitude is everything.</p>
             </section>
@@ -135,7 +86,7 @@
                 <span class="num">03</span>
                 <h2 class="title">Section3</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">It hurt because it mattered.</p>
             </section>
@@ -145,7 +96,7 @@
                 <span class="num">04</span>
                 <h2 class="title">Section4</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Sometimes the right path is not the easiest one.</p>
             </section>
@@ -155,7 +106,7 @@
                 <span class="num">05</span>
                 <h2 class="title">Section5</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Yesterday you said tomorrow. Just do it.</p>
             </section>
@@ -165,7 +116,7 @@
                 <span class="num">06</span>
                 <h2 class="title">Section6</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Happiness depends upon ourselves.</p>
             </section>
@@ -175,7 +126,7 @@
                 <span class="num">07</span>
                 <h2 class="title">Section7</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Faith makes all things possible.</p>
             </section>
@@ -185,7 +136,7 @@
                 <span class="num">08</span>
                 <h2 class="title">Section8</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Time you enjoy wasting is not wasted time.</p>
             </section>
@@ -195,7 +146,7 @@
                 <span class="num">09</span>
                 <h2 class="title">Section9</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
                 <p class="desc color2">Don’t dream it, be it.</p>
             </section>
@@ -207,34 +158,34 @@
 ​
     <!-- footer -->
     <footer class="paraFooter">
-        <h1>Parallax <em>Scrolling</em></h1>
-        <div class="footerInfo">
-            <h2>자바스크립트</h2>
-            <ul> 
-                <li><a href="javascriptPE01.html">1</a></li>
-                <li><a href="javascriptPE02.html">2</a></li>
-                <li><a href="javascriptPE03.html">3</a></li>
-                <li><a href="javascriptPE04.html">4</a></li>
-                <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
-                <li><a href="javascriptPE07.html">7</a></li>
-                <li><a href="javascriptPE08.html">8</a></li>
-            </ul>
-        </div>
-        <div class="footerInfo">
-            <h2>제이쿼리</h2>
-            <ul>
-                <li><a href="jqueryPE01.html">1</a></li>
-                <li><a href="jqueryPE02.html">2</a></li>
-                <li><a href="jqueryPE03.html">3</a></li>
-                <li><a href="jqueryPE04.html">4</a></li>
-                <li class="active"><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
-                <li><a href="jqueryPE07.html">7</a></li>
-                <li><a href="jqueryPE08.html">8</a></li>
-            </ul>
-        </div>
-  </footer>
+      <h1>Parallax <em>Scrolling</em></h1>
+      <div class="footerInfo">
+          <h2>자바스크립트</h2>
+          <ul> 
+              <li><a href="javascriptPE01.html">1</a></li>
+              <li><a href="javascriptPE02.html">2</a></li>
+              <li><a href="javascriptPE03.html">3</a></li>
+              <li><a href="javascriptPE04.html">4</a></li>
+              <li><a href="javascriptPE05.html">5</a></li>
+              <li class="active"><a href="javascriptPE06.html">6</a></li>
+              <li><a href="javascriptPE07.html">7</a></li>
+              <li><a href="javascriptPE08.html">8</a></li>
+          </ul>
+      </div>
+      <div class="footerInfo">
+          <h2>제이쿼리</h2>
+          <ul>
+              <li><a href="jqueryPE01.html">1</a></li>
+              <li><a href="jqueryPE02.html">2</a></li>
+              <li><a href="jqueryPE03.html">3</a></li>
+              <li><a href="jqueryPE04.html">4</a></li>
+              <li><a href="jqueryPE05.html">5</a></li>
+              <li><a href="jqueryPE06.html">6</a></li>
+              <li><a href="jqueryPE07.html">7</a></li>
+              <li><a href="jqueryPE08.html">8</a></li>
+          </ul>
+      </div>
+    </footer>
     <!-- //footer -->
 
     <!-- source -->
@@ -259,7 +210,7 @@
                     <ul>
                         <li class="active"><a href="#">Html</a></li>
                         <li><a href="#">CSS</a></li>
-                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Javascript</a></li>
                     </ul>
                 </div>
                 <div class="view-cont">
@@ -289,7 +240,7 @@
             &lt;span class="num"&gt;01&lt;/span&gt;
             &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Be true to thyself.&lt;/p&gt;
         &lt;/section&gt;
@@ -299,7 +250,7 @@
             &lt;span class="num"&gt;02&lt;/span&gt;
             &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Attitude is everything.&lt;/p&gt;
         &lt;/section&gt;
@@ -309,7 +260,7 @@
             &lt;span class="num"&gt;03&lt;/span&gt;
             &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;It hurt because it mattered.&lt;/p&gt;
         &lt;/section&gt;
@@ -319,7 +270,7 @@
             &lt;span class="num"&gt;04&lt;/span&gt;
             &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Sometimes the right path is not the easiest one.&lt;/p&gt;
         &lt;/section&gt;
@@ -329,7 +280,7 @@
             &lt;span class="num"&gt;05&lt;/span&gt;
             &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Yesterday you said tomorrow. Just do it.&lt;/p&gt;
         &lt;/section&gt;
@@ -339,7 +290,7 @@
             &lt;span class="num"&gt;06&lt;/span&gt;
             &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Happiness depends upon ourselves.&lt;/p&gt;
         &lt;/section&gt;
@@ -349,7 +300,7 @@
             &lt;span class="num"&gt;07&lt;/span&gt;
             &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Faith makes all things possible.&lt;/p&gt;
         &lt;/section&gt;
@@ -359,7 +310,7 @@
             &lt;span class="num"&gt;08&lt;/span&gt;
             &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Time you enjoy wasting is not wasted time.&lt;/p&gt;
         &lt;/section&gt;
@@ -369,7 +320,7 @@
             &lt;span class="num"&gt;09&lt;/span&gt;
             &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
             &lt;figure class="img-Wrap"&gt;
-                &lt;div class="img-jq img2"&gt;&lt;/div&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
             &lt;p class="desc color2"&gt;Don’t dream it, be it.&lt;/p&gt;
         &lt;/section&gt;
@@ -380,133 +331,11 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">.paraNav {
-    top: 20px;
-    transition: top 0.4s ease;
-}
-.paraNav.hide {
-    top: -200px;
-}
-.paraNav li a {
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-}
-.paraNav li.active a {
-    border-radius: 30px;
-}
-
-/* 한번에 나타나기 */
-/* .content-item {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 1s;
-}
-.content-item.show {
-    transform: translateY(0);
-    opacity: 1;
-} */
-
-/* 개별적으로 나타나기 */
-.content-item .num {
-    opacity: 0 !important;
-    transform: translateY(200px);
-    transition: all 1s 0.1s cubic-bezier(0, 1.23, 1, 1);
-}
-.content-item .title {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1s 0.3s cubic-bezier(0, 0.663, 0.38, 1.01);
-}
-.content-item .img-Wrap {
-    perspective: 500px;
-    opacity: 0;
-    transform: translateY(200px) rotate(30deg) skew(20deg);
-    transition: all 1s 0.6s cubic-bezier(0, 1.23, 1, 1);
-}
-.content-item .desc {
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: all 1s 0.9s cubic-bezier(0, 1.23, 1, 1);
-}
-.content-item.show .num {
-    opacity: 0.07 !important;
-    transform: translateY(0);
-}
-.content-item.show .title {
-    opacity: 1;
-    transform: translateX(0);
-}.content-item.show .img-Wrap {
-    opacity: 1;
-    transform: translateY(0) rotate(0) skew(0);
-}
-.content-item.show .desc {
-    opacity: 1;
-    transform: translateX(0);
-}
+<pre><code class="language-css">
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">$(".paraNav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".content-item").eq(index);
-    let offset = section.offset().top;
-
-    $("html, body").animate({scrollTop: offset}, 600);
-})
-
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop() + $(window).height()/2;
-
-    // if(scrollTop >= $("#section1").offset().top){
-    //     $("#section1").addClass("show");
-    // }
-    // if(scrollTop >= $("#section2").offset().top){
-    //     $("#section2").addClass("show");
-    // }
-    // if(scrollTop >= $("#section3").offset().top){
-    //     $("#section3").addClass("show");
-    // }
-    // if(scrollTop >= $("#section4").offset().top){
-    //     $("#section4").addClass("show");
-    // }
-    // if(scrollTop >= $("#section5").offset().top){
-    //     $("#section5").addClass("show");
-    // }
-    // if(scrollTop >= $("#section6").offset().top){
-    //     $("#section6").addClass("show");
-    // }
-    // if(scrollTop >= $("#section7").offset().top){
-    //     $("#section7").addClass("show");
-    // }
-    // if(scrollTop >= $("#section8").offset().top){
-    //     $("#section8").addClass("show");
-    // }
-    // if(scrollTop >= $("#section9").offset().top){
-    //     $("#section9").addClass("show");
-    // }
-
-    // for(let i=1; i&lt;10; i++){
-    //     if(scrollTop >= $("#section"+i).offset().top){
-    //         $("#section"+i).addClass("show");
-    //     } else {
-    //         $("#section"+i).removeClass("show");
-    //     }
-    // };
-
-    // each
-    $(".content-item").each(function(index){
-        if(scrollTop > $(this).offset().top){
-            $(this).addClass("show");
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        }                
-    })
-
-    // 출력용
-    $(".paraScroll span").text(parseInt(scrollTop));
-})
+<pre><code class="language-js">
 </code></pre> 
                     </div>
                 </div>
@@ -525,66 +354,71 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        $(".paraNav ul li").click(function(e){
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
+        const scrollMenu = function(){
+            document.querySelectorAll(".paraNav ul li a").forEach(li => {
+                li.addEventListener("click", e => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        };
 
-            $("html, body").animate({scrollTop: offset}, 600);
-        })
+        const scrollProgress = function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/2;
+            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+            // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+            // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+            // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+            // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+            // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+            // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+            // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+            // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
 
-            // if(scrollTop >= $("#section1").offset().top){
-            //     $("#section1").addClass("show");
-            // }
-            // if(scrollTop >= $("#section2").offset().top){
-            //     $("#section2").addClass("show");
-            // }
-            // if(scrollTop >= $("#section3").offset().top){
-            //     $("#section3").addClass("show");
-            // }
-            // if(scrollTop >= $("#section4").offset().top){
-            //     $("#section4").addClass("show");
-            // }
-            // if(scrollTop >= $("#section5").offset().top){
-            //     $("#section5").addClass("show");
-            // }
-            // if(scrollTop >= $("#section6").offset().top){
-            //     $("#section6").addClass("show");
-            // }
-            // if(scrollTop >= $("#section7").offset().top){
-            //     $("#section7").addClass("show");
-            // }
-            // if(scrollTop >= $("#section8").offset().top){
-            //     $("#section8").addClass("show");
-            // }
-            // if(scrollTop >= $("#section9").offset().top){
-            //     $("#section9").addClass("show");
-            // }
+            // document.getElementById("section1").style.transform = "translateX("+ offset1 +"px)";
+            // document.getElementById("section2").style.transform = "translateX("+ offset2 +"px)";
+            // document.getElementById("section3").style.transform = "translateX("+ offset3 +"px)";
+            // document.getElementById("section4").style.transform = "translateX("+ offset4 +"px)";
+            // document.getElementById("section5").style.transform = "translateX("+ offset5 +"px)";
+            // document.getElementById("section6").style.transform = "translateX("+ offset6 +"px)";
+            // document.getElementById("section7").style.transform = "translateX("+ offset7 +"px)";
+            // document.getElementById("section8").style.transform = "translateX("+ offset8 +"px)";
+            // document.getElementById("section9").style.transform = "translateX("+ offset9 +"px)";
 
+            // for문
             // for(let i=1; i<10; i++){
-            //     if(scrollTop >= $("#section"+i).offset().top){
-            //         $("#section"+i).addClass("show");
-            //     } else {
-            //         $("#section"+i).removeClass("show");
-            //     }
-            // };
+            //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+            //     document.getElementById("section"+i).style.transform = "translateX("+ offset +"px)";
+            // }
 
-            // each
-            $(".content-item").each(function(index){
-                if(scrollTop > $(this).offset().top){
-                    $(this).addClass("show");
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }                
-            })
+            // forEach문
+            document.querySelectorAll(".content-item").forEach(item => {
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
 
-            // 출력용
-            $(".paraScroll span").text(parseInt(scrollTop));
-        })
+                item.querySelector(".img").style.transform = "translateX("+ offset1 +"px)";
+                item.querySelector(".desc").style.transform = "translateX("+ -offset2 +"px)";
+            });
+
+            // 메뉴
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if(scrollTop > item.offsetTop -2 ){
+                    document.querySelectorAll(".paraNav ul li").forEach((li) => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                };
+            });
+
+            // 출력문
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+        }
+
+        scrollMenu();
+        window.addEventListener("scroll", scrollProgress)
 
         //source
         modalPE01();
