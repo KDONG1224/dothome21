@@ -385,7 +385,7 @@
             }
 
             questionAnswerView.style.display = "none";
-            questionAnswerEx.style.display = "none";
+            questionAnswerEx.style.display = "none"; 
         }
         updateQuiz();
 
@@ -396,9 +396,8 @@
                     if(questionAnswerSelect[i].value == quizInfo[0].quizAnswer){
                         // alert("정답입니다.");
                         questionAnswerConfirm.style.display = "none";
-                        questionAnswerView.style.display = "block";
                         questionAnswerView.innerHTML = "맞았습니다.";
-                        questionAnswerEx.style.display = "block";
+                        questionAnswerView.style.display = "block";
                     } else {
                         // alert("틀렸습니다.");
                         questionAnswerConfirm.style.display = "none";
