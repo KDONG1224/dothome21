@@ -95,9 +95,6 @@ section .box-left .tab .tabHead ul li a {
     font-size: 20px;
     margin-right: 20px;
 }
-section .box-left .tab .tabHead ul li a:nth-child(2) {
-    color: #DDDDDD;
-}
 section .box-left .tab .tabDate {
     float: right;
     color: #000;
