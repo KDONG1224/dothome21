@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 사이트 코딩 시험1</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/test05.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/test05-logo.jpg" alt="로고입니다.">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">즐길거리</a></li>
+                    <li><a href="#">요금/우대혜택</a></li>
+                    <li><a href="#">참여프로그램</a></li>
+                    <li><a href="#">이용가이드</a></li>
+                    <li><a href="#">소통서비스</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="img/test05-banner.jpg" alt="배너입니다.">
+        </div>
+        <section>
+            <div class="box-left">
+                <div class="tab">
+                    <div class="tabHead">
+                        <ul>
+                            <li class="lotte"><a href="#">롯데월드 소식</a></li>
+                            <li class="news"><a href="#">뉴스*공지</a></li>
+                        </ul>
+                    </div>
+                    <div class="tabDate"><a href="#">더보기</a></div class="tabDate">
+                </div>
+                <div class="content">
+                    <div class="contHead">
+                        <ul>
+                            <li><a href="#">그럴싸진관 미라클</a></li>
+                            <li><a href="#">드림스테이지'힘내 소중한 너'</a></li>
+                            <li><a href="#">'힘내 소중한 너'음원 발매</a></li>
+                            <li><a href="#">이용 요금 조정 안내</a></li>
+                        </ul>
+                    </div>
+                    <div class="contDate">
+                        <ul>
+                            <li>2108.11.19</li>
+                            <li>2108.11.20</li>
+                            <li>2108.11.13</li>
+                            <li>2108.11.12</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box-right">
+                <img src="img/test05-on.jpg" alt="이미지입니다.">
+            </div>
+        </section>
+        <article>
+            <h2>특별한 경험</h2>
+            <div class="box">
+                <div class="boxes box-1">
+                    <img src="img/test05-01.jpg" alt="이미지입니다.">
+                    <span>연간회원 안내</span>
+                </div>
+                <div class="boxes box-2">
+                    <img src="img/test05-02.jpg" alt="이미지입니다.">
+                    <span>프리미엄 투어</span>
+                </div>
+                <div class="boxes box-3">
+                    <img src="img/test05-03.jpg" alt="이미지입니다.">
+                    <span>공연참여 프로그램</span>
+                </div>
+                <div class="boxes box-4">
+                    <img src="img/test05-04.jpg" alt="이미지입니다.">
+                    <span>단체프로그램</span>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="first">
+                <ul>
+                    <li>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드</li>
+                    <li>대표자:박동기</li>
+                </ul>
+            </div>
+            <div class="second">
+                <ul>
+                    <li>사업자등록번호:219-85-00014</li>
+                    <li>통신판매업신고번호:송파 제5513호</li>
+                    <li>전화:1661-200</li>
+                </ul>
+            </div>
+            <span>COPYRIGHT 2018 LOTTEWORLD.ALLRIGHTS RESERVED.</span>
+        </footer>
+    </div>
+
+    <script>
+        let world = document.querySelector('.lotte');
+        let notice = document.querySelector('.news');
+        let contHead = document.querySelector('.contHead');
+        let contDate = document.querySelector('.contDate');
+
+        function lotte(){
+            contHead.style.display = 'block';
+            contDate.style.display = 'block';
+        };
+        function news(){
+            contHead.style.display = 'none';
+            contDate.style.display = 'none';
+        };
+
+        world.addEventListener('click',lotte);
+        notice.addEventListener('click',news);
+    </script>
+</body>
+</html>
