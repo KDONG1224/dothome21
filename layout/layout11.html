@@ -4,9 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 연습11</title>
+    <title>웹디자인 기능사 실기 연습</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            height: auto;
+        }
+
+        /* header */
+        .header {
+            overflow: hidden;
+        }
+        .header .logo {
+            width: 250px;
+            height: 100px;
+            line-height: 100px;
+            background: #CFC5E6;
+            float: left;
+        }
+        .header .menu {
+            width: 950px;
+            height: 100px;
+            line-height: 100px;
+            background: #AF9FD6;
+            float: left;
+        }
+
+        /* banner */
+        .banner {
+            height: 400px;
+            line-height: 400px;
+            background: #9078C8;
+        }
+
+        /* section */
+        .section {
+            background: #6041B1;
+            overflow: hidden;
+        }
+        .section .article1 {
+            width: 400px;
+            height: 250px;
+            line-height: 250px;
+            background: #785BBC;
+            float: left;
+        }
+        .section .article2 {
+            width: 400px;
+            height: 250px;
+            line-height: 250px;
+            background: #6041B1;
+            float: left;
+        }
+        .section .article3 {
+            width: 400px;
+            height: 250px;
+            line-height: 250px;
+            background: #573BAA;
+            float: left;
+        }
+
+        /* footer */
+        .footer {
+            background: #4C34A2;
+            overflow: hidden;
+        }
+        .footer .footer_logo {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            background: #573BAA;
+            float: left;
+        }
+        .footer .copyright {
+            width: 800px;
+            height: 100px;
+            line-height: 100px;
+            background: #4C34A2;
+            float: left;
+        }
+        .footer .sns {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            background: #402E9A;
+            float: left;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <header class="header">
+            <div class="logo">로고</div>
+            <div class="menu">메뉴</div>
+        </header>
+        <section class="banner">이미지 슬라이드</section>
+        <section class="section">
+            <article class="article1">공지사항</article>
+            <article class="article2">갤러리</article>
+            <article class="article3">팝업</article>
+        </section>
+        <footer class="footer">
+            <div class="footer_logo">로고</div>
+            <div class="copyright">Copylight</div>
+            <div class="sns">SNS</div>
+        </footer>
+    </div>
 </body>
 </html>
