@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Typing Game</title>
+    <link rel="stylesheet" href="../typing/css/typing_kdong.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <h1>영어 타이핑 마스터!</h1>
+    </div>
+    <div class="word-display">
+        English
+    </div>
+    <div class="word-input-box">
+        <input type="text" class="word-input">
+    </div>
+    <div class="game-info">
+        <div>
+            남은시간 : <span class="time">0</span>초
+        </div>
+        <div>
+            획득점수 : <span class="score">0</span>점
+        </div>
+    </div>
+
+    <!-- 영어 단와와 뜻이 같이 출력되면 좋을 듯 -->
+
+    
+    <button class="button loading" onclick="run()">게임을 불러오는중...</button>
+
+    <script src="../typing/js/en.js"></script>
+</body>
+</html>

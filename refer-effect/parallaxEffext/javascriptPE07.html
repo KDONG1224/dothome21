@@ -28,64 +28,46 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
-
+        
         /* 한번에 나타나기 */
-        /* .content-item {
+        /* .content-item .split {
             opacity: 0;
-            transform: translateY(100px);
-            transition: all 1s;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
         }
-        .content-item.show {
-            transform: translateY(0);
+        .content-item .split span.show {
             opacity: 1;
+            transform: translateY(0) skewX(0);
         } */
 
-        /* 개별적으로 나타나기 */
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 1.23, 1, 1);
-        }
-        .content-item .title {
+        /* 한 글자씩 나타나기 */
+        /* .content-item .split span {
+            display: inline-block;
+            min-width: 1vw;
             opacity: 0;
-            transform: translateX(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.663, 0.38, 1.01);
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
         }
-        .content-item .img-Wrap {
-            perspective: 500px;
+        .content-item .split span.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        } */
+
+        /* gsap 한 글자씩 나타나기 */
+        .content-item .desc span {
             opacity: 0;
-            transform: translateY(200px) rotate(30deg) skew(20deg);
-            transition: all 1s 0.6s cubic-bezier(0, 1.23, 1, 1);
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) rotate(90deg) scale(2);
         }
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 1.23, 1, 1);
-        }
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-        }
-        .content-item.show .title {
-            opacity: 1;
-            transform: translateX(0);
-        }.content-item.show .img-Wrap {
-            opacity: 1;
-            transform: translateY(0) rotate(0) skew(0);
-        }
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
     </style>
 </head>
 <body class="parallax">
 
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 - jquery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect07 - javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 텍스트 효과</p>
     </header>
     <!-- //header -->
 ​
@@ -115,9 +97,9 @@
                 <span class="num">01</span>
                 <h2 class="title">Section1</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Be true to thyself.</p>
+                <p class="desc split">Be true to thyself.</p>
             </section>
             <!-- //section1 -->
 ​
@@ -125,9 +107,9 @@
                 <span class="num">02</span>
                 <h2 class="title">Section2</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Attitude is everything.</p>
+                <p class="desc split">Attitude is everything.</p>
             </section>
             <!-- //section2 -->
 ​
@@ -135,9 +117,9 @@
                 <span class="num">03</span>
                 <h2 class="title">Section3</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">It hurt because it mattered.</p>
+                <p class="desc split">It hurt because it mattered.</p>
             </section>
             <!-- //section3 -->
 ​
@@ -145,9 +127,9 @@
                 <span class="num">04</span>
                 <h2 class="title">Section4</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Sometimes the right path is not the easiest one.</p>
+                <p class="desc split">Sometimes the right path is not the easiest one.</p>
             </section>
             <!-- //section4 -->
 ​
@@ -155,9 +137,9 @@
                 <span class="num">05</span>
                 <h2 class="title">Section5</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Yesterday you said tomorrow. Just do it.</p>
+                <p class="desc split">Yesterday you said tomorrow. Just do it.</p>
             </section>
             <!-- //section5 -->
 ​
@@ -165,9 +147,9 @@
                 <span class="num">06</span>
                 <h2 class="title">Section6</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Happiness depends upon ourselves.</p>
+                <p class="desc split">Happiness depends upon ourselves.</p>
             </section>
             <!-- //section6 -->
 ​
@@ -175,9 +157,9 @@
                 <span class="num">07</span>
                 <h2 class="title">Section7</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Faith makes all things possible.</p>
+                <p class="desc split">Faith makes all things possible.</p>
             </section>
             <!-- //section7 -->
 ​
@@ -185,9 +167,9 @@
                 <span class="num">08</span>
                 <h2 class="title">Section8</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Time you enjoy wasting is not wasted time.</p>
+                <p class="desc split">Time you enjoy wasting is not wasted time.</p>
             </section>
             <!-- //section8 -->
 ​
@@ -195,9 +177,9 @@
                 <span class="num">09</span>
                 <h2 class="title">Section9</h2>
                 <figure class="img-Wrap">
-                    <div class="img-jq img2"></div>
+                    <div class="img"></div>
                 </figure>
-                <p class="desc color2">Don’t dream it, be it.</p>
+                <p class="desc split">Don’t dream it, be it.</p>
             </section>
             <!-- //section9 -->
         </div>
@@ -207,34 +189,34 @@
 ​
     <!-- footer -->
     <footer class="paraFooter">
-        <h1>Parallax <em>Scrolling</em></h1>
-        <div class="footerInfo">
-            <h2>자바스크립트</h2>
-            <ul> 
-                <li><a href="javascriptPE01.html">1</a></li>
-                <li><a href="javascriptPE02.html">2</a></li>
-                <li><a href="javascriptPE03.html">3</a></li>
-                <li><a href="javascriptPE04.html">4</a></li>
-                <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
-                <li><a href="javascriptPE07.html">7</a></li>
-                <li><a href="javascriptPE08.html">8</a></li>
-            </ul>
-        </div>
-        <div class="footerInfo">
-            <h2>제이쿼리</h2>
-            <ul>
-                <li><a href="jqueryPE01.html">1</a></li>
-                <li><a href="jqueryPE02.html">2</a></li>
-                <li><a href="jqueryPE03.html">3</a></li>
-                <li><a href="jqueryPE04.html">4</a></li>
-                <li class="active"><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
-                <li><a href="jqueryPE07.html">7</a></li>
-                <li><a href="jqueryPE08.html">8</a></li>
-            </ul>
-        </div>
-  </footer>
+      <h1>Parallax <em>Scrolling</em></h1>
+      <div class="footerInfo">
+          <h2>자바스크립트</h2>
+          <ul> 
+              <li><a href="javascriptPE01.html">1</a></li>
+              <li><a href="javascriptPE02.html">2</a></li>
+              <li><a href="javascriptPE03.html">3</a></li>
+              <li><a href="javascriptPE04.html">4</a></li>
+              <li><a href="javascriptPE05.html">5</a></li>
+              <li><a href="javascriptPE06.html">6</a></li>
+              <li class="active"><a href="javascriptPE07.html">7</a></li>
+              <li><a href="javascriptPE08.html">8</a></li>
+          </ul>
+      </div>
+      <div class="footerInfo">
+          <h2>제이쿼리</h2>
+          <ul>
+              <li><a href="jqueryPE01.html">1</a></li>
+              <li><a href="jqueryPE02.html">2</a></li>
+              <li><a href="jqueryPE03.html">3</a></li>
+              <li><a href="jqueryPE04.html">4</a></li>
+              <li><a href="jqueryPE05.html">5</a></li>
+              <li><a href="jqueryPE06.html">6</a></li>
+              <li><a href="jqueryPE07.html">7</a></li>
+              <li><a href="jqueryPE08.html">8</a></li>
+          </ul>
+      </div>
+    </footer>
     <!-- //footer -->
 
     <!-- source -->
@@ -259,7 +241,7 @@
                     <ul>
                         <li class="active"><a href="#">Html</a></li>
                         <li><a href="#">CSS</a></li>
-                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Javascript</a></li>
                     </ul>
                 </div>
                 <div class="view-cont">
@@ -380,133 +362,11 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">.paraNav {
-    top: 20px;
-    transition: top 0.4s ease;
-}
-.paraNav.hide {
-    top: -200px;
-}
-.paraNav li a {
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-}
-.paraNav li.active a {
-    border-radius: 30px;
-}
-
-/* 한번에 나타나기 */
-/* .content-item {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 1s;
-}
-.content-item.show {
-    transform: translateY(0);
-    opacity: 1;
-} */
-
-/* 개별적으로 나타나기 */
-.content-item .num {
-    opacity: 0 !important;
-    transform: translateY(200px);
-    transition: all 1s 0.1s cubic-bezier(0, 1.23, 1, 1);
-}
-.content-item .title {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1s 0.3s cubic-bezier(0, 0.663, 0.38, 1.01);
-}
-.content-item .img-Wrap {
-    perspective: 500px;
-    opacity: 0;
-    transform: translateY(200px) rotate(30deg) skew(20deg);
-    transition: all 1s 0.6s cubic-bezier(0, 1.23, 1, 1);
-}
-.content-item .desc {
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: all 1s 0.9s cubic-bezier(0, 1.23, 1, 1);
-}
-.content-item.show .num {
-    opacity: 0.07 !important;
-    transform: translateY(0);
-}
-.content-item.show .title {
-    opacity: 1;
-    transform: translateX(0);
-}.content-item.show .img-Wrap {
-    opacity: 1;
-    transform: translateY(0) rotate(0) skew(0);
-}
-.content-item.show .desc {
-    opacity: 1;
-    transform: translateX(0);
-}
+<pre><code class="language-css">
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">$(".paraNav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".content-item").eq(index);
-    let offset = section.offset().top;
-
-    $("html, body").animate({scrollTop: offset}, 600);
-})
-
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop() + $(window).height()/2;
-
-    // if(scrollTop >= $("#section1").offset().top){
-    //     $("#section1").addClass("show");
-    // }
-    // if(scrollTop >= $("#section2").offset().top){
-    //     $("#section2").addClass("show");
-    // }
-    // if(scrollTop >= $("#section3").offset().top){
-    //     $("#section3").addClass("show");
-    // }
-    // if(scrollTop >= $("#section4").offset().top){
-    //     $("#section4").addClass("show");
-    // }
-    // if(scrollTop >= $("#section5").offset().top){
-    //     $("#section5").addClass("show");
-    // }
-    // if(scrollTop >= $("#section6").offset().top){
-    //     $("#section6").addClass("show");
-    // }
-    // if(scrollTop >= $("#section7").offset().top){
-    //     $("#section7").addClass("show");
-    // }
-    // if(scrollTop >= $("#section8").offset().top){
-    //     $("#section8").addClass("show");
-    // }
-    // if(scrollTop >= $("#section9").offset().top){
-    //     $("#section9").addClass("show");
-    // }
-
-    // for(let i=1; i&lt;10; i++){
-    //     if(scrollTop >= $("#section"+i).offset().top){
-    //         $("#section"+i).addClass("show");
-    //     } else {
-    //         $("#section"+i).removeClass("show");
-    //     }
-    // };
-
-    // each
-    $(".content-item").each(function(index){
-        if(scrollTop > $(this).offset().top){
-            $(this).addClass("show");
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        }                
-    })
-
-    // 출력용
-    $(".paraScroll span").text(parseInt(scrollTop));
-})
+<pre><code class="language-js">
 </code></pre> 
                     </div>
                 </div>
@@ -522,75 +382,88 @@ $(window).scroll(function(){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 소스 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        $(".paraNav ul li").click(function(e){
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
+        // 글씨 쪼개기
+        // let text = document.querySelector("#section1 .desc").innerText;
+        // let split = text.split('').join("</span><span>");
+        // split = "<span>" + split + "</span>"; 
+        // document.querySelector("#section1 .desc").innerHTML = split;
 
-            $("html, body").animate({scrollTop: offset}, 600);
-        })
+        // 다중 글씨 쪼개기
+        document.querySelectorAll(".split").forEach(el => {
+            let text = el.innerText;
+            let split = text.split('').join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>"; 
+            el.innerHTML = split;
+            el.setAttribute("aria-label", text);
+        });
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/2;
-
-            // if(scrollTop >= $("#section1").offset().top){
-            //     $("#section1").addClass("show");
-            // }
-            // if(scrollTop >= $("#section2").offset().top){
-            //     $("#section2").addClass("show");
-            // }
-            // if(scrollTop >= $("#section3").offset().top){
-            //     $("#section3").addClass("show");
-            // }
-            // if(scrollTop >= $("#section4").offset().top){
-            //     $("#section4").addClass("show");
-            // }
-            // if(scrollTop >= $("#section5").offset().top){
-            //     $("#section5").addClass("show");
-            // }
-            // if(scrollTop >= $("#section6").offset().top){
-            //     $("#section6").addClass("show");
-            // }
-            // if(scrollTop >= $("#section7").offset().top){
-            //     $("#section7").addClass("show");
-            // }
-            // if(scrollTop >= $("#section8").offset().top){
-            //     $("#section8").addClass("show");
-            // }
-            // if(scrollTop >= $("#section9").offset().top){
-            //     $("#section9").addClass("show");
+        // 스크롤 이펙트
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+            
+            // if(scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight){
+            //     document.querySelectorAll("#section1 .split span").forEach((element, index) => {
+            //         setTimeout(() => {
+            //             element.classList.add("show");
+            //         }, 50 * index)
+            //     })
             // }
 
-            // for(let i=1; i<10; i++){
-            //     if(scrollTop >= $("#section"+i).offset().top){
-            //         $("#section"+i).addClass("show");
-            //     } else {
-            //         $("#section"+i).removeClass("show");
+            //for
+            // let count = document.querySelectorAll('.content-item').length;
+
+            // for (let i = 1; i <= cnt; i++) {
+            //     if (scrollTop >= document.getElementById("section" + i).offsetTop) {
+            //         document.querySelectorAll("#section" + i + " .split span").forEach((elem, index) => {
+            //             setTimeout(() => {
+            //                 elem.classList.add("show");
+            //             }, 50*index);
+            //         });
             //     }
-            // };
+            // }
 
-            // each
-            $(".content-item").each(function(index){
-                if(scrollTop > $(this).offset().top){
-                    $(this).addClass("show");
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }                
-            })
-
-            // 메뉴
-            $(".content-item").each(function(i){
-                if(scrollTop > $(".content-item").eq(i).offset().top -2){
-                    $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+            //forEach()
+            document.querySelectorAll('.content-item').forEach(function(item){
+                if(scrollTop >= item.offsetTop){
+                    item.querySelectorAll('.split span').forEach((span, index)=>{
+                        setTimeout(() => {
+                            span.classList.add('show');
+                        }, 50*index);
+                    });
+                }
+            });
+            
+            //gsap
+            document.querySelectorAll('.content-item').forEach(function(el,index){
+                if(scrollTop >= el.offsetTop){
+                    gsap.to(el.querySelectorAll(".desc span"), {
+                        duration: .5, 
+                        opacity: 1,
+                        stagger: .05, //비틀거림
+                        y: 0,
+                        rotation: 0,
+                        scale: 1,
+                        ease: "power4.out"
+                    });
                 }
             });
 
-            // 출력용
-            $(".paraScroll span").text(parseInt(scrollTop));
+            // 메뉴
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if(scrollTop > item.offsetTop -2 ){
+                    document.querySelectorAll(".paraNav ul li").forEach((li) => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                };
+            });
+
+            // 출력문
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         })
 
         //source
