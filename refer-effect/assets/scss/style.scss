@@ -999,6 +999,10 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
 @media (max-width: 800px){
     .parallax {
 
+        .paraScroll {
+            font-size: 10px;
+        }
+
         .paraInfo {
             h1 {
                 font-size: 18px;
@@ -1008,6 +1012,24 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
                 line-height: 1.2;
             }
         }
+
+        .paraDot {
+            padding: 5px 2px;
+            ul {
+                li {
+                    a {
+                        font-size: 12px;
+                        width: 8px;
+                        height: 8px;
+
+                        span {
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+
         .paraNav {
             padding: 10px 4px 10px 4px;
             ul {
@@ -1028,12 +1050,35 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
             
         }
         .paraInfo2 {
-            padding: 15px;
+            padding: 10px;
+
+            li {
+                font-size: 8px;
+            }
         }
         .source button {
             right: 20px;
             top: 93.6%;
-        }   
+        }
+        
+        .paraFooter {
+            .footerInfo {
+                h2 {
+                    font-size: 15px;
+                    white-space: nowrap;
+                }
+                ul {
+                    li {
+                        a {
+                            font-size: 10px;
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -331,11 +331,92 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top 0.4s ease;
+}
+.paraNav.hide {
+    top: -200px;
+}
+.paraNav li a {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.paraNav li.active a {
+    border-radius: 30px;
+}
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">
+<pre><code class="language-js">const scrollMenu = function(){
+    document.querySelectorAll(".paraNav ul li a").forEach(li => {
+        li.addEventListener("click", e => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+};
+
+const scrollProgress = function(){
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+    // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+    // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+    // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+    // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+    // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+    // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+    // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+    // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+    // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
+
+    // document.getElementById("section1").style.transform = "translateX("+ offset1 +"px)";
+    // document.getElementById("section2").style.transform = "translateX("+ offset2 +"px)";
+    // document.getElementById("section3").style.transform = "translateX("+ offset3 +"px)";
+    // document.getElementById("section4").style.transform = "translateX("+ offset4 +"px)";
+    // document.getElementById("section5").style.transform = "translateX("+ offset5 +"px)";
+    // document.getElementById("section6").style.transform = "translateX("+ offset6 +"px)";
+    // document.getElementById("section7").style.transform = "translateX("+ offset7 +"px)";
+    // document.getElementById("section8").style.transform = "translateX("+ offset8 +"px)";
+    // document.getElementById("section9").style.transform = "translateX("+ offset9 +"px)";
+
+    // for문
+    // for(let i=1; i&lt;10; i++){
+    //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+    //     document.getElementById("section"+i).style.transform = "translateX("+ offset +"px)";
+    // }
+
+    // forEach문
+    document.querySelectorAll(".content-item").forEach(item => {
+        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+        item.querySelector(".img").style.transform = "translateX("+ offset1 +"px)";
+        item.querySelector(".desc").style.transform = "translateX("+ -offset2 +"px)";
+    });
+
+    // 메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if(scrollTop > item.offsetTop -2 ){
+            document.querySelectorAll(".paraNav ul li").forEach((li) => {
+                li.classList.remove("active");
+            });
+            document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+        };
+    });
+
+    // 출력문
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+}
+
+scrollMenu();
+window.addEventListener("scroll", scrollProgress)
+
+//source
+modalPE01();
 </code></pre> 
                     </div>
                 </div>

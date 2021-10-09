@@ -432,11 +432,169 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top 0.4s ease;
+}
+.paraNav.hide {
+    top: -200px;
+}
+.paraNav li a {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.paraNav li.active a {
+    border-radius: 30px;
+}
+
+/* bg */
+.paraCont .content-item .img-Wrap {
+    background: transparent;
+}
+
+/* reveal */
+.reveal > div,
+.reveal > span {
+    opacity: 0;
+}
+.reveal.show > div,
+.reveal.show > span {
+    animation: opacity 1000ms 200ms linear forwards;
+}
+
+.reveal {
+    position: relative;
+}
+.reveal::before {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 100;
+    /* background: #fff; */
+    /* 속기형 속성 - 글씨, 이미지 등등 사용가능 그런경우 다른곳에서 안먹힌다. */
+    background-color: #fff;
+    /* 속기형 속성이 안먹힌다. */
+}
+.reveal.reveal-two::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 100;
+    background-color: rgb(226, 27, 103);
+}
+
+/* 기본값 */
+.reveal.show::before {
+    animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.reveal-RTL.show::before {
+    animation: reveal-RTL 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.reveal-TTB.show::before {
+    animation: reveal-TTB 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.reveal-BTT.show::before {
+    animation: reveal-BTT 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+/* 두가지 */
+.reveal.show::after {
+    animation: reveal 1000ms 300ms  cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.reveal-RTL.show::after {
+    animation: reveal-RTL 1000ms 300ms  cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.reveal-TTB.show::before {
+    animation: reveal-TTB 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.reveal-BTT.show::before {
+    animation: reveal-BTT 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+@keyframes opacity {
+    0%   {opacity: 0;}
+    60%  {opacity: 0;}
+    70%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes reveal {
+    0%   {width: 0;    left: 0;}
+    50%  {width: 100%; left: 0;}
+    80%  {width: 100%; left: 0;}
+    100% {width: 0;    left: 100%;}
+}
+
+@keyframes reveal-RTL {
+    0%   {width: 0;    right: 0;}
+    50%  {width: 100%; right: 0;}
+    80%  {width: 100%; right: 0;}
+    100% {width: 0;    right: 100%;}
+}
+
+@keyframes reveal-TTB {
+    0%   {width: 100%; height: 0;    top: 0;}
+    50%  {width: 100%; height: 100%; top: 0;}
+    80%  {width: 100%; height: 100%; top: 0;}
+    100% {width: 100%; height: 0;    top: 100%;}
+}
+
+@keyframes reveal-BTT {
+    0%   {width: 100%; height: 0;    top: auto; bottom: 0;}
+    50%  {width: 100%; height: 100%; top: auto; bottom: 0;}
+    80%  {width: 100%; height: 100%; top: auto; bottom: 0;}
+    100% {width: 100%; height: 0;    top: auto; bottom: 100%;}
+}
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">
+<pre><code class="language-js">$(".paraNav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".content-item").eq(index);
+    let offset = section.offset().top;
+
+    $("html, body").animate({scrollTop: offset}, 600);
+});
+
+$(window).scroll(function(){
+    let scrollTop = $(this).scrollTop();
+
+    // reveal 기본효과
+    // $(".reveal").each(function(){
+    //     if((scrollTop + $(window).height()) >= $(this).offset().top){
+    //         $(this).addClass("show");
+    //     }
+    // });
+
+    // reveal 시간차
+    $(".reveal").each(function(){
+        if((scrollTop + $(window).height()) >= $(this).offset().top){
+            $(this).delay($(this).data("delay")).queue(function(){
+                $(this).addClass("show");
+            });
+            // console.log($(this).data("delay"));
+        };
+    });
+
+    // 메뉴
+    $(".content-item").each(function(i){
+        if(scrollTop > $(".content-item").eq(i).offset().top -2){
+            $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+        }
+    });
+
+    // 출력용
+    $(".paraScroll span").text(scrollTop);
+});
+
+//source
+modalPE01();
 </code></pre> 
                     </div>
                 </div>

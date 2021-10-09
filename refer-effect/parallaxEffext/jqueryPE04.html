@@ -27,6 +27,25 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
+
+        @media(max-width: 800px) {
+            .parallax .paraNav {
+                padding: 10px 4px 10px 4px;
+            }
+            .paraNav.hide {
+                top: -500px;
+            }
+            .parallax .paraNav ul li a {
+                width: auto;
+            }
+            .parallax .paraNav ul li a {
+                font-size: 10px;
+            }
+            .paraNav li a {
+                white-space: nowrap;
+                padding: 5px 10px;
+            }
+        }
     </style>
 </head>
 <body class="parallax">

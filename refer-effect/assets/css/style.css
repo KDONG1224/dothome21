@@ -1302,12 +1302,26 @@ a {
 }
 
 @media (max-width: 800px) {
+  .parallax .paraScroll {
+    font-size: 10px;
+  }
   .parallax .paraInfo h1 {
     font-size: 18px;
   }
   .parallax .paraInfo p {
     font-size: 14px;
     line-height: 1.2;
+  }
+  .parallax .paraDot {
+    padding: 5px 2px;
+  }
+  .parallax .paraDot ul li a {
+    font-size: 12px;
+    width: 8px;
+    height: 8px;
+  }
+  .parallax .paraDot ul li a span {
+    pointer-events: none;
   }
   .parallax .paraNav {
     padding: 10px 4px 10px 4px;
@@ -1334,11 +1348,24 @@ a {
     margin-left: 1px;
   }
   .parallax .paraInfo2 {
-    padding: 15px;
+    padding: 10px;
+  }
+  .parallax .paraInfo2 li {
+    font-size: 8px;
   }
   .parallax .source button {
     right: 20px;
     top: 93.6%;
+  }
+  .parallax .paraFooter .footerInfo h2 {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .parallax .paraFooter .footerInfo ul li a {
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
   }
 }
 

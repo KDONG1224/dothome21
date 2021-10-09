@@ -362,11 +362,177 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top 0.4s ease;
+}
+.paraNav.hide {
+    top: -200px;
+}
+.paraNav li a {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.paraNav li.active a {
+    border-radius: 30px;
+}
+
+/* 한번에 나타나기 */
+/* .content-item .desc {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* 한 글자씩 나타나기 */
+/* .content-item .desc span {
+    display: inline-block;
+    min-width: 1vw;
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc.show span {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* gsap 한 글자씩 나타나기 */
+.content-item .desc span {
+    opacity: 0;
+    display: inline-block;
+    min-width: 1vw;
+    transform: translateY(100px) rotate(90deg) scale(2);
+}
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">
+<pre><code class="language-js">$(".paraNav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".content-item").eq(index);
+    let offset = section.offset().top;
+
+    $("html, body").animate({scrollTop: offset}, 600);
+})
+
+// 글씨 나누기 - 한개
+// let text = $("#section1 .desc").text();
+// let split = text.split('').join("&lt;/span>&lt;span>");
+// split = "&lt;span>"+split+"&lt;/span>";
+
+// $("#section1 .desc").html(split);
+
+// 글씨 나누기 - 여러개(for문)
+// for(let i=1; i&lt;10; i++){
+//     let text = $("#section" + i + " .desc").text();
+//     let split = text.split('').join("&lt;/span>&lt;span>");
+//     split = "&lt;span>"+split+"&lt;/span>";
+
+//     $("#section" + i + " .desc").html(split);
+// }
+
+// 글씨 나누기 - 여러개(each문)
+// $(".content-item").each(index => {
+//     let text = $("#section" + (index+1) + " .desc").text();
+//     let split = text.split('').join("&lt;/span>&lt;span>");
+//     split = "&lt;span>"+split+"&lt;/span>";
+
+//     $("#section" + (index+1) + " .desc").html(split);
+// })
+$(".content-item .desc").each(function(){
+    let text = $(this).text();
+    let split = text.split('').join("&lt;/span>&lt;span aria-hidden='true'>");
+    split = "&lt;span aria-hidden='true'>"+split+"&lt;/span>";
+
+    $(this).html(split).attr("aria-label", text);
+});
+
+// 클래스 붙여주기 - 한개
+// $(window).scroll(function(){
+//     if($(window).scrollTop() > $("#section1").offset().top){
+//         $("#section1 .desc").addClass("show");
+//     } else {
+//         $("#section1 .desc").remove("show");
+//     }
+// });
+
+// 클래스 붙여주기 - 여러개
+// $(window).scroll(function(){
+//     $(".content-item .desc").each(function(){
+//         if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+//             $(this).addClass("show");
+//         } else {
+//             $(this).remove("show");
+//         }
+//     });
+// });
+
+// 한 글자씩 나타나기
+$(window).scroll(function(){
+    // if($(window).scrollTop() >= $("#section1").offset().top){
+    //     $("#section1 .desc span").each(i => {
+    //         setTimeout(() => {
+    //             $("#section1 .desc span").eq(i).addClass("show");
+    //         }, 50 * i);
+    //     });
+    // };
+
+    // for문
+    // for(let i=1; i<=$(".content-item").length; i++){
+    //     if($(window).scrollTop() >= $("#section"+i).offset().top){
+    //         $("#section" + i + " .desc span").each(index => {
+    //             setTimeout(() => {
+    //                 $("#section" + i + " .desc span").eq(index).addClass("show");
+    //             }, 50 * index);
+    //         });
+    //     };
+    // }
+
+    // each문
+    $(".content-item").each(function(index){
+        if($(window).scrollTop() >= $(this).offset().top - ($(window).height()/2)){
+            $(this).find(".desc span").each(inx => {
+                setTimeout(() => {
+                    $(this).find("span").eq(inx).addClass("show");
+                }, 50 * inx);   //i의 갯수만큼 시간차를 주기위해서 0,50,100,150,200 이렇게 초가 늘어나서 시간차
+            });
+        };
+    });
+
+    // gasp효과주기
+    $(".content-item").each(function(index){
+        if($(window).scrollTop() >= $(this).offset().top){
+            gsap.to($(this).find(".desc span"), {
+                duration: .5, 
+                opacity: 1,
+                stagger: .05, //비틀거림
+                y: 0,
+                rotation: 0,
+                scale: 1,
+                ease: "power4.out"
+            });
+        }
+
+        // 메뉴
+        if($(window).scrollTop() > $(this).offset().top - 2){
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            
+        }
+
+        // 출력용
+        $(".paraScroll span").text($(window).scrollTop());
+    });
+});
+
+//source
+modalPE01();
 </code></pre> 
                     </div>
                 </div>

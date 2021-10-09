@@ -362,11 +362,138 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top 0.4s ease;
+}
+.paraNav.hide {
+    top: -200px;
+}
+.paraNav li a {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.paraNav li.active a {
+    border-radius: 30px;
+}
+
+/* 한번에 나타나기 */
+/* .content-item .split {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .split span.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* 한 글자씩 나타나기 */
+/* .content-item .split span {
+    display: inline-block;
+    min-width: 1vw;
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .split span.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* gsap 한 글자씩 나타나기 */
+.content-item .desc span {
+    opacity: 0;
+    display: inline-block;
+    min-width: 1vw;
+    transform: translateY(100px) rotate(90deg) scale(2);
+}
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">
+<pre><code class="language-js">// 글씨 쪼개기
+// let text = document.querySelector("#section1 .desc").innerText;
+// let split = text.split('').join("&lt;/span>&lt;span>");
+// split = "&lt;span>" + split + "&lt;/span>"; 
+// document.querySelector("#section1 .desc").innerHTML = split;
+
+// 다중 글씨 쪼개기
+document.querySelectorAll(".split").forEach(el => {
+    let text = el.innerText;
+    let split = text.split('').join("&lt;/span>&lt;span aria-hidden='true'>");
+    split = "&lt;span aria-hidden='true'>" + split + "&lt;/span>"; 
+    el.innerHTML = split;
+    el.setAttribute("aria-label", text);
+});
+
+// 스크롤 이펙트
+window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    
+    // if(scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight){
+    //     document.querySelectorAll("#section1 .split span").forEach((element, index) => {
+    //         setTimeout(() => {
+    //             element.classList.add("show");
+    //         }, 50 * index)
+    //     })
+    // }
+
+    //for
+    // let count = document.querySelectorAll('.content-item').length;
+
+    // for (let i = 1; i <= cnt; i++) {
+    //     if (scrollTop >= document.getElementById("section" + i).offsetTop) {
+    //         document.querySelectorAll("#section" + i + " .split span").forEach((elem, index) => {
+    //             setTimeout(() => {
+    //                 elem.classList.add("show");
+    //             }, 50*index);
+    //         });
+    //     }
+    // }
+
+    //forEach()
+    document.querySelectorAll('.content-item').forEach(function(item){
+        if(scrollTop >= item.offsetTop){
+            item.querySelectorAll('.split span').forEach((span, index)=>{
+                setTimeout(() => {
+                    span.classList.add('show');
+                }, 50*index);
+            });
+        }
+    });
+    
+    //gsap
+    document.querySelectorAll('.content-item').forEach(function(el,index){
+        if(scrollTop >= el.offsetTop){
+            gsap.to(el.querySelectorAll(".desc span"), {
+                duration: .5, 
+                opacity: 1,
+                stagger: .05, //비틀거림
+                y: 0,
+                rotation: 0,
+                scale: 1,
+                ease: "power4.out"
+            });
+        }
+    });
+
+    // 메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if(scrollTop > item.offsetTop -2 ){
+            document.querySelectorAll(".paraNav ul li").forEach((li) => {
+                li.classList.remove("active");
+            });
+            document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+        };
+    });
+
+    // 출력문
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+})
+
+//source
+modalPE01();
 </code></pre> 
                     </div>
                 </div>
