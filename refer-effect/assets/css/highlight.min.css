@@ -36,12 +36,11 @@ base0F  #3971ED  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php 
 
 pre code.hljs {
   display: block;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   font-family: 'NEXONLv1Gothic';
   line-height: 1.6;
   padding: 20px;
 }
-
 code.hljs {
   padding: 3px 5px;
 }

@@ -76,3 +76,10 @@ body {
 .elRight {
     background: #16a085;
 }
+
+.pause {
+    width: 100%;
+}
+.pause button {
+    padding: 10px 20px;
+}

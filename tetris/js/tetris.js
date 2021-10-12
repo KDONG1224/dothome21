@@ -6,6 +6,8 @@ const playground = document.querySelector(".playground > ul");
 const gameText = document.querySelector(".game-text");
 const scoreDisplay = document.querySelector(".score");
 const restartButton = document.querySelector(".game-text > button");
+const pauseButton = document.querySelector(".pause > button");
+const playButton = document.querySelector(".play > button");
 
 //Setting
 const Game_ROWS = 20;
@@ -207,3 +209,8 @@ function reset() {
     mainBlock = null;
     nextBlock = null;
 }
+
+pauseButton.addEventListener("click",function(){
+    clearTimeout(downInterval);
+    window.cancelAnimationFrame(renderBlocks);
+})
