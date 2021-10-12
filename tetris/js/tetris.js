@@ -32,7 +32,7 @@ function init(){
     // blockArray.forEach(block => {
     //     console.log(block[0])
     // })
-
+    score=0;
     tempMovingItem = { ...movingItem };
     for(let i=0; i<20; i++){
         // console.log(i)
