@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* id */
+#header {
+    width: 100%;
+}
+#main {
+    width: 100%;
+}
+#footer {
+    width: 100%;
+    background-color: #202020;
+}
+
+/* header */
+.headerWrap {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+.headerWrap h1 {
+    float: left;
+    line-height: 120px;
+}
+.headerWrap nav {
+    float: right;
+}
+.headerWrap nav ul {
+    overflow: hidden;
+}
+.headerWrap nav ul li {
+    float: left;
+}
+.headerWrap nav ul li a {
+    margin-left: 50px;
+    line-height: 120px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* sliderWrap */
+.sliderWrap {
+    width: 100%;
+    height: 389px;
+    background: rgba(177, 41, 41, 0.363);
+}
+.sliderWrap .sliderImg {
+    position: relative;
+    width: 100%;
+}
+.sliderWrap .sliderImg .slider {
+    position: absolute;
+    left: 0; top: 0;
+    transition: all .3s;
+}
+.sliderWrap .sliderImg .slider img {
+    width: 100%;
+    height: 100%;
+}
+.sliderWrap .sliderImg:nth-child(1) {
+    z-index: 5;
+}
+.sliderWrap .sliderImg:nth-child(2) {
+    z-index: 4;
+}
+.sliderWrap .sliderImg:nth-child(3) {
+    z-index: 3;
+}
+.sliderWrap .sliderImg:nth-child(4) {
+    z-index: 2;
+}
+.sliderWrap .sliderImg:nth-child(5) {
+    z-index: 1;
+}
+
+/* delivery */
+.delivery {
+    width: 100%;
+    overflow: hidden;
+    margin: 50px 0;
+}
+.box {
+    width: 480px;
+    float: left;
+    background-color: #f2f2f2;
+}
+.box.right {
+    float: right;
+}
+.textBox {
+    float: left;
+    padding: 20px;
+}
+.textBox h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.textBox p {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.textBox span {
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.textBox span p {
+    display: inline-block;
+    margin-left: 10px;
+}
+.textBox span a {
+    font-size: 20px;
+    font-weight: bold;
+}
+.imgBox {
+    float: right;
+}
+.imgBox img {
+    width: 80px;
+    height: 62px;
+    margin-top: 45px;
+    margin-right: 20px;
+}
+
+/* bset */
+.best {
+    width: 100%;
+    overflow: hidden;
+}
+.best nav {
+    margin-bottom: 50px;
+}
+.best nav ul {
+    overflow: hidden;
+}
+.best nav ul li {
+    float: left;
+    position: relative;
+}
+.best nav ul li a {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    color: #a0a0a0;
+}
+.best nav ul li.active a {
+    color: #000;
+}
+.best nav ul li a.first::after {
+    content: '';
+    position: absolute;
+    right: -28px; top: 13px;
+    width: 4px;
+    height: 40px;
+    background: #000;
+}
+.best nav ul li a.second {
+    margin-left: 50px;
+}
+.bestBox {
+    float: left;
+    width: 310px;
+    margin-right: 35px;
+    overflow: hidden;
+    position: relative;
+}
+.bestBox.boxC {
+    margin-right: 0;
+}
+.best-img {
+    width: 100%;
+}
+.best-img img {
+    width: 100%;
+}
+.best-text {
+    float: left;
+    margin-top: 15px;
+}
+.best-text .desc {
+    font-size: 15px;
+    font-weight: bold;
+}
+.best-text .price {
+    line-height: 2;
+}
+.best-text .price strong {
+    font-size: 13px;
+}
+.best-text .price span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.best-cart {
+    float: right;
+    position: absolute;
+    bottom: 0; right: 0;
+}
+.best-cart img {
+    width: 100%;
+    height: 40px;
+}
+
+/* footer */
+.footerWrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: #202020;
+    margin-top: 100px;
+    padding: 50px 0;
+}
+.footerWrap .logo {
+    float: left;
+}
+.footerWrap .logo h1 {
+    font-size: 50px;
+    color: #fcfcfc;
+}
+.text {
+    float: right;
+}
+.text .text-com {}
+.text .text-com ul {
+    overflow: hidden;
+}
+.text .text-com ul li {
+    float: left;
+}
+.text .text-com ul li a {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: #fcfcfc;
+}
+.text .text-com.bottom ul li {
+    display: inline-block;
+    font-size: 16px;
+    color: #a5a2a2;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.text .first {}
+.text .second {}
+.text .third {}
+.text .four {}
