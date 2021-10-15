@@ -1,0 +1,67 @@
+* {
+    text-align: center;
+}
+
+.login_find {
+    display: flex;
+    justify-content: center;
+}
+
+.id_find {
+    font-size: 20px;
+    color: #366221;
+    border-top: 4px solid #366221;
+    border-left: 4px solid #366221;
+    border-right: 4px solid #366221;
+    padding: 20px 96px;
+}
+
+.pass_find {
+    font-size: 20px;
+    color: #c2c2c2;
+    border-top: 4px solid #c0bebebd;
+    border-right: 4px solid #c0bebebd;
+    border-bottom: 4px solid #366221;
+    padding: 17px 87px;
+}
+
+.pass_find a {
+    color: #999999;
+}
+
+#youName {
+    border: 1px solid #cccccc;
+    width: 580px;
+    height: 60px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+#youPhone {
+    border: 1px solid #cccccc;
+    width: 580px;
+    height: 60px;
+    margin-top: 40px;
+    text-align: left;
+
+}
+
+.find_desc {
+    font-size: 15px;
+    line-height: 1.47;
+    margin: 10px 0 200px 0;
+}
+
+#loginBtn {
+    font-size: 20px;
+    padding: 17px 272px;
+    color: #fff;
+    background-color: #4d942c;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+fieldset {
+    border: none;
+}
