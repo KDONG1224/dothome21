@@ -162,15 +162,182 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;div class="moveWrap"&gt;
+        &lt;article class="moveImage"&gt;
+            &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg2.jpg" alt="이미지"&gt;&lt;/div&gt;
+            &lt;div class="mText"&gt;
+                &lt;p&gt;Fall seven times, stand up eight.&lt;/p&gt;
+                &lt;p&gt;7번 넘어져도 8번 일어나라.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //contents --&gt;
+
+&lt;!-- info --&gt;
+&lt;div class="info"&gt;
+    &lt;h1&gt;&lt;a href="index.html"&gt;Mouse Effect04 - javascript&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;마우스 이펙트 - 마우스 방향에 따라 움직이기&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="info right"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;standardX : &lt;span class="standardX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;standardY : &lt;span class="standardY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;maxX : &lt;span class="maxX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;maxY : &lt;span class="maxY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;angleX : &lt;span class="angleX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;angleY : &lt;span class="angleY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- //info left --&gt;
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">body {
+    cursor: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moveWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moveImage {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(0) rotateY(0);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all 0.2s;
+}
+.moveImage .mImg {
+    width: 50vw;
+    position: relative;
+}
+.moveImage .mImg::before {
+    content: '';
+    position: absolute;
+    left: 5%; bottom: -3%;
+    width: 90%;
+    height: 40px;
+    background: url(../assets/img/bg21.jpg) no-repeat;
+    background-size: 100% 30px;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
+}
+.moveImage .mImg img {
+    width: 100%;
+    border-radius: 5px;
+}
+.moveImage .mText{
+    font-family: 'NEXONLv1Gothic';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate3d(-50%, -50%, 150px);
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    padding: 2vw;
+    font-size: 1vw;
+    white-space: nowrap;
+    line-height: 1.6;
+    border-radius: 5px;
+}
+.cursor {
+    position: absolute;
+    width: 10px; height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+    user-select: none;
+    pointer-events: none;
+}
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">
+<pre><code class="language-js">// 마우스 움직일때 좌표 출력용
+$(window).mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    // 전체 가로/세로 값  - 기준점을 가운데로 변경하기 위해
+    let standardX = $(window).width()/2-pageX;
+    let standardY = $(window).height()/2-pageY;
+
+    // 최댓값, 최솟값 설정
+    // 양수일때
+    // if(standardX >= 50) standardX = 50;
+    // if(standardY >= 50) standardY = 50;
+    // // 음수일때
+    // if(standardX <= -50) standardX = 50;
+    // if(standardY <= -50) standardY = 50;
+    
+    // 최솟값은 -50, 최댓값은 50 설정
+    let maxX = Math.max(-100, Math.min(100, standardX));
+    let maxY = Math.max(-100, Math.min(100, standardY));
+    
+    // 각도를 줄이는 설정
+    let angleX = maxX * 0.12;
+    let angleY = maxY * 0.12;
+
+    // 부드럽게 설정
+    let softX = 0;
+    let softY = 0;
+
+    softX += (angleX - softX) * 0.7;
+    softY += (angleY - softY) * 0.7;
+
+    // 이미지
+    $(".moveImage").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+ softY +"deg) rotateY("+ -softX +"deg)"});
+
+    // gsap - 커서
+    gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+    // page좌표 출력
+    $(".pageX").text(parseInt(pageX) + "px");
+    $(".pageY").text(parseInt(pageY) + "px");
+    $(".standardX").text(parseInt(standardX) + "px");
+    $(".standardY").text(parseInt(standardY) + "px");
+    $(".maxX").text(parseInt(maxX) + "px");
+    $(".maxY").text(parseInt(maxY) + "px");
+    $(".angleX").text(parseInt(angleX) + "px");
+    $(".angleY").text(parseInt(angleY) + "px");
+});
+
+// 소스보기 실행함수
+modal();
 </code></pre> 
                     </div>
                 </div>
