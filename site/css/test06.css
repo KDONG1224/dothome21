@@ -127,8 +127,27 @@ li {
     margin-left: 10px;
 }
 .textBox span a {
+    display: inline-block;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    text-indent: 30px;
+}
+.textBox.left span a::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    background-image: url('../img/test06/map.jpg');
+    width: 25px;
+    height: 30px;
+}
+.textBox.right span a::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    background-image: url('../img/test06/clock.jpg');
+    width: 25px;
+    height: 30px;
 }
 .imgBox {
     float: right;
