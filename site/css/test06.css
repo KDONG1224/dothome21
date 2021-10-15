@@ -258,7 +258,31 @@ li {
     margin-right: 20px;
     margin-top: 5px;
 }
-.text .first {}
+.text .first ul li {
+    position: relative;
+}
+.text .first ul li::after {
+    content: '';
+    position: absolute;
+    right: 8px; top: 4px;
+    width: 2px;
+    height: 22px;
+    background: #393939;
+}
+.text .bottom ul li {
+    position: relative;
+}
+.text .bottom ul li::after {
+    content: '';
+    position: absolute;
+    right: -11px; top: 2px;
+    width: 2px;
+    height: 18px;
+    background: #383838;
+}
+.text .bottom ul li:last-child:after {
+    background: transparent;
+}
 .text .second {}
 .text .third {}
 .text .four {}
