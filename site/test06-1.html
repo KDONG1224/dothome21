@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 사이트 코딩 시험2</title>
+
+    <link rel="stylesheet" href="css/test06.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="headerWrap">
+                <h1>COOKIT</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">COOKIT소개</a></li>
+                        <li><a href="#">COOKIT메뉴</a></li>
+                        <li><a href="#">리뷰</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">MY쿡킷</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main id="main">
+            <div class="sliderWrap">
+                <div class="sliderImg">
+                    <div class="slider"><img src="img/test06/banner01.jpg" alt="배너이미지"></div>
+                    <div class="slider"><img src="img/test06/banner02.jpg" alt="배너이미지"></div>
+                    <div class="slider"><img src="img/test06/banner03.jpg" alt="배너이미지"></div>
+                    <div class="slider"><img src="img/test06/banner04.jpg" alt="배너이미지"></div>
+                </div>
+            </div>
+            <div class="delivery">
+                <div class="box left">
+                    <div class="textBox left">
+                        <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                        <p>배송이 가능한지 알려드려요.</p>
+                        <span><a href="#">배송지 검색</a></span>
+                    </div>
+                    <div class="imgBox left"><img src="img/test06/count.jpg" alt="저울이미지"></div>
+                </div>
+                <div class="box right">
+                    <div class="textBox right">
+                        <h3>7월 30일(화)에 받을 수 있어요</h3>
+                        <p>오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                        <span><a href="#">63:28:32</a><p>남은시간</p></span>
+                    </div>
+                    <div class="imgBox right"><img src="img/test06/car.jpg" alt="차이미지"></div>
+                </div>
+            </div>
+            <div class="best">
+                <nav>
+                    <ul>
+                        <li class="active"><a class="first" href="#">실시간 베스트</a></li>
+                        <li><a class="second" href="#">생생한 리뷰</a></li>
+                    </ul>
+                </nav>
+                <div class="bestBox boxA">
+                    <div class="best-img"><img src="img/test06/best01.jpg" alt="평양식 어복쟁반"></div>
+                    <div class="best-text">
+                        <p class="desc">평양식 어복쟁반</p>
+                        <p class="price"><strong>33,800원</strong><span>/ 3인분</span></p>
+                    </div>
+                    <div class="best-cart"><img src="img/test06/cart.jpg" alt="장바구니이미지"></div>
+                </div>
+                <div class="bestBox boxB">
+                    <div class="best-img"><img src="img/test06/best02.jpg" alt="새우쭈꾸미삼겹살"></div>
+                    <div class="best-text">
+                        <p class="desc">새우쭈꾸미삼겹살</p>
+                        <p class="price"><strong>29,800원</strong><span>/ 3인분</span></p>
+                    </div>
+                    <div class="best-cart"><img src="img/test06/cart.jpg" alt="장바구니이미지"></div>
+                </div>
+                <div class="bestBox boxC">
+                    <div class="best-img"><img src="img/test06/best03.jpg" alt="방풍나물 아귀찜"></div>
+                    <div class="best-text">
+                        <p class="desc">방풍나물 아귀찜</p>
+                        <p class="price"><strong>32,800원</strong><span>/ 3인분</span></p>
+                    </div>
+                    <div class="best-cart"><img src="img/test06/cart.jpg" alt="장바구니이미지"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="footerWrap">
+                <div class="logo">
+                    <h1>COOKIT</h1>
+                </div>
+                <div class="text">
+                    <nav class="text-com top first">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리 방침</a></li>
+                            <li><a href="#">법적고지</a></li>
+                            <li><a href="#">사업자정보 확인</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="text-com bottom">
+                        <ul>
+                            <li>씨제이제일제당(주)</li>
+                            <li>대표자 : 신현재</li>
+                        </ul>
+                    </nav>
+                    <nav class="text-com bottom">
+                        <ul>
+                            <li>주소:서울 중구 동호로 330CJ제일제당 센터(우)04560</li>
+                            <li>사업자등록번호:104-86-09535</li>
+                        </ul>
+                    </nav>
+                    <nav class="text-com bottom">
+                        <ul>
+                            <li>통신판매업신고 중구 제07767호</li>
+                            <li>개인정보보호책임자:류화정</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sliderWrap = document.querySelector(".sliderWrap");
+        const sliderImg = document.querySelector(".sliderImg");
+        const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0 ;                  // 현재 보이는 이미지(첫번째 이미지)
+        let sliderCount = slider.length;        // 이미지 갯수 구하기
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            // slider[currentIndex].style.display = "none";
+            // slider[nextIndex].style.display = "block";
+
+            slider[currentIndex].style.opacity = "0";
+            slider[nextIndex].style.opacity = "1";
+
+            currentIndex = nextIndex;
+        }, 2000);
+    </script>
+</body>
+</html>
