@@ -127,6 +127,9 @@
             <li><a href="javascriptSE03.html">3</a></li>
             <li class="active"><a href="javascriptSE04.html">4</a></li>
             <li><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE06.html">6</a></li>
+            <li><a href="javascriptSE07.html">7</a></li>
+            <li><a href="javascriptSE08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -134,6 +137,9 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li><a href="jquerySE06.html">6</a></li>
+            <li><a href="jquerySE07.html">7</a></li>
+            <li><a href="jquerySE08.html">8</a></li>
         </ul>
     </div>
 
@@ -191,29 +197,65 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">/* slider */
+.slider-wrap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-img {
+    width: 600px;
+    height: 360px;
+    overflow: hidden;
+    margin: 10px;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-inner {
+    position: relative;
+    width: 600px;
+    height: 1800px;
+    overflow: hidden;
+}
+.slider-inner .slider {
+    float: left;
+    width: 600px;
+    height: 360px;
+    position: relative;
+}
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: 'NEXONLv1Gothic';
+}
+.slider-inner .slider:nth-child(1) {
+    z-index: 5;
+}
+.slider-inner .slider:nth-child(2) {
+    z-index: 4;
+}
+.slider-inner .slider:nth-child(3) {
+    z-index: 3;
+}
+.slider-inner .slider:nth-child(4) {
+    z-index: 2;
+}
+.slider-inner .slider:nth-child(5) {
+    z-index: 1;
+}
+.slider-inner .slider::before {
+    content: attr(data-name);
+}
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">
-</code></pre> 
-                    </div>
-                </div>
-            </div>
-
-            <button>닫기</button>
-          </div>
-        </div>
-      </div>
-    <!-- //modal -->
-
-    <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script>
-// slider1
+<pre><code class="language-js">// slider1
 const sliderImg1 = document.querySelector(".slider-img1");
 const sliderInner1 = document.querySelector(".slider-inner1");
 const slider1 = document.querySelector(".slider1");
@@ -256,6 +298,69 @@ setInterval(() =>{
         currentIndex2 = 0;
     };
 }, 3000);
+
+// 소스보기 실행함수
+modal();
+</code></pre> 
+                    </div>
+                </div>
+            </div>
+
+            <button>닫기</button>
+          </div>
+        </div>
+      </div>
+    <!-- //modal -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        // slider1
+        const sliderImg1 = document.querySelector(".slider-img1");
+        const sliderInner1 = document.querySelector(".slider-inner1");
+        const slider1 = document.querySelector(".slider1");
+
+        let currentIndex1 = 0;
+        let sliderHeight1 = slider1.offsetHeight;
+
+        sliderInner1.style.transition = "all 0.3s";
+        sliderInner1.style.top = "0px";
+
+        setInterval(() =>{
+            currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+            let sliderPosition = (currentIndex1 * -sliderHeight1) + "px";
+
+            sliderInner1.style.transition = "all 0.3s";
+            sliderInner1.style.top = sliderPosition;
+        }, 3000);
+
+        // slider2
+        const sliderImg2 = document.querySelector(".slider-img2");
+        const sliderInner2 = document.querySelector(".slider-inner2");
+        const slider2 = document.querySelector(".slider2");
+
+        let currentIndex2 = 0;
+        let sliderHeight2 = slider2.offsetHeight;
+        let sliderCount = document.querySelectorAll(".slider2").length;
+        let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+        sliderInner2.appendChild(sliderClone);
+
+        setInterval(() =>{
+            currentIndex2++
+            sliderInner2.style.transition = "all 0.3s";
+            sliderInner2.style.transform = "translateY(" + (-sliderHeight2 * currentIndex2) + "px)";
+
+            if(currentIndex2 == sliderCount){
+                setTimeout(() => {
+                    sliderInner2.style.transition = "0s";
+                    sliderInner2.style.transform = "translateY(0)";
+                }, 300);
+                currentIndex2 = 0;
+            };
+        }, 3000);
 
         // 소스보기 실행함수
         modal();
