@@ -298,7 +298,7 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
     }
 }
 
-@for $i from 1 through 30 {
+@for $i from 1 through 40 {
     .bg#{$i} {
         background-image: url(../img/bg#{$i}@2.jpg);
     }
@@ -919,6 +919,7 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
         }
     }
 }
+// 자바스크립트 이미지
 @for $i from 1 through 9 {
     .content-item {
         &:nth-child(#{$i}){
@@ -931,34 +932,17 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
 @for $i from 1 through 9 {
     .content-item {
         &:nth-child(#{$i}){
-            .img {
+            .img.img2 {
                 background-image: url(../img/bg2#{$i}.jpg);
             }
         }
     }
 }
+// 제이쿼리 이미지
 @for $i from 1 through 9 {
     .content-item {
         &:nth-child(#{$i}){
-            .img {
-                background-image: url(../img/bg3#{$i}.jpg);
-            }
-        }
-    }
-}
-@for $i from 1 through 9 {
-    .content-item {
-        &:nth-child(#{$i}){
-            .img.img3 {
-                background-image: url(../img/bg2#{$i}.jpg);
-            }
-        }
-    }
-}
-@for $i from 1 through 9 {
-    .content-item {
-        &:nth-child(#{$i}){
-            .img-jq {
+            .img.img1 {
                 background-image: url(../img/bg1#{$i}.jpg);
             }
         }
@@ -967,8 +951,8 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
 @for $i from 1 through 9 {
     .content-item {
         &:nth-child(#{$i}){
-            .img-jq.img3 {
-                background-image: url(../img/bg2#{$i}.jpg);
+            .img.img3 {
+                background-image: url(../img/bg3#{$i}.jpg);
             }
         }
     }
@@ -1154,4 +1138,75 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
             }
         }
     }
+}
+
+.paraDot {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    z-index: 1000;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    padding: 20px 10px;
+    border-radius: 30px;
+}
+.paraDot li {
+    list-style: none;
+}
+.paraDot li a {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 8px;
+    position: relative;
+    text-decoration: none;
+    transition: border-color 0.3s ease;
+}
+.paraDot li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #fff;
+    opacity: 0;
+    transform: scale(3);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+.paraDot li a:hover,
+.paraDot li a:focus {
+    border-color: #c44d48;
+}
+.paraDot li.active a::after {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.paraDot li a span {
+    position: absolute;
+    left: -105px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #000;
+    display: block;
+    padding: 2px 15px;
+    border-radius: 30px;
+    opacity: 0;
+}
+.paraDot li.active a {
+    background: #fff;
+}
+.paraDot li.active a span {
+    opacity: 1;
 }
