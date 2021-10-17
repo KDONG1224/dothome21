@@ -65,30 +65,29 @@
             modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
             modal.left = "0px";
 
-            $selector.modal.css( modal );
+            $selector.modal.css(modal);
 
             player.obj.setSize( frame.width, frame.height );
         }
 
-        // iframe 보이기
-        function showPlayer() {
-            // 처음 클릭시 iframe을 생성 
+          // iframe 보이기
+          function showPlayer() {
             if ( !player.obj ) {
                 setPlayer( $selector.showButton.data("youtube") );
             }
-
+            
             $selector.body.addClass("modal_on");
             $selector.overlay.show();
             player.visible = true;
-        }
-
+        };
+        
         // iframe 감추기
-        function hidePlayer() {
+        function hidePlayer (){
             player.obj.stopVideo();
             $selector.overlay.hide();
             $selector.body.removeClass("modal_on");
             player.visible = false;
-        }
+        };
 
     })();
 
