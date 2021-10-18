@@ -4,6 +4,7 @@
     height: 100vh;
     background: rgb(0, 0, 0);
     position: relative;
+    font-family: 'SBAggroB';
 }
 .bannerWrap {
     width: 100%;
@@ -40,6 +41,7 @@
     color: #fff;
     font-weight: 700;
     text-align: center;
+    font-family: 'SBAggroB';
 }
 .banner .bannerBox .textBox p {
     font-size: 50px;
@@ -112,6 +114,7 @@
 .section .sectionText h3 {
     text-align: right;
     font-size: 70px;
+    font-family: 'SBAggroB';
 }
 .section .sectionText p {
     text-align: right;
@@ -170,6 +173,7 @@
 .menu h3 {
     font-size: 50px;
     text-align: center;
+    font-family: 'SBAggroB';
 }
 .menu p {
     font-size: 30px;
@@ -204,6 +208,7 @@
     text-align: center;
     margin-top: 30px;
     color: #000;
+    font-family: 'SBAggroB';
 }
 .menuWrap-line {
     background: url(../img/line03.png);
@@ -243,8 +248,9 @@
 .short p {
     text-align: center;
     font-size: 80px;
-    color: #fff;
+    color: red;
     line-height: 250px;
+    font-family: 'SBAggroB';
 }
 .shortWrap-line {
     background: url(../img/line05.png);

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/highlight.min.css">
 
     <style>
-        body {
+        main {
             cursor: none;
         }
         .mouseCont {
@@ -21,8 +21,8 @@
             color: #fff;
             width: 100%;
             height: 100vh;
-            cursor: none;
             overflow: hidden;
+            cursor: none;
             font-family: 'S-CoreDream';
             position: relative;
         }
@@ -79,20 +79,24 @@
         .box-item .item {
             background-color: rgba(255,255,255,.3);
         }
+        .box-item.two .item {
+            border-radius: 50%;
+            transform: scale(0.2);
+        }
     </style>
 </head>
-<body class="bg bg38 blue">
+<body class="bg bg28 blue">
 
     <!-- contents -->
     <main>
         <div class="cursor"></div>
 
         <article class="mouseCont">
-                <p>Magic can happen only when you have an earnest desire.</p>
-                <h2>간절히 바라는 <em>마음</em>이 있어야 <em>마법</em>이 일어날 수 있어.</h2>
+                <p>I’m free to be whoever I want to be!</p>
+                <h2>내가 무엇이 되든 <em>자유로이</em>, <em>자유로이</em> 내가 선택해.</h2>
         </article>
         <div class="box-wrap">
-            <div class="box-item">
+            <div class="box-item two">
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
@@ -104,6 +108,17 @@
                 <div class="item"></div>
                 <div class="item"></div>
 
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
@@ -231,7 +246,7 @@
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Mouse Effect08 - jquery</a></h1>
+        <h1><a href="index.html">Mouse Effect08 - javascript</a></h1>
         <p>마우스 이펙트 - 상자 돌리기</p>
     </div>
 
@@ -244,7 +259,7 @@
             <li><a href="javascriptME05.html">5</a></li>
             <li><a href="javascriptME06.html">6</a></li>
             <li><a href="javascriptME07.html">7</a></li>
-            <li><a href="javascriptME08.html">8</a></li>
+            <li class="active"><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -254,7 +269,7 @@
             <li><a href="jqueryME05.html">5</a></li>
             <li><a href="jqueryME06.html">6</a></li>
             <li><a href="jqueryME07.html">7</a></li>
-            <li class="active"><a href="jqueryME08.html">8</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
 
@@ -287,7 +302,7 @@
                     <ul>
                         <li class="active"><a href="#">Html</a></li>
                         <li><a href="#">CSS</a></li>
-                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Javascript</a></li>
                     </ul>
                 </div>
                 <div class="view-cont">
@@ -319,29 +334,30 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        $(window).mousemove(function(e){
+        window.addEventListener("mousemove", (e) => {
+            const item = document.querySelectorAll(".item");
+
             const mouseX = e.clientX;
             const mouseY = e.clientY;
             const pageX = e.pageX;
             const pageY = e.pageY;
 
-            $(".item").each(function(index, item){
-                const itemX = $(this).offset().left + 20;
-                const itemY = $(this).offset().top + 20;
-                const diffX = mouseX - itemX;
-                const diffY = mouseY - itemY;
-                const radians = Math.atan2(diffY, diffX);
-                const angle = radians * 180 / Math.PI;
+            item.forEach(item => {
+                const itemX = item.offsetLeft - mouseX;
+                const itemY = item.offsetTop - mouseY;
 
-                $(this).css({"transform": "rotate(" + angle + "deg)"});
-            });
+                const dist = Math.sqrt(itemX * itemX + itemY * itemY);
+                const score = Math.exp(dist * -0.003);
+
+                item.style.transform = `scale(${score})`;
+            })
 
             gsap.to(".cursor", {duration: .3, left: mouseX-20, top: mouseY-20});
 
-            // page좌표 출력
-            $(".pageX").text(pageX) + "px";
-            $(".pageY").text(pageY) + "px";
-        });
+            // 출력
+            document.querySelector(".pageX").textContent = pageX + "px";   
+            document.querySelector(".pageY").textContent = pageY + "px";
+        })
 
         // 소스보기 실행함수
         modal();

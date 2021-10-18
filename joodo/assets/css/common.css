@@ -46,7 +46,7 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Bebas Neue';
+    font-family: 'SBAggroB';
 }
 #header h1 {
     width: 12%;
@@ -62,7 +62,7 @@ fieldset {
     margin-top: 15px;
 }
 #header nav a {
-    font-family: 'Bebas Neue';
+    font-family: 'SBAggroB';
     display: inline-block;
     font-size: 20px;
     color: #232323;
