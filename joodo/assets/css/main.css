@@ -113,7 +113,7 @@
 }
 .section .sectionText h3 {
     text-align: right;
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'SBAggroB';
 }
 .section .sectionText p {
@@ -163,12 +163,16 @@
 }
 .menuWrap {
     width: 100%;
-    padding: 50px 0;
-    background: #E9E2C6;
+    height: 100vh;
+    background: url(../img/bg01.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 .menu {
     width: 100%;
-    padding: 100px 0 200px;
+    height: 100vh;
+    padding: 100px 0;
 }
 .menu h3 {
     font-size: 50px;
@@ -180,21 +184,38 @@
     text-align: center;
     margin-top: 30px;
 }
-.menu .drinks {
+.menu .drinks .drinks-wrap {
     display: flex;
-    height: 100%;
+    height: 400px;
     justify-content: space-between;
 }
 .menu .drinks .drink {
     width: 22%;
     height: 264px;
+    height: 264px;
     color: #ffff;
     text-align: center;
     margin-top: 30px;
 }
+.menu .drinks {}
+.menu .drinks .drinks-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.menu .drinks .drinks-btn a {
+    display: block;
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+
+}
 .menu .drinks .drink img {
     width: 100%;
-    height: 288px;
+    height: 264px;
     border-radius: 50%;
     transform: scale(1);
     transition: all 0.3s;
@@ -209,6 +230,12 @@
     margin-top: 30px;
     color: #000;
     font-family: 'SBAggroB';
+}
+.menu .drinks .drinks-btn {
+    display: block;
+}
+.menu .drinks .drinks-btn a {
+    display: inline-block;
 }
 .menuWrap-line {
     background: url(../img/line03.png);

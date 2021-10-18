@@ -1,0 +1,106 @@
+// #mainCont
+// #aboutCont
+// #referCont
+// #youtubeCont
+// #scriptCont
+// #portCont
+body {
+    
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: rgb(121, 19, 19);
+    border-radius: 50%;
+    z-index: 10000;
+    user-select: none;
+    pointer-events: none;
+}
+
+// mainCont
+#mainCont {
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family: $font-main;
+    font-size: 9vw;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    br {
+        display: none;
+    }
+}
+#mainCont2 {
+    width: 100%;
+    background-color: #000;
+    height: 100vh;
+    font-size: 9vw;
+    line-height: 1.2;
+    color: #000;
+    position: relative;
+    z-index: -2;
+    font-family: $font-main2;
+    font-weight: 400;
+    font-style: italic;
+    overflow: hidden;
+
+    .textWrap {
+        width: 100%;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+
+        .line {
+            width: 100%;
+            display: flex;
+        
+            .left {
+                width: 50vw;
+                color: #fff;
+
+                .spanWrap {
+                    width: 100vw;
+                    text-align: center;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .right {
+                width: 50vw;
+                overflow: hidden;
+
+                .spanWrap {
+                    width: 100vw;
+                    text-align: center;
+                    transform: translateX(-50vw);
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .imgWrap {
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(1%, -50%);
+        width: 50%;
+        z-index: -1;
+
+        img {
+            width: 51%;
+            height: 100%;
+        }
+    }
+}
