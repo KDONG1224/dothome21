@@ -1129,10 +1129,6 @@ table {
   }
 }
 
-body {
-  cursor: none;
-}
-
 .cursor {
   position: absolute;
   width: 20px;
@@ -1244,4 +1240,179 @@ body {
 #mainCont2 .imgWrap img {
   width: 51%;
   height: 100%;
+}
+
+#aboutCont {
+  padding-top: 68px;
+  font-family: "saol";
+}
+
+#aboutCont .container {
+  max-width: 1273px;
+  margin: 0 auto;
+}
+
+#aboutCont .container .row #section {
+  width: 100%;
+}
+
+#aboutCont .container .row #section h2 {
+  font-size: 12vw;
+  margin-top: 174px;
+  line-height: .9;
+}
+
+#aboutCont .container .row #section .cont1__box {
+  margin-top: 270px;
+}
+
+#aboutCont .container .row #section .cont1__box .imgbox {
+  width: 100%;
+}
+
+#aboutCont .container .row #section .cont1__box .imgbox img {
+  width: 100%;
+}
+
+#aboutCont .container .row #section .cont1__box .textbox {
+  margin-top: 62px;
+  font-size: 1.11vw;
+  font-family: "Chosunilbo_myungjo";
+  width: 70%;
+}
+
+#aboutCont .container .row #section .cont1__box .textbox .desc1 {
+  margin-bottom: 30px;
+}
+
+#aboutCont .container .row #section .cont1__box .textbox .desc2 {
+  line-height: 1.6;
+}
+
+#aboutCont .container .row #section .cont2__box {
+  padding-top: 314px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#aboutCont .container .row #section .cont2__box .imgbox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+#aboutCont .container .row #section .cont2__box .imgbox img {
+  width: 100%;
+}
+
+#aboutCont .container .row #section .cont2__box .textbox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36%;
+          flex: 0 0 36%;
+  font-size: 1.11vw;
+  font-family: "Chosunilbo_myungjo";
+}
+
+#aboutCont .container .row #section .cont2__box .textbox .desc1 {
+  margin-bottom: 30px;
+}
+
+#aboutCont .container .row #section .cont2__box .textbox .desc2 {
+  line-height: 1.6;
+}
+
+#aboutCont .container .row #section .cont3__box {
+  padding-top: 372px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 496px;
+}
+
+#aboutCont .container .row #section .cont3__box .imgbox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+#aboutCont .container .row #section .cont3__box .imgbox img {
+  width: 100%;
+}
+
+#aboutCont .container .row #section .cont3__box .textbox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36%;
+          flex: 0 0 36%;
+  font-size: 1.11vw;
+  font-family: "Chosunilbo_myungjo";
+}
+
+#aboutCont .container .row #section .cont3__box .textbox .desc1 {
+  margin-bottom: 30px;
+}
+
+#aboutCont .container .row #section .cont3__box .textbox .desc2 {
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  #aboutCont .container .row {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  #aboutCont .container .row #section .cont1__box .textbox {
+    font-size: 2vw;
+    width: 100%;
+  }
+  #aboutCont .container .row #section .cont2__box {
+    display: block;
+  }
+  #aboutCont .container .row #section .cont2__box .textbox {
+    margin-top: 62px;
+    font-size: 2vw;
+  }
+  #aboutCont .container .row #section .cont3__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-bottom: 150px;
+  }
+  #aboutCont .container .row #section .cont3__box .textbox {
+    margin-top: 62px;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutCont .container .row {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  #aboutCont .container .row #section h2 {
+    margin-top: 100px;
+    text-align: center;
+  }
+  #aboutCont .container .row #section h2 br {
+    display: none;
+  }
+  #aboutCont .container .row #section .cont1__box {
+    margin-top: 150px;
+  }
+  #aboutCont .container .row #section .cont2__box {
+    padding-top: 150px;
+  }
+  #aboutCont .container .row #section .cont3__box {
+    padding-top: 150px;
+  }
 }

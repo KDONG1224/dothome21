@@ -186,22 +186,22 @@
                         <section class="menu">
                             <h3>DRINK MENU</h3>
                             <p>다양한 종류를 경험해보세요</p>
-                            <div class="drinks">
+                            <div class="drinks drink1">
                                 <div class="drinks-wrap">
                                     <div class="drink beer">
-                                        <img src="assets/img/history01.jpg" alt="이미지입니다.">
+                                        <img src="assets/img/drink1.png" alt="이미지입니다.">
                                         <span class="desc">맥주</span>
                                     </div>
                                     <div class="drink wine">
-                                        <img src="assets/img/history02.jpg" alt="이미지입니다.">
+                                        <img src="assets/img/drink2.png" alt="이미지입니다.">
                                         <span class="desc">맥주</span>
                                     </div>
                                     <div class="drink vodka">
-                                        <img src="assets/img/history03.jpg" alt="이미지입니다.">
+                                        <img src="assets/img/drink3.png" alt="이미지입니다.">
                                         <span class="desc">맥주</span>
                                     </div>
                                     <div class="drink cocktail">
-                                        <img src="assets/img/history04.jpg" alt="이미지입니다.">
+                                        <img src="assets/img/drink4.png" alt="이미지입니다.">
                                         <span class="desc">맥주</span>
                                     </div>
                                 </div>
@@ -209,6 +209,29 @@
                                     <a href="#">View Drinks</a>
                                 </div>
                             </div>
+                            <!-- <div class="drinks drink2">
+                                <div class="drinks-wrap">
+                                    <div class="drink beer">
+                                        <img src="assets/img/drink4.png" alt="이미지입니다.">
+                                        <span class="desc">칵테일</span>
+                                    </div>
+                                    <div class="drink wine">
+                                        <img src="assets/img/drink2.png" alt="이미지입니다.">
+                                        <span class="desc">칵테일</span>
+                                    </div>
+                                    <div class="drink vodka">
+                                        <img src="assets/img/drink4.png" alt="이미지입니다.">
+                                        <span class="desc">칵테일</span>
+                                    </div>
+                                    <div class="drink cocktail">
+                                        <img src="assets/img/drink3.png" alt="이미지입니다.">
+                                        <span class="desc">칵테일</span>
+                                    </div>
+                                </div>
+                                <div class="drinks-btn">
+                                    <a href="#">View Drinks</a>
+                                </div>
+                            </div> -->
                         </section>
                     </div>
                 </div>
@@ -224,6 +247,11 @@
         </div>
         <div class="shortWrap-line"></div>
     </main>
+    <main id="main4">
+        <div class="container">
+            
+        </div>
+    </main>
     <footer id="footer"></footer>
 
 
@@ -232,17 +260,24 @@
     <script>
         const bannerImg = document.querySelector(".bannerWrap");
         const banner = document.querySelectorAll(".banner");
+
         const sliderImg = document.querySelector(".sectionWrap");
         const slider = document.querySelectorAll(".section");
 
+        const drinkImg = document.querySelector(".menu");
+        const drink = document.querySelectorAll(".drinks");
+
         let currentIndex1 = 0 ;                  // 현재 보이는 이미지(첫번째 이미지)
         let currentIndex2 = 0 ;                  // 현재 보이는 이미지(첫번째 이미지)
+        let currentIndex3 = 0 ;                  // 현재 보이는 이미지(첫번째 이미지)
         let bannerCount = banner.length;        // 이미지 갯수 구하기
         let sliderCount = slider.length;        // 이미지 갯수 구하기
+        let drinkCount = drink.length;        // 이미지 갯수 구하기
 
         setInterval(() => {
             let nextIndex1 = (currentIndex1 + 1) % bannerCount;
             let nextIndex2 = (currentIndex2 + 1) % sliderCount;
+            let nextIndex3 = (currentIndex3 + 1) % drinkCount;
 
             // slider[currentIndex].style.display = "none";
             // slider[nextIndex].style.display = "block";
@@ -252,10 +287,15 @@
 
             slider[currentIndex2].style.opacity = "0";
             slider[nextIndex2].style.opacity = "1";
+            
+            // drink[currentIndex3].style.opacity = "0";
+            // drink[nextIndex3].style.opacity = "1";
 
             currentIndex1 = nextIndex1;
             currentIndex2 = nextIndex2;
+            currentIndex3 = nextIndex3;
         }, 5000);
+        
     </script>
 </body>
 </html>
