@@ -9,6 +9,27 @@
     <style>
         /* 폰트 */
         @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicLowOTFLight.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTF.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTFBold.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
             font-family: 'NEXONLv2Gothic';
             font-weight: 300;
             font-style: normal;
@@ -60,9 +81,10 @@
             z-index: 10000;
         }
         #contents {}
+        #contents > div {position: relative;}
         #section1 {height: 7000px;}
-        #section2 {background: #000; height: 7000px;}
-        #section3 {}
+        #section2 {height: 19000px; z-index: 2000;}
+        #section3 {height: 13000px; z-index: 3000;}
         #section4 {}
         #section5 {}
         #section6 {}
@@ -94,7 +116,7 @@
             width: 30vw;
             height: 30vw;
             background: #000;
-            border-radius: 50%;
+            border-radius: 50vw;
         }
         .s1Text4 span {
             font-size: 4vw;
@@ -117,19 +139,19 @@
             -webkit-background-clip: text;
             text-transform: capitalize;
         }
-        .s2Text2 {
+        .s2Text2 > div {
+            color: #fff;
             display: flex;
             justify-content: space-between;
-            top: 30%;
-            color: #fff;
             width: 55vw;
+            opacity: 0;
         }
-        .s2Text2 h2 {
+        .s2Text2 > div h2 {
             flex: 0 0 30%;
             font-size: 2vw;
             line-height: 1.4;
         }
-        .s2Text2 p {
+        .s2Text2 > div p {
             flex: 0 0 60%;
             font-size: 1.1vw;
             line-height: 1.7;
@@ -143,18 +165,64 @@
             background-repeat: no-repeat;
             background-position: center top;
             top: 70%;
-            z-index: 1;
             overflow: hidden;
+            margin: 2%;
         }
         .s2Text3 .img-wrap {
-            padding: 3.4%;
-            display: flex;
-            width: 56vw;
-        }   
-        .s2Text3 .img-wrap img {
-            width: 56vw;
-            border-top-left-radius: .8vw;
-            border-top-right-radius: .8vw;
+            position: relative;
+            width: 94%; height: 100%;
+            margin: 3%;
+            overflow: hidden;
+            border-radius: 1vw;
+        }
+        .s2Text3 .img-wrap > div {
+            position: absolute;
+            top: 0; left: 100%;
+            width: 100%;
+        } 
+        .s2Text3 .img-wrap > div a {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);   
+            width: 10vw; height: 10vw;
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 10vw;
+            font-size: 2vw;
+        }
+        .s2Text3 .img-wrap > div:nth-child(1) {
+            left: 0;
+        }
+
+        /* section3 */
+        .s3Text1 {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 8vw;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        .s3Text1 span {
+            display: inline-block;
+        }
+        .s3Text1 .s1 {
+            transform: matrix3d(2,1,-1,1.5,30,-45);
+        }
+        .s3Text1 .s2 {
+            transform: matrix3d(2,1,-1,1.5,30,-45);
+        }
+        .s3Text1 .s3 {
+            transform: matrix3d(2,1,-1,1.5,30,-45);
+        }
+        .s3Text1 .s4 {
+            transform: matrix3d(2,1,-1,1.5,30,-45);
+        }
+        .s3Text1 .s5 {
+            transform: matrix3d(2,1,-1,1.5,30,-45);
+        }
+        .s3Text1 .s6 {
+            transform: matrix3d(2,1,-1,1.5,30,-45);
         }
     </style>
 </head>
@@ -180,6 +248,8 @@
             <div class="s1Text3 fixed"
                  data-3200="width: 0vw;"
                  data-4200="width: 100vw;"
+                 data-10200="width: 100vw; display: block;"
+                 data-10201="width: 100vw; display: none;"
                  ><img src="../assets/img/apple1@2.jpg" alt="이미지">
             </div>
             <div class="s1Text4 fixed"
@@ -187,6 +257,8 @@
                  data-4300="width: 40vw; height: 40vw;"
                  data-5500="width: 40vw; height: 40vw;"
                  data-6000="width: 250vw; height: 250vw;"
+                 data-24000="width: 250vw; height: 250vw;"
+                 data-26000="width: 0vw; height: 0vw;"
                  ><span
                      data-4000="transform: translate(-50%, -50%) scale(0) rotate(-360deg);"
                      data-4500="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
@@ -202,58 +274,122 @@
                  data-7000="transform: translate(-50%, -50%) scale(1); top: 50%; opacity: 0;"
                  data-8000="transform: translate(-50%, -50%) scale(1); top: 50%; opacity: 1;"
                  data-9000="transform: translate(-50%, -50%) scale(.7); top: 14%; opacity: 1;"
+                 data-23500="transform: translate(-50%, -50%) scale(.7); top: 14%; opacity: 1;"
+                 data-24500="transform: translate(-50%, -50%) scale(1); top: 50%; opacity: 1;"
+                 data-26000="transform: translate(-50%, -50%) scale(0); top: 50%; opacity: 0;"
                  >i've been working on sites
             </div>
-            <div class="s2Text2 fixed"
-                 data-9000="top: 60%; opacity: 0;"
-                 data-9500="top: 30%; opacity: 1;"
-                 data-10000="top: 60%; opacity: 0;"
-            >
-                <h2>웹표준을 준수한<br>웹 표준 사이트 제작</h2>
-                <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
-            </div>
-            <div class="s2Text2 fixed"
-                 data-10000="top: 60%; opacity: 0;"
-                 data-15000="top: 30%; opacity: 1;"
-                 data-20000="top: 60%; opacity: 0;"
-            >
-                <h2>웹표준을 준수asd한<br>웹 표준 사이트 제작</h2>
-                <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
+            <div class="s2Text2">   
+                <div class="t1 fixed"
+                    data-9000="opacity: 0; top: 50%;"
+                    data-10000="opacity: 1; top: 30%;"
+                    data-11500="opacity: 1; top: 30%;"
+                    data-12500="opacity: 0; top: 50%;"
+                >
+                    <h2>웹표준을 준수한<br>웹 표준 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
+                </div>
+                <div class="t2 fixed"
+                    data-12500="opacity: 0; top: 50%;"
+                    data-13500="opacity: 1; top: 30%;"
+                    data-15000="opacity: 1; top: 30%;"
+                    data-16000="opacity: 0; top: 50%;"
+                >
+                    <h2>반응형을 준수한<br>반응형 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
+                </div>
+                <div class="t3 fixed"
+                    data-16000="opacity: 0; top: 50%;"
+                    data-17000="opacity: 1; top: 30%;"
+                    data-18500="opacity: 1; top: 30%;"
+                    data-19500="opacity: 0; top: 50%;"
+                >
+                    <h2>영화 사이트<br>기업형 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
+                </div>
+                <div class="t4 fixed"
+                    data-19500="opacity: 0; top: 50%;"
+                    data-20500="opacity: 1; top: 30%;"
+                    data-22000="opacity: 1; top: 30%;"
+                    data-23000="opacity: 0; top: 50%;"
+                >
+                    <h2>PHP 이용한<br>리액트 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
+                </div>
             </div>
             <div class="s2Text3 fixed"
                  data-8000="top: 210%; transform: translate(-50%, -50%) scale(3.4);"
                  data-9000="top: 70%; transform: translate(-50%, -50%) scale(1);"
-                 data-9200="top: 70%; transform: translate(-50%, -50%) scale(1);"
+                 data-23000="top: 70%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                 data-24000="top: 270%; transform: translate(-50%, -50%) scale(0); opacity: 0;"
             >
                 <div class="img-wrap"
-                    data-9200="left: 50%; transform: translateX(0%) scale(1);"
-                    data-9700="left: 50%; transform: translateX(-93%) scale(1);"
-                    data-12000="left: 50%; transform: translateX(-186%) scale(1);"
-                    data-17000="left: 50%; transform: translateX(-280%) scale(1);"
+                    data-0="display: block;"
+                    data-26000="display: block;"
+                    data-26001="display: none;"
                 >
                     <div class="img1"
-                    data-9200="opacity: 0;"
-                    data-9300="opacity: 1;">
+                        data-11000="left: 0%;"
+                        data-13000="left: -100%;"
+                    >
                         <img src="../assets/img/apple-site01.jpg" alt="사이트1">
+                        <a href="#">VIEW</a>
                     </div>
                     <div class="img2"
-                    data-9200="opacity: 0;"
-                    data-9300="opacity: 1;"
+                        data-11000="left: 100%;"
+                        data-13000="left: 0%;"
+                        data-15000="left: 0%;"
+                        data-16000="left: -100%;"
                     >
                        <img src="../assets/img/apple-site02.jpg" alt="사이트2">
+                       <a href="#">VIEW</a>
                     </div>
-                    <div class="img3">
+                    <div class="img3"
+                        data-15000="left: 100%;"
+                        data-16000="left: 0%;"
+                        data-18000="left: 0%;"
+                        data-19000="left: -100%;"
+                    >
                        <img src="../assets/img/apple-site03.jpg" alt="사이트3">
+                       <a href="#">VIEW</a>
                     </div>
-                    <div class="img4">
+                    <div class="img4"
+                        data-18000="left: 100%;"
+                        data-19000="left: 0%;"
+                    >
                        <img src="../assets/img/apple-site04.jpg" alt="사이트4">
+                       <a href="#">VIEW</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- section2 -->
 
-        <section id="section3"></section><!-- section3 -->
+        <section id="section3">
+            <div class="s3Text1 fixed">         <!-- scale, skew,  -->
+                <span class="s1"           
+                    data-26000="transform: scale(2) translateY(5px); opacity: 0;"
+                    data-27000="transform: scale(1) translateY(0px); opacity: 1;"
+                >s</span><span class="s2"
+                    data-26500="transform: ; opacity: 0;"
+                    data-27500="transform: ; opacity: 1;"
+                >c</span><span class="s3"
+                    data-27000="transform: ; opacity: 0;"
+                    data-28000="transform: ; opacity: 1;"
+                >r</span><span class="s4"
+                    data-27500="transform: ; opacity: 0;"
+                    data-28500="transform: ; opacity: 1;"
+                >i</span><span class="s5"
+                    data-28000="transform: ; opacity: 0;"
+                    data-29000="transform: ; opacity: 1;"
+                >p</span><span class="s6"
+                    data-28500="transform: ; opacity: 0;"
+                    data-29500="transform: ; opacity: 1;"
+                >t</span>
+            </div>
+        </section>
+        <!-- section3 -->
+
         <section id="section4"></section><!-- section4 -->
         <section id="section5"></section><!-- section5 -->
         <section id="section6"></section><!-- section6 -->

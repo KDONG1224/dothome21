@@ -10,6 +10,17 @@ function modalPE02(){
         document.querySelector("#modal").classList.add("hide");
     });
 }
+function modalPE04(){
+    document.querySelector(".parallax .source03 button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.remove("hide");
+        document.querySelector("#modal").classList.add("show");
+        document.querySelector(".view-cont > div:nth-child(1)").classList.add("active");
+    });
+    
+    document.querySelector(".modal-cont button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.add("hide");
+    });
+}
 function modalPE03(){
     document.querySelector(".parallax .source02.bt button").addEventListener("click", function(){
         document.querySelector("#modal").classList.remove("hide");

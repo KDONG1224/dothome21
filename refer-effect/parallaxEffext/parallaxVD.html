@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -33,8 +34,8 @@
             margin: 0; padding: 0;
         }
         .parallax {
-            background: #222;
-            color: #fff;
+            background: #F4DED3;
+            color: #000;
             font-family: 'NEXONLv1Gothic';
             font-weight: 400;
         }
@@ -44,15 +45,13 @@
             padding: 20px;
             z-index: 10000;
         }
-        #paraHeader h1 {
+        #paraHeader h1 a {
             display: inline-block;
             font-size: 20px;
-            border-bottom: 1px dashed #fff;
+            color: #000;
+            border-bottom: 1px dashed #000;
             margin-bottom: 8px;
-        }
-        #paraHeader h1 a {
             text-decoration: none;
-            color: #fff;
         }
         #paraCont {}
         .contentWrap {
@@ -71,82 +70,15 @@
             position: relative;
             box-sizing: border-box;
         }
-        .content__item:nth-child(even){
-            background: #000;
-        }
         .content__item__num {
             font-family: 'Lato';
             font-size: 25vw;
+            font-weight: 100;
             line-height: 1;
-            opacity: 0.07;
+            /* opacity: 0.07; */
             position: absolute;
             right: 5vw; top: 0vw;
-        }
-        .content__item__title {
-            font-size: 2vw;
-            text-align: left;
-            max-width: 1000px;
-            width: 50vw;
-        }
-        .content__item__imgWrap {
-            width: 50vw;
-            height: 60vh;
-            position: relative;
-            overflow: hidden;
-            background: #000;
-        }
-        .content__item__img {
-            position: absolute;
-            left: -10%; top: -10%;
-            width: 120%;
-            height: 120%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            filter: saturate(0%);
-            transition: all 0.2s;
-        }
-        .content__item__img:hover {
-            filter: saturate(100%);
-        }
-        .content__item__desc {
-            font-size: 4vw;
-            line-height: 1.4;
-            word-break: keep-all;
-            margin-top: -6vw;
-            margin-right: -3vw;
-            position: relative;
-            z-index: 100;
-            padding-left: 30vw;
-            padding-right: 10vw;
-        }
-
-        .content__item:nth-child(1) .content__item__img {
-            background-image: url(../assets/img/bg31.jpg);
-        }
-        .content__item:nth-child(2) .content__item__img {
-            background-image: url(../assets/img/bg32.jpg);
-        }
-        .content__item:nth-child(3) .content__item__img {
-            background-image: url(../assets/img/bg33.jpg);
-        }
-        .content__item:nth-child(4) .content__item__img {
-            background-image: url(../assets/img/bg34.jpg);
-        }
-        .content__item:nth-child(5) .content__item__img {
-            background-image: url(../assets/img/bg35.jpg);
-        }
-        .content__item:nth-child(6) .content__item__img {
-            background-image: url(../assets/img/bg36.jpg);
-        }
-        .content__item:nth-child(7) .content__item__img {
-            background-image: url(../assets/img/bg37.jpg);
-        }
-        .content__item:nth-child(8) .content__item__img {
-            background-image: url(../assets/img/bg38.jpg);
-        }
-        .content__item:nth-child(9) .content__item__img {
-            background-image: url(../assets/img/bg39.jpg);
+            color: #fff;
         }
 
 
@@ -181,46 +113,57 @@
         }
 
         /* info */
-        .paraScroll {
+        .info {
             position: fixed;
             left: 20px;
             bottom: 20px;
             z-index: 1000;
             background: rgba(0,0,0,.4);
-            color: #fff;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 12px;
-            padding: 0px 20px;
+            border-radius: 5px;
+            padding: 10px 20px;
         }
-        .paraInfo {
-            position: fixed;
-            left: 20px;
-            bottom: 70px;
-            z-index: 1000;
-            background: rgba(0,0,0,.4);
-            color: #fff;
-            padding: 20px;
-            font-size: 12px;
-            line-height: 1.8;
-            border-radius: 10px;
-        }
-        .paraInfo li {
+        .info li {
             list-style: none;
+            font-size: 12px;
+            padding: 2px;
+            color: #fff;
+        }
+        .character {
+            width: 400px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            z-index: 1000;
+            background-image: url(../assets/img/dog.jpg);
+        }
+        .character.walking{
+            animation: walk 0.8s steps(18, start) infinite;
+        }
+        .character.left {
+            background-position: 0 -300px;
+        }
+        .character.left.walking {
+            animation: backwalk 0.8s steps(18, start) infinite;
+        }
+        @keyframes walk {
+            0%   {background-position: 0 0;}
+            100% {background-position: -7200px 0;}
+        }
+        @keyframes backwalk {
+            0%   {background-position: 0 -300px;}
+            100% {background-position: 7200px -300px;}
         }
     </style>
 
 </head>
 <body class="parallax">
-    <div class="paraScroll">scrollTop() : <span>0</span>px</div>
-    <div class="paraInfo">
+
+    <div class="info">
         <ul>
-            <li>전체 가로 값 : <span class="scrollTotalWidth">0</span>px</li>
-            <li>body 높이 값 : <span class="bHeight">0</span>px</li>
-            <li>비율 : <span class="ratio">0</span>px</li>
-            <li>움직이기 : <span class="goLeft">0</span>px</li>
+            <li class="scrollTop">scrollTop() : <span>0</span>px</li>
+            <li class="contentWrapWidth">가로 전체 길이 : <span>0</span>px</li>
         </ul>
     </div>
     <!-- //info -->
@@ -231,95 +174,52 @@
     </header>
     <!-- //header -->
 
+    <div class="character"></div>
+
     <main id="paraCont">
         <div class="contentWrap">
             <section id="section1" class="content__item">
                 <span class="content__item__num">01</span>
-                <h2 class="content__item__title">Section1</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
             </section>
             <!-- //section1 -->
 
             <section id="section2" class="content__item">
                 <span class="content__item__num">02</span>
-                <h2 class="content__item__title">Section2</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
             </section>
             <!-- //section2 -->
 
             <section id="section3" class="content__item">
                 <span class="content__item__num">03</span>
-                <h2 class="content__item__title">Section3</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">매 순간에 최선을 다하고, 끊임없이 변화한다.</p>
             </section>
             <!-- //section3 -->
 
             <section id="section4" class="content__item">
                 <span class="content__item__num">04</span>
-                <h2 class="content__item__title">Section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">모든지 기본을 중요하게 생각하고 행동한다.</p>
             </section>
             <!-- //section4 -->
 
             <section id="section5" class="content__item">
                 <span class="content__item__num">05</span>
-                <h2 class="content__item__title">Section5</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p>
             </section>
             <!-- //section5 -->
 
             <section id="section6" class="content__item">
                 <span class="content__item__num">06</span>
-                <h2 class="content__item__title">Section6</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">천 마디 말보단 하나의 행동이 더 값지다.</p>
             </section>
             <!-- //section6 -->
 
             <section id="section7" class="content__item">
                 <span class="content__item__num">07</span>
-                <h2 class="content__item__title">Section7</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p>
             </section>
             <!-- //section7 -->
 
             <section id="section8" class="content__item">
                 <span class="content__item__num">08</span>
-                <h2 class="content__item__title">Section8</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다</p>
             </section>
             <!-- //section8 -->
 
             <section id="section9" class="content__item">
                 <span class="content__item__num">09</span>
-                <h2 class="content__item__title">Section9</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
             </section>
             <!-- //section9 -->
         </div>
@@ -327,7 +227,7 @@
     <!-- //main -->
       
     <!-- source -->
-    <div class="source02">
+    <div class="source03">
         <button>소스보기</button>
     </div>
     <!-- //source -->
@@ -353,99 +253,57 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">&lt;main id="paraCont"&gt;
+<pre><code class="language-html">&lt;div class="character"&gt;&lt;/div&gt;
+
+&lt;main id="paraCont"&gt;
     &lt;div class="contentWrap"&gt;
         &lt;section id="section1" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;01&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section1&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section1 --&gt;
 
         &lt;section id="section2" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;02&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section2&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;결과도 중요하지만, 과정을 더 중요하게 생각한다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section2 --&gt;
 
         &lt;section id="section3" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;03&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section3&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;매 순간에 최선을 다하고, 끊임없이 변화한다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section3 --&gt;
 
         &lt;section id="section4" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;04&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section4&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;모든지 기본을 중요하게 생각하고 행동한다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section4 --&gt;
 
         &lt;section id="section5" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;05&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section5&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section5 --&gt;
 
         &lt;section id="section6" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;06&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section6&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;천 마디 말보단 하나의 행동이 더 값지다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section6 --&gt;
 
         &lt;section id="section7" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;07&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section7&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;조그만 성공에 만족하지 않으며, 방심을 경계한다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section7 --&gt;
 
         &lt;section id="section8" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;08&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section8&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section8 --&gt;
 
         &lt;section id="section9" class="content__item"&gt;
             &lt;span class="content__item__num"&gt;09&lt;/span&gt;
-            &lt;h2 class="content__item__title"&gt;Section9&lt;/h2&gt;
-            &lt;figure class="content__item__imgWrap"&gt;
-                &lt;div class="content__item__img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
 &lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                     </div>
                     <div class="css">
@@ -465,8 +323,8 @@
     margin: 0; padding: 0;
 }
 .parallax {
-    background: #222;
-    color: #fff;
+    background: #F4DED3;
+    color: #000;
     font-family: 'NEXONLv1Gothic';
     font-weight: 400;
 }
@@ -476,15 +334,13 @@
     padding: 20px;
     z-index: 10000;
 }
-#paraHeader h1 {
+#paraHeader h1 a {
     display: inline-block;
     font-size: 20px;
-    border-bottom: 1px dashed #fff;
+    color: #000;
+    border-bottom: 1px dashed #000;
     margin-bottom: 8px;
-}
-#paraHeader h1 a {
     text-decoration: none;
-    color: #fff;
 }
 #paraCont {}
 .contentWrap {
@@ -504,15 +360,17 @@
     box-sizing: border-box;
 }
 .content__item:nth-child(even){
-    background: #000;
+    background: #F4DED3;
 }
 .content__item__num {
     font-family: 'Lato';
     font-size: 25vw;
+    font-weight: 100;
     line-height: 1;
-    opacity: 0.07;
+    /* opacity: 0.07; */
     position: absolute;
     right: 5vw; top: 0vw;
+    color: #fff;
 }
 .content__item__title {
     font-size: 2vw;
@@ -534,12 +392,7 @@
     height: 120%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
     filter: saturate(0%);
-    transition: all 0.2s;
-}
-.content__item__img:hover {
-    filter: saturate(100%);
 }
 .content__item__desc {
     font-size: 4vw;
@@ -554,31 +407,31 @@
 }
 
 .content__item:nth-child(1) .content__item__img {
-    background-image: url(../assets/img/bg31.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg1.jpg);
 }
 .content__item:nth-child(2) .content__item__img {
-    background-image: url(../assets/img/bg32.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg2.jpg);
 }
 .content__item:nth-child(3) .content__item__img {
-    background-image: url(../assets/img/bg33.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg3.jpg);
 }
 .content__item:nth-child(4) .content__item__img {
-    background-image: url(../assets/img/bg34.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg4.jpg);
 }
 .content__item:nth-child(5) .content__item__img {
-    background-image: url(../assets/img/bg35.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg5.jpg);
 }
 .content__item:nth-child(6) .content__item__img {
-    background-image: url(../assets/img/bg36.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg6.jpg);
 }
 .content__item:nth-child(7) .content__item__img {
-    background-image: url(../assets/img/bg37.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg7.jpg);
 }
 .content__item:nth-child(8) .content__item__img {
-    background-image: url(../assets/img/bg38.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg8.jpg);
 }
 .content__item:nth-child(9) .content__item__img {
-    background-image: url(../assets/img/bg39.jpg);
+    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg9.jpg);
 }
 
 
@@ -613,67 +466,80 @@
 }
 
 /* info */
-.paraScroll {
+.info {
     position: fixed;
     left: 20px;
     bottom: 20px;
     z-index: 1000;
     background: rgba(0,0,0,.4);
-    color: #fff;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 12px;
-    padding: 0px 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
-.paraInfo {
-    position: fixed;
-    left: 20px;
-    bottom: 70px;
-    z-index: 1000;
-    background: rgba(0,0,0,.4);
-    color: #fff;
-    padding: 20px;
-    font-size: 12px;
-    line-height: 1.8;
-    border-radius: 10px;
-}
-.paraInfo li {
+.info li {
     list-style: none;
+    font-size: 12px;
+    padding: 2px;
+    color: #fff;
+}
+.character {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 1000;
+    background-image: url(../assets/img/dog.jpg);
+}
+.character.walking{
+    animation: walk 0.8s steps(18, start) infinite;
+}
+.character.left {
+    background-position: 0 -300px;
+}
+.character.left.walking {
+    animation: backwalk 0.8s steps(18, start) infinite;
+}
+@keyframes walk {
+    0%   {background-position: 0 0;}
+    100% {background-position: -7200px 0;}
+}
+@keyframes backwalk {
+    0%   {background-position: 0 -300px;}
+    100% {background-position: 7200px -300px;}
 }
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-js">const contentWrap = $(".contentWrap");
-const contentItem = $(".content__item");
-
+<pre><code class="language-js">const contentWrap = $(".contentWrap").width();
+$("body").css("height", contentWrap);
+const scrollHeight = $(window).height();
 let lastScrollTop = 0;
-let scrollTotalWidth = contentWrap.width();
-$("body").height(scrollTotalWidth);
-
 
 $(window).scroll(function(){
     let scrollTop = $(window).scrollTop();
 
-    let nWidth = scrollTotalWidth - $(window).width();
-    let nHeight = $("body").height() - $(window).height();
+    $(".contentWrap").css({"transform": "translateX(" + -scrollTop + "px)"});
 
-    let ratio = nWidth / nHeight;
-    let goLeft = scrollTop * ratio;
+    clearTimeout($.data(this, "scrollCheck"));
 
-    contentWrap.css("left", -goLeft);
+    $.data(this, "scrollCheck",setTimeout(function(){
+        $(".character").removeClass(".walking");
+    }, 1000));
 
-    //출력
-    $(".paraScroll span").text(scrollTop);
-    $(".scrollTotalWidth").text(scrollTotalWidth);
-    $(".bHeight").text($("body").height());
-    $(".ratio").text(ratio.toFixed(5));
-    $(".goLeft").text(parseInt(goLeft));
+    if(scrollTop > lastScrollTop){
+        $(".character").removeClass("left");
+        $(".character").addClass("walking");
+    } else {
+        $(".character").addClass("left");
+        $(".character").addClass("walking");
+    }
+    lastScrollTop = scrollTop;
+
+    // 출력
+    $(".scrollTop span").text(parseInt(scrollTop));
+    $(".contentWrapWidth span").text(parseInt(contentWrap));
 });
-
-//출력
-$(".scrollTotalWidth").text(scrollTotalWidth);
 </code></pre> 
                     </div>
                 </div>
@@ -694,7 +560,8 @@ $(".scrollTotalWidth").text(scrollTotalWidth);
     <script src="../assets/js/modal.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        const contentWrap = $(".contentWrap");
+
+    const contentWrap = $(".contentWrap");
         const contentItem = $(".content__item");
 
         let lastScrollTop = 0;
@@ -713,19 +580,31 @@ $(".scrollTotalWidth").text(scrollTotalWidth);
 
             contentWrap.css("left", -goLeft);
 
-            //출력
-            $(".paraScroll span").text(scrollTop);
-            $(".scrollTotalWidth").text(scrollTotalWidth);
-            $(".bHeight").text($("body").height());
-            $(".ratio").text(ratio.toFixed(5));
-            $(".goLeft").text(parseInt(goLeft));
+            clearTimeout($.data(this, "scrollCheck"));
+
+            $.data(this, "scrollCheck",setTimeout(function(){
+                $(".character").removeClass(".walking");
+            }, 1000));
+
+            if(scrollTop > lastScrollTop){
+                $(".character").removeClass("left");
+                $(".character").addClass("walking");
+            } else {
+                $(".character").addClass("left");
+                $(".character").addClass("walking");
+            }
+            lastScrollTop = scrollTop;
+
+            // 출력
+            $(".scrollTop span").text(parseInt(scrollTop));
+            $(".contentWrapWidth span").text(parseInt(contentWrap));
         });
 
         //출력
         $(".scrollTotalWidth").text(scrollTotalWidth);
 
         //source
-        modalPE02();
+        modalPE04();
     </script>
 </body>
 </html>

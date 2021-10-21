@@ -270,6 +270,8 @@ $text6: linear-gradient(to bottom, #232526 0%, #414345 100%);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    z-index: 0;
+    overflow: hidden;
 
     &::before {
         @include content;

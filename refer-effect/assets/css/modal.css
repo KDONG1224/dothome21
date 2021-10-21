@@ -287,7 +287,7 @@
 .source02 button {
   position: fixed;
   left: 20px;
-  bottom: 80px;
+  bottom: 205px;
   width: 120px;
   height: 40px;
   line-height: 25px;
@@ -304,6 +304,29 @@
 }
 
 .source02 button:hover {
+  background: #fff;
+  color: #000;
+}
+.source03 button {
+  position: fixed;
+  left: 20px;
+  bottom: 90px;
+  width: 120px;
+  height: 40px;
+  line-height: 25px;
+  text-align: center;
+  z-index: 10000;
+  background: rgba(0,0,0,.4);
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: #fff;
+  border: 0px solid rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.source03 button:hover {
   background: #fff;
   color: #000;
 }
