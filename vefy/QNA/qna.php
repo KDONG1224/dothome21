@@ -56,8 +56,8 @@
                                     <fieldset class="search-field">
                                         <legend class="ir_so">고객센터 검색 영역</legend>
                                         <div class="p_box">
-                                            <p class="choice"><a href="qna.php">Q&A</a></p>
                                             <p><a href="notice.php">공지사항</a></p>
+                                            <p class="choice"><a href="qna.php">Q&A</a></p>
                                         </div>
                                         <div class="search_box">
                                             <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요!" aria-label="search" size=30 required>
@@ -231,7 +231,8 @@
 
 
 <script>
-$(".que").click(function() {
+$(".que").click(function(e) {
+    e.preventDefault();
     $(this).next(".anw").stop().slideToggle(300);
     $(this).toggleClass('on').siblings().removeClass('on');
     $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기

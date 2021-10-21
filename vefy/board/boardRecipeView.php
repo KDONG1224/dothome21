@@ -13,7 +13,7 @@
     <meta name="author" content="베피">
     <meta name="description" content="채식을 위한 정보 공유 사이트입니다.">
     <meta name="keywords" content="베피, 채식, 그릭요거트, 글루텐, 글루텐프리">
-    <title>게시판</title>
+    <title>레시피</title>
     
     <!-- style -->
     <link rel="stylesheet" href="../assets/css/normal/reset.css">
@@ -43,7 +43,7 @@
             <h2 class="ir_so">메인 컨텐츠</h2>
             <article class="content-article">
                 <div class="boardType">
-                    <h3>자유게시판</h3>
+                    <h3>레시피</h3>
                     <p></p>
                     <div class="board">
                         <div class="board-table mt30">

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/css/normal/reset.css">
     <link rel="stylesheet" href="../assets/css/normal/fonts.css">
     <link rel="stylesheet" href="../assets/css/normal/common.css">
-    <link rel="stylesheet" href="../assets/css/dog.css">
+    <link rel="stylesheet" href="../assets/css/joinSave.css">
     <link rel="stylesheet" href="../assets/css/join.css">
 
     
@@ -225,7 +225,7 @@
                         $result = $connect -> query($sql);
 
                         if($result){
-                            msg("회원가입을 축하합니다. 로그인 해주세요.");
+                            msg("회원가입을 축하합니다. 로그인 해주세요!!");
                         } else {
                             msg("에러 발생04 - 관리자에게 문의하세요.");
                             exit;
@@ -236,26 +236,26 @@
                     }
 
                     ?>
-                    <div class="card,good">
-                        <div class="dog">
-                            <div class="head">
-                                <div class="ears"></div>
-                                <div class="face"></div>
-                                <div class="eyes">
-                                    <div class="teardrop"></div>
-                                </div>
-                                <div class="nose"></div>
-                                <div class="mouth">
-                                    <div class="tongue"></div>
-                                </div>
-                                <div class="chin"></div>
+                     <div class="card good">
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
                             </div>
-                            <div class="body">
-                                <div class="tail"></div>
-                                <div class="legs"></div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
                             </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
                         </div>
                     </div>
+                </div>
                 </div>
             </article>
         </section>

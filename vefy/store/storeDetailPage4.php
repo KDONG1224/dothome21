@@ -64,8 +64,8 @@
                             <div class="inner">
                                 <a href="#" class="right">상품 선택</a>
                                 <ul class="checkbox">
-                                    <li class="checkbox1"><a href="#">한돈 삼겹살 구이용</a></li>
-                                    <li class="checkbox2"><a href="#">한돈 삼겹살 수육용</a></li>
+                                    <li class="checkbox1"><a href="#">체리 1팩</a></li>
+                                    <li class="checkbox2"><a href="#">체리 2팩 ( +8000원 )</a></li>
                                 </ul>
                             </div>
                         </div>

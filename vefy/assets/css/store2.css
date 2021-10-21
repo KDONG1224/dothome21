@@ -76,7 +76,7 @@ body {
     opacity: 0.89;
 }
 .img_box .img_desc {
-    font-size: 25px;
+    font-size: 23px;
 }
 .img_box1:last-child {
     margin-right: 0;
@@ -120,7 +120,7 @@ body {
 }
 .desc {
     position: absolute;
-    background-color: #000000e1;
+    background-color: #000000af;
     padding: 30px;
     bottom: -152px; left: 0;
     width: 100%;

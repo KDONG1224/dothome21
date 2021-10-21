@@ -30,8 +30,8 @@
         data-0="top: 50%;"
         data-500="top: 30%;"
         >
-        <img src="../assets/img/remain2.jpeg" alt="이미지">
-    </div>
+            <img src="../assets/img/remain2.jpeg" alt="이미지">
+        </div>
         <div class="bgBox recipe">
             <p>여러분의 레시피를 공유해주세요</p>
             <h1>Recipe</h1>
@@ -43,6 +43,21 @@
         <div class="container">
             <div class="commu-wrap">
                 <h2>Recipe</h2>
+                <form action="boardRecipeSearch.php" name="boardRecipeSearch" method="get">
+                    <fieldset class="search-field">
+                        <legend class="ir_so">게시판 검색 영역</legend>
+                        <div class="search_box">
+                            <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요!" aria-label="search" size=30 required>
+                            <select name="searchOption" id="searchOption" class="form-select">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="name">작성자</option>
+                                <option value="view">조회수</option>
+                            </select>
+                            <button type="submit" class="form-btn">검색</button>
+                        </div>
+                    </fieldset>
+                </form>
                 <div class="box_wrap">
                     <!-- <div class="cm_boxr cm_box1 recipe">
                         <span class="icon icon1">
@@ -168,10 +183,11 @@
                     ?>
                 </div>
             </div>
+            <div class="wirte-btn">
+                <a href="boardRecipeWirte.php" class="form-btn black recipe">글쓰기</a>
+            </div>
         </div>
-        <div class="wirte-btn">
-            <a href="boardRecipeWirte.php" class="form-btn black recipe">글쓰기</a>
-        </div>
+        
         <div class="pageList recipe">
             <ul>
                 <?php

@@ -17,7 +17,7 @@
     font-size: 15px;
     color: #000;
     border: 1px solid #cccccc;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
     padding: 17px 355px 16px 20px;
     display: block;
 }
@@ -53,21 +53,21 @@
     right: 15px;
     top: 11px;
     color: #fff;
-    background: #4d942c;
+    background: #b1c5b3;
     padding: 5px 35px;
     border-radius: 5px;
 }
 .join_line {
     content: '';
     margin: 0 60px;
-    width: 1px;
+    width: 14px;
     height: 616px;
     transform: rotate(180deg);
     background-color: #c4c4c4;
 }
 .right_title {
     color: #fff;
-    background-color: #4d942c;
+    background-color: #b1c5b3;
     padding: 17px 1px 20px;
     white-space: nowrap;
     font-weight: normal;
@@ -78,7 +78,6 @@
 }
 .right_agree {
     padding: 30px 40px 45px 20px;
-    
 }
 .agree_desc {
     margin: 27px 0 27px 0;
@@ -88,14 +87,17 @@
     padding-bottom: 27px;
 }
 .join_click {
+    width: 100%;
     color: #fff;
-    background-color: #366221;
+    background-color: #b1c5b3;
     padding: 16px 230px;
     border-radius: 10px;
     font-size: 20px;
     margin-top: 20px;
     cursor: pointer;
     white-space: nowrap;
+    pointer-events: none;   
+    visibility: hidden;    
 }
 #checkAll {
     transform: scale(1.7);
@@ -153,4 +155,16 @@ fieldset {
 .member-form .info a {
     text-decoration: underline;
     color: #666;
+}
+.vefyLogo2 {
+    background-image: url(../img/logo_green.png);
+    background-size: cover;
+    margin: 52px auto;
+    width: 140px;
+    height: 42px;
+}
+.scrollWrap {
+    overflow-y: scroll;
+    height: 346px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
 }

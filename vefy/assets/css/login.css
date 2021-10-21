@@ -6,7 +6,9 @@ body {
     justify-content: center;
     margin-bottom: 200px;
 }
-
+.login {
+    margin-bottom: 40px;
+}
 .loginLeft {}
 
 .loginID label {}
@@ -43,13 +45,14 @@ body {
     height: 42px;
     margin: 0 auto;
 }
-.input_write {
-    padding: 17px 255px 17px 17px;
-    color: #000000;
-    font-weight: 500;
-    margin-bottom: 40px;
+.input_write3 {
+    border: 1px solid #cccccc;
+    width: 435px;
+    height: 60px;
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 15px;
 }
-
 .loginLine {
     border-right: 1px solid #c4c4c4;
     margin-left: 50px;

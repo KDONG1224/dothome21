@@ -47,7 +47,7 @@
             <input type="text" name="youPhone" id="youPhone" class="input_write" maxlength="20"
                 placeholder="휴대폰 번호를 입력해 주세요." autocmplete="off" required>
             </div>
-            <button id="loginBtn" type="submit" class="btn_submit" onclick="findPass(1)">확인</button>
+            <button id="loginBtn" type="submit" class="btn_submit2" onclick="findPass(1)">확인</button>
         </fieldset>
     </form>
     <div class="find_desc">위 방법으로 아이디 / 비밀번호를 찾을 수 없을 경우<br>고객센터 게시판으로 문의 주시기 바랍니다.</div>

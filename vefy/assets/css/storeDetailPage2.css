@@ -17,7 +17,7 @@ body {
     overflow: hidden;
 }
 .contentDesc {
-    flex: 0 0 50%;
+    flex: 0 0 45.7%;
 }
 .contentImg img {
     max-width: 100%;
@@ -194,7 +194,7 @@ body {
     color: rgba(0, 0, 0, 0.52);
     cursor: pointer;
     height: 60px;
-    margin-bottom: 200px;
+    margin-bottom: 40px;
 }
 .DetailEx {
     font-size: 18px;

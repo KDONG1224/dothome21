@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../assets/css/normal/common.css">
     <link rel="stylesheet" href="/assets/css/board.css">
 </head>
-<body>
+<body style="height: auto;">
     <header id="header">
         <?php
             include "../include/header.php"
@@ -43,6 +43,21 @@
         <div class="container">
             <div class="commu-wrap">
                 <h2>community</h2>
+                <form action="boardSearch.php" name="boardSearch" method="get">
+                    <fieldset class="search-field">
+                        <legend class="ir_so">게시판 검색 영역</legend>
+                        <div class="search_box">
+                            <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요!" aria-label="search" size=30 required>
+                            <select name="searchOption" id="searchOption" class="form-select">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="name">작성자</option>
+                                <option value="view">조회수</option>
+                            </select>
+                            <button type="submit" class="form-btn">검색</button>
+                        </div>
+                    </fieldset>
+                </form>
                 <div class="box_wrap">
                     <!-- <div class="cm_box cm_box1">
                         <span class="icon icon1">
@@ -173,9 +188,9 @@
                     ?>
                 </div>
             </div>
-        </div>
-        <div class="wirte-btn">
-            <a href="boardWrite.php" class="form-btn black">글쓰기</a>
+            <div class="wirte-btn">
+                <a href="boardWrite.php" class="form-btn black">글쓰기</a>
+            </div>
         </div>
 
         <div class="pageList">

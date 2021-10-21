@@ -79,15 +79,25 @@ body {
 
 .banner-desc {
     position: absolute;
-    left: 40%; bottom: 18%;
+    left: 40%; bottom: 25%;
     z-index: 100000;
     color: #69856b;
 }
 .banner-desc h2 {
     font-size: 80px;
+    line-height: 0.9;
+    white-space: nowrap;
+}
+.banner-desc h2 a {
+    font-size: 80px;
+    line-height: 0.9;
+    white-space: nowrap;
+    color: #69856b;
 }
 .banner-desc p {
     font-size: 30px;
+    line-height: 1.5;
+    margin-top: 30px;
 }
 
 .banner-middle {
@@ -170,15 +180,18 @@ body {
     background-size: 100%;
 }
 .sectionCont-box p {
-    font-family: 'Chosunilbo_myungjo';
+    font-family: 'NanumSquare';
     color: #fff;
-    font-size: 26px;
+    font-size: 23px;
     margin-top: 20px;
+    line-height: 1.5;
 }
 .sectionCont-box p.eng {
+    font-family: 'Gideon Roman';
     color: #fff;
     font-size: 26px;
     margin-bottom: 80px;
+    line-height: 1.5;
 }
 .sectionCont-box ul {
     width: 100%;
@@ -334,7 +347,7 @@ body {
     background: #000;
 }
 .storeBox h3 {
-    font-family: 'Chosunilbo_myungjo';
+    font-family: 'NanumSquare';
     font-size: 35px;
     white-space: nowrap;
     position: absolute;
@@ -375,8 +388,8 @@ body {
 }
 .swiper-slide.store .store_btn a {
     display: inline-block;
-    font-family: 'Chosunilbo_myungjo';
-    font-size: 30px;
+    font-family: 'NanumSquare';
+    font-size: 25px;
     font-weight: bold;
     color: #3e6d3c;
     border-radius: 50px;

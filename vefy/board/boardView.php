@@ -13,7 +13,7 @@
     <meta name="author" content="베피">
     <meta name="description" content="채식을 위한 정보 공유 사이트입니다.">
     <meta name="keywords" content="베피, 채식, 그릭요거트, 글루텐, 글루텐프리">
-    <title>게시판</title>
+    <title>커뮤니티</title>
     
     <!-- style -->
     <link rel="stylesheet" href="../assets/css/normal/reset.css">
@@ -23,7 +23,7 @@
 </head>
 <body>
     <!-- skipMenu -->
-    <div id="skip">
+    <div id="skip" class="ir_pm">
         <a href="#contents">컨텐츠 바로가기</a>
         <a href="#footer">푸터 바로가기</a>
     </div>
@@ -110,39 +110,10 @@
                                     } else {
                                     }
                                 ?>
-                                <a href="board.php">목록보기</a>
+                                <a href="boardRecipe.php">목록보기</a>
                             </div>
                         </div>
                     </div>
-                    <div class="reply_view">
-                    <h3>댓글목록</h3>
-                        <?php
-
-                            $youID = $_GET['youID'];                
-
-                            $sql = mq("SELECT * FROM ".$youID."_reply WHERE con_num='".$youID."' order by youID desc");
-                            while($reply = $sql->fetch_array()){
-                        ?>
-                        <div class="dap_lo">
-                            <div><b><?php echo $reply['name'];?></b></div>
-                            <div class="dap_to comt_edit"><?php echo nl2br("$reply[content]"); ?></div>
-                            <div class="rep_me dap_to"><?php echo $reply['date']; ?></div>
-                
-                        </div>
-                    <?php } ?>
-                
-                    <!--- 댓글 입력 폼 -->
-                    <div class="dap_ins">
-                        <form action="reply_ok.php?board_id=<?echo $board_id;?>&idx=<?php echo $bno; ?>" method="post">
-                            <input type="hidden" name="dat_user" id="dat_user" class="dat_user" size="15" placeholder="아이디" value=<?$_SESSION['userid']?>>
-                            <div style="margin-top:10px; ">
-                                <textarea name="content" class="reply_content" id="re_content" ></textarea>
-                                <button id="rep_bt" class="re_bt">댓글</button>
-                            </div>
-                        </form>
-                    </div>
-                </div><!--- 댓글 불러오기 끝 -->
-                <div id="foot_box"></div>
                 </div>
             </article>
         </section>

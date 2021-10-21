@@ -47,11 +47,11 @@
                 <div class="banner-wrap">
                     <div class="banner-img-wrap">
                         <div class="banner-img">
-                            <img class="imgBox1" src="../assets/img/main01.png" alt="이미지입니다.">
+                            <img class="imgBox1" src="../assets/img/main.jpg" alt="이미지입니다.">
                         </div>
                     </div>
                     <div class="banner-desc">
-                        <h2>Welcome to "V.E.F.Y" site.</h2>
+                        <h2><a href="introduce.php">Welcome to "V.E.F.Y"</a></h2>
                         <p>We will post many ways to be happy and healthy on "VEFY"<br>And we hope the "VEFY" site will
                             make you happy. </p>
                     </div>
@@ -85,7 +85,7 @@
                             </ul>
                         </div>
                         <div class="sectionCont-img-box">
-                            <img src="../assets/img/main6.jpeg" alt="이미지입니다.">
+                            <img src="../assets/img/mainImg1.jpeg" alt="이미지입니다.">
                         </div>
                         <div class="sectionCont-bg-box"></div>
                     </div>
@@ -93,7 +93,7 @@
                 <section id="cont2" class="section">
                     <div class="container">
                         <div class="sectionCont-img-box">
-                            <img src="../assets/img/img225.png" alt="이미지입니다.">
+                            <img src="../assets/img/mainImg2.png" alt="이미지입니다.">
                         </div>
                         <div class="sectionCont-box">
                             <h3>Recipe</h3>
@@ -119,7 +119,7 @@
                             </ul>
                         </div>
                         <div class="sectionCont-img-box">
-                            <img src="../assets/img/main222.png" alt="이미지입니다.">
+                            <img src="../assets/img/mainImg3.png" alt="이미지입니다.">
                         </div>
                         <div class="sectionCont-bg-box"></div>
                     </div>
@@ -127,7 +127,7 @@
                 <section id="cont2" class="section">
                     <div class="container">
                         <div class="sectionCont-img-box">
-                            <img src="../assets/img/simg2.png" alt="이미지입니다.">
+                            <img src="../assets/img/mainImg4.png" alt="이미지입니다.">
                         </div>
                         <div class="sectionCont-box">
                             <h3>Customer Service</h3>
@@ -224,7 +224,7 @@
 
     
     <!-- 모달 -->
-  <div class="modalOverlay">
+  <!-- <div class="modalOverlay">
         <div class="modalWrap">
             <div class="modalTop">
                 <h1 class="modalTitle">VEFY</h1>
@@ -254,7 +254,7 @@
                 </fieldset>
             </form>
         </div>
-    </div>
+    </div> -->
     <!-- 모달 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 소스 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>

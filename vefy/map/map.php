@@ -84,12 +84,12 @@
         <div class="restaurant">
             <h2>지역별 맛집</h2>
             <div class="restaurantList">
-                <span class="active ">서울</span>
-                <span>의정부</span>
-                <span>속초</span>
+                <span class="active">서울</span>
+                <span>경기</span>
+                <span>강원</span>
                 <span>대구</span>
                 <span>부산</span>
-                <span>제주도</span>
+                <span>제주</span>
             </div>
             <div class="restaurantLocation">
                 <div class="restaurantLocationWrap">
@@ -101,11 +101,65 @@
                         <div>5.라페름(브런치) - 서울 용산구 이태원로54길 32</div>
                         <div>6.알라보(샐러드) - 서울특별시 강남구 테헤란로 129 강남N타워 1층</div>
                         <div>7.칙피스(샐러드) - 서울특별시 강남구 강남대로152길 69</div>
-                        <!-- <div>매장 내 식사 · 테이크 아웃</div> -->
                     </div>
-                    <!-- <div class="LocationImg">
-                        <img src="../assets/img/지도.jpg" alt="">
-                    </div> -->
+                </div>
+            </div>
+            <div class="restaurantLocation">
+                <div class="restaurantLocationWrap">
+                    <div class="LocationWrap">
+                        <div>1. 베지앙(카페) - 경기 파주시 맨드라미길 20</div>
+                        <div>2. 몽가타(와인) - 경기도 군포시 산본로323번길 16-12 센타빌딩B </div>
+                        <div>3. 에티컬테이블(일식) - 경기도 성남시 수정구 복정로 57</div>
+                        <div>4. 오무오무(베이커리) - 경기 고양시 일산동구 일산로380번길 35-1</div>
+                        <div>5. 리스토란테라일락(양식) - 경기도 수원시 팔달구 신풍로23번길 38-8</div>
+                        <div>6. 채식공간 녹두(샐러드 뷔페) - 경기도 파주시 산남로107번길 35-35</div>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantLocation">
+                <div class="restaurantLocationWrap">
+                    <div class="LocationWrap">
+                        <div>1. 범바우막국수(채식메뉴) - 강원 양양군 강현면 동해대로 3277-22</div>
+                        <div>2. 에이플(카페) - 강원 영월군 영월읍 덕포시장길 9</div>
+                        <div>3. 달래촌 - 강원 양양군 현남면 화상천로 634</div>
+                        <div>4. 쁘아송다브릴(한식) - 강원 고성군 간성읍 간성로 73</div>
+                        <div>5. 루루흐(카페) - 강원 속초시 만천1길 38 1층</div>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantLocation">
+                <div class="restaurantLocationWrap">
+                    <div class="LocationWrap">
+                        <div>1. 러빙헛 로데오점(채식메뉴) - 대구광역시 수성구 범어동 96-1</div>
+                        <div>2. 세상을여는사랑(채식메뉴) - 대구광역시 남구 대명동 1733-6번지</div>
+                        <div>3. 갓샐러드 칠곡점(카페) - 대구광역시 북구 동천동 동천로 125-8</div>
+                        <div>4. 바라지레스토랑(체식 레스토랑)) - 대구광역시 중구 동성로1가 동성로 73</div>
+                        <div>5. 산채식당점(한식) - 대구광역시 동구 용수동 70-4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantLocation">
+                <div class="restaurantLocationWrap">
+                    <div class="LocationWrap">
+                        <div>1. 베지나랑 2호점(채식 레스토랑) - 부산광역시 수영구 민락동 광안해변로370번길 9-32</div>
+                        <div>2. 나유타카페(카페) - 부산광역시 금정구 장전동 수림로61번길 53</div>
+                        <div>3. 다전(채식 레스토랑) - 부산광역시 부산진구 부전2동 신천대로62번길 61</div>
+                        <div>4. 에코토피아(채식 전문식당) - 부산광역시 수영구 남천동 수영로408번길 30-6</div>
+                        <div>5. 채식식당(채식메뉴) - 부산광역시 부산진구 부전동 397-44</div>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantLocation">
+                <div class="restaurantLocationWrap">
+                    <div class="LocationWrap">
+                        <div>1. 작은부엌(채식 전문식당) - 제주특별자치도 제주시 조천읍 선흘동2길 1</div>
+                        <div>2. 밥이보약(한식당) - 제주특별자치도 제주시 노형동 1296-3</div>
+                        <div>3. 다소니(전통 찻집) - 제주특별자치도 제주시 오라일동 오남로6길 24</div>
+                        <div>4. 카페 901(카페) - 제주특별자치도 제주시 노형동 288-39</div>
+                        <div>5. 채식식당 푸른솔맑은향(채식메뉴) - 제주특별자치도 제주시 노형동 1621</div>
+                        <div>5. 숲속의도토리(채식메뉴) - 제주특별자치도 제주시 외도일동 도근내길 18</div>
+                        <div>5. And 유 (Yu) Café(채식 레스토랑) - 518 Hallim-ro 한림읍 Jeju-si Jeju-do KR</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,8 +180,8 @@
     <script src="../assets/js/map.js"></script>
     <script>
         // 탭메뉴
-        const tabLocation = document.querySelectorAll(".location");
-        const tabDesc = document.querySelectorAll(".vefy_desc");
+        const tabLocation = document.querySelectorAll(".restaurantList > span");
+        const tabDesc = document.querySelectorAll(".restaurantLocation");
         const tabSearch = document.querySelector(".map_btn22");
         const tabSearchMap = document.querySelector(".search_mapp");
 
@@ -137,7 +191,7 @@
                 tabSearchMap.style.zIndex = "2";
             });
         };
-
+        tabDesc[0].style.display = "block"
         tabLocation.forEach((element, index) => {
                     element.addEventListener("click", function () {
 
@@ -150,7 +204,10 @@
                             el.style.display = "none";
                         })
                         tabDesc[index].style.display = "block";
+                        
                     })
+                });
+                
     </script>
 </body>
 

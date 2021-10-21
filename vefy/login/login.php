@@ -44,11 +44,11 @@
                             <div class="login">
                                 <div>
                                     <label for="youID"></label>
-                                    <input type="text" name="youID" id="youID" class="input_write" placeholder="아이디" autocomplete="off" autofocus required></input>
+                                    <input type="text" name="youID" id="youID" class="input_write3" placeholder="아이디" autocomplete="off" autofocus required></input>
                                 </div>
                                 <div>
                                     <label for="youPass"></label>
-                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호" autocomplete="off" required></input>
+                                    <input type="password" name="youPass" id="youPass" class="input_write3" maxlength="20" placeholder="비밀번호" autocomplete="off" required></input>
                                 </div>
                             </div>
                         </div>

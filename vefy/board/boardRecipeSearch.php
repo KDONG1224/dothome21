@@ -141,7 +141,7 @@
                             <div class="wirte-btn">
                                 <a href="boardRecipe.php" class="form-btn black">목록 돌아가기</a>
                             </div>
-                            <div class="board-page">
+                            <div class="pageList">
                                 <ul>
                                     <?php
                                         $sql = "SELECT count(myRecipeID) FROM myRecipe";
@@ -171,13 +171,13 @@
                                         
                                         // 처음으로
                                         if($page != 1){
-                                            echo "<li><a href='boardRecipeSearch.php?page=1'>처음으로</a></li>";
+                                            echo "<li><a href='boardRecipeSearch.php?page=1'>first</a></li>";
                                         }
 
                                         // 이전 페이지
                                         if($page != 1){
                                             $prevPage = $page - 1;
-                                            echo "<li><a href='boardRecipeSearch.php?page={$prevPage}'>&#129044;</a></li>";
+                                            echo "<li><a href='boardRecipeSearch.php?page={$prevPage}'>prev</a></li>";
                                         }
 
                                         for($i=$startPage; $i<=$endPage; $i++){
@@ -189,12 +189,12 @@
                                         // 다음 페이지
                                         if($page != $endPage){
                                             $nextPage = $page + 1;
-                                            echo "<li><a href='boardRecipeSearch.php?page={$nextPage}'>&#129046;</a></li>";
+                                            echo "<li><a href='boardRecipeSearch.php?page={$nextPage}'>next</a></li>";
                                         }
 
                                         // 마지막으로
                                         if($page != $endPage){
-                                            echo "<li><a href='boardRecipeSearch.php?page={$boardTatalPage}'>마지막으로</a></li>";
+                                            echo "<li><a href='boardRecipeSearch.php?page={$boardTatalPage}'>last</a></li>";
                                         }
                                     ?>        
 

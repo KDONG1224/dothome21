@@ -23,7 +23,7 @@
 </head>
 <body>
 
-    <div id="skip">
+    <div id="skip ir_pm">
         <a href="#contents">컨텐츠 바로가기</a>
         <a href="#footer">푸터 바로가기</a>
     </div>
@@ -148,7 +148,7 @@
                             <div class="wirte-btn">
                                 <a href="board.php" class="form-btn black">목록 돌아가기</a>
                             </div>
-                            <div class="board-page">
+                            <div class="pageList">
                                 <ul>
                                     <?php
                                         $sql = "SELECT count(myBoardID) FROM myBoard";
@@ -178,13 +178,13 @@
                                         
                                         // 처음으로
                                         if($page != 1){
-                                            echo "<li><a href='boardSearch.php?page=1'>처음으로</a></li>";
+                                            echo "<li><a href='boardSearch.php?page=1'>first</a></li>";
                                         }
 
                                         // 이전 페이지
                                         if($page != 1){
                                             $prevPage = $page - 1;
-                                            echo "<li><a href='boardSearch.php?page={$prevPage}'>&#129044;</a></li>";
+                                            echo "<li><a href='boardSearch.php?page={$prevPage}'>prev</a></li>";
                                         }
 
                                         for($i=$startPage; $i<=$endPage; $i++){
@@ -196,12 +196,12 @@
                                         // 다음 페이지
                                         if($page != $endPage){
                                             $nextPage = $page + 1;
-                                            echo "<li><a href='boardSearch.php?page={$nextPage}'>&#129046;</a></li>";
+                                            echo "<li><a href='boardSearch.php?page={$nextPage}'>next</a></li>";
                                         }
 
                                         // 마지막으로
                                         if($page != $endPage){
-                                            echo "<li><a href='boardSearch.php?page={$boardTatalPage}'>마지막으로</a></li>";
+                                            echo "<li><a href='boardSearch.php?page={$boardTatalPage}'>last</a></li>";
                                         }
                                     ?>        
 
@@ -225,10 +225,12 @@
         </main>
         <!-- //content -->
 
-        <footer id="footer">
-            footer
-        </footer>
-        <!-- //footer -->
+    <footer id="footer">
+        <?php
+            include "../include/footer.php"
+        ?>
+    </footer>
+    <!-- //footer -->
     </div>
     <!-- //wrap -->
 </body>

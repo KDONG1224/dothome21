@@ -53,4 +53,19 @@
     </div>
 </body>
 
+<script>
+            let signIn = document.querySelector(".signIn");
+            let overlay = document.querySelector(".modalOverlay");
+            let modalClose = document.querySelector(".loginClose");
+
+            function modalOn(){
+                modal.classList.add("active")
+            }
+            function modalOff(){
+                modal.classList.remove("active")
+            }
+            signIn.addEventListener("click", modalOn);
+            overlay.addEventListener("click", modalOff);
+            modalClose.addEventListener("click", modalOff);
+</script>
 </html>

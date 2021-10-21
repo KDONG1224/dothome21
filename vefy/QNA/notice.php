@@ -13,7 +13,7 @@
     <meta name="description" content="채식을 위한 정보 공유 사이트입니다.">
     <meta name="keywords" content="베피, 채식, 그릭요거트, 글루텐, 글루텐프리">
 
-    <title>QNA</title>
+    <title>Service</title>
 
     <!-- style -->
     <link rel="stylesheet" href="../assets/css/normal/reset.css">
