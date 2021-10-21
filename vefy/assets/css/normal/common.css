@@ -1,5 +1,5 @@
 body {
-    font-family: 'Noto Sans KR' !important;
+    font-family: 'Gideon Roman', 'Noto Sans KR' !important;
     font-weight: 400;
     font-size: 16px;
     /* background: #CBD5B2; */
@@ -38,43 +38,66 @@ fieldset {
 /* header */
 #header {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #CBD5B2;
+    height: 70px;
+    /* display: grid;
+    grid-template-columns: 1fr auto 1fr; */
+    background-color: #C9D5CA;
     position: absolute;
     top: 0;
     z-index: 10;
-    padding: 4px 0;
+    border-bottom: 1px solid rgb(172, 172, 172);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#header h1 {
+    width: 12%;
+    text-align: center;
 }
 #header h1 a {
     padding: 10px;
     margin: 20px;
     color: #fff;
+    line-height: 90px;
 }
 #header h1 a img {
-    width: 70%;
-    margin-top: 10px;
+    width: 60%;
+    margin-top: 35px;
+}
+#header nav {
+    width: 44%;
 }
 #header nav a {
-    height: auto !important;
-    font-size: 18px;
-    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    color: #394234;
     padding: 0 40px 0 0 !important;
 }
-#header nav a:hover span {
-    color: #586352;
+#header nav a:last-child {
+    padding: 0 !important;
 }
+#header nav a:first-child {
+    margin-left: 65px;
+}
+/* #header nav a:hover span {
+    color: #586352;
+} */
 
-#header .member {}
+#header .member {
+    width: 44%;
+    text-align: right;
+}
 #header .member a {
-    padding: 5px;
-    margin: 5px;
+    display: inline-block;
     transition: background 0.3s, color 0.3s;
-    color: #fff;
+    color: #394234;
+    margin: 5px;
+    font-size: 17px;
+    padding: 0 40px 0 0;
 }
 #header .member a:hover {
-    color: #586352;
+    color: #fff;
 }
 #header .member a:last-child {
     margin-right: 30px;
@@ -82,23 +105,23 @@ fieldset {
 
 /* footer */
 #footer {
-    background-color: #f5f5f5;
+    background-color: #cdd1cd;
     height: 140px;
     position: relative;
+    border-top: 1px solid #999;
 }
 .footer {
     width: 100%;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 20px 0;
-    color: #c4c4c4;
+    color: #fff;
     position: absolute;
     bottom: 0;
 }
 .footer_left {
-    margin-right: 8%;
+    flex: 0 0 30%;
 }
 .footer_left .footer_left_top {
     margin-bottom: 10px;
@@ -117,6 +140,7 @@ fieldset {
 .footer_left .footer_left_bottom {}
 .footer_left .footer_left_bottom > span {
     font-size: 15px;
+    white-space: nowrap;
 }
 .footer_left .footer_left_bottom > span:first-child:after {
     content: '|';
@@ -126,6 +150,7 @@ fieldset {
     vertical-align: 1px;
 }
 .footer_middle {
+    flex: 0 0 10%;
     margin-bottom: 10px;
     margin-right: 10%;
 }
@@ -144,12 +169,13 @@ fieldset {
 .footer_middle .footer_middle_copy {
     font-size: 15px;
     margin-top: 10px;
+    white-space: nowrap;
 }
 .footer_right {
-    margin-left: 8%;
+    flex: 0 0 20%;
+    text-align: right;
 }
 .footer_right .footer_right_icons {
-    width: 100%;
     margin-top: 20px;
 }
 .footer_right .footer_right_icons .icon {
@@ -180,6 +206,7 @@ fieldset {
     color: transparent;
 }
 /* 헤더 네비 이펙트 */
+/* Effect 15: scale down, reveal */
 *,
 *:after,
 *::before {
@@ -187,54 +214,38 @@ fieldset {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#cl-effect-5 a {
+nav a {
 	position: relative;
 	display: inline-block;
-	margin: 15px 25px;
 	outline: none;
-	color: #CBD5B2;
+	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 400;
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
-	font-size: 1.35em;
 }
-
-#cl-effect-5 a:hover,
-#cl-effect-5 a:focus {
+nav a:hover,
+nav a:focus {
 	outline: none;
 }
-
-/* Effect 5: same word slide in */
 .cl-effect-5 a {
 	overflow: hidden;
 	padding: 0 4px;
-	height: 1em;
 }
-
 .cl-effect-5 a span {
 	position: relative;
 	display: inline-block;
-	-webkit-transition: -webkit-transform 0.3s;
-	-moz-transition: -moz-transform 0.3s;
 	transition: transform 0.3s;
 }
-
 .cl-effect-5 a span::before {
 	position: absolute;
 	top: 100%;
 	content: attr(data-hover);
 	font-weight: 700;
-	-webkit-transform: translate3d(0,0,0);
-	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
-
 .cl-effect-5 a:hover span,
 .cl-effect-5 a:focus span {
-	-webkit-transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
 	transform: translateY(-100%);
 }
+
 /* Effect 5: same word slide in and border bottom */

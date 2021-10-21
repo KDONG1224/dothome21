@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +24,12 @@
     <!-- swiper -->
     <link rel="stylesheet" href="../assets/css/normal/swiper-bundle.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
 
 </head>
-<body>
+
+<body onload="setHalfVolume(); return=false;">
+
     <!-- header -->
     <header id="header">
         <?php
@@ -35,239 +38,324 @@
     </header>
     <!-- //header -->
 
-    <section id="section">
-        <div class="sectionWrap">
-            <div class="swiper section">
-                <div class="swiper-wrapper section">
-                    <div class="swiper-slide section">
-                        <div class="slider-inner section">
-                            <h3>The best communication<br>about vegan</h3>
-                            <span class="btn">
-                                <a href="#">WELCOME</a>
-                            </span>
+    <div id=bodyWrap>
+        <main id="main">
+            <section class="banner">
+                <audio class="audio" src="../assets/mp3/Drops of Earth.mp3" controls autoplay loop volume="0.2">
+                    지원하지 않습니다.
+                </audio>
+                <div class="banner-wrap">
+                    <div class="banner-img-wrap">
+                        <div class="banner-img">
+                            <img class="imgBox1" src="../assets/img/main01.png" alt="이미지입니다.">
                         </div>
                     </div>
-                    <div class="swiper-slide section">
-                        <div class="slider-inner section">
-                            <h3>The best communication<br>about vegan</h3>
-                            <span class="btn">
-                                <a href="#">WELCOME</a>
-                            </span>
-                        </div>
+                    <div class="banner-desc">
+                        <h2>Welcome to "V.E.F.Y" site.</h2>
+                        <p>We will post many ways to be happy and healthy on "VEFY"<br>And we hope the "VEFY" site will
+                            make you happy. </p>
                     </div>
-                    <div class="swiper-slide section">
-                        <div class="slider-inner section">
-                            <h3>The best communication<br>about vegan</h3>
-                            <span class="btn">
-                                <a href="#">WELCOME</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide section">
-                        <div class="slider-inner section">
-                            <h3>The best communication<br>about vegan</h3>
-                            <span class="btn">
-                                <a href="#">WELCOME</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination section"></div>
-            </div>
-        </div>
-    </section>
-    <main id="main">
-        <div class="container">
-            <section class="introduceWrap">
-                <h2>introduce</h2>
-                <div class="introduce left">
-                    <img src="../assets/img/intoduce01.jpg" alt="1번 이미지입니다.">
-                    <div class="image-cont left one">
-                        <h3 class="image-title">VEGAN FRIENDLY</h3>
-                        <p class="image-desc">비건 프렌들리 V.E.F.Y는 채식과 건강에 대한 여러가지 정보를 알려주고 공유 할 수 있는 웹 서비스 사이트입니다.</p>
-                        <!-- <a class="image-btn red" href="#">자세히 보기</a> -->
-                    </div>
-                </div>
-                <div class="introduce right">
-                    <div class="box_top">
-                        <img src="../assets/img/intoduce02.jpg" alt="2번 이미지입니다.">
-                        <div class="image-cont right two">
-                            <h3 class="image-title">THINK</h3>
-                            <p class="image-desc">채식에 대한 거부감이 있더라도 건강해지고 싶은 생각은 누구에게나 있습니다.</p>
-                            <!-- <a class="image-btn red" href="#">자세히 보기</a> -->
-                        </div>
-                    </div>
-                    <div class="box_bottom">
-                        <img src="../assets/img/intoduce03.jpg" alt="3번 이미지입니다.">
-                        <div class="image-cont right three">
-                            <h3 class="image-title">HELP</h3>
-                            <p class="image-desc">어떻게 접근하고 실천해야 하는지 모르는 사람들을 위해 도움을 주고자 만들어진 사이트입니다.</p>
-                            <!-- <a class="image-btn red" href="#">자세히 보기</a> -->
+                    <div class="banner-middle">
+                        <div class="slider-img">
+                            <div class="slider">
+                                <img src="../assets/img/simg4.png" alt="이미지1">
+                            </div>
+                            <div class="slider">
+                                <img src="../assets/img/simg1.png" alt="이미지2">
+                            </div>
+                            <div class="slider">
+                                <img src="../assets/img/simg3.png" alt="이미지3">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="guideWrap">
+
+            <section class="contents">
+                <section id="cont1" class="section">
+                    <div class="container">
+                        <div class="sectionCont-box">
+                            <h3>VEGAN FRIENDLY</h3>
+                            <p>비건 프렌들리 V.E.F.Y는 채식과 건강에 대한 여러가지 정보를 알려주고 공유 할 수 있는 웹 서비스 사이트입니다.</p>
+                            <p class="eng">Vegan Friendly V.E.F.Y provides web services that inform and share various
+                                information about vegetarianism and health.</p>
+                            <ul>
+                                <!-- <li><a href="../board/board.php">커뮤니티로 바로가기</a></li> -->
+                                <li><a href="../board/board.php">go to Community</a></li>
+                            </ul>
+                        </div>
+                        <div class="sectionCont-img-box">
+                            <img src="../assets/img/main6.jpeg" alt="이미지입니다.">
+                        </div>
+                        <div class="sectionCont-bg-box"></div>
+                    </div>
+                </section>
+                <section id="cont2" class="section">
+                    <div class="container">
+                        <div class="sectionCont-img-box">
+                            <img src="../assets/img/img225.png" alt="이미지입니다.">
+                        </div>
+                        <div class="sectionCont-box">
+                            <h3>Recipe</h3>
+                            <p>자신만의 레시피와 여러가지 정보를 알려주고 공유해보세요.</p>
+                            <p class="eng">Tell me your own recipe and various information and share it.</p>
+                            <ul>
+                                <!-- <li><a href="../board/boardRecipe.php">레시피로 바로가기</a></li> -->
+                                <li><a href="../board/boardRecipe.php">go to Recipe</a></li>
+                            </ul>
+                        </div>
+                        <div class="sectionCont-bg-box"></div>
+                    </div>
+                </section>
+                <section id="cont3" class="section">
+                    <div class="container">
+                        <div class="sectionCont-box">
+                            <h3>Map</h3>
+                            <p>채식 음식 맛집, 채식을 하는 사람도 부담없이 먹을 수 있는 음식점을 공유해보세요.</p>
+                            <p class="eng">Share a vegetarian restaurant and a restaurant where vegetarians can eat
+                                without any burden.</p>
+                            <ul>
+                                <li><a href="../map/map.php">go to Map</a></li>
+                            </ul>
+                        </div>
+                        <div class="sectionCont-img-box">
+                            <img src="../assets/img/main222.png" alt="이미지입니다.">
+                        </div>
+                        <div class="sectionCont-bg-box"></div>
+                    </div>
+                </section>
+                <section id="cont2" class="section">
+                    <div class="container">
+                        <div class="sectionCont-img-box">
+                            <img src="../assets/img/simg2.png" alt="이미지입니다.">
+                        </div>
+                        <div class="sectionCont-box">
+                            <h3>Customer Service</h3>
+                            <p>궁금한 사항이나 Q&A가 있으면 언제든지 알려주세요.</p>
+                            <p class="eng">Please let me know if you have any questions.</p>
+                            <ul>
+                                <li><a href="../QNA/qna.php">go to Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="sectionCont-bg-box"></div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <section id="articelWrap">
+            <div class="mid-box">
+                <div class="mid-text-box">
+                    <span>채식에 대한 거부감이 있더라도 건강해지고 싶은 생각은 누구에게나 있습니다.<br>채식으로 건강한 삶을 유지할 수 있는 쉬운 방법부터 환경을 지키는 방법까지 소개해드리기
+                        위해 만들어진 웹 서비스 사이트입니다.</span>
+                </div>
+            </div>
             <div class="container">
-                <section class="guide">
-                    <h2>the guide</h2>
-                    <div class="guide_boxes">
-                        <div class="guide_box one">
-                            <div class="img_box">
-                                <img src="../assets/img/guide01.jpg" alt="Community">
-                            </div>
-                            <div class="text_box">
-                                <span><a href="../board/board.php">Community
-                                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.024 4h6.015l7.961 8-7.961 8h-6.015l7.961-8-7.961-8zm-10.024 16h6.015l7.961-8-7.961-8h-6.015l7.961 8-7.961 8z"/></svg></a>
-                                </span>
-                            </div>
+                <section class="store p100">
+                    <div class="storeWrap">
+                        <div class="storeBox">
+                            <h3>스토어<br>인기상품</h3>
                         </div>
-                        <div class="guide_box two">
-                            <div class="img_box">
-                                <img src="../assets/img/guide02.jpg" alt="Vegan Store">
-                            </div>
-                            <div class="text_box">
-                                <span><a href="../store/store.php">Vegan Store
-                                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.024 4h6.015l7.961 8-7.961 8h-6.015l7.961-8-7.961-8zm-10.024 16h6.015l7.961-8-7.961-8h-6.015l7.961 8-7.961 8z"/></svg></a>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="guide_box three">
-                            <div class="img_box">
-                                <img src="../assets/img/guide03.jpg" alt="V.E.F.Y Map">
-                            </div>
-                            <div class="text_box">
-                                <span><a href="../map/map.php">V.E.F.Y Map
-                                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.024 4h6.015l7.961 8-7.961 8h-6.015l7.961-8-7.961-8zm-10.024 16h6.015l7.961-8-7.961-8h-6.015l7.961 8-7.961 8z"/></svg></a>
-                                </span>
+                        <!-- Swiper -->
+                        <div class="swiper store">
+                            <div class="swiper-wrapper store">
+                                <div class="swiper-slide store ss1">
+                                    <div class="store_img">
+                                        <img src="../assets/img/fimg1.png" alt="그릭요거트 이미지">
+                                    </div>
+                                    <div class="store_btn">
+                                        <a href="#">삼색 토스트</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide store ss1">
+                                    <div class="store_img">
+                                        <img src="../assets/img/fimg8.png" alt="그릭요거트 이미지">
+                                    </div>
+                                    <div class="store_btn">
+                                        <a href="#">비건 타코</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide store ss1">
+                                    <div class="store_img">
+                                        <img src="../assets/img/fimg3.png" alt="그릭요거트 이미지">
+                                    </div>
+                                    <div class="store_btn">
+                                        <a href="#">바질 파스타</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide store ss1">
+                                    <div class="store_img">
+                                        <img src="../assets/img/fimg4.png" alt="그릭요거트 이미지">
+                                    </div>
+                                    <div class="store_btn">
+                                        <a href="#">나물 웜볼</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide store ss1">
+                                    <div class="store_img">
+                                        <img src="../assets/img/fimg5.png" alt="그릭요거트 이미지">
+                                    </div>
+                                    <div class="store_btn">
+                                        <a href="#">시저 샐러드</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide store ss1">
+                                    <div class="store_img">
+                                        <img src="../assets/img/fimg6.png" alt="그릭요거트 이미지">
+                                    </div>
+                                    <div class="store_btn">
+                                        <a href="#">호밀빵 샌드위치</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-        </div>
-        <div class="container">
-            <section class="issue">
-                <div class="issueWrap">
-                    <h2>hot issue</h2>
-                    <!-- Swiper -->
-                    <div class="swiper issue">
-                        <div class="swiper-wrapper issue">
-                            <div class="swiper-slide issue ss1">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue01.jpg" alt="그릭요거트 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">그릭요거트</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss2">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue02.jpg" alt="샐러드 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">샐러드</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss3">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue03.jpg" alt="비빔밥 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">비빔밥</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss4">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue04.jpg" alt="그릭요거트 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">그릭요거트</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss5">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue02.jpg" alt="그릭요거트 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">그릭요거트</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss6">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue04.jpg" alt="샐러드 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">샐러드</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss7">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue03.jpg" alt="비빔밥 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">비빔밥</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide issue ss8">
-                                <div class="issue_img">
-                                    <img src="../assets/img/issue01.jpg" alt="그릭요거트 이미지">
-                                </div>
-                                <div class="issue_btn">
-                                    <a href="#">그릭요거트</a>
-                                </div>
-                            </div>
+            <!-- footer -->
+            <footer id="footer">
+                <?php
+                    include "../include/footer.php";
+                ?>
+            </footer>
+            <!-- //footer -->
+        </section>
+
+    </div>
+
+    
+    <!-- 모달 -->
+  <div class="modalOverlay">
+        <div class="modalWrap">
+            <div class="modalTop">
+                <h1 class="modalTitle">VEFY</h1>
+                <div class="modalDesc">Let's be friends</div>
+                <p>Join our mailing list, get free shipping<br> on your first order</p>
+            </div>
+            <form name="login" action="loginFindID.php" method="POST">
+                <fieldset>
+                    <div class="modalInput">
+                        <legend class="ir_so">로그인 입력</legend>
+                        <div>
+                            <label for="youID"></label>
+                            <input type="text" name="youID" id="youID" class="input_write2" placeholder="아이디"
+                                autocomplete="off" autofocus required></input>
                         </div>
+                        <div>
+                            <label for="youPass"></label>
+                            <input type="password" name="youPass" id="youPass" class="input_write2" maxlength="20"
+                                placeholder="비밀번호" autocomplete="off" required></input>
+                        </div>
+                        <input type="checkbox" name="check" value="check" class="check__box"></input>
+                        <span class="SignUp">*Sign me up for emails from VEFY.<a href="join.php"><u>Privacy
+                                    Policy</u></a></span>
+                        <button type="submit" class="loginSuccess">Have fun with Vefy(login)</button>
+                        <div class="loginClose"><u>No Thanks, Continue to website.</u></div>
                     </div>
-                </div>
-                <div class="swiper-button-next issue"></div>
-                <div class="swiper-button-prev issue"></div>
-            </section>
+                </fieldset>
+            </form>
         </div>
-    </main>
-    <!-- footer -->
-    <footer id="footer">
-        <?php
-            include "../include/footer.php";
-        ?>
-    </footer>
-    <!-- //footer -->
-
-
-
+    </div>
+    <!-- 모달 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../assets/js/modernizr.custom.js"></script>
     <script src="../assets/js/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper.section', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
+       
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            }
+        const sliderWrap = document.querySelector(".slider-wrap");
+        const sliderImg = document.querySelector(".slider-img");
+        const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider[currentIndex].style.opacity = "0";
+            slider[nextIndex].style.opacity = "1";
+
+            currentIndex = nextIndex;
+        }, 6000);
+
+        var mHtml = $("html");
+        var page = 1;
+
+        mHtml.animate({
+            scrollTop: 0
+        }, 10);
+
+        window.addEventListener("wheel", function (e) {
+            e.preventDefault();
+        }, {
+            passive: false
         });
 
-        var swiper1 = new Swiper(".swiper.issue", {
-            slidesPerView: 4,
+        $(window).on("wheel", function (e) {
+            if (mHtml.is(":animated")) return;
+
+            if (e.originalEvent.deltaY > 0) {
+                if (page == 7) return;
+
+                page++;
+            } else if (e.originalEvent.deltaY < 0) {
+                if (page == 1) return;
+
+                page--;
+            }
+            var posTop = (page - 1) * $(window).height();
+            mHtml.animate({
+                scrollTop: posTop
+            }, 1020);
+        });
+
+        var swiper1 = new Swiper(".swiper.store", {
+            slidesPerView: 3,
             spaceBetween: 20,
-            slidesPerGroup: 4,
+            slidesPerGroup: 3,
             loop: true,
             loopFillGroupWithBlank: true,
             autoplay: {
-                delay: 3000,
-            },
-
-            navigation: {
-                nextEl: ".swiper-button-next.issue",
-                prevEl: ".swiper-button-prev.issue"
+                delay: 7000,
             }
-      });
+        });
+
+        let nowScrollTop;
+        let lastScrollTop = 10;
+
+        function scrollProgress() {
+            nowScrollTop = true;
+
+            setTimeout(() => {
+                if (nowScrollTop) {
+                    nowScrollTop = false;
+                    hasScroll();
+                }
+            }, 500);
+        }
+
+        function hasScroll() {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+            if (scrollTop >= lastScrollTop) {
+                document.querySelector(".banner").classList.add("hide");
+            } else {
+                document.querySelector(".banner").classList.remove("hide");
+            }
+            lastScrollTop = scrollTop;
+        }
+
+        var x = document.querySelector(".audio");
+
+        function setHalfVolume(){ 
+            x.volume = 0.2;
+        }
+        setHalfVolume();
+
+        window.addEventListener("scroll", scrollProgress);
+
     </script>
 </body>
+
 </html>

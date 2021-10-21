@@ -294,7 +294,126 @@
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">/* 가로모드 css */
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-style: normal;
+}
+* {
+    margin: 0; padding: 0;
+}
+.parallax {
+    background: #000;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 400;
+}
+#paraHeader {
+    position: fixed;
+    left: 0; top: 0;
+    padding: 20px;
+    z-index: 10000;
+}
+#paraHeader h1 a {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    border-bottom: 1px dashed #fff;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+#paraCont {}
+.contentWrap {}
+.content__item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.content__item__num {
+    font-size: 8vw;
+    padding: 10vw;
+    display: inline-block;
+}
+
+#section1 {background: #111; z-index: 9000;}
+#section2 {background: #222; z-index: 8000;}
+#section3 {background: #333; z-index: 7000; height: 6000px;}
+#section4 {background: #444; z-index: 7100;}
+#section5 {background: #555; z-index: 7200;}
+#section6 {background: #666; z-index: 7300;}
+#section7 {background: #777; z-index: 7400;}
+#section8 {background: #888; z-index: 7500;}
+#section9 {background: #999; z-index: 7600;}
+
+.sce3 {
+    position: fixed;
+    left: 0; top: 0;
+    width: 6000px;
+    height: 100vh;
+    background: rgb(229,93,93);
+    overflow: hidden;
+}
+.sce3 > div {
+    float: left;
+    width: 1000px;
+    height: 100vh;
+}
+.sce3 > div:nth-child(1) {
+    background: #8FA9AA;
+}
+.sce3 > div:nth-child(2) {
+    background: #C4BBB2;
+}
+.sce3 > div:nth-child(3) {
+    background: #9A8F73;
+}
+.sce3 > div:nth-child(4) {
+    background: #398289;
+}
+.sce3 > div:nth-child(5) {
+    background: #859453;
+}
+.sce3 > div:nth-child(6) {
+    background: #3D8F79;
+}
+
+/* nav */
+.paraNav {
+    position: fixed;
+    right: 20px; top: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,.4);
+    padding: 15px 20px;
+    border-radius: 50px;
+    transition: top 0.4s ease;
+}
+.paraNav li {
+    display: inline-block;
+    list-style: none;
+}
+.paraNav li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 30px;
+}
+.paraNav li.active a {
+    background: #fff;
+    color: #000;
+}
 </code></pre>
                     </div>
                     <div class="javascript">

@@ -1,7 +1,10 @@
+body {
+    font-family: 'Gideon Roman';
+}
 .loginWrap {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .loginLeft {}
@@ -10,7 +13,7 @@
 
 
 .btn_submit {
-    background-color: #4d942c;
+    background-color: #b1c5b3;
     text-align: center;
     padding: 17px;
     border-radius: 10px;
@@ -58,7 +61,7 @@
 }
 
 .loginRight .loginDesc {
-    color: #4d942c;
+    color: #010200;
     font-size: 20px;
     padding-bottom: 14px;
 }
@@ -71,7 +74,7 @@
 
 #joinBtn {
     color: #fff;
-    background-color: #366221;
+    background-color: #b1c5b3;
     text-align: center;
     padding: 15px;
     border-radius: 10px;
