@@ -146,9 +146,16 @@
 .sec3 {z-index: 3;}
 .sec4 {z-index: 4;}
 
-@media(max-width: 1300px){
-    .row {
-        padding: 0 50px !important;
+@media(max-width: 800px){
+    .banner__Text .textBox h3 {
+        font-size: 12vw;
+    }
+    .banner__Text .textBox p {
+        font-size: 5vw;
+    }
+    .banner__Text .banner-btn a {
+        font-size: 4vw;
+        padding: 1vw 4vw;
     }
 }
 
