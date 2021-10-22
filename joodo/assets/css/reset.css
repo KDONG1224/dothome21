@@ -57,6 +57,9 @@ a {
   color: #222;
   text-decoration: none
 }
+a:hover {
+  color: #2698cb;
+}
 
 /* 목록 초기화 */
 ol,
@@ -73,13 +76,60 @@ em {
   font-style: normal;
 }
 
+video,
 img {
-  width: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 폰트 스타일 초기화 */
+em,
+address {
+    font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+/* 제목 태그 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* 테두리 초기화 */
+img,
+fieldset {
+    border: 0 none;
 }
 
 /* 버튼 초기화 */
 button {border: 0; cursor: pointer;}
 
+/* clearfix */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: '';
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
 
 /* IR 효과 */
 .ir_pm {
@@ -131,4 +181,36 @@ input[type=search]::-webkit-search-decoration {
 input:checked[type=checkbox] {
     background-color: #666;
     -webkit-appearance: checkbox
+}
+
+/* 셀렉트 메뉴 메인 스타일 */
+.ui_select2 {
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    height: 36px;
+    border: 0 none;
+    padding: 0 10px;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    vertical-align: middle;
+    text-align: left;
+    white-space: nowrap;
+    background: #2c2f34 url(../img/down.svg) no-repeat right 10px center;
+    background-size: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 메인 텍스트 박스 스타일1 */
+.ui_input3 {
+    background: #2c2f34;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    height: 36px;
+    padding: 0 10px;
 }

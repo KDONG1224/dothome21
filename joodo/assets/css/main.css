@@ -99,6 +99,7 @@
     display: flex;
     position: absolute;
     left: 0; top: 0;
+    display: none;
 }
 .cont4, .cont2, .cont3 {
     opacity: 0;
