@@ -3,9 +3,7 @@
     position: relative;
     height: 100vh;
 }
-#main {
-    height: 100vh;
-}
+#main {}
 #article {
     width: 100%;
     background: url(../img/bg01.png) no-repeat;
@@ -102,7 +100,7 @@
     display: none;
     justify-content: space-between;
     vertical-align: middle;
-    padding-top: 14vh;
+    padding: 20vh 0;
 }
 .section .section__img {
     flex: 0 0 40%;
