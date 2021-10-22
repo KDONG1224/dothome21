@@ -160,35 +160,45 @@
         position: absolute;
         top: 70px; right: 12px;
         width: 180px;
-        background: #262626;
-        z-index: 102;
+        color: #000;
+        z-index: 13;
         margin-top: 12px;
+        transform: translateX(50%);
+        transition: all 0.9s ease-in-out;
     }
     .member a {
         font-size: 12px;
         white-space: nowrap;
+        color: #000;
     }
     .member.show {
         display: flex;
+        transform: translateX(0%);
     }
     .cl-effect-5 {
         position: absolute;
-        top: 70px; right: 0;
-        background: #262626;
+        top: 72px; right: 0;
+        background: #fff;
         width: 200px;
-        height: 38%;
+        height: 35vh;
         display: none;
-        z-index: 101;
+        z-index: 12;
+        border-bottom-left-radius: 20px;
+        transform: translateX(50%);
+        transition: all 0.2s ease-in-out;
     }
     .cl-effect-5.show {
         display: block;
+        transform: translateX(0%);
     }
     #cl-effect-5 a {
         display: block;
         text-align: right;
         font-size: 20px;
+        background: #fff;
+        color: #000;
     }
     #cl-effect-5 a:first-child {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 }
