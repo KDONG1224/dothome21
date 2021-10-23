@@ -18,6 +18,19 @@
     background: #000;
     position: relative;
 }
+#article2 {}
+#article3 {
+    position: relative;
+    width: 100%;
+    background: url(../img/bg02.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#aside {
+    background: #000;
+    padding: 5vh 0;
+}
+
 /* banner */
 .banner {
     width: 100vw;
@@ -256,4 +269,162 @@
     #short__banner {
         padding: 0;
     }
+}
+
+/* article2 */
+.recipe__wrap {
+    text-align: center;
+    padding: 20vh 0;
+}
+.recipe__wrap p {
+    font-size: 2vw;
+}
+.recipe__wrap h2 {
+    font-size: 3vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.recipe__wrap a {
+    font-size: 1vw;
+    padding: 15px 30px;
+    background: #000;
+    color: #fff;
+    margin-top: 50px;
+    display: inline-block;
+}
+.recipe__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recipe {
+    border: 1px solid #000;
+    padding: 30px 50px;
+    background: rgb(213, 216, 218);
+}
+.recipe .recipe__img {
+    overflow: hidden;
+}
+.recipe .recipe__img img {
+    transform: scale(1);
+    transition: all 0.5s ease-in;
+}
+.recipe .recipe__img img:hover {
+    transform: scale(1.2);
+}
+.recipe .recipe__text {}
+.recipe .recipe__text .recipe__desc {
+    font-size: 1.5vw;
+    margin-top: 30px;
+}
+.recipe .recipe__text .recipe__stars {
+    padding: 13px 0;
+}
+.recipe .recipe__text .recipe__stars .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -3px;
+    background-image: url('../img/icon.png');
+}
+.recipe .recipe__text .recipe__stars .star1 {
+    background-position: -393px 0;
+}
+.recipe .recipe__text .recipe__stars .star2 {
+    background-position: -412px 0;
+}
+.recipe .recipe__text .recipe__stars .star0 {
+    background-position: -374px 0;
+}
+.recipe .recipe__text a {
+    font-size: 1vw;
+    padding: 15px 30px;
+    background: #000;
+    color: #fff;
+    border-radius: 40px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.recipe .recipe__text a:hover {
+    background: rgb(182, 119, 119);
+}
+
+/* article3 */
+.gunbae__wrap {
+    display: flex;
+    justify-content: space-around;
+    padding: 20vh 0;
+    height: 50vh;
+}
+.gunbae__text {
+    flex: 0 0 30%;
+    position: relative;
+}
+.gunbae__img {
+    flex: 0 0 40%;
+}
+.gunbae__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gunbae__text__box {
+    border: 1px solid #000;
+    text-align: right;
+    height: 35vh;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 480px;
+    overflow: hidden;
+}
+.gunbae__text__box h3 {
+    font-size: 5vw;
+}
+.gunbae__text__box p {
+    font-size: 2.8vw;
+}
+.gunbae__text__box .gunbae__slider {
+    float: left;
+    width: 800px;
+    height: 480px;
+    position: relative;
+    border: 1px solid #7F4D3E;
+}
+.gunbae__text__box .gunbae__slider:nth-child(1) {
+    z-index: 5;
+}
+.gunbae__text__box .gunbae__slider:nth-child(2) {
+    z-index: 4;
+}
+.gunbae__text__box .gunbae__slider:nth-child(3) {
+    z-index: 3;
+}
+.gunbae__text__box .gunbae__slider:nth-child(4) {
+    z-index: 2;
+}
+.gunbae__text__box .gunbae__slider:nth-child(5) {
+    z-index: 1;
+}
+#article3::before {
+    content: '';
+    width: 100vw;
+    max-width: 100%;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    background: url(../img/line04.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99999;
+}
+
+/* aside */
+
+#aside .swiper-slide img {
+    width: 50%;
 }
