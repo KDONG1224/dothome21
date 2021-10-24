@@ -98,6 +98,94 @@
         .figma {
             background-color: rgba(226, 171, 171, 0.603);
         }
+        .bg12 {
+            background-image: linear-gradient(to top, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%) !important;
+        }
+        .header_icon li a {
+            background-color: rgb(160, 77, 77);
+        }
+        .header_tit {
+            width: 100%;
+            height: 100%;
+        }
+        .slider_box {
+            width: 120px; 
+            height: 120px; 
+            perspective: 300px;
+            transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+        .slider {
+            width: 100%; 
+            height: 100%; 
+            transform-style: preserve-3d;
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+        .slide, 
+        .slide:after, 
+        .slide:before {
+            display: block; 
+            width: 100%; 
+            height: 100%;
+            background: url('https://kdong1224.github.io/dothome21/class/img/img01.jpg');
+            position: absolute;
+            transform-style: preserve-3d;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide.x {
+            transform: rotateY(90deg);
+        } 
+        .slide.x:after {
+            content: '';
+            background-image: url('https://kdong1224.github.io/dothome21/class/img/img03.jpg');
+            transform: translateZ(60px) rotateZ(-90deg);
+        }
+        .slide.x:before {
+            content: '';
+            background-image: url('https://kdong1224.github.io/dothome21/class/img/img02.jpg');
+            transform: translateZ(-60px) rotateZ(-90deg);
+        }
+        .slide.y {
+            transform: rotateX(90deg);
+        } 
+        .slide.y:after {
+            content: '';
+            background-image: url('https://kdong1224.github.io/dothome21/class/img/img06.jpg');
+            transform: translateZ(60px) scale(-1);
+        }
+        .slide.y:before {
+            content: '';
+            background-image: url('https://kdong1224.github.io/dothome21/class/img/img08.jpg');
+            transform: translateZ(-60px);
+        }
+        .slide.z {
+            transform: rotateX(0);
+        } 
+        .slide.z:after {
+            content: '';
+            background-image: url('https://kdong1224.github.io/dothome21/class/img/img10.jpg');
+            transform: translateZ(60px);
+        }
+        .slide.z:before {
+            content: '';
+            background-image: url('https://kdong1224.github.io/dothome21/class/img/img15.jpg');
+            transform: translateZ(-60px);
+        }
+        .slider {
+            -webkit-animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+            animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+        }
+        @keyframes rotate {
+            0%, 10% {transform: rotateY(0deg) rotateX(0deg);}
+            15%, 20% {transform: rotateY(180deg) rotateX(0deg);}
+            25%, 35% {transform: rotateY(180deg) rotateX(270deg);}
+            40%, 50% {transform: rotateY(180deg) rotateX(90deg);}
+            55%, 65% {transform: rotateY(-90deg) rotateX(90deg);}
+            70%, 80% {transform: rotateY(90deg) rotateX(90deg);}
+            90%, 95% {transform: rotateY(0deg) rotateX(90deg);}
+        }
     </style>
 </head>
 
@@ -124,12 +212,21 @@
     <!-- //nav -->
 
     <!-- header -->
-    <div id="header">
+    <div id="header" class="bg12">
         <div class="container">
             <div class="row">
                 <div class="span12" style="text-align:center;">
                     <div class="header_tit">
-                        <a href="https://kdong1224.github.io/dothome21/"><img src="assets/img/main2.svg" alt="main"></a>
+                        <a href="https://kdong1224.github.io/dothome21/">
+                            <!-- <img src="assets/img/main2.svg" alt="main"> -->
+                            <div class="slider_box">
+                                <div class="slider">
+                                    <div class="slide x"></div>
+                                    <div class="slide y"></div>
+                                    <div class="slide z"></div>
+                                </div>
+                            </div>
+                        </a>
                         <h1>Professional web publishers</h1>
                     </div>
                     <div class="header_icon">
@@ -158,7 +255,7 @@
     <!-- contents_tit -->
     <div id="contents_tit">
         <div class="titt">
-            <p><a href="#" class="tit_btn">&quot;나는 강동재다&quot;</a></p>
+            <p><a href="#" class="tit_btn">&quot;Hello! 프론트앤드를 꿈꾸는 나는 강동재&quot;</a></p>
         </div>
     </div>
     <!-- //contents_tit -->
