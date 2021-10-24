@@ -415,30 +415,32 @@
         const agreeMust = document.querySelector('.must-check');
         const agreeCho = document.querySelector('.choice');
         const join = document.querySelector('.join_click');
-
+        // join.style.visibility = "visible"
+        // join.style.visibility = "hidden"
         agreeChkAll.addEventListener('change', (e) => {
             let agreeChk = document.querySelectorAll('#check');
 
             for (let i = 0; i < agreeChk.length; i++) {
                 agreeChk[i].checked = e.target.checked;
-                console.log(e.target)
             }
-            if(agreeMust.checked){
+            if(agreeChkAll.checked){
                 join.style.pointerEvents = "auto"
-                join.style.visibility = "visible"
+                join.style.display = "block"
+                join.style.backgroundColor = "#b1c5b3"
             } else {
                 join.style.pointerEvents = "none"
-                join.style.visibility = "hidden"
+                join.style.backgroundColor = "#efefef"
             }
         });
 
         agreeMust.addEventListener('change', (e) => {
             if(agreeMust.checked){
                 join.style.pointerEvents = "auto"
-                join.style.visibility = "visible"
+                join.style.display = "block"
+                join.style.backgroundColor = "#b1c5b3"
             } else {
                 join.style.pointerEvents = "none"
-                join.style.visibility = "hidden"
+                join.style.backgroundColor = "#efefef"
             }
         });
             

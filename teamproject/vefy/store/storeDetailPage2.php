@@ -1,3 +1,8 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -29,14 +34,14 @@
     <div class="cotainer">
         <div class="contentWrap">
             <div class="contentImg">
-                <img src="../assets/img/세트 상품.png" alt="스토어">
+                <img src="../assets/img/로즈마리.png" alt="스토어">
             </div>
             <div class="contentDesc">
                 <div class="main_right">
                     <div class="right_top">
                         <div class="Goods_title">
-                            <div class="title_main">[기획] 세트 상품</div>
-                            <div class="title_desc">세트 개당 판매가: xxxx원</div>
+                            <div class="title_main">로즈마리</div>
+                            <div class="title_desc">100g당 판매가: xxxx원</div>
                         </div>
                         <div class="Goods_price">11,300원</div>
                         <span class="price_sale">15%</span>
@@ -64,8 +69,8 @@
                             <div class="inner">
                                 <a href="#" class="right">상품 선택</a>
                                 <ul class="checkbox">
-                                    <li class="checkbox1"><a href="#">[기획] 세트 상품 1팩</a></li>
-                                    <li class="checkbox2"><a href="#">[기획] 세트 상품 2팩 ( +8000원 )</a></li>
+                                    <li class="checkbox1"><a href="#">로즈마리 1팩</a></li>
+                                    <li class="checkbox2"><a href="#">로즈마리 2팩 (+ 8000원 )</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -82,13 +87,15 @@
             </span></div>
         <div class="DetailEx">
             <div class="textBox">
-                <strong>바나나</strong> : 저널에 실린 연구에 의하면 바나나에 풍부한 칼륨은 정상 혈압과 심장 기능을 유지시키는 등 심혈관에 여러 가지 효능이 있는 것으로 나타났다.<br>
-                <strong>아보카도</strong> : 비타민A와 비타민C가 풍부하게 들어 있어 피로 회복에 도움이 되고, 면역력을 높이며 눈 건강에도 좋다.<br>
-                <strong>토마토</strong> :토마토가 몸에 좋은 이유는 소화를 돕는 것에서 끝나지 않는다. 토마토에는 피로를 풀고 신진대사를 돕는 비타민 C와 지방 분해를 돕는 비타민 B, 항산화 작용으로 노화를 막는 리코펜, 고혈압을 예방하는 루틴 등 몸에 좋은 성분이 많이 들어 있다.
+                1 소화 기능 개선 과식을 하거나 소화가 안 될 때 로즈마리 차를 한 잔 마시면 속이 편안해지는 것을 느낄 수 있을 것이다. ...<br>
+                2 기억력 및 집중력 향상 ...<br>
+                3 면역력 강화 ...<br>
+                4 눈 건강 보호 ...<br>
+                5 기분 개선
             </div>
             <div class="imgBox">
-                <img src="../assets/img/kim.png" alt="김정호">
-            </div> 
+                <img src="../assets/img/jo.png" alt="조은선">
+            </div>
         </div>
     </div>
 

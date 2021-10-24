@@ -102,6 +102,7 @@ body {
 .Goods_shelflife {
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(192, 191, 191);
+    line-height: 3.5;
 }
 .Goods_check {
     padding-bottom: 25px;

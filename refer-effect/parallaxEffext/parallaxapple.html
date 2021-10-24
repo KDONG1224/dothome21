@@ -8,6 +8,34 @@
 
     <style>
         /* 폰트 */
+        /* saol */
+        @font-face {
+            font-family: 'saol';
+            src: url(../fonts/saol.woff2) format("woff2");
+            src: url(../fonts/saol.woff) format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Chosunilbo_myungjo */
+        @font-face {
+            font-family: 'Chosunilbo_myungjo';
+            src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff) format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pasEfOqeefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
         @font-face {
             font-family: 'NEXONLv1Gothic';
             font-weight: 300;
@@ -208,22 +236,29 @@
             perspective: 64px;
         }
         .s3Text1 .s1 {
-            transform: matrix3d(2,1,-1,1.5,30,-45);
+            /* transform: scaleX(20vw) scaleY(30vw);
+            background: black; */
+            transform: matrix3d(2,1,-10,1.5,30,-45);
         }
+
         .s3Text1 .s2 {
-            transform: matrix3d(2,1,-1,1.5,30,-45);
+            /* transform: translate(-20vw, 20vw); */
         }
+
         .s3Text1 .s3 {
-            transform: matrix3d(2,1,-1,1.5,30,-45);
+            /* transform: translate(-10vw, -20vw); */
         }
+
         .s3Text1 .s4 {
-            transform: matrix3d(2,1,-1,1.5,30,-45);
+            /* transform: translate(10vw, -20vw); */
         }
+
         .s3Text1 .s5 {
-            transform: matrix3d(2,1,-1,1.5,30,-45);
+            /* transform: translate(10vw, 20vw); */
         }
+
         .s3Text1 .s6 {
-            transform: matrix3d(2,1,-1,1.5,30,-45);
+            /* transform: translate(30vw, 10vw); */
         }
     </style>
 </head>
@@ -367,25 +402,32 @@
         <!-- section2 -->
 
         <section id="section3">
-            <div class="s3Text1 fixed">         <!-- scale, skew,  -->
-                <span class="s1"           
-                    data-26000="transform: rotateX(90deg) scale(5); opacity: 0;"
-                    data-27000="transform: rotateX(0deg) scale(1); opacity: 1;"
+            <div class="s3Text1 fixed">         
+                <span class="s1"
+                    data-26000="background: Magenta; color: MintCream; transform: rotate(-10deg) translateX(-10vw) skew(20deg) scale(3);"
+                    data-26500="background: MidnightBlue; color: Moccasin; transform: rotate(-5deg) translateX(-5vw) skew(10deg) scale(2.5);"
+                    data-27000="background: navy; color: white; transform: rotate(-2deg) translateX(-2vw) skew(5deg) scale(2.2);"
+                    data-27500="background: white; color: black; transform: rotate(0deg) translateX(0vw) skew(0deg) scale(1);"
                 >s</span><span class="s2"
-                    data-26500="transform: rotateX(-90deg) scale(5); opacity: 0;"
-                    data-27500="transform: rotateX(0deg) scale(1); opacity: 1;"
+                    data-26500="background: black; color: MintCream; transform: rotate(-10deg) translateX(-10vw) skew(20deg) scale(3);"
+                    data-27000="background: black; color: white;"
+                    data-27500="background: black; color: white;"
                 >c</span><span class="s3"
-                    data-27000="transform: rotateX(90deg) scale(5); opacity: 0;"
-                    data-28000="transform: rotateX(0deg) scale(1); opacity: 1;"
+                    data-27000="background: black; color: white;"
+                    data-27500="background: black; color: white;"
+                    data-28000="background: yellow; color: black;"
                 >r</span><span class="s4"
-                    data-27500="transform: rotateX(-90deg) scale(5); opacity: 0;"
-                    data-28500="transform: rotateX(0deg) scale(1); opacity: 1;"
+                    data-27500="background: yellow; color: black;"
+                    data-28000="background: yellow; color: black;"
+                    data-28500="background: black; color: white;"
                 >i</span><span class="s5"
-                    data-28000="transform: rotateX(90deg) scale(5); opacity: 0;"
-                    data-29000="transform: rotateX(0deg) scale(1); opacity: 1;"
+                    data-28000="background: black; color: white;"
+                    data-28500="background: yellow; color: black;"
+                    data-29000="background: black; color: white;"
                 >p</span><span class="s6"
-                    data-28500="transform: rotateX(-90deg) scale(5); opacity: 0;"
-                    data-29500="transform: rotateX(0deg) scale(1); opacity: 1;"
+                    data-28500="background: black; color: white;"
+                    data-29000="background: black; color: white;"
+                    data-29500="background: yellow; color: black;"
                 >t</span>
             </div>
         </section>

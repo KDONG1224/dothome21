@@ -60,7 +60,7 @@
 .join_line {
     content: '';
     margin: 0 60px;
-    width: 14px;
+    width: 7px;
     height: 616px;
     transform: rotate(180deg);
     background-color: #c4c4c4;
@@ -89,7 +89,7 @@
 .join_click {
     width: 100%;
     color: #fff;
-    background-color: #b1c5b3;
+    background-color: #efefef;
     padding: 16px 230px;
     border-radius: 10px;
     font-size: 20px;
@@ -97,7 +97,7 @@
     cursor: pointer;
     white-space: nowrap;
     pointer-events: none;   
-    visibility: hidden;    
+    /* visibility: hidden;     */
 }
 #checkAll {
     transform: scale(1.7);
@@ -166,5 +166,5 @@ fieldset {
 .scrollWrap {
     overflow-y: scroll;
     height: 346px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.055);
 }

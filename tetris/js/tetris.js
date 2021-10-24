@@ -214,3 +214,6 @@ pauseButton.addEventListener("click",function(){
     clearTimeout(downInterval);
     window.cancelAnimationFrame(renderBlocks);
 })
+playButton.addEventListener("click", function(){
+    dropBlock();
+});

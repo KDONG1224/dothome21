@@ -47,6 +47,36 @@ html, body {
     margin-top: 30px;
     overflow: hidden;
 }
+.board-search {
+    position: relative;
+}
+.board-search .search-field {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.search-field .p_box {
+    float: left;
+}
+.search-field .search_box {
+    float: right;
+}
+.board-search .search-field .p_box p {
+    display: inline-block;
+}
+.board-search .search-field .p_box p a {
+    display: inline-block;
+    margin-top: 83px;
+    font-size: 26px;
+    padding: 0 10px 0 10px;
+    margin: 0 5px 0 5px;
+    font-weight: 600;
+    color: #c5c5c5;
+}
+.board-search .search-field .p_box p.choice a {
+    border-bottom: 2px solid #4d942c;
+    border-bottom: 2px solid #C9D5CA;
+    color: #000;
+}
 .commu-wrap {
     position: relative;
 }
@@ -54,17 +84,29 @@ html, body {
     text-align: right;
     margin-bottom: 40px;
 }
+.board-search .form-search {
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+.board-search .form-btn {
+    border: 1px solid #f3e6d6;
+    background-color: #f3e6d6;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #c77f5d;
+}
 .commu-wrap .form-search {
     border: 1px solid #c5c5c5;
     border-radius: 5px;
     padding: 10px 15px;
 }
 .commu-wrap .form-btn {
-    border: 1px solid #C9D5CA;
-    background-color: #C9D5CA;
+    border: 1px solid #f3e6d6;
+    background-color: #f3e6d6;
     border-radius: 5px;
     padding: 10px 15px;
-    color: #fff;
+    color: #c77f5d;
 }
 .board-table {}
 .board-table table {
@@ -591,7 +633,7 @@ html, body {
 }
 .cm_box button {
     margin-top: 20px;
-    padding: 10px 20px 7px 20px;
+    padding: 7px 20px 7px 20px;
     background: #f3e6d6;
     font-size: 16px;
     border-radius: 30px;
