@@ -129,6 +129,9 @@
             border-radius: 1vw;
             padding: 1vw;
         }
+        .cardWrap.is-disabled {
+            pointer-events: none;
+        }
         .cardWrap .card {
             width: 8vw;
             height: 20vh;
@@ -224,7 +227,7 @@
             <div class="score">
                 <p class="turns">기회 : <span>5</span>번</p>
                 <p class="attempts">시도 : <span>0</span></p>
-                <p class="wins">우승 : <span>0</span></p>
+                <p class="wins">성공 : <span>0</span></p>
             </div>
         </article>
         <!-- //title -->
@@ -235,7 +238,7 @@
             <div class="score core">
                 <p class="turns">기회 : <span>5</span>번</p>
                 <p class="attempts">시도 : <span>0</span></p>
-                <p class="wins">우승 : <span>0</span></p>
+                <p class="wins">성공 : <span>0</span></p>
             </div>
             <button class="btn-continue">다시 도전하기</button>
         </div>
@@ -336,9 +339,10 @@
         const dataType = "data-type";
         const dataMatch = "data-matched";
         const selectedClass = "is-selected";
+        const playStop = "is-disabled";
         const playSoundClass = "is-playing";
         const visibleClass = "is-visible";
-        const timeoutLength = 400;
+        const timeoutLength = 900;
 
         let sound = [
             "../assets/audio/dingdong.mp3",
@@ -382,12 +386,16 @@
             let seletedCards = $("."+selectedClass);
             // 만약에 카드1와 카드2가 같다면 dataMatched를 true로 
             if(seletedCards.length == 2){
+                // 버그 방지
+                $cardWrap.addClass(playStop);
+
                 card1 = seletedCards.eq(0).attr(dataType);
                 card2 = seletedCards.eq(1).attr(dataType);
 
                 if(card1 == card2){
                     // 만약에 카드1과 카드2가 같으면 dataMatched -> true / 음악재생(정답)
                     seletedCards.attr(dataMatch, true).removeClass(selectedClass);
+                    $cardWrap.removeClass(playStop);
 
                     // 성공 음악 재생
                     if($btnSound.hasClass(playSoundClass)){
@@ -404,6 +412,7 @@
                         turnsCount--;
                         $turns.html(turnsCount);
                         seletedCards.removeClass(selectedClass);
+                        $cardWrap.removeClass(playStop);
                     }, timeoutLength);
 
                     // 기회가 없을 때 시도+1, 기회+5
@@ -424,6 +433,8 @@
                 setTimeout(function(){
                     // 성공 메세지
                     $success.addClass(visibleClass);
+                    winsCount++;
+                    $wins.html(winsCount);
 
                     // 성공 음악 추가
                     if($btnSound.hasClass(playSoundClass)){
