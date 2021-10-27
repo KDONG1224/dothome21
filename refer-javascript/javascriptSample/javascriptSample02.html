@@ -165,8 +165,8 @@
 <body>
     <h1>Javascript 알고리즘 공부하기</h1>
     <ol>
-        <li class="active"><a href="javascriptSample01.html">01</a></li>
-        <li><a href="javascriptSample02.html">02</a></li>
+        <li><a href="javascriptSample01.html">01</a></li>
+        <li class="active"><a href="javascriptSample02.html">02</a></li>
         <li><a href="javascriptSample03.html">03</a></li>
         <li><a href="javascriptSample04.html">04</a></li>
         <li><a href="javascriptSample05.html">05</a></li>
@@ -178,37 +178,32 @@
     </ol>
     
     <div id="sample1" class="sample">
-        <h2>세 수 중 최솟값 <span class="dot"></span></h2>
-        <p class="problem">Q : 100이하의 자연수 A, B, C를 입력받아 세 수 중 가장 작읍 값을 출력하는 프로그램을 작성하세요.</p>
+        <h2>연필 갯수<span class="dot"></span></h2>
+        <p class="problem">Q : 연필 1다스는 12자루입니다. 학생 1인당 연필을 1자루씩 나누어 준다고 할 때 N명의 학생수를 입력하면 
+                            필요한 연필의 다스 수를 계산하는 프로그램을 작성하시오.!
+        </p>
         <div class="desc">
             <dl>
                 <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
-                <dd>첫 번째 줄에 100이하의 세 자연수가 입력된다.</dd>
+                <dd>첫 번째 줄에 1000이하의 자연수 N을 입력합니다.</dd>
                 <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
-                <dd>첫 번째 줄에 가장 작은 수를 출력한다.</dd>
+                <dd>첫 번째 줄에 필요한 다스 수를 출력합니다.</dd>
             </dl>
         </div>
         <div class="sam">
             <dl>
                 <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i> 입력 예제</dt>
-                <dd>10 50 85</dd>
+                <dd>178</dd>
                 <dt><i class="fa fa-pencil" aria-hidden="true"></i> 출력 예제</dt>
-                <dt>10</dt>
+                <dt>15</dt>
             </dl>
         </div>
         <div class="code">
-<pre class="line-number"><code class="language-js">function solution(a, b, c){
-    let answer;
-    
-    if(a &lt; b){
-        answer = a;
-    }
-    if(c &lt; answer){
-        answer = c;
-    }
+<pre class="line-number"><code class="language-js">function solution(num){
+    let answer = Math.ceil(num/12);
     return answer;
-}
-console.log(solution(10, 50, 85));
+};
+console.log(solution(178));
 </code></pre>
         </div>
     </div>
@@ -218,29 +213,11 @@ console.log(solution(10, 50, 85));
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        // let a = 10;
-        // let b = 50;
-        // let c = 85;
-
-        // if(a<b && a<c){
-        //     document.write(a);
-        // } else if (b<a && b<c){
-        //     document.write(b);
-        // } else if (c<a && c<b){
-        //     document.write(c);
-        // };
-        function solution(a, b, c){
-            let answer;
-            
-            if(a < b){
-                answer = a;
-            }
-            if(c < answer){
-                answer = c;
-            }
+        function solution(num){
+            let answer = Math.ceil(num/12);
             return answer;
-        }
-        console.log(solution(10, 50, 85));
+        };
+        console.log(solution(178));
     </script>
 </body>
 </html>
