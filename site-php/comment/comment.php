@@ -39,67 +39,56 @@
         <section id="mainCont">
             <h2 class="ir_so">메인 컨텐츠</h2>
             <article class="content-article">
-                <!-- cardType01 -->
-                <section class="cardType">
-                    <div class="cardType01">
-                        <h2>혼술족을 위한 제안</h2>
-                        <p>분위기를 내고 싶은 당신, 혼술을 하는 당신, 맛있는 술을 마시고 싶은 당신, 여러분을 위해 제안합니다. 
-                        열심히 준비하였습니다. 재밌게 봐주세요~</p>
-                        <div class="card-wrap">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="../assets/img/card01.jpg" alt="칵테일(Cocltail) 이미지입니다." class="card-img">
-                                    <strong class="card-title">칵테일(Cocktail)</strong>
-                                    <span class="card-desc">술과 여러 종류의 음료, 첨가물 등을 섞어 만든 혼합주를 일컫는다.</span>
-                                    <span class="card-keyword">
-                                        <span>#칵테일</span>
-                                        <span>#모히또</span>
-                                        <span>#블루하와이</span>
-                                        <span>#마가리타</span>
-                                        <span>#바카디</span>
-                                    </span>
-                                </a>
+                <h3>해양레저스포츠! 그 즐거움 속으로</h3>
+                <p>물이 무서운 당신! 물을 좋아하는 당신! 수상스포츠 안전하게 함께 즐겨봐요!</p>
+                <section class="section-card">
+                    <h4 class="ir_so">카드 컨텐츠</h4>
+                    <ul class="card-list">
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/img06.jpg" alt="카약 이미지입니다">
+                            </a>
+                            <div class="item">
+                                <strong>칵테일(Cocktail)</strong>
+                                <span>짐승의 뼈와 가죽으로 배을 만들어 타던것이 기원이다.<br>양날 노를 사용하는게 특징이다.</span>
+                                <span class="keyword">
+                                    <span>#카약</span><span>#카누</span><span>#패들</span>
+                                </span>
                             </div>
-                            <div class="card">
-                                <a href="#">
-                                    <img src="../assets/img/card02.jpg" alt="맥주(Beer) 이미지입니다." class="card-img">
-                                    <strong class="card-title">맥주(Beer)</strong>
-                                    <span class="card-desc">보리를 가공한 맥아를 발효한 술이다. 알콜은 맥주의 종류에 따라 다양한 도수를 가진다.</span>
-                                    <span class="card-keyword">
-                                        <span>#맥주</span>
-                                        <span>#카스</span>
-                                        <span>#테라</span>
-                                        <span>#한맥</span>
-                                        <span>#타이거</span>
-                                        <span>#하이네켄</span>
-                                        <span>#기네스</span>
-                                    </span>
-                                </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/img07.jpg" alt="SUP 이미지입니다.">
+                            </a>
+                            <div class="item">
+                                <strong>SUP</strong>
+                                <span>보드위에서 무릎을 꿇고 스트로크를 하는 스포츠<br>서핑의 파생물이라고 할 수 있다.</span>
+                                <span class="keyword">
+                                    <span>#SUP</span><span>#패들보드</span><span>#서핑</span>
+                                </span>
                             </div>
-                            <div class="card">
-                                <a href="#">
-                                    <img src="../assets/img/card03.jpg" alt="보드카(Vodka) 이미지입니다." class="card-img">
-                                    <strong class="card-title">보드카(Vodka)</strong>
-                                    <span class="card-desc">동유럽 원산의 증류주이다. 러시아어로 물을 뜻하는 낱말 'вода 보다’에서 유래되었다.</span>
-                                    <span class="card-keyword">
-                                        <span>#앱솔루트</span>
-                                        <span>#스미노프</span>
-                                        <span>#레이카</span>
-                                        <span>#벨루가</span>
-                                        <span>#그레이구스</span>
-                                    </span>
-                                </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/img08.jpg" alt="고무보트 이미지입니다.">
+                            </a>
+                            <div class="item">
+                                <strong>고무보트</strong>
+                                <span>PVC나 고무로 만든 보트를 타고 계곡이나 강의 급류를 타는 레포츠</span>
+                                <span class="keyword">
+                                    <span>#래프팅</span><span>#고무보트</span><span>#계곡</span>
+                                </span>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
-                <!-- //cardType01 -->
             </article>
-            <article class="flow-article">
-                <h3 class="ir_so">레시피 알아보기</h3>
+
+            <article class="flow-article content-sub">
+                <h3>해양레저스포츠 공유하기</h3>
+                <p>해양레저스포츠 즐기는 방법을 공유해주세요!</p>
                 <section id="comment" class="section-commnet">
-                    <h4>맛 좋은 술 공유하기</h4>
-                    <p>맛 좋은 술을 댓글로 공유해주세요!</p>
+                    <h4 class="ir_so">댓글 콘텐츠</h4>
                     <div class="comment-form">
                         <form action="commenSave.php" method="post" name="comment">
                             <fieldset>
@@ -110,8 +99,8 @@
                                         <input type="text" name="youName" id="youName" class="input_write2" placeHolder="이름" autocomplete="off" maxlength="10" required>
                                     </div>
                                     <div>
-                                        <label for="youText" class="ir_so">맛 좋은 술</label>
-                                        <input type="text" name="youText" id="youText" class="input_write2 w100" placeHolder="맛 좋은 술을 적어주세요!" autocomplete="off" required>
+                                        <label for="youText" class="ir_so">해양레저스포츠 방법</label>
+                                        <input type="text" name="youText" id="youText" class="input_write2 w100" placeHolder="즐기는 방법을 적어주세요!" autocomplete="off" required>
                                     </div>
                                     <button class="btn_submit2" type="submit" value="공유하기">share</button>
                                 </div>
@@ -133,7 +122,7 @@
                         ?>
                             <div>
                                 <p><?=$info['youText']?></p>
-                                <div>
+                                <div class="icon">
                                     <img src="https://kdong1224.github.io/dothome21/class/img/img05.jpg" alt="프로필 사진">
                                     <span><?=$info['youName']?></span>
                                     <span><?=date('Y-m-d H:i', $info['regTime'])?></span>

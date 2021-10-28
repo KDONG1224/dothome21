@@ -3,10 +3,10 @@
     <h2 class="ir_so">메인 메뉴</h2>
     <ul>
         <li><a href="../comment/comment.php">댓글</a></li>
-        <li><a href="../includ/join.php">회원가입</a></li>
-        <li><a href="../includ/login.php">로그인</a></li>
+        <li><a href="../login/join.php">회원가입</a></li>
+        <li><a href="../login/login.php">로그인</a></li>
         <li><a href="../board/board.php">게시판</a></li>
-        <li><a href="#">블로그</a></li>
+        <li><a href="#">문의하기</a></li>
     </ul>
 </nav>
 <div class="member">

@@ -91,10 +91,8 @@
         a {text-decoration: none;}
         li {list-style: none;}
         img {width: 100%; vertical-align: top;}
-
-        body {
-            height: 10000px;
-        }
+        iframe {border: 0;}
+        /* body {height: 10000px;} */
 
         /* 스크롤 */
         .scroll {
@@ -112,11 +110,9 @@
         #contents > div {position: relative;}
         #section1 {height: 7000px;}
         #section2 {height: 19000px; z-index: 2000;}
-        #section3 {height: 13000px; z-index: 3000;}
-        #section4 {}
-        #section5 {}
-        #section6 {}
-        #section7 {}
+        #section3 {height: 16000px; z-index: 3000;}
+        #section4 {height: 30000px; z-index: 4000; background: #000;}
+        #section5 {height: 3000px; z-index: 5000; background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);}
 
         /* section1 */
         .fixed {
@@ -226,39 +222,155 @@
 
         /* section3 */
         .s3Text1 {
-            font-family: 'NEXONLv1Gothic';
             font-size: 8vw;
-            font-weight: 100;
+            font-weight: 300;
+            font-family: 'NEXONLv1Gothic';
             text-transform: uppercase;
+            white-space: nowrap;
         }
         .s3Text1 span {
             display: inline-block;
-            perspective: 64px;
         }
         .s3Text1 .s1 {
-            /* transform: scaleX(20vw) scaleY(30vw);
-            background: black; */
-            transform: matrix3d(2,1,-10,1.5,30,-45);
+            /* transform: translate(-20vw, -10vw); */
         }
-
         .s3Text1 .s2 {
             /* transform: translate(-20vw, 20vw); */
         }
-
         .s3Text1 .s3 {
             /* transform: translate(-10vw, -20vw); */
         }
-
         .s3Text1 .s4 {
             /* transform: translate(10vw, -20vw); */
         }
-
         .s3Text1 .s5 {
             /* transform: translate(10vw, 20vw); */
         }
-
         .s3Text1 .s6 {
             /* transform: translate(30vw, 10vw); */
+        }
+        .s3Text1 .s7 {
+            width: 100vw;
+            height: 1px;
+            background: #000;
+        }
+        .s3Text2 {
+            perspective: 500px;
+        }
+        .s3Text2 iframe {
+            width: 60vw;
+            height: 60vh;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+        }
+        .s3Text2 .i1 {
+            position: absolute;
+            left: 0; top: 0;
+        }
+        .s3Text2 .i2 {
+            position: absolute;
+            left: 0; top: 0;
+        }
+        .s3Text2 .i3 {
+            position: absolute;
+            left: 0; top: 0;
+        }
+
+        /* section4 */
+        .s4Text1 {}
+        .s4Text1  > div {
+            width: 10vw;
+            height: 10vw;
+            background: #000;
+            border-radius: 50%;
+        }
+        .s4Text1 .circle1 {left: 40%; top: 50%; background: rgb(216, 36, 36);}
+        .s4Text1 .circle2 {left: 80%; top: 20%; background: rgb(99, 230, 11);}
+        .s4Text1 .circle3 {left: 20%; top: 40%; background: rgb(19, 191, 197);}
+        .s4Text1 .circle4 {left: 60%; top: 90%; background: rgb(17, 45, 204);}
+        .s4Text1 .circle5 {left: 30%; top: 10%; background: rgb(165, 21, 52);}
+        .s4Text1 .circle6 {left: 10%; top: 60%; background: rgb(77, 4, 38);}
+        .s4Text1 .circle7 {left: 60%; top: 50%; background: rgb(217, 255, 0);}
+        .s4Text1 .circle8 {left: 25%; top: 85%; background: rgb(16, 19, 56);}
+        .s4Text1 .circle9 {left: 50%; top: 0%; background: rgb(15, 196, 120);}
+        .s4Text1 .circle10 {left: 85%; top: 80%; background: rgb(0, 0, 0);}
+
+        .s4Text2 {
+            color: #fff;
+            font-size: 10vw;
+            perspective: 500px;
+        }
+        .s4Text2 .ani {
+            color: #FED128;
+            text-shadow: 
+                -.1vw 0vw .25vw #FED128, -.2vw 0vw .25vw #FED128, -.4vw 0vw .25vw #FED128, 
+                -.1vw 0vw .1vw #F0130B, -.2vw 0vw .1vw #F0130B, -.4vw 0vw .1vw #F0130B,
+                -.1vw 0vw .1vw #F0130B, -.2vw 0vw .1vw #F0130B, -.4vw 0vw .1vw #F0130B,
+                -.1vw 0vw .8vw #F0130B, -.2vw 0vw .8vw #F0130B, -.4vw 0vw .8vw #F0130B, .2vw 0vw .5vw #F0130B,
+                -.1vw 0vw .5vw #F0130B, -.2vw 0vw .5vw #F0130B, -.4vw 0vw .5vw #F0130B, 
+                -.1vw 0vw 10vw #FA1C16, -.2vw 0vw 10vw #FA1C16, -.4vw 0vw 10vw #FA1C16;
+            animation: jackpots 1s 0s ease infinite;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+        }
+        @keyframes jackpots {
+            0%,
+            100% {
+                text-shadow: 
+                -.1vw 0vw .1vw #FED128, -.15vw 0vw .2vw #FED128, -.2vw 0vw .2vw #FED128, 
+                -.1vw 0vw 3vw #F0130B, -.2vw 0vw 3vw #F0130B, -.4vw 0vw 3vw #F0130B,
+                -.1vw 0vw 5vw #F0130B, -.2vw 0vw 5vw #F0130B, -.4vw 0vw .8vw #F0130B, .2vw 0vw 10vw #F0130B;
+                color: #FED128;
+            }
+            50% {
+            text-shadow: 
+                -.1vw 0vw .1vw #705C12, -.15vw 0vw .2vw #705C12, -.2vw 0vw .2vw #705C12, 
+                -.1vw 0vw .1vw #5C0704, -.2vw 0vw .1vw #5C0704, -.4vw 0vw .1vw #5C0704,
+                -.1vw 0vw .2vw #5C0704, -.2vw 0vw .2vw #5C0704, -.4vw 0vw .2vw #5C0704, .2vw 0vw .5vw #5C0704;
+                color: #705C12;
+            }
+        }
+
+        .s4Text3 {
+            width: 100vw;
+            height: 100vh;
+        }
+        .s4Text3 > div {
+            width: 20vw;
+            position: absolute;
+            left: 0; top: 0;
+        }
+        .s4Text3 .a1 {left: 30%; top: 36%;}
+        .s4Text3 .a2 {left: 32%; top: 40%;}
+        .s4Text3 .a3 {left: 34%; top: 44%;}
+        .s4Text3 .a4 {left: 36%; top: 48%;}
+        .s4Text3 .a5 {left: 38%; top: 52%;}
+        .s4Text3 .a6 {left: 40%; top: 56%;}
+
+        /* section5 */
+        .s5Text1 {
+            font-size: 10vw;
+            font-weight: 800;
+            color: #0E273C;
+        }
+        .s5Text1 {
+            left: 50%;
+            top: 70%;
+        }
+        .s5Text2 img {
+            width: 20vw;
+        }
+        .s5Text3 span {
+            font-size: 2.5vw;
+            display: block;
+            padding: 1vw 0;
+        }
+        .s5Text2 p {
+            color: #000;
+            margin-left: 50%;
+            transform: translateX(-6em);
+            font-size: 5vw;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -402,41 +514,250 @@
         <!-- section2 -->
 
         <section id="section3">
-            <div class="s3Text1 fixed">         
+            <div class="s3Text1 fixed"
+                data-32500="top: 50%;"
+                data-33500="top: 10%;"
+                data-40500="top: 50%;"
+                data-41500="top: -50%;"
+            >         
                 <span class="s1"
-                    data-26000="background: Magenta; color: MintCream; transform: rotate(-10deg) translateX(-10vw) skew(20deg) scale(3);"
-                    data-26500="background: MidnightBlue; color: Moccasin; transform: rotate(-5deg) translateX(-5vw) skew(10deg) scale(2.5);"
-                    data-27000="background: navy; color: white; transform: rotate(-2deg) translateX(-2vw) skew(5deg) scale(2.2);"
-                    data-27500="background: white; color: black; transform: rotate(0deg) translateX(0vw) skew(0deg) scale(1);"
+                    data-26000="font-size:200vw; opacity:0;"
+                    data-28000="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-28500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-29000="font-size:8vw; opacity:1; transform:translatey(0%);"
                 >s</span><span class="s2"
-                    data-26500="background: black; color: MintCream;"
-                    data-27000="background: black; color: white;"
-                    data-27500="background: black; color: white;"
+                    data-26000="font-size:200vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-28500="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-29000="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-29500="font-size:8vw; opacity:1; transform:translatey(0%);"
                 >c</span><span class="s3"
-                    data-27000="background: black; color: white;"
-                    data-27500="background: yellow; color: navy;"
-                    data-28000="background: blue; color: black;"
+                    data-26000="font-size:200vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-29000="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-29500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-30000="font-size:8vw; opacity:1; transform:translatey(0%);"
                 >r</span><span class="s4"
-                    data-27500="background: red; color: black;"
-                    data-28000="background: yellow; color: black;"
-                    data-28500="background: black; color: white;"
+                    data-26000="font-size:200vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-29500="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-30500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-31000="font-size:8vw; opacity:1; transform:translatey(0%);"
                 >i</span><span class="s5"
-                    data-28000="background: black; color: white;"
-                    data-28500="background: yellow; color: black;"
-                    data-29000="background: black; color: white;"
+                    data-26000="font-size:200vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-30500="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-31000="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-31500="font-size:8vw; opacity:1; transform:translatey(0%);"
                 >p</span><span class="s6"
-                    data-28500="background: black; color: white;"
-                    data-29000="background: black; color: white;"
-                    data-29500="background: yellow; color: black;"
+                    data-26000="font-size:200vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-31000="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-31500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-32000="font-size:8vw; opacity:1; transform:translatey(0%);"
                 >t</span>
+            </div>
+            <div class="s3Text2 fixed">
+                <iframe class="i1" src="../mouseEffect/javascriptME01.html" 
+                    data-33000="transform: translate3d(-80%, 0%, -10000px); opacity: 0;"
+                    data-34000="transform: translate3d(-80%, -50%, 0px); opacity: 1;"
+                    data-39000="transform: translate3d(-80%, -50%, 0px); opacity: 1;"
+                    data-40000="transform: translate3d(-80%, -50%, 1000px); opacity: 0;"
+                ></iframe>
+                <iframe class="i2" src="../sliderEffect/javascriptSE02.html" 
+                    data-34000="transform: translate3d(-50%, -80%, -10000px); opacity: 0;"
+                    data-35000="transform: translate3d(-50%, -80%, 0px); opacity: 1;"
+                    data-38500="transform: translate3d(-50%, -80%, 0px); opacity: 1;"
+                    data-39500="transform: translate3d(-50%, -80%, 1000px); opacity: 0;"
+                ></iframe>
+                <iframe class="i3" src="parallaxVD.html" 
+                    data-36000="transform: translate3d(-20%, -30%, -10000px); opacity: 0;"
+                    data-37000="transform: translate3d(-20%, -30%, 0px); opacity: 1;"
+                    data-38000="transform: translate3d(-20%, -30%, 0px); opacity: 1;"
+                    data-39000="transform: translate3d(-20%, -30%, 1000px); opacity: 0;"
+                ></iframe>
             </div>
         </section>
         <!-- section3 -->
 
-        <section id="section4"></section><!-- section4 -->
-        <section id="section5"></section><!-- section5 -->
-        <section id="section6"></section><!-- section6 -->
-        <section id="section7"></section><!-- section7 -->
+        <section id="section4">
+            <div class="s4Text1"
+                data-0="display: none;"
+                data-40000="display: block;"
+                data-42999="display: block;"
+                data-43001="display: none;"
+            >
+                <div class="circle1 fixed"
+                data-40000="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle2 fixed"
+                data-40050="width: 0vw; height: 0vw;"
+                data-42000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle3 fixed"
+                data-40080="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle4 fixed"
+                data-40110="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle5 fixed"
+                data-40140="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle6 fixed"
+                data-40170="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle7 fixed"
+                data-40200="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle8 fixed"
+                data-40230="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle9 fixed"
+                data-40260="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle10 fixed"
+                data-40290="width: 0vw; height: 0vw;"
+                data-43000="width: 200vw; height: 200vw;"
+                ></div>
+            </div>
+            <div class="s4Text2 fixed"
+                data-0="display: none;"
+                data-43000="display: block;"
+                data-70000="display: block;"
+                data-70001="display: none;"
+            >
+                <div class="ani"
+                    data-43000="transform: translate3d(0, 0, -1000px) rotate(0deg); opacity: 0;"
+                    data-45000="transform: translate3d(0, 0, 0px) rotate(360deg); opacity: 1;"
+                    data-45500="transform: translate3d(0, 0, 0px) rotate(365deg); opacity: 1;"
+                    data-69000="transform: translate3d(0, 0, 0px) rotate(365deg); opacity: 1;"
+                    data-70000="transform: translate3d(0, 0, -1000px) rotate(0deg); opacity: 0;"
+                >ANIMATION</div>
+            </div>
+            <div class="s4Text3 fixed"
+                data-0="display: none;"
+                data-43000="display: block;"
+                data-70000="display: block;"
+                data-70001="display: none;"
+            >
+                <div class="a1 fixed"
+                    data-46500="left: 30%; top: 36%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-47000="left: 30%; top: 36%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-47500="left: 30%; top: 36%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-48000="left: 30%; top: 36%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-49000="left: 80%; top: 36%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-64000="left: 80%; top: 36%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-65000="left: 80%; top: 36%; transform: translate(-50%, -50%) scale(1); opacity: 0;"
+                >
+                    <iframe height="400" style="width: 100%;" scrolling="no" title="Cloudy Spiral Animation" src="https://codepen.io/kdong1224/embed/RwgmeMp?default-tab=&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/kdong1224/pen/RwgmeMp">
+                        Cloudy Spiral Animation</a> by KDONG1224 (<a href="https://codepen.io/kdong1224">@kdong1224</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                <div class="a2 fixed"
+                    data-48500="left: 32%; top: 40%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-49000="left: 32%; top: 40%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-49500="left: 32%; top: 40%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-50000="left: 32%; top: 40%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-50500="left: 78%; top: 40%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-63000="left: 78%; top: 40%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-64000="left: 78%; top: 40%; transform: translate(-50%, -50%) scale(1); opacity: 0;"
+                >
+                    <iframe height="400" style="width: 100%;" scrolling="no" title="Square Animation" src="https://codepen.io/kdong1224/embed/qBjBYwd?default-tab=&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/kdong1224/pen/qBjBYwd">
+                        Square Animation</a> by KDONG1224 (<a href="https://codepen.io/kdong1224">@kdong1224</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                <div class="a3 fixed"
+                    data-50500="left: 34%; top: 44%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-51000="left: 34%; top: 44%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-51500="left: 34%; top: 44%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-52000="left: 34%; top: 44%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-52500="left: 76%; top: 44%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-62000="left: 76%; top: 44%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-63000="left: 76%; top: 44%; transform: translate(-50%, -50%) scale(1); opacity: 0;"
+                >
+                    <iframe height="400" style="width: 100%;" scrolling="no" title="3d cube image box" src="https://codepen.io/kdong1224/embed/QWMdJwg?default-tab=&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/kdong1224/pen/QWMdJwg">
+                        3d cube image box</a> by KDONG1224 (<a href="https://codepen.io/kdong1224">@kdong1224</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                <div class="a4 fixed"
+                    data-52500="left: 36%; top: 48%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-53000="left: 36%; top: 48%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-53500="left: 36%; top: 48%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-54000="left: 36%; top: 48%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-54500="left: 74%; top: 48%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-61000="left: 74%; top: 48%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-62000="left: 74%; top: 48%; transform: translate(-50%, -50%) scale(1); opacity: 0;"
+                >
+                    <iframe height="400" style="width: 100%;" scrolling="no" title="Summer Dream" src="https://codepen.io/kdong1224/embed/gORNMav?default-tab=&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/kdong1224/pen/gORNMav">
+                        Summer Dream</a> by KDONG1224 (<a href="https://codepen.io/kdong1224">@kdong1224</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                <div class="a5 fixed"
+                    data-54500="left: 38%; top: 52%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-55000="left: 38%; top: 52%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-55500="left: 38%; top: 52%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-56000="left: 38%; top: 52%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-56500="left: 72%; top: 52%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-60000="left: 72%; top: 52%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-61000="left: 72%; top: 52%; transform: translate(-50%, -50%) scale(1); opacity: 0;"
+                >
+                    <iframe height="400" style="width: 100%;" scrolling="no" title="Rocket Animation" src="https://codepen.io/kdong1224/embed/xxLgzeQ?default-tab=&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/kdong1224/pen/xxLgzeQ">
+                        Rocket Animation</a> by KDONG1224 (<a href="https://codepen.io/kdong1224">@kdong1224</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                <div class="a6 fixed"
+                    data-56500="left: 40%; top: 56%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-57000="left: 40%; top: 56%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-57500="left: 40%; top: 56%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-58000="left: 40%; top: 56%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
+                    data-58500="left: 70%; top: 56%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-59000="left: 70%; top: 56%; transform: translate(-50%, -50%) scale(1); opacity: 1;"
+                    data-60000="left: 70%; top: 56%; transform: translate(-50%, -50%) scale(1); opacity: 0;"
+                >
+                    <iframe height="400" style="width: 100%;" scrolling="no" title="Wave Animation" src="https://codepen.io/kdong1224/embed/VwWeBxp?default-tab=&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/kdong1224/pen/VwWeBxp">
+                        Wave Animation</a> by KDONG1224 (<a href="https://codepen.io/kdong1224">@kdong1224</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <!-- section4 -->
+
+        <section id="section5">
+            <div class="s5Text1 fixed"
+                data-0="top: 50%; display: none;"
+                data-71501="top: 50%; display: block;"
+                data-71500="top: 50%; display: block;"
+                data-72500="top: 30%; display: block;"
+            >
+                CONTACT
+            </div>
+            <div class="s5Text2 fixed"
+                data-0="left: 55%; top: 60%; display: none;"
+                data-72500="left: 55%; top: 60%; display: block;"
+                data-end="left: 55%; top: 60%; display: block;"
+            ></div>
+        </section>
+        <!-- section5 -->
     </div>
     <!-- //contents -->
     
@@ -450,6 +771,103 @@
 
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
+
+        const prefix = " ";
+        const skills = [
+        "Email",
+        "gkfl8809@naver.com",
+        "Kako",
+        "kdong1224",
+        "Instagram",
+        "@noyclah_jdk",
+        "Phone",
+        "010 2377 2418"
+        ].map((s) => `${s}`);
+        const delay = 5;
+        const step = 1;
+        const tail = 5;
+        const timeout = 75;
+
+        const p = document.createElement("p");
+        document.querySelector(".s5Text2").appendChild(p);
+
+        const colors = ["red", "green", "blue", "yellow", "cyan", "magenta"];
+        function getRandomColor() {
+        return colors[Math.floor(Math.random() * colors.length)];
+        }
+        function getRandomChar() {
+        return String.fromCharCode(Math.random() * (127 - 33) + 33);
+        }
+        function getRandomColoredString(n) {
+        const fragment = document.createDocumentFragment();
+        for (let i = 0; i < n; i++) {
+            const char = document.createElement("span");
+            char.textContent = getRandomChar();
+            char.style.color = getRandomColor();
+            fragment.appendChild(char);
+        }
+        return fragment;
+        }
+
+        const $ = {
+            text: "",
+            prefixP: -tail,
+            skillI: 0,
+            skillP: 0,
+            direction: "forward",
+            delay,
+            step
+        };
+
+        function render() {
+        const skill = skills[$.skillI];
+
+        if ($.step) {
+            $.step--;
+        } else {
+            $.step = step;
+            if ($.prefixP < prefix.length) {
+            if ($.prefixP >= 0) {
+                $.text += prefix[$.prefixP];
+            }
+            $.prefixP++;
+            } else {
+            if ($.direction === "forward") {
+                if ($.skillP < skill.length) {
+                $.text += skill[$.skillP];
+                $.skillP++;
+                } else {
+                if ($.delay) {
+                    $.delay--;
+                } else {
+                    $.direction = "backward";
+                    $.delay = delay;
+                }
+                }
+            } else {
+                if ($.skillP > 0) {
+                $.text = $.text.slice(0, -1);
+                $.skillP--;
+                } else {
+                $.skillI = ($.skillI + 1) % skills.length;
+                $.direction = "forward";
+                }
+            }
+            }
+        }
+
+        p.textContent = $.text;
+        p.appendChild(
+            getRandomColoredString(
+            $.prefixP < prefix.length
+                ? Math.min(tail, tail + $.prefixP)
+                : Math.min(tail, skill.length - $.skillP)
+            )
+        );
+        setTimeout(render, timeout);
+        }
+        setTimeout(render, 500);
+
     </script>
 </body>
 </html>

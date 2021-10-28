@@ -11,6 +11,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
 
+    <!-- SEO -->
+    <meta name="author" content="webstoryboy" />
+    <meta name="description" content="PHP 포트폴리오 사이트입니다." />
+    <meta name="keywords" content="PHP, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 웹스토리보이" />
+    <meta name="robots" content="all" />
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="img/icon_256.png" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="256x256" href="img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon_16.png" />
+
     <!-- style -->
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/var.css">
@@ -35,24 +49,24 @@
     <!-- //header -->
 
     <!-- contents -->
-    <main id="contents">
-        <section id="mainCont">
+    <main id="main">
+        <section id="mainContent">
             <h2 class="ir_so">메인 컨텐츠</h2>
+
             <article class="content-article">
-                <div class="boardType">
-                    <h3>게시판</h3>
-                    <p>가장 빠른 새소식 업데이트</p>
-                    <div class="board">
+                <h3>게시판</h3>
+                <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자를 위한 게시판입니다.</p>
+                    <section class="section-board">
+                        <h4 class="ir_so">게시판 컨텐츠</h4>
                         <div class="board-search">
                             <form action="boardSearch.php" name="boardSearch" method="get">
                                 <fieldset>
                                     <legend class="ir_so">게시판 검색 영역</legend>
-                                    <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요!" aria-label="search">
+                                    <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search" required>
                                     <select name="searchOption" id="searchOption" class="form-select">
                                         <option value="title">제목</option>
                                         <option value="content">내용</option>
-                                        <option value="name">작성자</option>
-                                        <option value="view">조회수</option>
+                                        <option value="name">등록자</option>
                                     </select>
                                     <button type="submit" class="form-btn">검색</button>
                                     <a href="boardWrite.php" class="form-btn black">글쓰기</a>
@@ -72,15 +86,30 @@
                                     <tr>
                                         <th>번호</th>
                                         <th>제목</th>
-                                        <th>작성자</th>
-                                        <th>작성일</th>
+                                        <th>등록자</th>
+                                        <th>등록일</th>
                                         <th>조회수</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
+                                        if(isset($_GET['page'])){
+                                            $page = (int) $_GET['page'];
+                                        } else {
+                                            $page = 1;
+                                        }
+
+                                        $numView = 10;
+                                        $viweLimit = ($numView * $page) - $numView;
+
+                                        // 1~20 : DESC LIMIT 0, 20      -> $page = 1    ($numView * $page) - $numView
+                                        // 21~40 : DESC LIMIT 21, 40    -> $page = 2    ($numView * $page) - $numView
+                                        // 41~60 : DESC LIMIT 41, 40    -> $page = 3    ($numView * $page) - $numView
+                                        // 61~80 : DESC LIMIT 61, 40    -> $page = 4    ($numView * $page) - $numView
+                                        // 81~100 : DESC LIMIT 81, 40   -> $page = 5    ($numView * $page) - $numView
+
                                         // board + member -> join
-                                        $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.boardView, b.regTime FROM myMember m JOIN myBoard b ON (m.myMemberID = b.myMemberID) ORDER BY myBoardID";
+                                        $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.boardView, b.regTime FROM myMember m JOIN myBoard b ON (m.myMemberID = b.myMemberID) ORDER BY myBoardID DESC LIMIT {$viweLimit}, {$numView}";
                                         $result = $connect -> query($sql);
 
                                         if($result){
@@ -91,7 +120,7 @@
                                                     $info = $result -> fetch_array(MYSQLI_ASSOC);
                                                     echo "<tr>";
                                                     echo "<td>".$info['myBoardID']."</td>";
-                                                    echo "<td>".$info['boardTitle']."</td>";
+                                                    echo "<td><a href='boardView.php?boardID={$info['myBoardID']}'>".$info['boardTitle']."</a></td>";
                                                     echo "<td>".$info['youName']."</td>";
                                                     echo "<td>".date('Y-m-d', $info['regTime'])."</td>";
                                                     echo "<td>".$info['boardView']."</td>";
@@ -112,7 +141,62 @@
                         </div>
                         <div class="board-page">
                             <ul>
-                                <li><a href="#">처음으로</a></li>
+                                <?php
+                                    $sql = "SELECT count(myBoardID) FROM myBoard";
+                                    $result = $connect -> query($sql);
+
+                                    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+                                    $boardTatalCount = $boardTotalCount['count(myBoardID)'];
+
+                                    // echo "전체 갯수 : " .$boardTatalCount;
+
+                                    // 총 페이지 수
+                                    $boardTatalPage = ceil($boardTatalCount/$numView);
+
+                                    // echo "총 페이지 수 : " .$boardTatalPage;
+
+                                    // 1 2 3 4 5 6 7 8 9 10 11
+                                    // 현재 페이지를 기준으로 보여주고 싶은 갯수
+                                    $pageView = 5;
+                                    $startPage = $page - $pageView;
+                                    $endPage = $page + $pageView;
+
+                                    // 처음 페이지 초기화
+                                    if($startPage < 1) $startPage = 1;
+                                    
+                                    // 마지막 페이지 초기화
+                                    if($endPage >= $boardTatalPage) $endPage = $boardTatalPage;
+                                    
+                                    // 처음으로
+                                    if($page != 1){
+                                        echo "<li><a href='board.php?page=1'>처음으로</a></li>";
+                                    }
+
+                                    // 이전 페이지
+                                    if($page != 1){
+                                        $prevPage = $page - 1;
+                                        echo "<li><a href='board.php?page={$prevPage}'>&#129044;</a></li>";
+                                    }
+
+                                    for($i=$startPage; $i<=$endPage; $i++){
+                                        $active = "";
+                                        if($i == $page) $active = "active";
+                                        echo "<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
+                                    };
+
+                                    // 다음 페이지
+                                    if($page != $endPage){
+                                        $nextPage = $page + 1;
+                                        echo "<li><a href='board.php?page={$nextPage}'>&#129046;</a></li>";
+                                    }
+
+                                    // 마지막으로
+                                    if($page != $endPage){
+                                        echo "<li><a href='board.php?page={$boardTatalPage}'>마지막으로</a></li>";
+                                    }
+                                ?>        
+
+                                <!-- <li><a href="#">처음으로</a></li>
                                 <li><a href="#">&#129044;</a></li>
                                 <li class="active"><a href="#">1</a></li>
                                 <li><a href="#">2</a></li>
@@ -122,7 +206,7 @@
                                 <li><a href="#">6</a></li>
                                 <li><a href="#">7</a></li>
                                 <li><a href="#">&#129046;</a></li>
-                                <li><a href="#">마지막으로</a></li>
+                                <li><a href="#">마지막으로</a></li> -->
                             </ul>
                         </div>
                     </div>

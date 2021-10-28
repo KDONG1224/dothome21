@@ -69,6 +69,7 @@ em {
 }
 img {
     width: 100%;
+    vertical-align: top;
 }
 fieldset {
     border: 0 none;
@@ -184,6 +185,14 @@ dl.list2 li::before {
 .btn_submit2:hover {
     box-shadow: inset 0 0 0 5px #9082f5;
 }
+
+/* 간격 */
+.mt0  {margin-top: 0;}
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
 
 
 /* 이미지 표현 방법 */

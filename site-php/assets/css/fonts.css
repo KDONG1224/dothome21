@@ -67,23 +67,24 @@
 
 @font-face {
     font-family: 'NEXONLv1Gothic';
-    font-weight: 300;
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
-    font-style: normal;
+    font-weight: 300; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicLowOTFLight.woff) format('woff');
+    font-display: swap;
 }
-
 @font-face {
     font-family: 'NEXONLv1Gothic';
-    font-weight: 400;
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-style: normal;
+    font-weight: 400; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTF.woff) format('woff');
+    font-display: swap;
 }
-
 @font-face {
     font-family: 'NEXONLv1Gothic';
-    font-weight: 700;
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
-    font-style: normal;
+    font-weight: 700; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTFBold.woff) format('woff');
+    font-display: swap;
 }
 
 @font-face {
