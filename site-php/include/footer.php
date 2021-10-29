@@ -13,39 +13,39 @@
             <div>
                 <strong>로그인</strong>
                 <ul>
-                    <li><a href="join.html">join.html</a></li>
-                    <li><a href="joinSave.html">joinSave.html</a></li>
-                    <li><a href="login.html">login.html</a></li>
+                    <li><a href="../login/join.html">join.php</a></li>
+                    <li><a href="../login/joinSave.html">joinSave.php</a></li>
+                    <li><a href="../login/login.html">login.php</a></li>
                 </ul>
             </div>
             <div>
                 <strong>게시판</strong>
                 <ul>
-                    <li><a href="board.html">board.html</a></li>
-                    <li><a href="boardView.html">boardView.html</a></li>
-                    <li><a href="boardWrite.html">boardWrite.html</a></li>
-                    <li><a href="boardModify.html">boardModify.html</a></li>
-                    <li><a href="boardSearch.html">boardSearch.html</a></li>
+                    <li><a href="../board/board.php">board.php</a></li>
+                    <li><a href="../board/boardView.php">boardView.php</a></li>
+                    <li><a href="../board/boardWrite.php">boardWrite.php</a></li>
+                    <li><a href="../board/boardModify.php">boardModify.php</a></li>
+                    <li><a href="../board/boardSearch.php">boardSearch.php</a></li>
                 </ul>
             </div>
             <div>
                 <strong>SNS</strong>
                 <ul>
-                    <li><a href="#">인플러언서</a></li>
-                    <li><a href="#">인스타그램</a></li>
-                    <li><a href="#">트위터</a></li>
-                    <li><a href="#">페이스북</a></li>
-                    <li><a href="#">블로그</a></li>
+                    <li><a href="https://github.com/KDONG1224/dothome21">깃허브</a></li>
+                    <li><a href="https://www.instagram.com/noyclah_jdk/">인스타그램</a></li>
+                    <li><a href="#">카카오톡</a></li>
+                    <li><a href="https://www.facebook.com/khari8809">페이스북</a></li>
+                    <li><a href="https://kdong1224.tistory.com/">블로그</a></li>
                 </ul>
             </div>
             <div>
                 <strong>사이트</strong>
                 <ul>
-                    <li><a href="https://webzz.tistory.com/" target="_blank">레퍼런스</a></li>
-                    <li><a href="https://wtss.tistory.com/" target="_blank">튜토리얼</a></li>
-                    <li><a href="https://wess.tistory.com/" target="_blank">웹 폰트</a></li>
-                    <li><a href="https://wsss.tistory.com/" target="_blank">애니메이션</a></li>
-                    <li><a href="https://cafe.naver.com/crossbrowsing" target="_blank">스터디 신청</a></li>
+                    <li><a href="https://kdong1224.github.io/dothome21/refer-javascript/index.html" target="_blank">자바스크립트</a></li>
+                    <li><a href="https://kdong1224.github.io/dothome21/refer-jquery/index.html" target="_blank">제이쿼리</a></li>
+                    <li><a href="https://kdong1224.github.io/dothome21/refer-effect/index.html" target="_blank">EFEECT</a></li>
+                    <li><a href="https://kdong1224.github.io/dothome21/refer-effect/parallaxEffext/parallaxapple.html" target="_blank">애니메이션</a></li>
+                    <li><a href="https://kdong1224.github.io/dothome21/megabox/index21.html" target="_blank">메가박스</a></li>
                 </ul>
             </div>
         </div>
@@ -56,7 +56,7 @@
                 <li>KaKao</li>
                 <li>@kdong1224</li>
                 <li>Phone</li>
-                <li>010-2732-9233</li>
+                <li>010-2377-2418</li>
             </ul>
         </div>
     </section>

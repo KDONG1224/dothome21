@@ -242,7 +242,7 @@
 
                                 while( $info = mysqli_fetch_array($result) ){
                             ?>
-                                    <li><a href="#"><?= $info['boardTitle'] ?></a><span><?= date('Y-m-d H:i', $info['regTime']) ?></span></li>
+                                    <li><a href="../board/boardView.php?boardID=<?=$info['myBoardID']?>"><?= $info['boardTitle'] ?></a><span><?= date('Y-m-d H:i', $info['regTime']) ?></span></li>
                             <?php
                                 };
                             ?>
@@ -251,7 +251,7 @@
                             <li><a href="#">스터디 참여에 대해서 자세히 알려드립니다.</a><span>2021.02.02</span></li>
                             <li><a href="#">스터디 강의와 면접 잘 보는 법에 대해서 알려드릴께요~</a><span>2021.02.02</span></li> -->
                         </ul>
-                        <a href="board.html" title="더보기" class="more">더보기</a>
+                        <a href="../board/board.php" title="더보기" class="more">더보기</a>
                     </div>
                     <div class="news">
                         <h4>댓글 업데이트</h4>
@@ -260,9 +260,9 @@
                                 $sql = "SELECT myCommentID, youText, regTime FROM myComment ORDER BY myCommentID DESC LIMIT 4";
                                 $result = $connect -> query($sql);
 
-                                while( $info = mysqli_fetch_array($result) ){
+                                while( $info = mysqli_fetch_array($result)){
                             ?>
-                                    <li><a href="#"><?= $info['youText'] ?></a><span><?= date('Y-m-d H:i', $info['regTime']) ?></span></li>
+                                    <li><a href="../comment/comment.php?myCommentID=<?=$info['myCommentID']?>"><?= $info['youText'] ?></a><span><?= date('Y-m-d H:i', $info['regTime']) ?></span></li>
                             <?php
                                 };
                             ?>
@@ -271,7 +271,7 @@
                             <li><a href="#">여기가 짱인듯.. 너무 좋아요~~ 너무 필요한 거였어요~ 여기가 짱인듯.. 너무 좋아요~~ </a><span>2021.02.02</span></li>
                             <li><a href="#">앞으로도 좋은 영상 부탁드령요~</a><span>2021.02.02</span></li> -->
                         </ul>
-                        <a href="comment.html" title="더보기" class="more">더보기</a>
+                        <a href="../comment/comment.php" title="더보기" class="more">더보기</a>
                     </div>
                 </section>
             </article>
