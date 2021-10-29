@@ -296,49 +296,11 @@
         .s4Text1 .circle10 {left: 85%; top: 80%; background: rgb(0, 0, 0);}
 
         .s4Text2 {
-            width: 100vw;
-            height: 100vh;
-        }
-        .s4Text2 .stars {
-            background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-            z-index:0;
-        }
-        .s4Text2 .twinkling {
-            background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-            z-index:1;
-            animation: move-twink-back 200s linear infinite;
-        }
-        .s4Text2 .clouds {
-            background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-            z-index:3;
-            animation: move-clouds-back 200s linear infinite;
-        }
-        .s4Text2 .stars,
-        .s4Text2 .twinkling,
-        .s4Text2 .clouds {
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            width:100%;
-            height:100%;
-            display:block;
-        }
-        @keyframes move-twink-back {
-            from {background-position:0 0;}
-            to {background-position: -10000px 5000px;}
-        }
-        @keyframes move-clouds-back {
-            from {background-position: 0 0;}
-            to {background-position: 10000px 0;}
-        }
-        .s4Text3 {
             color: #fff;
             font-size: 10vw;
             perspective: 500px;
         }
-        .s4Text3 .ani {
+        .s4Text2 .ani {
             color: #FED128;
             text-shadow: 
                 -.1vw 0vw .25vw #FED128, -.2vw 0vw .25vw #FED128, -.4vw 0vw .25vw #FED128, 
@@ -369,27 +331,27 @@
             }
         }
 
-        .s4Text4 {
+        .s4Text3 {
             width: 100vw;
             height: 100vh;
         }
-        .s4Text4 > div {
+        .s4Text3 > div {
             width: 20vw;
             position: absolute;
             left: 0; top: 0;
         }
-        .s4Text4 .a1 {left: 30%; top: 36%;}
-        .s4Text4 .a2 {left: 32%; top: 40%;}
-        .s4Text4 .a3 {left: 34%; top: 44%;}
-        .s4Text4 .a4 {left: 36%; top: 48%;}
-        .s4Text4 .a5 {left: 38%; top: 52%;}
-        .s4Text4 .a6 {left: 40%; top: 56%;}
+        .s4Text3 .a1 {left: 30%; top: 36%;}
+        .s4Text3 .a2 {left: 32%; top: 40%;}
+        .s4Text3 .a3 {left: 34%; top: 44%;}
+        .s4Text3 .a4 {left: 36%; top: 48%;}
+        .s4Text3 .a5 {left: 38%; top: 52%;}
+        .s4Text3 .a6 {left: 40%; top: 56%;}
 
         /* section5 */
         .s5Text1 {
             font-size: 10vw;
             font-weight: 800;
-            color: #fff;
+            color: #0E273C;
         }
         .s5Text1 {
             left: 50%;
@@ -404,7 +366,7 @@
             padding: 1vw 0;
         }
         .s5Text2 p {
-            color: #fff;
+            color: #000;
             margin-left: 50%;
             transform: translateX(-6em);
             font-size: 5vw;
@@ -668,35 +630,23 @@
             </div>
             <div class="s4Text2 fixed"
                 data-0="display: none;"
-                data-43000="display: none;"
-                data-43001="display: block;"
+                data-43000="display: block;"
+                data-70000="display: block;"
+                data-70001="display: none;"
             >
-                <div class="stars"
-                    data-43000="background-position: 0 0;"
-                    data-50000="background-position: -1000px 5000px;"
-                ></div>
-                <div class="twinkling"></div>
-                <div class="clouds"></div>
+                <div class="ani"
+                    data-43000="transform: translate3d(0, 0, -1000px) rotate(0deg); opacity: 0;"
+                    data-45000="transform: translate3d(0, 0, 0px) rotate(360deg); opacity: 1;"
+                    data-45500="transform: translate3d(0, 0, 0px) rotate(365deg); opacity: 1;"
+                    data-69000="transform: translate3d(0, 0, 0px) rotate(365deg); opacity: 1;"
+                    data-70000="transform: translate3d(0, 0, -1000px) rotate(0deg); opacity: 0;"
+                >ANIMATION</div>
             </div>
             <div class="s4Text3 fixed"
                 data-0="display: none;"
                 data-43000="display: block;"
                 data-70000="display: block;"
                 data-70001="display: none;"
-            >
-                <div class="ani"
-                    data-43000="transform: translate3d(0, 20px, -1000px) rotate(0deg); opacity: 0;"
-                    data-45000="transform: translate3d(0, 20px, 0px) rotate(360deg); opacity: 1;"
-                    data-45500="transform: translate3d(0, -300px, 0px) rotate(365deg); opacity: 1;"
-                    data-65000="transform: translate3d(0, -300px, 0px) rotate(365deg); opacity: 1;"
-                    data-66000="transform: translate3d(0, -300px, -1000px) rotate(0deg); opacity: 0;"
-                >ANIMATION</div>
-            </div>
-            <div class="s4Text4 fixed"
-                data-0="display: none;"
-                data-43000="display: block;"
-                data-66000="display: block;"
-                data-66001="display: none;"
             >
                 <div class="a1 fixed"
                     data-46500="left: 30%; top: 36%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
@@ -795,15 +745,15 @@
         <section id="section5">
             <div class="s5Text1 fixed"
                 data-0="top: 50%; display: none;"
-                data-66001="top: 50%; display: block;"
-                data-67000="top: 50%; display: block;"
-                data-70000="top: 30%; display: block;"
+                data-71501="top: 50%; display: block;"
+                data-71500="top: 50%; display: block;"
+                data-72500="top: 30%; display: block;"
             >
                 CONTACT
             </div>
             <div class="s5Text2 fixed"
                 data-0="left: 55%; top: 60%; display: none;"
-                data-70000="left: 55%; top: 60%; display: block;"
+                data-72500="left: 55%; top: 60%; display: block;"
                 data-end="left: 55%; top: 60%; display: block;"
             ></div>
         </section>

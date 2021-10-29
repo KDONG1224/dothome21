@@ -298,42 +298,115 @@
         .s4Text2 {
             width: 100vw;
             height: 100vh;
+            background-color: #340468;
+            margin: 0;
+            overflow: hidden;
+            perspective: 3.125vmin;
         }
-        .s4Text2 .stars {
-            background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-            z-index:0;
+        .s4Text2::after {
+            background-color: #340468;
+            border-radius: 50%;
+            box-shadow: 0 0 2.5vmin 2.5vmin #340468;
+            content: "";
+            height: 2.5vmin;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 2.5vmin;
         }
-        .s4Text2 .twinkling {
-            background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-            z-index:1;
-            animation: move-twink-back 200s linear infinite;
+        .s4Text2 .polygon  {
+            animation: 4s linear infinite polygon;
+            left: 50%; top: 50%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotatex(90deg) rotatey(0) translatey(-25vmin);
         }
-        .s4Text2 .clouds {
-            background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-            z-index:3;
-            animation: move-clouds-back 200s linear infinite;
+        @keyframes polygon {
+            100% {transform: rotatex(90deg) rotatey(360deg) translatey(0);}
         }
-        .s4Text2 .stars,
-        .s4Text2 .twinkling,
-        .s4Text2 .clouds {
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            width:100%;
-            height:100%;
-            display:block;
+        .side {
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/231848/fractal-fire-sky-seamless-background.jpg);
+            background-size: 159.129894029% 25%;
+            filter: hue-rotate(-10deg);
+            min-height: 100vh;
+            position: absolute;
+            transform-origin: 0;
+            width: calc(9.94561837681% + 1px);
+
+            /* @for $i from 1 through $n {
+                &:nth-child(#{$i}) {
+                background-position: ($a * $i * -1) 0;
+                transform: rotatey(360deg / $n * $i) translate3d(-50%, -50%, $r);
+                }
+            } */
         }
-        @keyframes move-twink-back {
-            from {background-position:0 0;}
-            to {background-position: -10000px 5000px;}
+        .side:nth-child(1) {
+            background-position: -9.945618377% 0;
+            transform: rotatey(22.5deg) translate3d(-50%, -50%, 25px);
         }
-        @keyframes move-clouds-back {
-            from {background-position: 0 0;}
-            to {background-position: 10000px 0;}
+        .side:nth-child(2) {
+            background-position: -39.78247351% 0;
+            transform: rotatey(11.25deg) translate3d(-50%, -50%, 25px);
         }
-        .s4Text3 {
+        .side:nth-child(3) {
+            background-position: -89.51056539% 0;
+            transform: rotatey(7.5deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(4) {
+            background-position: -159.129894% 0;
+            transform: rotatey(5.625deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(5) {
+            background-position: -248.6404594% 0;
+            transform: rotatey(4.5deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(6) {
+            background-position: -358.0422616% 0;
+            transform: rotatey(3.75deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(7) {
+            background-position: -487.3353005% 0;
+            transform: rotatey(3.214285714deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(8) {
+            background-position: -636.5195761% 0;
+            transform: rotatey(2.8125deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(9) {
+            background-position: -805.5950885% 0;
+            transform: rotatey(2.5deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(10) {
+            background-position: -994.5618377% 0;
+            transform: rotatey(2.25deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(11) {
+            background-position: -1203.419824% 0;
+            transform: rotatey(2.045454545deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(12) {
+            background-position: -1432.169046% 0;
+            transform: rotatey(1.875deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(13) {
+            background-position: -1680.809506% 0;
+            transform: rotatey(1.730769231deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(14) {
+            background-position: -1949.341202% 0;
+            transform: rotatey(1.607142857deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(15) {
+            background-position: -2237.764135% 0;
+            transform: rotatey(1.5deg) translate3d(-50%, -50%, 25px);
+        }
+        .side:nth-child(16) {
+            background-position: -2546.078304% 0;
+            transform: rotatey(1.40625deg) translate3d(-50%, -50%, 25px);
+        }
+
+        /* .s4Text3 {
             color: #fff;
             font-size: 10vw;
             perspective: 500px;
@@ -367,9 +440,9 @@
                 -.1vw 0vw .2vw #5C0704, -.2vw 0vw .2vw #5C0704, -.4vw 0vw .2vw #5C0704, .2vw 0vw .5vw #5C0704;
                 color: #705C12;
             }
-        }
+        } */
 
-        .s4Text4 {
+        /* .s4Text4 {
             width: 100vw;
             height: 100vh;
         }
@@ -383,13 +456,13 @@
         .s4Text4 .a3 {left: 34%; top: 44%;}
         .s4Text4 .a4 {left: 36%; top: 48%;}
         .s4Text4 .a5 {left: 38%; top: 52%;}
-        .s4Text4 .a6 {left: 40%; top: 56%;}
+        .s4Text4 .a6 {left: 40%; top: 56%;} */
 
         /* section5 */
-        .s5Text1 {
+        /* .s5Text1 {
             font-size: 10vw;
             font-weight: 800;
-            color: #fff;
+            color: #0E273C;
         }
         .s5Text1 {
             left: 50%;
@@ -404,12 +477,12 @@
             padding: 1vw 0;
         }
         .s5Text2 p {
-            color: #fff;
+            color: #000;
             margin-left: 50%;
             transform: translateX(-6em);
             font-size: 5vw;
             font-weight: 500;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -671,14 +744,26 @@
                 data-43000="display: none;"
                 data-43001="display: block;"
             >
-                <div class="stars"
-                    data-43000="background-position: 0 0;"
-                    data-50000="background-position: -1000px 5000px;"
-                ></div>
-                <div class="twinkling"></div>
-                <div class="clouds"></div>
+                <div class="polygon">
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                </div>
             </div>
-            <div class="s4Text3 fixed"
+            <!-- <div class="s4Text3 fixed"
                 data-0="display: none;"
                 data-43000="display: block;"
                 data-70000="display: block;"
@@ -688,15 +773,13 @@
                     data-43000="transform: translate3d(0, 20px, -1000px) rotate(0deg); opacity: 0;"
                     data-45000="transform: translate3d(0, 20px, 0px) rotate(360deg); opacity: 1;"
                     data-45500="transform: translate3d(0, -300px, 0px) rotate(365deg); opacity: 1;"
-                    data-65000="transform: translate3d(0, -300px, 0px) rotate(365deg); opacity: 1;"
-                    data-66000="transform: translate3d(0, -300px, -1000px) rotate(0deg); opacity: 0;"
                 >ANIMATION</div>
-            </div>
-            <div class="s4Text4 fixed"
+            </div> -->
+            <!-- <div class="s4Text4 fixed"
                 data-0="display: none;"
                 data-43000="display: block;"
-                data-66000="display: block;"
-                data-66001="display: none;"
+                data-70000="display: block;"
+                data-70001="display: none;"
             >
                 <div class="a1 fixed"
                     data-46500="left: 30%; top: 36%; transform: translate(-50%, -50%) scale(0); opacity: 1;"
@@ -788,25 +871,25 @@
                         on <a href="https://codepen.io">CodePen</a>.
                     </iframe>
                 </div>
-            </div>
+            </div> -->
         </section>
         <!-- section4 -->
 
-        <section id="section5">
+        <!-- <section id="section5">
             <div class="s5Text1 fixed"
                 data-0="top: 50%; display: none;"
-                data-66001="top: 50%; display: block;"
-                data-67000="top: 50%; display: block;"
-                data-70000="top: 30%; display: block;"
+                data-71501="top: 50%; display: block;"
+                data-71500="top: 50%; display: block;"
+                data-72500="top: 30%; display: block;"
             >
                 CONTACT
             </div>
             <div class="s5Text2 fixed"
                 data-0="left: 55%; top: 60%; display: none;"
-                data-70000="left: 55%; top: 60%; display: block;"
+                data-72500="left: 55%; top: 60%; display: block;"
                 data-end="left: 55%; top: 60%; display: block;"
             ></div>
-        </section>
+        </section> -->
         <!-- section5 -->
     </div>
     <!-- //contents -->
@@ -822,101 +905,101 @@
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
 
-        const prefix = " ";
-        const skills = [
-        "Email",
-        "gkfl8809@naver.com",
-        "Kako",
-        "kdong1224",
-        "Instagram",
-        "@noyclah_jdk",
-        "Phone",
-        "010 2377 2418"
-        ].map((s) => `${s}`);
-        const delay = 5;
-        const step = 1;
-        const tail = 5;
-        const timeout = 75;
+        // const prefix = " ";
+        // const skills = [
+        // "Email",
+        // "gkfl8809@naver.com",
+        // "Kako",
+        // "kdong1224",
+        // "Instagram",
+        // "@noyclah_jdk",
+        // "Phone",
+        // "010 2377 2418"
+        // ].map((s) => `${s}`);
+        // const delay = 5;
+        // const step = 1;
+        // const tail = 5;
+        // const timeout = 75;
 
-        const p = document.createElement("p");
-        document.querySelector(".s5Text2").appendChild(p);
+        // const p = document.createElement("p");
+        // document.querySelector(".s5Text2").appendChild(p);
 
-        const colors = ["red", "green", "blue", "yellow", "cyan", "magenta"];
-        function getRandomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
-        }
-        function getRandomChar() {
-        return String.fromCharCode(Math.random() * (127 - 33) + 33);
-        }
-        function getRandomColoredString(n) {
-        const fragment = document.createDocumentFragment();
-        for (let i = 0; i < n; i++) {
-            const char = document.createElement("span");
-            char.textContent = getRandomChar();
-            char.style.color = getRandomColor();
-            fragment.appendChild(char);
-        }
-        return fragment;
-        }
+        // const colors = ["red", "green", "blue", "yellow", "cyan", "magenta"];
+        // function getRandomColor() {
+        // return colors[Math.floor(Math.random() * colors.length)];
+        // }
+        // function getRandomChar() {
+        // return String.fromCharCode(Math.random() * (127 - 33) + 33);
+        // }
+        // function getRandomColoredString(n) {
+        // const fragment = document.createDocumentFragment();
+        // for (let i = 0; i < n; i++) {
+        //     const char = document.createElement("span");
+        //     char.textContent = getRandomChar();
+        //     char.style.color = getRandomColor();
+        //     fragment.appendChild(char);
+        // }
+        // return fragment;
+        // }
 
-        const $ = {
-            text: "",
-            prefixP: -tail,
-            skillI: 0,
-            skillP: 0,
-            direction: "forward",
-            delay,
-            step
-        };
+        // const $ = {
+        //     text: "",
+        //     prefixP: -tail,
+        //     skillI: 0,
+        //     skillP: 0,
+        //     direction: "forward",
+        //     delay,
+        //     step
+        // };
 
-        function render() {
-        const skill = skills[$.skillI];
+        // function render() {
+        // const skill = skills[$.skillI];
 
-        if ($.step) {
-            $.step--;
-        } else {
-            $.step = step;
-            if ($.prefixP < prefix.length) {
-            if ($.prefixP >= 0) {
-                $.text += prefix[$.prefixP];
-            }
-            $.prefixP++;
-            } else {
-            if ($.direction === "forward") {
-                if ($.skillP < skill.length) {
-                $.text += skill[$.skillP];
-                $.skillP++;
-                } else {
-                if ($.delay) {
-                    $.delay--;
-                } else {
-                    $.direction = "backward";
-                    $.delay = delay;
-                }
-                }
-            } else {
-                if ($.skillP > 0) {
-                $.text = $.text.slice(0, -1);
-                $.skillP--;
-                } else {
-                $.skillI = ($.skillI + 1) % skills.length;
-                $.direction = "forward";
-                }
-            }
-            }
-        }
+        // if ($.step) {
+        //     $.step--;
+        // } else {
+        //     $.step = step;
+        //     if ($.prefixP < prefix.length) {
+        //     if ($.prefixP >= 0) {
+        //         $.text += prefix[$.prefixP];
+        //     }
+        //     $.prefixP++;
+        //     } else {
+        //     if ($.direction === "forward") {
+        //         if ($.skillP < skill.length) {
+        //         $.text += skill[$.skillP];
+        //         $.skillP++;
+        //         } else {
+        //         if ($.delay) {
+        //             $.delay--;
+        //         } else {
+        //             $.direction = "backward";
+        //             $.delay = delay;
+        //         }
+        //         }
+        //     } else {
+        //         if ($.skillP > 0) {
+        //         $.text = $.text.slice(0, -1);
+        //         $.skillP--;
+        //         } else {
+        //         $.skillI = ($.skillI + 1) % skills.length;
+        //         $.direction = "forward";
+        //         }
+        //     }
+        //     }
+        // }
 
-        p.textContent = $.text;
-        p.appendChild(
-            getRandomColoredString(
-            $.prefixP < prefix.length
-                ? Math.min(tail, tail + $.prefixP)
-                : Math.min(tail, skill.length - $.skillP)
-            )
-        );
-        setTimeout(render, timeout);
-        }
-        setTimeout(render, 500);
+        // p.textContent = $.text;
+        // p.appendChild(
+        //     getRandomColoredString(
+        //     $.prefixP < prefix.length
+        //         ? Math.min(tail, tail + $.prefixP)
+        //         : Math.min(tail, skill.length - $.skillP)
+        //     )
+        // );
+        // setTimeout(render, timeout);
+        // }
+        // setTimeout(render, 500);
 
     </script>
 </body>
