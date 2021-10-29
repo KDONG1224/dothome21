@@ -54,6 +54,9 @@ img {
     padding: 20px 0;
     display: inline-block;
 }
+#aside nav .mainMenu .subMenu a.open {
+    color: #0368EA;
+}
 #aside nav .mainMenu .subMenu ul {
     padding: 10px 0;
     display: none;

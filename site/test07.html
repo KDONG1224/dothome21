@@ -225,12 +225,10 @@
                 
                     $(this).next("ul").slideDown(350);
                     $(this).toggleClass("open");
-                    $(this).css("color", "#0368EA");
                     
                 } else if($(this).hasClass("open")) {
                     $(this).removeClass("open");
                     $(this).next("ul").slideUp(350);
-                    $(this).css("color", "black");
                 }
             });
         });
