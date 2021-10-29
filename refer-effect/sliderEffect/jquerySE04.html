@@ -281,7 +281,7 @@ let currentIndex1 = 0;
 let sliderHeight1 = slider1.height();
 
 setInterval(function(){
-    currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
 
     let sliderPosition = currentIndex1 * -sliderHeight1;
     sliderInner1.animate({top: sliderPosition}, 600, "easeOutExpo");

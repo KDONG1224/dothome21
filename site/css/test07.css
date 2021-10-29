@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* id */
+#body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-family: 'Nanum Gothic';
+}
+#aside {
+    flex: 0 0 28%;
+}
+#main {
+    flex: 0 0 70%;
+}
+
+/* aside */
+#aside h2 {}
+#aside h2 a {
+    display: inline-block;
+    font-size: 1vw;
+    color: transparent;
+    background: url(../img/test07/header__logo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 40px;
+}
+#aside nav {
+    margin-top: 50px;
+}
+#aside nav .mainMenu {}
+#aside nav .mainMenu .subMenu {}
+#aside nav .mainMenu .subMenu a {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0;
+    display: inline-block;
+}
+#aside nav .mainMenu .subMenu ul {
+    padding: 10px 0;
+    display: none;
+}
+#aside nav .mainMenu .subMenu ul > li {}
+#aside nav .mainMenu .subMenu ul > li:last-child {
+    padding-bottom: 20px;
+}
+#aside nav .mainMenu .subMenu ul li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+/* main */
+/* banner */
+.banner {
+    display: flex;
+}
+.slider-img {
+    width: 700px;
+    height: 380px;
+    overflow: hidden;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-inner {
+    position: relative;
+    width: 700px;
+    height: 1520px;
+    overflow: hidden;
+}
+.slider-inner .slider {
+    float: left;
+    width: 700px;
+    height: 380px;
+    position: relative;
+}
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: 'NEXONLv1Gothic';
+}
+.slider-inner .slider:nth-child(1) {
+    z-index: 3;
+}
+.slider-inner .slider:nth-child(2) {
+    z-index: 2;
+}
+.slider-inner .slider:nth-child(3) {
+    z-index: 1;
+}
+.slider-inner .slider::before {
+    content: attr(data-name);
+}
+
+/* tabMenu */
+.tabMenu {
+    margin: 50px 0;
+}
+.tabMenu .tab-btn {}
+.tabMenu .tab-btn ul {
+    display: flex;
+    justify-content: center;
+}
+.tabMenu .tab-btn ul li {}
+.tabMenu .tab-btn ul li a {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #ddd;
+    font-weight: 800;
+}
+.tabMenu .tab-btn ul li.active a {
+    color: #000;
+}
+.tabMenu .tab-btn ul li .child {
+    position: relative;
+}
+.tabMenu .tab-btn ul li .child::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 3px; height: 20px;
+    background: #000;
+}
+
+.tab-cont {
+    display: flex;
+    justify-content: space-between;
+}
+.tab-cont .service {
+    text-align: center;
+}
+.tab-cont .service a {}
+.tab-cont .service a img {
+    width: 80%;
+}
+.tab-cont div p {
+    display: block;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #373737;
+}
+.cont2 {
+    display: none;
+}
+
+/* noticeWrap */
+.noticeWrap {
+    margin-top: 50px;
+}
+.noticeWrap .row {
+    padding: 20px;
+    background: #F7F7F7;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+    padding: 5px;
+}
+.noticeWrap .notice {
+    flex: 0 0 30%;
+    border: 1px solid #D0D2E1;
+    background: #fff;
+}
+.noticeWrap .notice strong {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-weight: 800;
+    position: relative;
+}
+.noticeWrap .notice strong::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 20px; height: 20px;
+    background: url(../img/test07/plus.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.noticeWrap .notice img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.noticeWrap .notice .desc {}
+.noticeWrap .notice .desc span {
+    display: inline-block;
+    position: relative;
+}
+.noticeWrap .notice .desc span::before {
+    content: '';
+    position: absolute;
+    left: 15px; top: 12px;
+    width: 2px; height: 2px;
+    background: #595959;
+    border-radius: 50%;
+}
+.noticeWrap .notice .desc span a {
+    display: block;
+    width: 175px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 0;
+    margin-left: 20px;
+    color: #595959;
+}
+
+/* footer */
+#footer {
+    margin-top: 100px;
+    background: #EDF2F8;
+}
+#footer .footerWrap {
+    overflow: hidden;
+    padding: 10px;
+}
+#footer .footerWrap .footer__logo {
+    float: left;
+    width: 50px;
+}
+#footer .footerWrap .footer__logo img {
+    width: 100%;
+    margin-top: 4px;
+}
+#footer .footerWrap .address {
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#footer .footerWrap .address p {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 0;
+    color: #2F2E2C;
+}
+#footer .footerWrap .footer__sns {
+    float: right;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+    background-image: url(../img/test07/footer__sns.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
