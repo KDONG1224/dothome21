@@ -74,6 +74,10 @@
             font-family: 'CookieRun-Regular';
             font-size: 30px;
         }
+        .title span {
+            font-size: 30px;
+            cursor: pointer;
+        }
 
         /* success */
         .success {
@@ -180,6 +184,22 @@
             background-image: url(../assets/img/cardBG01.jpg);
             background-size: cover;
         }
+        .cardWrap .card .front.bg01 {
+            background-image: url(../assets/img/cardBG01.jpg);
+            background-size: cover;
+        }
+        .cardWrap .card .front.bg02{
+            background-image: url(../assets/img/cardBG02.jpg);
+            background-size: cover;
+        }
+        .cardWrap .card .front.bg03{
+            background-image: url(../assets/img/cardBG03.jpg);
+            background-size: cover;
+        }
+        .cardWrap .card .front.bg04{
+            background-image: url(../assets/img/cardBG04.jpg);
+            background-size: cover;
+        }
         .card[data-type=img1] .back {
             background-image: url(../assets/img/polar-bear.png);
         }
@@ -229,6 +249,10 @@
                 <p class="attempts">시도 : <span>0</span></p>
                 <p class="wins">성공 : <span>0</span></p>
             </div>
+            <span class="bg_btn1"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></span>
+            <span class="bg_btn2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+            <span class="bg_btn3"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span>
+            <span class="bg_btn4"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></span>
         </article>
         <!-- //title -->
 
@@ -247,75 +271,75 @@
         <!-- cardWrap -->
         <section class="cardWrap">
             <div class="card" data-type="img1" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img1" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img2" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img2" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img3" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img3" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img4" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img4" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img5" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img5" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img6" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img6" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img7" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img7" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img8" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img8" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img9" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
             <div class="card" data-type="img9" data-matched="false">
-                <div class="front"></div>
+                <div class="front bg01"></div>
                 <div class="back"></div>
             </div>
         </section>
@@ -356,6 +380,24 @@
             winsCount = 0,   //우승 횟수
             card1, card2, msg;
 
+
+        $(".bg_btn1").click(function(e){
+            e.preventDefault();
+            $(".card .front").toggleClass("bg01").siblings().removeClass("bg02").removeClass("bg03").removeClass("bg04");
+        })
+        $(".bg_btn2").click(function(e){
+            e.preventDefault();
+            $(".card .front").toggleClass("bg02").siblings().removeClass("bg01").removeClass("bg03").removeClass("bg04");
+        })
+        $(".bg_btn3").click(function(e){
+            e.preventDefault();
+            $(".card .front").toggleClass("bg03").siblings().removeClass("bg02").removeClass("bg01").removeClass("bg04");
+        })
+        $(".bg_btn4").click(function(e){
+            e.preventDefault();
+            $(".card .front").toggleClass("bg04").siblings().removeClass("bg02").removeClass("bg03").removeClass("bg01");
+        })
+            
         // audio 버튼을 클릭하면 꺼지고 클릭하면 켜지게 하기
         $btnSound.on("click", function(){
             $(this).toggleClass("is-playing");
