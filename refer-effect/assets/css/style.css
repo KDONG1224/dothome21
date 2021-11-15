@@ -458,8 +458,7 @@ a {
 }
 
 #main.game {
-  background: -webkit-gradient(linear, left top, left bottom, from(#231557), color-stop(29%, #44107A), color-stop(88%, #FF1361), to(#fff700dc));
-  background: linear-gradient(to bottom, #231557 0%, #44107A 29%, #FF1361 88%, #fff700dc 100%);
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 }
 
 #main.game #contents h1 {

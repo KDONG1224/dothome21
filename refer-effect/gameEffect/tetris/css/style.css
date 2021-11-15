@@ -12,6 +12,11 @@ ul {
 body {
     height: 100%;
     overflow: hidden;
+    background: url(../img/terisBG.jpg) no-repeat center top;
+    background-size: cover;
+}
+.wrapper {
+    position: relative;
 }
 .game-text {
     display: none;
@@ -26,6 +31,7 @@ body {
     top: 0;
     color: #fff;
     font-size: 50px;
+    z-index: 999;
 }
 .game-text > button {
     padding: 0.3rem 1rem 0.5rem;
@@ -39,8 +45,12 @@ body {
     text-align: center;
     font-size: 36px;
     margin-bottom: 2rem;
+    color: #fff;
+    font-weight: bold;
 }
-
+.playground {
+    position: relative;
+}
 .playground > ul {
     border: 1px solid #333;
     width: 250px;
@@ -56,30 +66,44 @@ body {
 .playground > ul > li > ul > li {
     width: 25px;
     height: 25px;
-    outline: 1px solid #ccc;
+    outline: 1px solid #fecffd23;
 }
 .squre {
-    background: #2c82c9;
+    background: #f8fb33;
 }
 .bar {
-    background: salmon;
+    background: #fb68b7;
 }
 .tree {
-    background: #67c23a;
+    background: #ff972e;
 }
 .zee {
-    background: #e6a23c;
+    background: #83ff56;
 }
 .elLeft {
-    background: #8e44ad;
+    background: #e093ff;  
 }
 .elRight {
-    background: #16a085;
+    background: #63fffc;
 }
-
-.pause {
+.pause, .play {
     width: 100%;
 }
+.play button,
 .pause button {
     padding: 10px 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50%;
+}
+.play button {
+    position: absolute;
+    top: 0; left: 38vw;
+}
+.pause button {
+    position: absolute;
+    top: 3vw; left: 38vw;
 }
