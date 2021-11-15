@@ -82,6 +82,8 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 	margin-top: 20px;
 	font-weight: 500;
     font-family: 'Fredoka One', cursive;
+	position: relative;
+	z-index: 9999 !important;
 }
 #header h3{
 	margin-bottom: 30px;
