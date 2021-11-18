@@ -75,10 +75,10 @@ body {
     height: 420px;
 }
 .swiper-wrapper .swiper-slide .slider-inner.inner1 {
-    background-image: url('https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_02.png')
+    background-image: url('../img/clovabanner.jpg')
 }
 .swiper-wrapper .swiper-slide .slider-inner.inner2 {
-    background-image: url('https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_01.png')
+    background-image: url('../img/clovabanner1.jpg')
 }
 
 /* section1 */
