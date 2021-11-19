@@ -1,0 +1,594 @@
+@charset "utf-8";
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic';
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+li {
+    list-style: none;
+}
+body,
+input,
+textarea,
+select,
+button,
+table {
+    font-family: 'Nanum Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;
+    color: #222;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* 레이아웃 */
+#header {
+}
+#main {
+    position: relative;
+    z-index: 1;
+    margin-top: -400px;
+}
+#banner {
+    position: relative;
+    z-index: 3;
+}
+#date {
+    background: #F4F8F9;
+    padding: 70px 0;
+}
+#commu {
+    padding: 100px 0;
+}
+#footer {
+    background: #27405F;
+}
+
+/* 컨테이너 */
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 헤더영역 */
+.header {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    font-size: 30px;
+    line-height: 200px;
+}
+.header__logo a {
+    background: url(../img/test08/header_logo.jpg) no-repeat center center;
+    background-size: contain;
+    color: transparent;
+    padding: 15px 25px;
+}
+.header nav {
+    margin-top: 85px;
+}
+/* .header nav .mainMenu {
+    display: flex;
+}
+.header nav .subMenu {
+    display: block;
+}
+.header nav .subMenu .sub_link {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+.header nav .subMenu ul {
+    display: none;
+}
+.header nav .subMenu:hover ul {
+    display: block;
+    background: #fff;
+    position: relative;
+    z-index: 999;
+}
+.header nav .subMenu ul li {}
+.header nav .subMenu ul li .sub_link_a {
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    display: block;
+    padding: 12px 0;
+} */
+.header nav {
+    z-index: 1000;
+    font-size: 20px;
+    font-weight: 800;
+    height: 500px;
+}
+.header nav .main-menu {
+    display: flex;
+}
+.sub-menu-parent {
+    position: relative;
+    z-index: 1000;
+}
+.sub-menu-parent a {
+    padding: 0px 20px;
+}
+.sub-menu {
+    z-index: 1000;
+    visibility: hidden;
+    /* hides sub-menu */
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    transform: translateY(-2em);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, linear 0.01s;
+}
+.sub-menu-parent:hover .sub-menu {
+    visibility: visible;
+    /* shows sub-menu */
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+    /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+.sub-menu li {
+    position: relative;
+    background: #fff;
+}
+.sub-menu li a {
+    position: relative;
+    font-size: 15px;
+    padding: 50px 0;
+}
+
+/* 배너영역 */
+.bannerWrap {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    z-index: -1;
+}
+.banner-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1903px;
+    height: 800px;
+    overflow: hidden;
+}
+.banner-img img {
+    width: 1903px;
+}
+.banner-inner {
+    position: relative;
+    width: 9515px;
+    height: 800px;
+    overflow: hidden;
+}
+.banner-inner .banner {
+    float: left;
+    width: 1903px;
+    height: 800px;
+    position: relative;
+}
+.banner-inner .banner::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    padding: 5px 10px 3px;
+}
+/* .banner-inner .banner:nth-child(1) {
+    z-index: 5;
+}
+.banner-inner .banner:nth-child(2) {
+    z-index: 4;
+}
+.banner-inner .banner:nth-child(3) {
+    z-index: 3;
+}
+.banner-inner .banner:nth-child(4) {
+    z-index: 2;
+}
+.banner-inner .banner:nth-child(5) {
+    z-index: 1;
+} */
+.banner-inner .banner::before {
+    content: attr(data-name);
+}
+.banner-btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.banner-btn .prev {
+    width: 56px; height: 56px;
+    border: 12px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(45deg);
+    left: 2%; top: 45%;
+}
+.banner-btn .next {
+    width: 56px;
+    height: 56px;
+    border: 12px solid #fff;
+    border-bottom: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+    right: 3.5%;
+    top: 45%;
+}
+
+/* 사업일정 영역 */
+.date {}
+.date h3 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.date h3::after {
+    content: '';
+    width: 52px; height: 51px;
+    position: absolute;
+    right: 0; top: 0;
+    background: url(../img/test08/plus-btn.jpg);
+    cursor: pointer;
+}
+.date__boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.date__box {
+    width: 275px;
+    background: #fff;
+    border: 1px solid #DADBDD;
+    padding: 20px;
+}
+.date__box p {
+    display: inline-block;
+    border: 3px solid #90A5B8;
+    font-weight: 800;
+    color: #4F6483;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+}
+.date__box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.date__box__term {
+    display: flex;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.date__box .date__term {}
+.date__box .date__term span {
+    display: block;
+    padding: 3px 6px;
+    line-height: 1.6;
+    font-size: 11px;
+    background-color: #6590D3;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.date__box .date__date {}
+.date__box .date__date span {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 2px;
+}
+
+/* 커뮤니티 */
+.commu {}
+.commu__top {
+    display: flex;
+    justify-content: space-between;
+}
+.commu__left {
+    flex: 0 0 28%;
+    border: 1px solid #D7D7D7;
+    padding: 20px;
+}
+.commu__tab {}
+.commu__tab ul {
+    display: flex;
+}
+.commu__tab ul li {
+    position: relative;
+}
+.commu__tab ul li::after {
+    content: '';
+    width: 2px; height: 15px;
+    position: absolute;
+    right: 10%; top: 20%;
+    background: #000;
+}
+.commu__tab ul li:last-child:after {
+    background: transparent;
+}
+.commu__tab ul li a {
+    padding: 2px 20px 2px 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #888888;
+    position: relative;
+}
+.commu__tab ul li .child::after {
+    content: '';
+    width: 25px; height: 24px;
+    position: absolute;
+    right: -100%; top: 0;
+    background: url(../img/test08/plus-btn.jpg) no-repeat center;
+    background-size: cover;
+}
+.commu__tab ul li.active a {
+    color: #000;
+}
+.commu__tab__cont {
+    margin-top: 20px;
+}
+.commu__tab__cont.cont2 {
+    display: none;
+}
+.commu__desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.commu__desc:last-child {
+    margin-bottom: 10px;
+}
+.commu__desc a {
+    font-size: 12px;
+}
+.commu__desc p {
+    font-size: 10px;
+    color: #929292;
+}
+.commu__right {
+    flex: 0 0 70%;
+    border: 1px solid #D7D7D7;
+    padding: 20px;
+}
+.commu__right h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.commu__right h4::after {
+    content: '';
+    width: 25px;
+    height: 24px;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    background: url(../img/test08/plus-btn.jpg) no-repeat center;
+    background-size: cover;
+}
+.commu__right__box {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+.commu__right__left {
+    flex: 0 0 15;
+}
+.commu__right__center {
+    flex: 0 0 60%;
+}
+.commu__right__right {
+    flex: 0 0 10%;
+}
+.commu__right__left ul {}
+.commu__right__left ul li {}
+.commu__right__left ul li a {
+    background: #3073CE;
+    display: block;
+    color: #CDE8FD;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+.commu__right__center ul {}
+.commu__right__center ul li {
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    color: #232323;
+}
+.commu__right__right ul {}
+.commu__right__right ul li {
+    color: #929292;
+    margin-bottom: 10px;
+}
+.commu__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.commu__bottom .commu__left {
+    background: url(../img/test08/sub_banner.jpg) no-repeat top;
+    background-size: cover;
+}
+.commu__bottom .commu__right {}
+.commu__bottom .commu__right h4 {
+    position: relative;
+}
+.commu__bottom .commu__right h4::after {
+    content: '';
+    width: 25px;
+    height: 24px;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    background: url(../img/test08/plus-btn.jpg) no-repeat center;
+    background-size: cover;
+}
+.commu__bottom .commu__right__box {
+    display: flex;
+    justify-content: space-between;
+}
+.commu__bottom .commu__right__left {
+    flex: 0 0 42%;
+    position: relative;
+}
+.commu__bottom .commu__right__left::after {
+    content: '';
+    width: 1.5px; height: 80px;
+    background: #92929254;
+    position: absolute;
+    right: -18%; top: 0;
+}
+.commu__bottom .commu__right__right {
+    flex: 0 0 42%;
+}
+.commu__right__desc {
+    margin-bottom: 10px;
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.commu__right__desc a {
+    font-size: 12px;
+}
+.commu__right__desc p {
+    font-size: 10px;
+    color: #929292;
+}
+
+/* 푸터영역 */
+.footerWrap {}
+.footer {}
+.footer__top {
+    border-bottom: 1px solid #3F5771;
+}
+.footer__top__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.footer__top ul {
+    display: flex;
+}
+.footer__top ul li {}
+.footer__top ul li a {
+    color: #9EB0C6;
+    font-size: 12px;
+    padding: 0 10px;
+}
+.footer__top .family__sites {}
+.footer__top .family__sites select {
+    background: transparent;
+    border: 1px solid #9EB0C6;
+    color: #9EB0C6;
+    padding: 5px 10px;
+}
+.footer__bottom {
+    padding: 40px 0 100px;
+}
+.footer__bottom__box {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__bottom .left {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__bottom .left h3 {
+    width: 290px;
+}
+.footer__bottom .left h3 a {
+    color: transparent;
+    font-size: 50px;
+    padding: 20px 0;
+    background: url(../img/test08/footer_logo.jpg) no-repeat center;
+    background-size: cover;
+}
+.footer__sns {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 14px;
+}
+.footer__sns .adress {
+    line-height: 20px;
+}
+.footer__sns .adress span {
+    display: block;
+    color: #9EB0C6;
+}
+.footer__sns .sns {
+    margin-left: 40px;
+}
+.footer__sns .sns a {
+    color: transparent;
+    display: inline-block;
+    height: 35px; width: 35px;
+    margin-right: 10px;
+}
+.footer__sns .sns .sns__face {
+    background: url(../img/test08/sns_facebook.jpg) no-repeat center;
+    background-size: cover;
+}
+.footer__sns .sns .sns__twi {
+    background: url(../img/test08/sns-twiter.jpg) no-repeat center;
+    background-size: cover;
+}
+.footer__sns .sns .sns__you {
+    background: url(../img/test08/sns_youtube.jpg) no-repeat center;
+    background-size: cover;
+}
+.footer__bottom .call {
+    position: relative;
+}
+.footer__bottom .call::before {
+    content: '';
+    width: 2px; height: 50px;
+    position: absolute;
+    left: -22%; top: 2%;
+    background: #9eb0c638;
+}
+.footer__bottom .call span {
+    display: block;
+    font-size: 12px;
+    color: #9EB0C6;
+}
+.footer__bottom .call span:last-child {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2px;
+}
