@@ -15,6 +15,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/isotope.css" rel="stylesheet">
     <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/mainBanner.css" rel="stylesheet">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -36,8 +37,8 @@
 
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@webstoryboy" />
-    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:site" content="@kdong1224" />
+    <meta name="twitter:title" content="크동" />
     <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
     <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
 
@@ -98,642 +99,10 @@
         .figma {
             background-color: rgba(228, 228, 228, 0.603);
         }
-        .bg12 {
-            /* background: linear-gradient(to bottom, #ffdde1, #ee9ca7) !important; */
-            /* background: url(../dothome21/illustrator/img/section06-1.jpg) ;
-            background-position: center; */
-        }
         .header_icon li a {
             background-color: #26a76f;
             position: relative;
             z-index: 99;
-        }
-        .header_tit {
-            width: 100%;
-            height: 100%;
-        }
-        .slider_box {
-            width: 120px; 
-            height: 120px; 
-            perspective: 300px;
-            transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
-            margin: 0 auto;
-            padding: 50px 0;
-        }
-        .slider {
-            width: 100%; 
-            height: 100%; 
-            transform-style: preserve-3d;
-            transform: rotateY(0deg) rotateX(0deg);
-        }
-        .slide, 
-        .slide:after, 
-        .slide:before {
-            display: block; 
-            width: 100%; 
-            height: 100%;
-            background: url('https://kdong1224.github.io/dothome21/class/img/img01.jpg');
-            position: absolute;
-            transform-style: preserve-3d;
-            background-size: cover;
-            background-position: center;
-        }
-        .slide.x {
-            transform: rotateY(90deg);
-        } 
-        .slide.x:after {
-            content: '';
-            background-image: url('https://kdong1224.github.io/dothome21/class/img/img03.jpg');
-            transform: translateZ(60px) rotateZ(-90deg);
-        }
-        .slide.x:before {
-            content: '';
-            background-image: url('https://kdong1224.github.io/dothome21/class/img/img02.jpg');
-            transform: translateZ(-60px) rotateZ(-90deg);
-        }
-        .slide.y {
-            transform: rotateX(90deg);
-        } 
-        .slide.y:after {
-            content: '';
-            background-image: url('https://kdong1224.github.io/dothome21/class/img/img06.jpg');
-            transform: translateZ(60px) scale(-1);
-        }
-        .slide.y:before {
-            content: '';
-            background-image: url('https://kdong1224.github.io/dothome21/class/img/img08.jpg');
-            transform: translateZ(-60px);
-        }
-        .slide.z {
-            transform: rotateX(0);
-        } 
-        .slide.z:after {
-            content: '';
-            background-image: url('https://kdong1224.github.io/dothome21/class/img/img10.jpg');
-            transform: translateZ(60px);
-        }
-        .slide.z:before {
-            content: '';
-            background-image: url('https://kdong1224.github.io/dothome21/class/img/img15.jpg');
-            transform: translateZ(-60px);
-        }
-        .slider {
-            -webkit-animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
-            animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
-        }
-        @keyframes rotate {
-            0%, 10% {transform: rotateY(0deg) rotateX(0deg);}
-            15%, 20% {transform: rotateY(180deg) rotateX(0deg);}
-            25%, 35% {transform: rotateY(180deg) rotateX(270deg);}
-            40%, 50% {transform: rotateY(180deg) rotateX(90deg);}
-            55%, 65% {transform: rotateY(-90deg) rotateX(90deg);}
-            70%, 80% {transform: rotateY(90deg) rotateX(90deg);}
-            90%, 95% {transform: rotateY(0deg) rotateX(90deg);}
-        }
-        .main22 {
-            width: 100%;
-            height: 600px;
-            overflow: hidden;
-            position: absolute;
-        }
-        .main22 ul { 
-            margin-bottom: 1.25rem;
-        }
-        .main22 ul.no-bullet {
-            list-style: none;
-        }
-        .main22 .inline-list {
-            margin: 0 auto 1.0625rem auto;
-            margin-left: -1.375rem;
-            margin-right: 0;
-            padding: 0;
-            list-style: none;
-            overflow: hidden; 
-        }
-        .inline-list > li {
-            list-style: none;
-            float: left;
-            margin-left: 1.375rem;
-            display: block; 
-        }
-        .inline-list > li > * {
-            display: block; 
-        }
-        .main22 {
-            background-color: #0c3545;
-            height: 486px;
-        }
-        .absolute {
-            position: absolute;
-        }
-        .cloud_left {
-            width: 150px;
-            height: 50px;
-            overflow: hidden;
-            top: 60px;
-            left: 60px;
-            z-index:999;
-        }
-        .cloud {
-            background: white;
-            border-radius: 50%;
-            display: block;
-        }
-        .cloud_left ul , .land_tree ul {
-            margin: 0px
-        }
-        .cloud_left li:nth-child(1) {
-            width: 50px;
-            height: 50px;
-            margin: 30px 0px 0px 0px;
-        }
-        .cloud_left li:nth-child(2) {
-            width: 70px;
-            height: 70px;
-            margin: 0px 0px 0px -10px;
-        }
-        .cloud_left li:nth-child(3) {
-            width: 40px;
-            height: 40px;
-            margin: 23px 0px 0px -7px;
-        }
-        .cloud_right {
-            width: 150px;
-            height: 50px;
-            overflow: hidden;
-            top: 100px;
-            right: 240px;
-            z-index: 2;
-        }
-        .cloud_right ul , .land_tree ul {
-            margin: 0px
-        }
-        .cloud_right li:nth-child(1) {
-            width: 40px;
-            height: 40px;
-            margin: 36px 0px 0px 1px;
-        }
-        .cloud_right li:nth-child(2) {
-            width: 70px;
-            height: 70px;
-            margin: 0px 0px 0px -11px;
-        }
-        .cloud_right li:nth-child(3) {
-            width: 50px;
-            height: 50px;
-            margin: 31px 0px 0px -13px;
-        }
-        .sea {
-            width: 100%;
-            height: 30px;
-            background: #2a94d6;
-            bottom:7px;
-        }
-        .sea:after {
-            content: '';
-            position: absolute;
-            height: 12px;
-            background: #1D7FBB;
-            bottom: -10px;
-            width: 100%;
-            left: 0px;
-        }
-        .sea span {
-            background-color: #8bd9f5;
-            position: absolute;
-        }
-        .wave1 {
-            width: 100px;
-            height: 3px;
-            left: 420px;
-            top: 10px;
-        }
-        .wave2 {
-            width: 100px;
-            height: 3px;
-            left: 433px;
-            top: 13px;
-        }
-        .wave3 {
-            width: 50px;
-            height: 3px;
-            right: 460px;
-            top: 15px;
-        }
-        .wave4 {
-            width: 50px;
-            height: 3px;
-            right: 467px;
-            top: 18px;
-        }
-        .landscape {
-            bottom: 15px;
-            width: 400px;
-            height: 170px;
-            z-index: 3;
-        }
-        .max_right {
-            right: 0px
-        }
-        .max_right .grass {
-            left:20px;
-        }
-        .max_right .grass:after {
-            right: 0px;
-            bottom: 40px;
-        }
-        .max_right .land_tree {
-            bottom: 40px;
-            left: 30px;
-        }
-        .grass {
-            width: 100%;
-            height: 40px;
-            left: -20px;
-            border-radius: 50px;
-            position: absolute;
-            background: #126c48;
-            bottom: 0px;
-            display: block;
-            z-index: 1
-        }
-        .grass:after {
-            position: absolute;
-            content: '';
-            width: 50%;
-            height: 40px;
-            border-radius: 50px;
-            background: #219065;
-            bottom: 36px;
-        }
-        .leftt-gras {
-            right: 40px !important;
-        }
-        .land_tree {
-            width: auto;
-            height: 50px;
-            display: block;
-            position: absolute;
-            bottom: 40px;
-            overflow: hidden;
-        }
-        .land_tree li {
-            border-radius: 50%;
-        }
-        .land_tree li:nth-child(1) {
-            width: 40px;
-            height: 40px;
-            margin: 30px 0px 0px 0px;
-            background: #219065;
-        }
-        .land_tree li:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            margin: 0px 0px 0px -10px;
-            background: #126c48;
-        }
-        .land_tree li:nth-child(3) {
-            width: 50px;
-            height: 50px;
-            margin: 23px 0px 0px -7px;
-            background: #219065;
-        }
-        .tree1 {
-            background: #21904b;
-            border-radius: 50%;
-            width: 65px;
-            height: 65px;
-            border-right: 5px solid #157C3C;
-            border-bottom: 5px solid #157C3C;
-            z-index: -1;
-            right: 100px;
-            bottom: 120px;
-        }
-        .tree1:after {
-            position: absolute;
-            content: '';
-            width: 2px;
-            height: 50px;
-            background: #FFF;
-            margin: 30px 0px 0px 3px;
-            top: 35px;
-        }
-        .tree2 {
-            background: #26a76f;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            border-right: 5px solid #17955e;
-            border-bottom: 5px solid #17955e;
-            z-index: -1;
-            right: 150px;
-            bottom: 80px;
-        }
-        .tree2:after {
-            position: absolute;
-            content: '';
-            width: 2px;
-            height: 50px;
-            background: #FFF;
-            margin: 23px 10px 0px 0px;
-            top: 27px;
-        }
-        .boat {
-            bottom: 10px;
-            z-index: 1;
-            -webkit-animation: boatanimate 30s linear infinite;
-            -moz-animation: boatanimate 30s linear infinite;
-            -o-animation: boatanimate 30s linear infinite;
-            animation: boatanimate 30s linear infinite;
-        }
-        @-webkit-keyframes boatanimate {
-            0% {right:250px;}
-            100% {right:1040px;}
-        }
-        @-moz-keyframes boatanimate {
-            0% {right:250px;}
-            100% {right:1040px;}
-        }
-        @-o-keyframes boatanimate {
-            0% {right:250px;}
-            100% {right:1040px;}
-        }
-        @keyframes boatanimate {
-            0% {right:250px;}
-            100% {right:1040px;}
-        }
-        .boat-body {
-            width: 100px;
-            height: 20px;
-            background: #e25c45;
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 20px;
-        }
-        .white-body {
-            width: 65px;
-            height: 16px;
-            background: #FFF;
-            margin: 0px 13px;
-            border-top-left-radius: 20px;
-        }
-        .windows {
-            margin: 0px 12px !important;
-        }
-        .boat .circle {
-            background: #a18e6e;
-            width: 7px;
-            height: 7px;
-            margin: 5px 3px;
-            border-radius: 50%;
-        }
-        .smokestack {
-            width: 10px;
-            height: 17px;
-            background: #a18e6e;
-            bottom: 30px;
-            margin-left: 45px;
-        }
-        .plane {
-            top: 40%;
-            left: 80px;
-            -webkit-animation: planeanimate 30s linear infinite;
-            -moz-animation: planeanimate 30s linear infinite;
-            -o-animation: planeanimate 30s linear infinite;
-            animation: planeanimate 30s linear infinite;
-        }
-        @-webkit-keyframes planeanimate {
-            0% {left:-10%;}
-            100% {left:110%;}
-        }
-        @-moz-keyframes planeanimate {
-            0% {left:-10%;}
-            100% {left:110%;}
-        }
-        @-o-keyframes planeanimate {
-            0% {left:-10%;}
-            100% {left:110%;}
-        }
-        @keyframes planeanimate {
-            0% {left:-10%;}
-            100% {left:110%;}
-        }
-        .plane-body {
-            width: 90px;
-            height: 15px;
-            background: #FFF;
-            border-bottom: 4px solid #ECECEC;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-        .plane .circle {
-            width: 5px;
-            height: 5px;
-            background: #E25C45;
-            border-radius: 50%;
-            margin: 4px 5px 0 0;
-            float: right;
-        }
-        .wing1 {
-            background: #E25C45;
-            width: 15px;
-            height: 20px;
-            float: right;
-            bottom: 3px;
-            position: absolute;
-            right: 35px;
-        }
-        .wing1:after {
-            position: absolute;
-            content: '';
-            background: #0C3545;
-            width: 7px;
-            height: 28px;
-            right: -3px;
-            -webkit-transform: rotate(14deg);
-            -moz-transform: rotate(14deg);
-            -o-transform: rotate(14deg);
-            transform: rotate(14deg);
-            top: 3px;
-        }
-        .flipwing {
-            -webkit-transform: scaleY(-1);
-            -moz-transform: scaleY(-1);
-            -o-transform: scaleY(-1);
-            transform: scaleY(-1);
-            bottom: 35px;
-            height: 16px;
-            width: 14px;
-        }
-        .teal {
-            background: #F6D160;
-            width: 16px;
-            height: 23px;
-            bottom: 35px;
-        }
-        .teal:after {
-            position: absolute;
-            content: '';
-            background: #0C3545;
-            width: 7px;
-            height: 28px;
-            right: -3px;
-            -webkit-transform: rotate(-16deg);
-            -moz-transform: rotate(-16deg);
-            -o-transform: rotate(-16deg);
-            transform: rotate(-16deg);
-            top: -7px;
-        }
-        .sun {
-            width: 48px;
-            height: 48px;
-            background: #fab92d;
-            border-radius: 50%;
-            border-bottom:5px solid #eaab23;
-            border-right:5px solid #eaab23;
-            right: 352px;
-            top: 90px;
-            z-index: 1;
-        }
-        .main h1 {
-            margin-top: 143px;
-            margin-left: 110px;
-            color: #FFF;
-            font-size: 30px;
-        }
-        .btn-round {
-            padding: 5px 16px;
-            border: 1px solid #0A2B38;
-            border-radius: 50px;
-            transition:0.2s ease;
-        }
-        .contact-btn {
-            color: #92ADB8;
-            font-size: 17px;
-            top: 50%;
-            right: 45%;
-            position: absolute;
-            z-index: 99;
-            text-decoration: none;
-        }
-        .contact-btn:hover {
-            background: #219065;
-            color: white;
-        }
-        .relative {
-            position: relative;
-        }
-        .fume {
-            margin:0px;
-        }
-        .fume li {
-            background-color: white;
-            border-radius: 50%;
-        }
-        .fume1 {
-            width: 7px;
-            height: 7px;
-            margin-left: 48px;
-            -webkit-animation: smokeup 2.0s linear infinite;
-            -moz-animation: smokeup 2.0s linear infinite;
-            -o-animation: smokeup 2.0s linear infinite;
-            animation: smokeup 2.0s linear infinite;
-        }
-        .fume2 {
-            width: 9px;
-            height: 9px;
-            margin-left: 38px;
-            -webkit-animation: smokeup 2.1s linear infinite;
-            -moz-animation: smokeup 2.1s linear infinite;
-            -o-animation: smokeup 2.1s linear infinite;
-            animation: smokeup 2.1s linear infinite;
-        }
-        .fume3 {
-            width: 12px;
-            height: 12px;
-            margin-left: 48px;
-            -webkit-animation: smokeup 2.2s linear infinite;
-            -moz-animation: smokeup 2.2s linear infinite;
-            -o-animation: smokeup 2.2s linear infinite;
-            animation: smokeup 2.2s linear infinite;
-        }
-        .fume4 {
-            width: 15px;
-            height: 15px;
-            margin-left: 38px;
-            -webkit-animation: smokeup 2.3s linear infinite;
-            -moz-animation: smokeup 2.3s linear infinite;
-            -o-animation: smokeup 2.3s linear infinite;
-            animation: smokeup 2.3s linear infinite;
-        }
-        @-webkit-keyframes smokeup {
-            0% {margin-bottom:-3px; opacity: 1}
-            80% {margin-bottom:7px; opacity: 0}
-            100% {margin-bottom:7px; opacity: 0}
-        }
-        @-moz-keyframes smokeup {
-            0% {margin-bottom:-3px; opacity: 1}
-            80% {margin-bottom:7px; opacity: 0}
-            100% {margin-bottom:7px; opacity: 0}
-        }
-        @-o-keyframes smokeup {
-            0% {margin-bottom:-3px; opacity: 1}
-            80% {margin-bottom:7px; opacity: 0}
-            100% {margin-bottom:7px; opacity: 0}
-        }
-        @keyframes smokeup {
-            0% {margin-bottom:-3px; opacity: 1}
-            80% {margin-bottom:7px; opacity: 0}
-            100% {margin-bottom:7px; opacity: 0}
-        }
-        .r-mountain {
-            border-left: 110px rgba(0, 0, 0, 0) solid;
-            border-right: 110px rgba(0, 0, 0, 0) solid;
-            border-bottom: 170px #B3A385 solid;
-            position: absolute;
-            right: 80px;
-            bottom: 40px;
-        }
-        .r-mountain:before {
-            content: '';
-            position: absolute;
-            left: 0px;
-            border-right: 110px rgba(0, 0, 0, 0) solid;
-            border-bottom: 170px #A18E6E solid;
-        }
-        .r-mountain:after {
-            content: '';
-            position: absolute;
-            left: -39px;
-            border-left: 39px rgba(0, 0, 0, 0) solid;
-            border-right: 39px rgba(0, 0, 0, 0) solid;
-            border-bottom: 60px #FFF solid;
-        }
-        .snow {
-            margin: 0px;
-            position: absolute;
-            top: 9px;
-            right: 153px;
-        }
-        .snow li {
-            background: #FFF;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            margin: 0px;
-            display: inline-block;
-        }
-        .gl:after {
-            position: absolute;
-            content: '';
-            width: 50%;
-            height: 40px;
-            border-radius: 50px;
-            background: #219065;
-            bottom: 36px;
-            left: 0px;
-        }
-        .left_m {
-            left: 0px;
         }
     </style>
 </head>
@@ -862,8 +231,6 @@
                             <div class="slider_box">
                                 <div class="slider">
                                     <div class="slide x"></div>
-                                    <div class="slide y"></div>
-                                    <div class="slide z"></div>
                                 </div>
                             </div>
                         </a>
@@ -1473,16 +840,16 @@
                         <a href="https://www.figma.com/proto/87By3FNKoipSAvti5MQGbt/Javascript-Reference-Book?page-id=0%3A1&node-id=2%3A16&viewport=270%2C48%2C0.1&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA JAVASCRIPT</span>
-                                    <span class="overlay-text-thumb-donut">피그마 자바스크립트</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 자바스크립트</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA JAVASCRIPT</span>
+                                    <span class="overlay-img-donut">JAVASCRIPT</span>
+                                    <span class="overlay-text-thumb-donut">자바스크립트</span>
+                                    <span class="overlay-text-thumb1-donut">자바스크립트</span>
+                                    <span class="overlay-text-thumb2-donut">JAVASCRIPT</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/sea-bottom.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA JAVASCRIPT</h5>
-                                    <p>피그마 자바스크립트</p>
-                                    <span>FIGMA JAVASCRIPT</span>
+                                    <h5>JAVASCRIPT</h5>
+                                    <p>자바스크립트</p>
+                                    <span>JAVASCRIPT</span>
                                 </div>
                             </div>
                         </a> 
@@ -1494,16 +861,16 @@
                         <a href="https://www.figma.com/proto/78g7PCJR1fA12P2BlHBFUa/jQuery-Reference-Book?page-id=0%3A1&node-id=2%3A17&viewport=270%2C48%2C0.12&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA JQUERY</span>
-                                    <span class="overlay-text-thumb-donut">피그마 제이쿼리</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 제이쿼리</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA JQUERY</span>
+                                    <span class="overlay-img-donut">JQUERY</span>
+                                    <span class="overlay-text-thumb-donut">제이쿼리</span>
+                                    <span class="overlay-text-thumb1-donut">제이쿼리</span>
+                                    <span class="overlay-text-thumb2-donut">JQUERY</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/shore_01.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA JQUERY</h5>
-                                    <p>피그마 제이쿼리</p>
-                                    <span>FIGMA JQUERY</span>
+                                    <h5>JQUERY</h5>
+                                    <p>제이쿼리</p>
+                                    <span>JQUERY</span>
                                 </div>
                             </div>
                         </a> 
@@ -1515,16 +882,16 @@
                         <a href="https://www.figma.com/proto/xhQBGOdPahrnmoMk5bF4TO/Script-Reference-Book?page-id=19%3A2&node-id=19%3A328&viewport=241%2C48%2C0.05&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA MOUSE SCRIPT</span>
-                                    <span class="overlay-text-thumb-donut">피그마 마우스 스크립트</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 마우스 스크립트</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA MOUSE SCRIPT</span>
+                                    <span class="overlay-img-donut">MOUSE SCRIPT</span>
+                                    <span class="overlay-text-thumb-donut">마우스 스크립트</span>
+                                    <span class="overlay-text-thumb1-donut">마우스 스크립트</span>
+                                    <span class="overlay-text-thumb2-donut">MOUSE SCRIPT</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/snowman.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA MOUSE SCRIPT</h5>
-                                    <p>피그마 마우스 스크립트</p>
-                                    <span>FIGMA MOUSE SCRIPT</span>
+                                    <h5>MOUSE SCRIPT</h5>
+                                    <p>마우스 스크립트</p>
+                                    <span>MOUSE SCRIPT</span>
                                 </div>
                             </div>
                         </a> 
@@ -1536,16 +903,16 @@
                         <a href="https://www.figma.com/proto/xhQBGOdPahrnmoMk5bF4TO/Script-Reference-Book?page-id=19%3A3&node-id=19%3A2819&viewport=241%2C48%2C0.06&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA SLIDER SCRIPT</span>
-                                    <span class="overlay-text-thumb-donut">피그마 슬라이더 스크립트</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 슬라이더 스크립트</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA SLIDER SCRIPT</span>
+                                    <span class="overlay-img-donut">SLIDER SCRIPT</span>
+                                    <span class="overlay-text-thumb-donut">슬라이더 스크립트</span>
+                                    <span class="overlay-text-thumb1-donut">슬라이더 스크립트</span>
+                                    <span class="overlay-text-thumb2-donut">SLIDER SCRIPT</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/sea_01.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA SLIDER SCRIPT</h5>
-                                    <p>피그마 슬라이더 스크립트</p>
-                                    <span>FIGMA SLIDER SCRIPT</span>
+                                    <h5>SLIDER SCRIPT</h5>
+                                    <p>슬라이더 스크립트</p>
+                                    <span>SLIDER SCRIPT</span>
                                 </div>
                             </div>
                         </a> 
@@ -1557,16 +924,16 @@
                         <a href="https://www.figma.com/proto/xhQBGOdPahrnmoMk5bF4TO/Script-Reference-Book?page-id=19%3A4&node-id=19%3A3988&viewport=241%2C48%2C0.04&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA PARALLAX SCRIPT</span>
-                                    <span class="overlay-text-thumb-donut">피그마 패럴렉스 스크립트</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 패럴렉스 스크립트</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA PARALLAX SCRIPT</span>
+                                    <span class="overlay-img-donut">PARALLAX SCRIPT</span>
+                                    <span class="overlay-text-thumb-donut">패럴렉스 스크립트</span>
+                                    <span class="overlay-text-thumb1-donut">패럴렉스 스크립트</span>
+                                    <span class="overlay-text-thumb2-donut">PARALLAX SCRIPT</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/sea_02.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA PARALLAX SCRIPT</h5>
-                                    <p>피그마 패럴렉스 스크립트</p>
-                                    <span>FIGMA PARALLAX SCRIPT</span>
+                                    <h5>PARALLAX SCRIPT</h5>
+                                    <p>패럴렉스 스크립트</p>
+                                    <span>PARALLAX SCRIPT</span>
                                 </div>
                             </div>
                         </a> 
@@ -1578,16 +945,16 @@
                         <a href="https://www.figma.com/proto/xhQBGOdPahrnmoMk5bF4TO/Script-Reference-Book?page-id=19%3A5&node-id=19%3A1536&viewport=241%2C48%2C0.04&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA GAME SCRIPT</span>
-                                    <span class="overlay-text-thumb-donut">피그마 게임 스크립트</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 게임 스크립트</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA GAME SCRIPT</span>
+                                    <span class="overlay-img-donut">GAME SCRIPT</span>
+                                    <span class="overlay-text-thumb-donut">게임 스크립트</span>
+                                    <span class="overlay-text-thumb1-donut">게임 스크립트</span>
+                                    <span class="overlay-text-thumb2-donut">GAME SCRIPT</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/farm_01.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA GAME SCRIPT</h5>
-                                    <p>피그마 게임 스크립트</p>
-                                    <span>FIGMA GAME SCRIPT</span>
+                                    <h5>GAME SCRIPT</h5>
+                                    <p>게임 스크립트</p>
+                                    <span>GAME SCRIPT</span>
                                 </div>
                             </div>
                         </a> 
@@ -1599,16 +966,16 @@
                         <a href="https://www.figma.com/proto/iJJz6tNEzknMzClb6SzKnY/SCSS-Reference-Book?page-id=0%3A1&node-id=0%3A26&viewport=270%2C48%2C0.05&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA SCSS</span>
-                                    <span class="overlay-text-thumb-donut">피그마 SCSS</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 SCSS</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA SCSS</span>
+                                    <span class="overlay-img-donut">SCSS Reference</span>
+                                    <span class="overlay-text-thumb-donut">SCSS 레퍼런스</span>
+                                    <span class="overlay-text-thumb1-donut">SCSS 레퍼런스</span>
+                                    <span class="overlay-text-thumb2-donut">SCSS Reference</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/forest _01.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA SCSS</h5>
-                                    <p>피그마 SCSS</p>
-                                    <span>FIGMA SCSS</span>
+                                    <h5>SCSS Reference</h5>
+                                    <p>SCSS 레퍼런스</p>
+                                    <span>SCSS Reference</span>
                                 </div>
                             </div>
                         </a> 
@@ -1620,16 +987,16 @@
                         <a href="https://www.figma.com/proto/PkJxiwPIywoqvbRDBNpiW2/MySQL-Reference-Book?page-id=0%3A1&node-id=2%3A263&viewport=270%2C48%2C0.04&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA MySQL</span>
-                                    <span class="overlay-text-thumb-donut">피그마 MySQL</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 MySQL</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA MySQL</span>
+                                    <span class="overlay-img-donut">MySQL Reference</span>
+                                    <span class="overlay-text-thumb-donut">MySQL 레퍼런스</span>
+                                    <span class="overlay-text-thumb1-donut">MySQL 레퍼런스</span>
+                                    <span class="overlay-text-thumb2-donut">MySQL Reference</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/haunted-house.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA MySQL</h5>
-                                    <p>피그마 MySQL</p>
-                                    <span>FIGMA MySQL</span>
+                                    <h5>MySQL Reference</h5>
+                                    <p>MySQL 레퍼런스</p>
+                                    <span>MySQL Reference</span>
                                 </div>
                             </div>
                         </a> 
@@ -1641,16 +1008,37 @@
                         <a href="https://www.figma.com/proto/5Es4tMpC18usMzsg0iTV3A/React-Reference-Book?page-id=0%3A1&node-id=2%3A2&viewport=270%2C48%2C0.06&scaling=contain" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA React</span>
-                                    <span class="overlay-text-thumb-donut">피그마 React</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 React</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA React</span>
+                                    <span class="overlay-img-donut">React Reference</span>
+                                    <span class="overlay-text-thumb-donut">리액트 레퍼런스</span>
+                                    <span class="overlay-text-thumb1-donut">리액트 레퍼런스</span>
+                                    <span class="overlay-text-thumb2-donut">React Reference</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/hills.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA React</h5>
-                                    <p>피그마 React</p>
-                                    <span>FIGMA React</span>
+                                    <h5>React Reference</h5>
+                                    <p>리액트 레퍼런스</p>
+                                    <span>React Reference</span>
+                                </div>
+                            </div>
+                        </a> 
+                    </section>
+                    <!-- //box -->
+
+                    <!-- box -->
+                    <section class="color-shape reference figma">
+                        <a href="https://www.figma.com/proto/5Es4tMpC18usMzsg0iTV3A/React-Reference-Book?page-id=0%3A1&node-id=2%3A2&viewport=270%2C48%2C0.06&scaling=contain" target="_blank">
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">Vue Reference</span>
+                                    <span class="overlay-text-thumb-donut">뷰 레퍼런스</span>
+                                    <span class="overlay-text-thumb1-donut">뷰 레퍼런스</span>
+                                    <span class="overlay-text-thumb2-donut">Vue Reference</span>
+                                </div>
+                                <img src="assets/img/Landscape-circle/shore_02.png" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>Vue Reference</h5>
+                                    <p>뷰 레퍼런스</p>
+                                    <span>Vue Reference</span>
                                 </div>
                             </div>
                         </a> 
@@ -1662,16 +1050,16 @@
                         <a href="https://www.figma.com/file/2e8r7G3tuw1BNFyouOIdJ8/Portfolio?node-id=0%3A1" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">FIGMA Portfolio</span>
-                                    <span class="overlay-text-thumb-donut">피그마 Portfolio</span>
-                                    <span class="overlay-text-thumb1-donut">피그마 Portfolio</span>
-                                    <span class="overlay-text-thumb2-donut">FIGMA Portfolio</span>
+                                    <span class="overlay-img-donut">Portfolio</span>
+                                    <span class="overlay-text-thumb-donut">Portfolio</span>
+                                    <span class="overlay-text-thumb1-donut">Portfolio</span>
+                                    <span class="overlay-text-thumb2-donut">Portfolio</span>
                                 </div>
                                 <img src="assets/img/Landscape-circle/great-wall-of-china.png" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>FIGMA Portfolio</h5>
-                                    <p>피그마 Portfolio</p>
-                                    <span>FIGMA Portfolio</span>
+                                    <h5>Portfolio</h5>
+                                    <p>Portfolio</p>
+                                    <span>Portfolio</span>
                                 </div>
                             </div>
                         </a> 
