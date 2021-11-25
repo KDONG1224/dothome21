@@ -54,7 +54,8 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #header{
 	/* background: url(../img/bg.jpg) no-repeat center top; */
 	/* background-size: cover; */
-	background-image: linear-gradient(to top, #e8198b 0%, #c7eafd 100%);
+	/* background-image: linear-gradient(to top, #e8198b 0%, #c7eafd 100%); */
+	background: #1D7FBB;
 	padding: 10px 0 10px 0px;
 }
 #header.sub {
