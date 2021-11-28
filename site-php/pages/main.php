@@ -40,6 +40,11 @@
             <h2 class="ir_so">메인 컨텐츠</h2>
 
             <article class="content-article">
+                <?php
+                   //echo "<pre>";
+                    //var_dump($_SESSION);
+                    //echo "</pre>";
+                ?>
                 <h3>해양레저스포츠! 그 즐거움 속으로</h3>
                 <p>물이 무서운 당신! 물을 좋아하는 당신! 수상스포츠 안전하게 함께 즐겨봐요!</p>
                 <section class="section-card">
@@ -98,31 +103,31 @@
                             </p>
                             <div class="interview">
                                 <div class="icon">
-                                    <a href="https://www.youtube.com/embed/TAc6h89l8SY" target="_blank">
+                                    <a href="https://www.youtube.com/embed/ZhiUebupLv8" target="_blank">
                                         <img src="../assets/img/svg-pizza.svg" alt="카약">
                                         <span>#카약</span>
                                     </a>
                                 </div>
                                 <div class="icon">
-                                    <a href="https://www.youtube.com/embed/TAc6h89l8SY" target="_blank">
+                                    <a href="https://www.youtube.com/embed/IvpGzotDfrU" target="_blank">
                                         <img src="../assets/img/svg-vanilla-cupcake.svg" alt="SUP">
                                         <span>#SUP</span>
                                     </a>
                                 </div> 
                                 <div class="icon">
-                                    <a href="https://www.youtube.com/embed/TAc6h89l8SY" target="_blank">
+                                    <a href="https://www.youtube.com/embed/2jjN0scXwMM" target="_blank">
                                         <img src="../assets/img/svg-pear.svg" alt="래프팅">
                                         <span>#래프팅</span>
                                     </a>
                                 </div> 
                                 <div class="icon">
-                                    <a href="https://www.youtube.com/embed/TAc6h89l8SY" target="_blank">
+                                    <a href="https://www.youtube.com/embed/ZOA7xKf7OSg" target="_blank">
                                         <img src="../assets/img/svg-cherries.svg" alt="자전거">
                                         <span>#자전거</span>
                                     </a>
                                 </div> 
                                 <div class="icon">
-                                    <a href="https://www.youtube.com/embed/TAc6h89l8SY" target="_blank">
+                                    <a href="https://www.youtube.com/embed/t8EfGaQI0qk" target="_blank">
                                         <img src="../assets/img/svg-bread-egg.svg" alt="안전선">
                                         <span>#안전선</span>
                                     </a>
