@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDONG's Portfolio</title>
+
+    <!-- SEO -->
+    <meta name="author" content="kdong" />
+    <meta name="description" content="리액트 포트폴리오 사이트입니다." />
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 웹스토리보이" />
+    <meta name="robots" content="all" />
+
+    <!-- facebook -->
+    <meta property="og:url" content="https://kdong1224.github.io/dothome21/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="React Portfolio App" />
+    <meta property="og:description" content="리액트 포트폴리오 사이트입니다." />
+    <meta property="og:image" content="assets/icon/icon_256.png" />
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="React Portfolio App" />
+    <meta name="twitter:url" content="https://kdong1224.github.io/dothome21/index.html" />
+    <meta name="twitter:image" content="img/icon_256" />
+    <meta name="twitter:description" content="리액트 포트폴리오 사이트입니다." />
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="assets/icon/icon_256.png" />
+    <link rel="apple-touch-icon" href="assets/icon/icon_256.png" />
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/icon/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/icon_16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href=“assets/icon/icon_32.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/vars.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style0.css">
+
+    <!-- font-aswesome - icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style>
+        .scroll {
+            position: fixed;
+            left: 10px; bottom: 10px;
+            width: 50px; height: 50px;
+            background: rgba(199, 212, 18, 0.8);
+            text-align: center;
+            line-height: 50px;
+            color: #000;
+            z-index: 10000;
+        }
+        .fixed {
+            position: fixed;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll">0</div>
+
+    <header id="header">
+        <div class="header">
+            <div class="logo"><a href="https://kdong1224.github.io/dothome21/index.html">PORTFOLIO</a></div>
+            <nav>
+                <ul>
+                    <li class="audio">
+                        <span class="btn-sound">
+                            <i class="fa fa-volume-off" aria-hidden="true"></i>
+                            <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+                        </span>
+                        <audio id="theme-song" src="assets/audio/mainBG02.mp3" loop="loop" alt="[무료비트] 양홍원 X 오왼 타입 재즈 붐뱁 비트  Drive  (Prod. SkaLiner)   jazz boom bap beat.mp3"></audio>
+                    </li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SCRIPT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="banner">
+            <h2 class="mainText">
+                <span>Front-End Development</span> 
+                <span>Front-End Development</span> 
+                <span>Front-End Development</span> 
+                <span>Front-End Development</span> 
+            </h2>
+            <div class="main__center__img">
+                <p class="main__center__img__text text2">DEVELOPER</p>
+                <div class="myImg">
+                    <img src="assets/img/main2.jpg" alt="">
+                    <p class="main__center__img__text text1">DEVELOPER</p>
+                </div>
+            </div>
+            <div class="main__bottom__text">
+                <p>I DON'T WANT A PERFECT LIFE,<br>I WANT A HAPPY LIFE.</p>
+            </div>
+        </section>
+        <section class="aboutMe">
+            <h2>about</h2>
+            <div class="aboutMeImg"
+                data-2100="height: 0vh;"
+                data-2200="height: 10vh;"
+                data-2300="height: 20vh;"
+                data-2400="height: 30vh;"
+                data-2500="height: 40vh;"
+                data-2600="height: 50vh;"
+                data-2600="height: 54vh;"
+                data-2700="height: 62vh;"
+                data-2800="height: 64vh;"
+                data-2900="height: 66vh;"
+                data-3000="height: 70vh;"
+            >
+            </div>
+            <div class="about__desc__box">
+                <p class="about__desc1">I want to enjoy things and have fun and<br>live like every day is the last day</p>
+                <p class="about__desc2">Kdong</p>
+            </div>
+        </section>
+        <section class="aboutText mt200">
+            <div class="container">
+                <h2>식사는 하셨습니까?</h2>
+                <p>밥
+                    <span
+                        data-3800="width: 0vw;"
+                        data-3900="width: 6vw;"
+                        data-4200="width: 12vw;"
+                    ></span>
+                   값하는 프론트 앤드 개발자 강동재 입니다.
+                </p>
+                <div class="aboutText__box mt400">
+                    <div class="aboutText__box__img">
+                        <img src="assets/img/myImg01@2x.jpg" alt="강동재">
+                    </div>
+                    <div class="aboutText__box__desc">
+                        <div class="right__box__top">
+                            <p>항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에
+                            맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서
+                            약 6개월간의 여정을 시작했습니다. 아직은 서툴고 부족하다는 점을 알고 있습니다. 
+                            하지만 반대로 생각하면 얼마나 더 성장할 수 있는 기회라고 생각합니다. “밥값하는 프론트 
+                            엔드 개발자 강동재” 는 항상 노력하며 열정적으로 공부하며 경험을 통해 성장하는 모습을 보여드리겠습니다.</p>
+                        </div>
+                        <div class="right__box__bottom">
+                            <span class="right__box__bottom__desc first">
+                                <a href="https://kdong1224.github.io/dothome21/refer-javascript/index.html">#trendly</a>
+                                <a href="https://kdong1224.github.io/dothome21/refer-jquery/index.html">#modesty</a>
+                                <a href="https://kdong1224.github.io/dothome21/class/index.html">#patience</a>
+                            </span>
+                            <span class="right__box__bottom__desc seconds">
+                                <a href="https://www.instagram.com/noyclah_jdk/">#instagram</a>
+                                <a href="https://www.youtube.com/channel/UCHg7CuuNR5thugcU_vUmkzA">#youtube</a>
+                                <a href="/">#kakao</a>
+                            </span>
+                            <a class="learn__more" href="https://kdong1224.github.io/dothome21/index.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sitesWrap">
+            <div class="sites__header">
+                <span class="sites__header__text text1">WANT TO SEE</span>
+                <span class="sites__header__text text2">HOW<div class="sites__header__text__img"></div>ME HELP</span>
+                <span class="sites__header__text text3">SITES?</span>
+                <span class="sites__header__text text4">강동재의 다양한 사이트를 소개합니다.</span>
+            </div>
+        </section>
+        <section class="sites__title__wrap">
+            <div class="sites__title fixed"
+                data-0="display: none;"
+                data-7119="display: none;"
+                data-7200="display: block;"
+            >
+                <div class="sites__title__black">
+                    <div class="sites__title__black_text">
+                        <span class="black black1"
+                            data-7200="top: 0;"
+                            data-7400="top: -300px;"
+                        >WEB STANDARD WEB STANDARD WEB STANDARD WEB STANDARD</span>
+                        <span class="black black2"
+                            data-7300="top: 300px;"
+                            data-7400="top: 150px;"
+                            data-7600="top: 0px;"
+                        >RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE</span>
+                        <span class="black black3"
+                            data
+                        >MEGABOX MEGABOX MEGABOX MEGABOX MEGABOX MEGABOX MEGABOX</span>
+                        <span class="black black4"
+                            data
+                        >TEAM PROJECT TEAM PROJECT TEAM PROJECT TEAM PROJECT</span>
+                        <span class="black black5"
+                            data
+                        >PHP PHP PHP PHP PHP PHP PHP PHP PHP PHP PHP PHP</span>
+                        <span class="black black6"
+                            data
+                        >React React React React React React React React React</span>
+                    </div>
+                    <div class="sites__title__black_img">
+                        <div class="sites__title__black__img__box">
+                            <img src="assets/img/webStandard.png" alt="웹표준">
+                            <p>웹표준 사이트 제작 웹 표준 지침서를 준수하고 크로스브라우징 작업을 한
+                                 사이트 입니다. 모든 사용자가 이용에 불편이 없도록 대체 텍스트로 웹 
+                                 접근성 또한 고려하였습니다. 슬라이드, 탭, 메뉴, 팝업, 동영상 기능을
+                                 작업하였으며, 동적인 부분을 더하기 위해 slick.js 등과 같은 플러그인을
+                                 이용하여 배너와 갤러리에 효과를 주었습니다. 크로스 브라우징은 익스플로러
+                                 8버전부터 지원합니다.
+                            </p>
+                            <span>
+                                <a href="#">코드보기</a>
+                                <a href="#">사이트 보기</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sites__title__white">
+                    <span class="white white1"
+                        data-7200="top: 0;"
+                        data-7400="top: -300px;"
+                    >WEB STANDARD WEB STANDARD WEB STANDARD WEB STANDARD</span>
+                    <span class="white white2"
+                        data-7300="top: 300px;"
+                        data-7400="top: 150px;"
+                        data-7600="top: 0px;"
+                    >RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE</span>
+                    <span class="white white3">MEGABOX MEGABOX MEGABOX MEGABOX MEGABOX MEGABOX MEGABOX</span>
+                    <span class="white white4">TEAM PROJECT TEAM PROJECT TEAM PROJECT TEAM PROJECT</span>
+                    <span class="white white5">PHP PHP PHP PHP PHP PHP PHP PHP PHP PHP PHP PHP</span>
+                    <span class="white white6">React React React React React React React React React</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scroll").innerHTML = scrollTop;
+        });
+
+
+        // audio
+        const btnSound = $(".btn-sound");
+        const themeSong = $("#theme-song")[0];
+
+        btnSound.on("click", function(){
+            $(this).toggleClass("is-playing");
+
+            // audio - play / pause
+            if($(this).hasClass("is-playing")){
+                themeSong.play();
+            } else {
+                themeSong.pause();
+            };
+            
+            $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
+        });
+
+        // spot
+        // const mainSpot = document.querySelector(".spot");
+        // const mainSpan = document.querySelector(".spot span");
+
+        // let currentIndex = 0;
+        // let spanClone = mainSpot.firstElementChild.cloneNode(true);
+        // mainSpot.appendChild(spanClone);
+
+        function mouseMove(e){
+            // 마우스 값
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            // 기준점 가운데로 변경
+            let standardX = window.innerWidth/2 - pageX; 
+            let standardY = window.innerHeight/2 - pageY;
+
+            // 이미지 x축 -> 마우스 값/20, y축 -> 마우스 값/20
+            const move = document.querySelector(".myImg img");
+            move.style.transform = "translate(" + standardX/120 + "px," + standardY/120 + "px)";
+        }
+
+        document.addEventListener("mousemove", mouseMove);
+
+    </script>
+</body>
+</html>
