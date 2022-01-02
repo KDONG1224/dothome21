@@ -904,7 +904,34 @@
         <h2> 30. 함수 유형 : 클래스 상속 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    
+    document.write("*** 30. 함수 유형 : 클래스 상속 ***");
+
+    class study {
+        constructor(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+        }
+        result(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>" );
+        }
+    }
+    class study2 extends study {
+        constructor(num, name, job, age){
+            super(num, name, job);
+            this.age = age;
+        }
+        result2(){
+            document.write(this.num + ". 내 이름은" + this.name + "이며, 직업은 " + this.job + "이며 나이는 "+ this.age +"살 입니다.<br>" );
+        }
+    }
+
+    const info1 = new study("1", "크동", "웹퍼블리셔");
+    const info2 = new study2("2", "강동재", "프론트앤드 개발자","30");
+
+    info1.result();
+    info2.result();
+    info2.result2();
 }
 </code></pre>
         </div>
@@ -1722,7 +1749,7 @@
         //sample30
         //30. 클래스 상속
 
-        document.querySelector("#sample30 .text").innerHTML = ` `;
+        document.querySelector("#sample30 .text").innerHTML = `1. 내 이름은 크동이며, 직업은 웹 퍼블리셔 입니다. <br> 2. 내 이름은 강동재이며, 직업은 프론트앤드 개발자 입니다.<br> 3.내 이름은 강동재이며, 직업은 프론트앤드 개발자이며 나이는 100살 입니다.`;
                 document.querySelector("#sample30 .result-box h3").addEventListener("click", function(){
                     document.querySelector("#sample30 .result-box h3").classList.toggle("active");
                     document.querySelector("#sample30 .result-box div").classList.toggle("active");
