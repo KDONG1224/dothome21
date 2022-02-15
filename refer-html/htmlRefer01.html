@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/Html.png" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/Html.png" />
+    <link rel="icon" href="../assets/face/Html.png" sizes="128x128" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/prism.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+      <strong>김정식</strong>
+    </header>
+
+    <main id="contents">
+      <h2>
+        <a href="index.html">HTML <em>기초 문법</em></a>
+      </h2>
+
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">속성</a></li>
+          <li class="active"><a href="htmlRefer01.html">기초 문법</a></li>
+          <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+          <li><a href="htmlRefer03.html">시멘틱 태그</a></li>
+        </ul>
+      </div>
+      <!-- //menu -->
+
+      <div class="refer">
+        <div class="doc">
+          <h3>HTML이란?</h3>
+          <p>
+            <strong>HyperText Markup Language</strong>의 약자입니다. 월드 와이드
+            웹(World Wide Web)에서 볼수 있는 하이퍼텍스트 문서로 만들기 위한
+            언어입니다. 웹 페이지는 HTML 문서라고도 불리며, HTML 태그들로
+            구성됩니다. 각각의 HTML 태그는 웹 페이지의 디자인이나 기능을
+            결정하는데 사용됩니다.
+          </p>
+
+          <h3>HTML 주석 표시</h3>
+          <p>HTML에서 주석을 표시할 때 다음과 같이 사용합니다.</p>
+          <div class="code">
+            <pre><code>&lt;!-- HTML 주석 --&gt;</code></pre>
+          </div>
+
+          <h3>HTML 선언 방법</h3>
+          <p>
+            DOCTYPE 선언은 HTML 문서에 &lt;html&gt; 태그를 정의하기 전에 가장
+            먼저 선언 되어야만 합니다. 이러한 DOCTYPE 선언은 HTML 태그는
+            아니지만, 선언된 페이지의 HTML 버전이 무엇인지를 웹 브라우저에
+            알려주는 역할을 하는 선언문으로, 대소문자를 구분하지 않습니다.
+          </p>
+          <div class="code">
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;HTML !DOCTYPE declaration&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/style&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+  </body>
+</html>
