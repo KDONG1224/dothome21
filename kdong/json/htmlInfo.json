@@ -1,9 +1,9 @@
 {
   "data": {
-    "title": "kdong's html information",
-    "status": "ok",
-    "status_message": "Query was successful",
     "refernceData": {
+      "title": "kdong's html information",
+      "status": "ok",
+      "status_message": "Query was successful",
       "type": "html",
       "datas": [{
           "id": 1,
