@@ -1,10 +1,12 @@
 {
-  "title": "kdong's html information",
+  "data": {
+    "title": "kdong's html information",
   "status": "ok",
   "status_message": "Query was successful",
-  "htmlInfo": {
+  "refernceData": {
     "type": "html",
-    "htmlDatas": [{
+    "datas": [
+      {
         "id": 1,
         "link": "https://developer.mozilla.org/ko/docs/Web/HTML/Element/a",
         "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://blog.kakaocdn.net/dn/KWSlV/btq4MTbqRrV/r2vIqzLlKBOtVKsBX8sga0/img.png",
@@ -3278,5 +3280,6 @@
         ]
       }
     ]
+  }
   }
 }
