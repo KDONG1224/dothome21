@@ -1,7 +1,7 @@
 {
-  "refernceData": {
+  "data": {
     "type": "html",
-    "datas": [
+    "referenceData": [
       {
         "id": 1,
         "link": "https://developer.mozilla.org/ko/docs/Web/HTML/Element/a",
