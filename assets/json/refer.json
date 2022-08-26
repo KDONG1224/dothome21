@@ -1,12 +1,9 @@
-// 20211111125334
-// https://webstoryboy.github.io/react5001/src/assets/json/refer.json
-
 {
     "status": "ok",
     "status_message": "Query was successful",
-    "data": {
+    "htmlInfo": {
       "type": "html",
-      "htmlRefer": [
+      "htmlDatas": [
         {
           "id": 1,
           "link": "https://webzz.tistory.com/229",

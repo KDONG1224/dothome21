@@ -1,0 +1,62 @@
+{
+    "data": {
+        "encoreList": [
+            {
+                "id": 1,
+                "storeName": "원성수산",
+                "storeImg": "https://cdn.gachishop.com/dq762DpnQFC4oQMT5bMX20210618053555286307.png?size=120x120&option=scale",
+                "contentImg": "https://cdn.gachishop.com/LRYlVxrhLuleW8nov6Vl20210618065537398060.png?size=340x340&option=scale",
+                "title": "[하루 10개 한정] 통통하고 쫄깃한 여수 활갑오징어 1kg",
+                "price": "14,900",
+                "image": [
+                    "https://cdn.gachishop.com/wediCPJd4OUD0qnFAkCd20210618065540741406.png?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/GqmiU3GsMKl5eBIFoTjV20210618065543542119.png?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/Q1Op06Asyxh1xgRxoIGl20210618065546338521.png?size=750x700&option=fit"
+                ],
+                "menuimage": "https://cdn.gachishop.com/ZRX7v37U07qDSf3J3qjm20210623030243499442.jpg?size=540x540&option=scale"
+            },
+            {
+                "id": 2,
+                "storeName": "솔송고버섯",
+                "storeImg": "https://cdn.gachishop.com/CmUoirzJfTdZ7etoZqsW20210324060736856462.png?size=120x120&option=scale",
+                "contentImg": "https://cdn.gachishop.com/KZKTgSg7qlqS4R80Z3M220210415081651879007.png?size=340x340&option=scale",
+                "title": "100% 국내산 친환경 인증! 직접 재배해서 먹는 솔송고버섯 키트",
+                "price": "5,500",
+                "image": [
+                    "https://cdn.gachishop.com/7ihyLOIPvumZjLVek9P320210324061222764708.jpg?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/sXBDqFo2QQ1gExs0vhFZ20210324061232502833.jpg?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/RIyThu22lVSdV71tRRdg20210324061227281641.jpg?size=750x700&option=fit"
+                ],
+                "menuimage": "https://cdn.gachishop.com/zvVZqn74M8gtaSFzOuAe20210408001005368497.png?size=540x540&option=scale"
+            },
+            {
+                "id": 3,
+                "storeName": "평창자작나무수액",
+                "storeImg": "https://cdn.gachishop.com/dq762DpnQFC4oQMT5bMX20210618053555286307.png?size=120x120&option=scale",
+                "contentImg": "https://cdn.gachishop.com/qYwGIOFVEj8BL1tzGLfH20210407235916712181.png?size=340x340&option=scale",
+                "title": "#프리미엄 #강력추천 자연이 주는 건강한 선물! 천연 자작나무 수액 100%",
+                "price": "38,000",
+                "image": [
+                    "https://cdn.gachishop.com/GtqP7yTJsp5tIwZDs0KA20210318083144482651.jpg?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/iefV3yrrlJnpEBvXOfdj20210318083135453450.jpg?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/SHe3NQcHHkdE74KR78SH20210318083140231212.jpg?size=750x700&option=fit"
+                ],
+                "menuimage": "https://cdn.gachishop.com/0vTlHGLkZX8HvZYDSJMQ20210323063054720413.png?size=540x540&option=scale"
+            },
+            {
+                "id": 4,
+                "storeName": "세이브존",
+                "storeImg": "https://cdn.gachishop.com/4QG8ymoY0N3Zk22IRPZv20210513051532395171.png?size=120x120&option=scale",
+                "contentImg": "https://cdn.gachishop.com/KZKTgSg7qlqS4R80Z3M220210415081651879007.png?size=340x340&option=scale",
+                "title": "★단독 #밥도둑 #가성비왕! 고급진 쫀득한 보리 굴비 선물세트!",
+                "price": "29,900",
+                "image": [
+                    "https://cdn.gachishop.com/T3ctCMG47dczIxkE3Jlk20210118082902492029.jpg?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/Bcof8tQltE6xCeuRwmmo20210118083019433689.jpg?size=750x700&option=fit",
+                    "https://cdn.gachishop.com/aY2jXrA11jh73XJq9VNe20210118082804623012.jpg?size=750x700&option=fit"
+                ],
+                "menuimage": "https://cdn.gachishop.com/G6khxnMjSqfi4oT5DNPU20210121060245682553.png?size=540x540&option=scale"
+            }
+        ]
+    }
+}

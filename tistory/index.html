@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preload" as="script" href="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js">
+  <link rel="preload" as="script" href="https://t1.daumcdn.net/tistory_admin/lib/lightbox/js/lightbox-plus-jquery.min.js">
+  <link rel="preload" as="script" href="//developers.kakao.com/sdk/js/kakao.min.js">
+
+  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/script_polyfills.js">
+  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/script.js">
+  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/script_sidebar.js">
+  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/script_appearance.js">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/style_base.css">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/style_common.css">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/kaniwari/space@11.5.2/build/style_sidebar.css">
+
+  <link href="assets/style_custom.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <main id="main">
+    <div class="document">
+      <h2 class="t_tit" data-ke-size="size26">includes( )에 대해 알아보자 !</h2>
+
+      <p class="t_desc2" data-ke-size="size16">String.prototype.includes( ); <br />하나의 문자열이 다른 문자열에 포함되어 있는지 판별하고 불린값으로
+        반환시키는 메서드입니다.<br />있다면 true, 없다면 false로 반환시켜줍니다.</p>
+      <!-- <hr data-ke-style="style1" /> -->
+      <div class="divider"></div>
+      <p class="t_box2" style="display: inline-block;" data-ke-size="size16">construction(구문)</p>
+      <p class="t_box" data-ke-size="size16">"str".includes(searchString[, position]);</p>
+      <p class="t_box2" style="display: inline-block;" data-ke-size="size16">searchString(찾을 문자열, 검색값)</p>
+      <p class="t_box" data-ke-size="size16">현재 문자열에서 어떤 문자열을 찾을지 검색값을 정합니다.<br />대소문자를 구별합니다.</p>
+      <p class="t_box2" style="display: inline-block;" data-ke-size="size16">position(찾기 시작할 위치, 위치값)</p>
+      <p class="t_box" data-ke-size="size16">기본값; 0, 현재 문자열에서 어느 위치에서부터 찾을지를 정합니다.</p>
+      <h3 class="t_tit2" data-ke-size="size23"># 예제를 통해 익혀봅시다.</h3>
+      <div class="t_code">
+        <pre class="actionscript"><code>const str1 = "javascript reference";
+    
+    const currentStr1 = str1.includes("javascript");
+    const currentStr2 = str1.includes("j");
+    const currentStr3 = str1.includes("b");
+    const currentStr4 = str1.includes("reference");
+    const currentStr5 = str1.includes("reference", 1);
+    const currentStr6 = str1.includes("reference", 11);
+    const currentStr7 = str1.includes("reference", 12);
+    </code></pre>
+      </div>
+      <div class="result">
+        <details>
+          <summary>결과보기</summary>
+          <div class="t_result">true<br />true<br />false<br />true<br />true<br />true<br />false</div>
+        </details>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
